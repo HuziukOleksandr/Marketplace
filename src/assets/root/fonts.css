@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "WorkSans";
+    font-weight: 400;
+    src: url("../fonts/WorkSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "WorkSans";
+    font-weight: 500;
+    src: url("../fonts/WorkSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "WorkSans";
+    font-weight: 600;
+    src: url("../fonts/WorkSans-SemiBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "SpaceMono";
+    font-weight: 700;
+    src: url("../fonts/SpaceMono-Bold.ttf") format("truetype");
+}

@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import './assets/styles/colors.css'
-import './assets/styles/fonts.css'
-import './assets/styles/reset.css'
+import './assets/root/colors.css'
+import './assets/root/fonts.css'
+import './assets/root/reset.css'
 
 import components from './components/UI'
 
