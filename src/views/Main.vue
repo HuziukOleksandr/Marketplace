@@ -5,19 +5,23 @@
         <Trending/>
         <Artists/>
         <Category/>
+        <Discover/>
+        <Highlight/>
     </div>
 </template>
 
 <script>
-import Navigation from '../components/Navigation.vue'
+import Navigation from '../components/Navigation.vue'   
 import Hero from '../components/Hero/Hero.vue'
 import Trending from '../components/Trending/Trending.vue'
 import Artists from '../components/Artists/Artists.vue'
 import Category from '../components/Category/Category.vue'
+import Discover from '../components/Discover/Discover.vue'
+import Highlight from '../components/Highlight/Highlight.vue'
 
     export default {
         components: {
-            Navigation, Hero, Trending, Artists, Category
+            Navigation, Hero, Trending, Artists, Category, Discover, Highlight
         },
         data(){
             return {

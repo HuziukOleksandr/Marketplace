@@ -19,7 +19,6 @@
     border-radius: 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: var(--text-color-white);
     transition: 0.2s;
 }
 

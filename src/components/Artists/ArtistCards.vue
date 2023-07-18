@@ -3,7 +3,7 @@
         <!-- Preview Start -->
         <div class="preview">
             <div class="number">
-                {{ card.id }}
+                <h3 class="number-text">{{ card.id }}</h3>
             </div>
             <img :src="getUserImageUrl(card.name,'Large')" :alt="card.name">
         </div>
@@ -82,12 +82,16 @@
         justify-content: center;
         align-items: center;
         border-radius: 20px;
-        font-family: "Space Mono", sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
         color: var(--text-color-secondary);
         background-color: var(--background-color);
+    }
+
+    .number-text{
+        font-family: "SpaceMono", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
     }
 
     /* Preview Styles End*/
@@ -123,7 +127,7 @@
     }
 
     .sale-number{
-        font-family: "Space Mono", sans-serif;
+        font-family: "SpaceMono", sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;

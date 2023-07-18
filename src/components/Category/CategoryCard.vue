@@ -2,8 +2,8 @@
     <div class="card" v-for="card in cards">
         <!-- Preview Start -->
         <div class="preview">
-            <img :src="getImageUrl(card.background)" alt="" class="bg-img">
-            <img :src="getImageUrl(card.image)" alt="" class="preview-icon">
+            <img :src="getImageUrl(card.background)" :alt="card.background" class="bg-img">
+            <img :src="getImageUrl(card.image)" :alt="card.image" class="preview-icon">
         </div>
         <!-- Preview Start -->
 
@@ -30,11 +30,6 @@ import { useI18n } from 'vue-i18n'
                 t, locale
             }
         },
-        data(){
-            return {
-                
-            }
-        },
         methods: {
             getTitleClasses(){
                 return {
@@ -43,16 +38,8 @@ import { useI18n } from 'vue-i18n'
                 };
             },
             getImageUrl(name) {
-                
                 return new URL(`../../assets/images/Categories/${name}.svg`, import.meta.url).href;
             } 
-        },
-        computed:{
-            background(){
-                return{
-                    backgroundImage: `url(${this.getImageUrl(this.cards.background)})`
-                }
-            }
         }
     }
 </script>
@@ -138,6 +125,7 @@ import { useI18n } from 'vue-i18n'
     /* Ukrainian Style End */
 
     /* Title Styles End */
+    
 }
 
 /* Tablet */

@@ -144,6 +144,7 @@
         padding: 0 30px;
         background-color: var(--button-background-color);
         border: none;
+        color: var(--text-color-white);
     }
 
     .loc-icon{

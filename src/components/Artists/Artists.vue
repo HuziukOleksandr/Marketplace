@@ -1,5 +1,5 @@
 <template>
-    <div class="section">
+    <div class="artists">
         <!-- Header Start -->
         <div class="header">
             <div class="left-side">
@@ -9,7 +9,7 @@
             <div class="right-side">
                 <my-button
                     class="button">
-                    <img src="../../assets/images/Buttons/RocketLaunch.svg" alt="">
+                    <img src="../../assets/images/Buttons/RocketLaunch.svg" alt="RocketLaunch">
                     {{ $t("Artists.button") }}
                 </my-button>
             </div>
@@ -74,7 +74,7 @@ import { useI18n } from 'vue-i18n'
 
     /* Main Styles Start */
 
-    .section{
+    .artists{
         min-height: 840px;
         margin: 0 auto;
         display: flex;
@@ -133,6 +133,7 @@ import { useI18n } from 'vue-i18n'
         padding: 0 50px;
         background-color: var(--background-color);
         border: 2px solid var(--button-background-color);
+        color: var(--text-color-white);
     }
 
     /* Header Styles End */

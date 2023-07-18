@@ -33,5 +33,15 @@
         "utility": "Utility",
         "sport": "Sport",
         "virtualWorlds": "Virtual Worlds"
+    },
+    "Discover": {
+        "title": "Discover More NFTs",
+        "subTitle": "Explore new trending NFTs",
+        "button": "See All",
+        "price": "Price",
+        "highestBid": "Highest Bid"
+    },
+    "Highlight": {
+        "button": "See NFT"
     }
 }

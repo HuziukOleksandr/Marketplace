@@ -165,6 +165,7 @@ import { useI18n } from 'vue-i18n'
         margin-bottom: 40px;
         background-color: var(--button-background-color);
         border: none;
+        color: var(--text-color-white);
     }
 
     .info{

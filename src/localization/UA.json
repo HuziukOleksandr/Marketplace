@@ -33,5 +33,15 @@
         "utility": "Утиліта",
         "sport": "Спорт",
         "virtualWorlds": "Віртуальні світи"
+    },
+    "Discover": {
+        "title": "Дізнайтеся більше про NFT",
+        "subTitle": "Ознайомтеся з новими трендовими NFT",
+        "button": "Побачити все",
+        "price": "Ціна",
+        "highestBid": "Найвища Ставка"
+    },
+    "Highlight": {
+        "button": "Дивитись NFT"
     }
 }
