@@ -1,5 +1,6 @@
 <template>
     <nav class="header">
+        <!-- Logo Start -->
         <div class="logo">
             <img 
                 src="../assets/images/svg/favicon.svg" 
@@ -10,31 +11,67 @@
                 alt="title"
                 class="logo-title">
         </div>
+        <!-- Logo End -->
+
+        <!-- Navigation Start -->
         <div class="nav-links">
             <div class="link-item">
-                <a href="!#" class="link">Marketplace</a>
+                <a href="!#" class="link">{{ $t("Navigation.marketplace") }}</a>
             </div>
             <div class="link-item">
-                <a href="!#" class="link">Rankings</a>
+                <a href="!#" class="link">{{ $t("Navigation.rankings") }}</a>
             </div>
             <div class="link-item">
-                <a href="!#" class="link">Connect a wallet</a>
+                <a href="!#" class="link">{{ $t("Navigation.connectAWallet") }}</a>
             </div>
             <my-button class="button">
-                <img src="../assets/images/svg/User.svg" alt="user">
-                Sing Up
+                <img src="../assets/images/Buttons/User.svg" alt="user">
+                {{ $t("Navigation.button") }}
             </my-button>
+
+            <div class="link-item ">
+                <img 
+                    :src="getImageUrl(language)" 
+                    alt="Flag uk" 
+                    class="loc-icon"
+                    @click="dropDawnShow">
+            </div>
+            
+            <my-localization 
+                :dialogVisible="dialogVisible"
+                @changeLanguage="changeLanguage"
+                v-model:show="dialogVisible"
+                @closeWindow="closeWindow"/>
         </div>
+        <!-- Navigation Start -->
     </nav>
 </template>
 
 <script>
+
     export default {
         data() {
             return {
-
+                language: "EN",
+                dialogVisible: false,
+                
             }
-        }
+        },
+        methods: {
+            dropDawnShow(){
+                this.dialogVisible = !this.dialogVisible;
+            },
+            getImageUrl(name) {  
+                return new URL(`../assets/images/svg/${name}.svg`, import.meta.url).href;
+            },
+            changeLanguage(lang){
+                this.language = lang;
+            },
+            closeWindow(dialogVisible){
+                this.dialogVisible = dialogVisible;
+            }
+            
+        },
     }
 </script>
 
@@ -42,6 +79,9 @@
 
 /* Desktop */
 @media only screen and (max-width: 1920px) {
+
+    /* Main Style Start */
+
     .header{
         width: 100%;
         height: 100px;
@@ -51,6 +91,8 @@
         justify-content: space-between;
     }
 
+    /* Main Style End */
+    
     /* Logo Styles Start */
 
     .logo{
@@ -69,12 +111,14 @@
     }
 
     /* Logo Styles End */
+
     /* Lins Styles Start */
 
     .nav-links{
         height: 60px;
         display: flex;
         gap: 10px;
+        position: relative;
     }
 
     .link-item{
@@ -86,7 +130,7 @@
     .link{
         color: var(--text-color-white);
         text-decoration: none;
-        font-family: 'WorkSans', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         transition: 0.2s;
     }
@@ -98,18 +142,54 @@
     .button{
         height: 60px;
         padding: 0 30px;
-        
+        background-color: var(--button-background-color);
+        border: none;
+    }
+
+    .loc-icon{
+        width: 35px;
+        transition: 0.2s;
+    }  
+
+    .loc-icon:hover{
+        cursor: pointer;
+        scale: 1.05;
     }
 
     /* Links Styles End */
-
+   
 }
 
 /* Tablet */
-@media only screen and (max-width: 960px) {   
+@media only screen and (max-width: 960px) { 
+    
+    /* Main Style Start */
+
+    /* Main Style End */
+    
+    /* Logo Styles Start */
+
+    /* Logo Styles End */
+    
+    /* Lins Styles Start */
+
+    /* Links Styles End */
 }
 
 /* Mobile */
-@media only screen and (max-width: 540px) {   
+@media only screen and (max-width: 540px) { 
+
+    /* Main Style Start */
+
+    /* Main Style End */
+    
+    /* Logo Styles Start */
+
+    /* Logo Styles End */
+    
+    /* Lins Styles Start */
+
+    /* Links Styles End */ 
+    
 }
 </style>

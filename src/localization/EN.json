@@ -1,0 +1,37 @@
+{
+    "Navigation": {
+        "marketplace": "Marketplace",
+        "rankings": "Rankings",
+        "connectAWallet": "Connect a wallet",
+        "button": "Sign Up"
+    },
+    "Hero": {
+        "title": "Discover digital art & Collect NFTs",
+        "text": "NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.",
+        "button": "Get Started",
+        "totalSale": "Total Sale",
+        "auctions": "Auctions",
+        "artists": "Artists"
+    },
+    "Trending": {
+        "title": "Trending Collection",
+        "subTitle": "Checkout our weekly updated trending collection."
+    },
+    "Artists": {
+        "title": "Top creators",
+        "subTitle": "Checkout Top Rated Creators on the NFT Marketplace",
+        "button": "View Rankings",
+        "totalSale": "Total Sale:"
+    },
+    "Category": {
+        "title": "Browse Categories",
+        "art": "Art",
+        "collectibles": "Collectibles",
+        "music": "Music",
+        "photography": "Photography",
+        "video": "Video",
+        "utility": "Utility",
+        "sport": "Sport",
+        "virtualWorlds": "Virtual Worlds"
+    }
+}

@@ -1,8 +1,10 @@
 <template>
-    <div class="main">
+    <div class="main" @click="showLanguage">
         <Navigation/>
         <Hero/>
         <Trending/>
+        <Artists/>
+        <Category/>
     </div>
 </template>
 
@@ -10,11 +12,21 @@
 import Navigation from '../components/Navigation.vue'
 import Hero from '../components/Hero/Hero.vue'
 import Trending from '../components/Trending/Trending.vue'
+import Artists from '../components/Artists/Artists.vue'
+import Category from '../components/Category/Category.vue'
 
     export default {
         components: {
-            Navigation, Hero, Trending
-        }
+            Navigation, Hero, Trending, Artists, Category
+        },
+        data(){
+            return {
+                languageVisible: false
+            }
+        },
+        methods: {
+            
+        },
     }
 </script>
 
