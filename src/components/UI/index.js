@@ -1,7 +1,9 @@
 import MyButton from './MyButton.vue'
 import MyLocalization from './MyLocalization.vue'
+import MyInput from './MyInput.vue'
 
 export default [
     MyButton,
-    MyLocalization
+    MyLocalization,
+    MyInput
 ]

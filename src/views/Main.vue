@@ -7,30 +7,33 @@
         <Category/>
         <Discover/>
         <Highlight/>
+        <Works/>
+        <Subscribe/>
+        <Footer/>
     </div>
 </template>
 
 <script>
-import Navigation from '../components/Navigation.vue'   
-import Hero from '../components/Hero/Hero.vue'
-import Trending from '../components/Trending/Trending.vue'
-import Artists from '../components/Artists/Artists.vue'
-import Category from '../components/Category/Category.vue'
-import Discover from '../components/Discover/Discover.vue'
-import Highlight from '../components/Highlight/Highlight.vue'
+import Navigation from '../components/Navigation/Navigation.vue'   
+import Hero from '../components/Main/Hero/Hero.vue'
+import Trending from '../components/Main/Trending/Trending.vue'
+import Artists from '../components/Main/Artists/Artists.vue'
+import Category from '../components/Main/Category/Category.vue'
+import Discover from '../components/Main/Discover/Discover.vue'
+import Highlight from '../components/Main/Highlight/Highlight.vue'
+import Works from '../components/Main/Works/Works.vue'
+import Subscribe from '../components/Main//Subscribe/Subscribe.vue'
+import Footer from '../components/Footer/Footer.vue'
 
     export default {
         components: {
-            Navigation, Hero, Trending, Artists, Category, Discover, Highlight
+            Navigation, Hero, Trending, Artists, Category, Discover, Highlight, Works, Subscribe, Footer
         },
         data(){
             return {
                 languageVisible: false
             }
-        },
-        methods: {
-            
-        },
+        }
     }
 </script>
 
