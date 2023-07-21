@@ -20,7 +20,7 @@
         <!-- Right-Side Start -->
         <div class="right-side">
             <img 
-                src="../../../assets/images/png/Space Walking.png" 
+                src="../../../assets/images/Hero/hero.svg" 
                 alt="Space Walking">
             <div class="preview">
                 <h2 class="preview-title">{{previewTitle}}</h2>

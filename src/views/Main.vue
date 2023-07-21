@@ -1,6 +1,6 @@
 <template>
     <div class="main" @click="showLanguage">
-        <Navigation/>
+        <Header/>
         <Hero/>
         <Trending/>
         <Artists/>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Navigation from '../components/Navigation/Navigation.vue'   
+import Header from '../components/Header/Header.vue'   
 import Hero from '../components/Main/Hero/Hero.vue'
 import Trending from '../components/Main/Trending/Trending.vue'
 import Artists from '../components/Main/Artists/Artists.vue'
@@ -27,7 +27,7 @@ import Footer from '../components/Footer/Footer.vue'
 
     export default {
         components: {
-            Navigation, Hero, Trending, Artists, Category, Discover, Highlight, Works, Subscribe, Footer
+            Header, Hero, Trending, Artists, Category, Discover, Highlight, Works, Subscribe, Footer
         },
         data(){
             return {

@@ -1,9 +1,23 @@
 {
+    "Header": {
+        "button" : "Sign Up"
+    },
     "Navigation": {
         "marketplace": "Marketplace",
         "rankings": "Rankings",
+        "connectAWallet": "Connect a wallet"
+    },
+    "Footer": {
+        "explore": "Explore",
+        "marketplace": "Marketplace",
+        "rankings": "Rankings",
         "connectAWallet": "Connect a wallet",
-        "button": "Sign Up"
+        "title": "Join our weekly digest",
+        "sub-title": "Get exclusive promotions & updates straight to your inbox.",
+        "text": "NFT marketplace UI created with Anima for Figma.",
+        "community": "Join our community",
+        "input":"Enter your email here",
+        "button": "Subscribe"
     },
     "Hero": {
         "title": "Discover digital art & Collect NFTs",
