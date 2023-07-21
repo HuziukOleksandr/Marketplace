@@ -35,6 +35,11 @@
         transform: scale(1.01);
     }
 
+    .link-item{
+        display: flex;
+        padding: 0 20px;
+        align-items: center;
+    }
     /* Links Styles End */
 
 }

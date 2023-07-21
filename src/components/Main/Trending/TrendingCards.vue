@@ -3,16 +3,19 @@
         <!-- Main Picture -->
         <img 
             :src="getImageUrl(card.mainPicture)" 
-            :alt="card.mainPicture">
+            :alt="card.mainPicture"
+            class="main-picture">
         
         <!-- Secondary Start -->
         <div class="secondary">
             <img 
                 :src="getImageUrl(card.secondaryPicture[0].name)" 
-                :alt="card.secondaryPicture[0].name">
+                :alt="card.secondaryPicture[0].name"
+                class="secondary-picture">
             <img 
                 :src="getImageUrl(card.secondaryPicture[1].name)" 
-                :alt="card.secondaryPicture[1].name">
+                :alt="card.secondaryPicture[1].name"
+                class="secondary-picture">
     
             <my-button class="more">
                 {{ card.lenght }}
@@ -24,8 +27,11 @@
         <div class="preview">
             <h2 class="title">{{ card.preview }}</h2>
             <div class="user">
-                <img :src="getUserImageUrl(card.namePicture, 'Small')" :alt="card.namePicture">
-                <h2 class="userName">{{ card.userName }}</h2>
+                <img 
+                    :src="getUserImageUrl(card.namePicture, 'Small')" 
+                    :alt="card.namePicture"
+                    class="user-picture">
+                <h2 class="user-name">{{ card.userName }}</h2>
             </div>
         </div>
         <!-- Preview End -->
@@ -66,6 +72,15 @@
         gap: 15px;
     }
 
+    .main-picture{
+        transition: .2s;
+    }
+
+    .main-picture:hover{
+        cursor: pointer;
+        scale:  1.01;
+    }
+
     /* Main Styles End */
 
     /* Secondary Styles Start */
@@ -82,9 +97,17 @@
         justify-content: center;
         align-items: center;
         background-color: var(--button-background-color);
+        color: var(--text-color-white);
         border: none;
     }
 
+    .secondary-picture{
+        transition: 0.4s;
+    }   
+    .secondary-picture:hover{
+        cursor: pointer;
+        scale: 1.01;
+    }
     /* Secondary Styles End */
 
     /* Preview Styles Start */
@@ -93,6 +116,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        
     }
 
     .title{
@@ -108,14 +132,18 @@
         gap: 10px;
     }
 
-    .userName{
+    .user-name{
         color: var(--text-color-white);
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 14px;
         line-height: 22px;
-
     }
+
+    .user-picture:hover, .user-name:hover{
+        cursor: pointer;
+    }
+
     /* Preview Styles End */
 
 }
