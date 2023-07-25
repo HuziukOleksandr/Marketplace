@@ -18,7 +18,7 @@ import Timer from './HighlightTimer.vue'
         },
         data(){
             return {
-                endtime: '2023-07-23',
+                endtime: '2023-07-28',
                 card:{
                     userIcon: "Shroomie",
                     userName: "Shroomie", 
@@ -33,7 +33,7 @@ import Timer from './HighlightTimer.vue'
 <style scoped>
 
 /* Desktop */
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1280px) {
 
     /* Main Style Start */
 

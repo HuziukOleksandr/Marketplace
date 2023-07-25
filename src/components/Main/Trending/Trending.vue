@@ -51,7 +51,7 @@ import Card from './TrendingCards.vue'
 <style scoped>
 
 /* Desktop */
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1280px) {
 
     /* Main Style Start */
 
@@ -100,9 +100,10 @@ import Card from './TrendingCards.vue'
     .content{
         max-width: 1050px;
         width: 100%;
-        height: 525px;
+        min-height: 525px;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     /* Content Styles End */

@@ -1,7 +1,7 @@
 <template>
     <div class="explore">
         <h2 class="explore-header">{{ $t("Footer.explore") }}</h2>
-        <Navigation class="navigation"/>
+        <Navigation class="navigation" :link-item-styles="customLinkItemStyles"/>
     </div>
 </template>
 
@@ -10,13 +10,20 @@ import Navigation from '../Navigation/Navigation.vue'
     export default {
         components:{
             Navigation
+        },
+        data(){
+            return{
+                customLinkItemStyles: {
+                    color: "var(--text-color-secondary)",
+                },
+            }
         }
     }
 </script>
 
 <style scoped>
 /* Desktop */
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1280px) {
 
 
     /* Explore Styles Start */
@@ -31,10 +38,12 @@ import Navigation from '../Navigation/Navigation.vue'
         font-weight: 600;
         font-size: 22px;
         line-height: 35px;
-        color: var(--text-color-white)
+        color: var(--text-color-white);
+        margin-bottom: 30px;
     } 
 
     .navigation{
+        display: flex;
         flex-direction: column ;
         gap: 20px;
     }

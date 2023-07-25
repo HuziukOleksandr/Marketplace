@@ -1,123 +1,59 @@
 <template>
-    <nav class="header">
+    <div class="header">
         <!-- Logo Start -->
-        <my-logo />
+
+        <my-logo/>
+
         <!-- Logo End -->
 
         <!-- Navigation Start -->
-        <div class="nav-links">
+       
+         <HeaderNav class="navigation"/>
 
-            <Navigation class="navigation-header"/>
-
-            <my-button class="button">
-                <img src="../../assets/images/Buttons/User.svg" alt="user">
-                {{ $t("Header.button") }}
-            </my-button>
-
-            <div class="link-item ">
-                <img 
-                    :src="getImageUrl(language)" 
-                    alt="Flag uk" 
-                    class="loc-icon"
-                    @click="dropDawnShow">
-            </div>
-            
-            <my-localization 
-                :dialogVisible="dialogVisible"
-                @changeLanguage="changeLanguage"
-                v-model:show="dialogVisible"
-                @closeWindow="closeWindow"/>
-        </div>
         <!-- Navigation Start -->
-    </nav>
+        </div>
 </template>
 
 <script>
-import Navigation from '../Navigation/Navigation.vue'
+import HeaderNav from './HeaderNav.vue'
 
     export default {
         components: {
-            Navigation
+            HeaderNav,
         },
         data() {
             return {
-                language: "EN",
-                dialogVisible: false,
                 
             }
         },
-        methods: {
-            dropDawnShow(){
-                this.dialogVisible = !this.dialogVisible;
-            },
-            getImageUrl(name) {  
-                return new URL(`../../assets/images/svg/${name}.svg`, import.meta.url).href;
-            },
-            changeLanguage(lang){
-                this.language = lang;
-            },
-            closeWindow(dialogVisible){
-                this.dialogVisible = dialogVisible;
-            }
+        methods : {
             
-        },
+        }
+        
     }
 </script>
 
 <style scoped>
 
 /* Desktop */
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1280px) {
 
     /* Main Style Start */
 
     .header{
-        width: 100%;
         height: 100px;
-        padding: 0 50px;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
+    
+
+    .burger-menu{
+        display: none;
+    }
+
     /* Main Style End */
-
-    /* Logo Styles End */
-
-    .link-item{
-        display: flex;
-        align-items: center;
-        padding:0 20px;
-    }
-
-    /* Links Styles Start */
-
-    .nav-links{
-        height: 60px;
-        display: flex;
-        gap: 10px;
-        position: relative;
-    }
-
-    .button{
-        height: 60px;
-        padding: 0 30px;
-        background-color: var(--button-background-color);
-        border: none;
-        color: var(--text-color-white);
-    }
-
-    .loc-icon{
-        width: 35px;
-        transition: 0.2s;
-    }  
-
-    .loc-icon:hover{
-        cursor: pointer;
-        scale: 1.05;
-    }
-
-    /* Links Styles End */
    
 }
 
@@ -129,12 +65,13 @@ import Navigation from '../Navigation/Navigation.vue'
     /* Main Style End */
     
     /* Logo Styles Start */
-
+    
     /* Logo Styles End */
     
     /* Lins Styles Start */
 
     /* Links Styles End */
+
 }
 
 /* Mobile */
@@ -156,11 +93,3 @@ import Navigation from '../Navigation/Navigation.vue'
 
 </style>
 
-<style>
-.navigation-header > .link-item{
-
-    display: flex;
-    align-items: center;
-    padding:0 20px;
-}
-</style>

@@ -45,7 +45,7 @@
 <style scoped>
 
 /* Desktop */
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1280px) {
 
     /* Main Styles Start */
 

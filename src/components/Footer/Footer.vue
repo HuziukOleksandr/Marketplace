@@ -59,7 +59,7 @@ import Community from './Community.vue'
 <style scoped>
 
 /* Desktop */
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1280px) {
 
     /* Main Style Start */
     

@@ -70,7 +70,7 @@ import { useI18n } from 'vue-i18n'
 <style  scoped>
 
 /* Desktop */
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1280px) {
 
     /* Main Styles Start */
 
@@ -104,6 +104,7 @@ import { useI18n } from 'vue-i18n'
         flex-direction: column;
         gap: 10px;
     }
+
     .title{
         color: var(--text-color-white);
         font-family: 'Montserrat', sans-serif;
@@ -143,7 +144,7 @@ import { useI18n } from 'vue-i18n'
     .content{
         max-width: 1050px;
         width: 100%;
-        height: 775px;
+        min-height: 775px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
