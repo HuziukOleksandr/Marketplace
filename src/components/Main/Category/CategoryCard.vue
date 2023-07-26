@@ -54,7 +54,7 @@ import { useI18n } from 'vue-i18n'
     .card{
         max-width: 240px;
         width: 100%;
-        height: 316px;
+        min-height: 316px;
         display: flex;
         flex-direction: column;
         border-radius: 20px;
@@ -74,7 +74,7 @@ import { useI18n } from 'vue-i18n'
     .preview{
         position: relative;
         width: 100%;
-        height: 240px;
+        min-height: 240px;
         overflow: hidden;
         border-radius: 20px 20px 0 0;
     }
@@ -129,21 +129,69 @@ import { useI18n } from 'vue-i18n'
 }
 
 /* Tablet */
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
 
     /* Main Styles Start */
+
+    .card{
+        max-width: 150px;
+        width: 100%;
+        min-height: 210px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        background-color: var(--background-secondary);
+        transition: 0.2s;
+    }
+
+    .card:hover .bg-img, .preview-icon, .title{
+        filter: blur(0);
+        cursor: pointer;
+    }
 
     /* Main Styles End */
     
     /* Preview Styles Start */
 
+    .preview{
+        position: relative;
+        width: 100%;
+        min-height: 150px;
+        overflow: hidden;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .bg-img {
+        width: 150px;
+        filter: blur(4px);
+        transition: 0.6s;
+    }
+
+    .preview-icon{
+        width: 80px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     /* Preview Styles End */
 
     /* Title Styles Start */
 
+    .title{
+        padding: 20px 20px 25px 20px;
+    }
+
     /* English Style Start */
 
-
+    .english-title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--text-color-white);
+    }
 
     /* English Style End */
     

@@ -45,19 +45,21 @@
 }
 
 /* Tablet */
-@media only screen and (max-width: 960px) { 
+@media only screen and (min-width: 768px) and (max-width: 1279px) { 
+    .logo{
+        display: flex;
+        gap: 10px;
+        height: 24px;
+        align-items: center;
+    }
 
-/* Main Style Start */
+    .logo-picture{
+        height: 24px;
+    }
 
-/* Main Style End */
-
-/* Logo Styles Start */
-
-/* Logo Styles End */
-
-/* Lins Styles Start */
-
-/* Links Styles End */
+    .logo-title{
+        height: 15px;
+    }
 }
 
 /* Mobile */

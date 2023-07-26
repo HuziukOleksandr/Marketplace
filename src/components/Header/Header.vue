@@ -6,6 +6,7 @@
 
         <!-- Logo End -->
 
+        <img src="../../assets/images/svg/BurgerMenu.svg" alt="BurgerMenu" class="burger-menu">
         <!-- Navigation Start -->
        
          <HeaderNav class="navigation"/>
@@ -35,60 +36,38 @@ import HeaderNav from './HeaderNav.vue'
 
 <style scoped>
 
-/* Desktop */
+/* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
 
-    /* Main Style Start */
-
     .header{
+        padding: 0 100px    ;
         height: 100px;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-
-    
-
     .burger-menu{
         display: none;
     }
 
-    /* Main Style End */
-   
 }
 
-/* Tablet */
-@media only screen and (max-width: 960px) { 
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
+@media only screen and (min-width: 768px) and (max-width: 1279px) { 
     
-    /* Main Style Start */
-
-    /* Main Style End */
+    .header{
+        padding: 0 50px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     
-    /* Logo Styles Start */
+    .navigation{
+        display: none;
+    }
     
-    /* Logo Styles End */
-    
-    /* Lins Styles Start */
 
-    /* Links Styles End */
-
-}
-
-/* Mobile */
-@media only screen and (max-width: 540px) { 
-
-    /* Main Style Start */
-
-    /* Main Style End */
-    
-    /* Logo Styles Start */
-
-    /* Logo Styles End */
-    
-    /* Lins Styles Start */
-
-    /* Links Styles End */ 
-    
 }
 
 </style>

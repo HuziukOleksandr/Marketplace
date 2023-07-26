@@ -22,11 +22,9 @@ import Navigation from '../Navigation/Navigation.vue'
 </script>
 
 <style scoped>
-/* Desktop */
+
+/* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
-
-
-    /* Explore Styles Start */
 
     .explore{
         max-width: 240px;
@@ -48,66 +46,30 @@ import Navigation from '../Navigation/Navigation.vue'
         gap: 20px;
     }
     
-    /* Explore Styles End */
-
-
-
-    /* Subscribe Styles Start */
-
-
-
-    /* Subscribe Styles End */
-
-
-
-    /* English Styles Start */
-
-
-
-    /* English Styles End */
-
-    /* Ukrainian Styles Start */
-
-
-
-    /* Ukrainian Styles End */
-
-    /* Content Styles End */
-
-
 }
 
-/* Tablet */
-@media only screen and (max-width: 960px) { 
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
+@media only screen and (min-width: 768px) and (max-width: 1279px) { 
+    .explore{
+        max-width: 240px;
+        width: 100%;
+    }
 
-    /* Main Style Start */
+    .explore-header{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 35px;
+        color: var(--text-color-white);
+        margin-bottom: 30px;
+    } 
 
-    /* Main Style End */
-
-    /* Logo Styles Start */
-
-    /* Logo Styles End */
-
-    /* Lins Styles Start */
-
-    /* Links Styles End */
+    .navigation{
+        display: flex;
+        flex-direction: column ;
+        gap: 20px;
+    }
 }
 
-/* Mobile */
-@media only screen and (max-width: 540px) { 
-
-    /* Main Style Start */
-
-    /* Main Style End */
-
-    /* Logo Styles Start */
-
-    /* Logo Styles End */
-
-    /* Lins Styles Start */
-
-    /* Links Styles End */ 
-
-}
 </style>
 

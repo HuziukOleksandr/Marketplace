@@ -52,7 +52,6 @@ import {useI18n} from 'vue-i18n'
                 };
             },
         }
-        
     }
 </script>
 
@@ -63,7 +62,7 @@ import {useI18n} from 'vue-i18n'
     /* Main Style Start */
     
     .work{
-        height: 740px;
+        min-height: 740px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -107,7 +106,7 @@ import {useI18n} from 'vue-i18n'
     .content{
         max-width: 1050px;
         width: 100%;
-        height: 440px; 
+        min-height: 440px; 
         display: flex;
         justify-content: space-between;
     }
@@ -116,34 +115,58 @@ import {useI18n} from 'vue-i18n'
 }
 
 /* Tablet */
-@media only screen and (max-width: 960px) {   
+@media only screen and (min-width: 768px) and (max-width: 1279px) {   
 
     /* Main Style Start */
+
+    .work{
+        min-height: 520px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 0;
+    }
 
     /* Main Style End */
 
     /* Header Styles Start */
+    .header{
+        max-width: 690px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 39px;
+        color: var(--text-color-white);
+    }
+
+    .sub-title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--text-color-white);
+    }
 
     /* Header Styles End */
     
     /* Content Styles Start */
 
-    /* Content Styles End */
-
-}
-
-/* Mobile */
-@media only screen and (max-width: 540px) {  
-    
-    /* Main Style Start */
-
-    /* Main Style End */
-
-    /* Header Styles Start */
-
-    /* Header Styles End */
-    
-    /* Content Styles Start */
+    .content{
+        max-width: 690px;
+        width: 100%;
+        min-height: 320px; 
+        display: flex;
+        justify-content: space-between;
+    }
 
     /* Content Styles End */
 

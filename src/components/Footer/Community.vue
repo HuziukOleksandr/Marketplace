@@ -25,25 +25,30 @@
 </template>
 
 <script>
-    export default {
-        
-    }
+    export default {}
 </script>
 
 <style scoped>
-/* Desktop */
-@media only screen and (min-width: 1280px) {
 
-    /* Main Style Start */
+/* Стилі для великих моніторів та десктопів */
+@media only screen and (min-width: 1280px) {
+    /* Main Styles Start */
     .community{
         max-width: 328px;
         width: 100%;
     }
 
+    /* Main Styles End */
+
+    /* Logo Styles Start */
+
     .logo{
         margin-bottom: 30px;
     }
 
+    /* Logo Styles Start */
+
+    /* Text Styles Start */
     .text, .title{
         font-family: 'Mintserrat', sans-serif;
         font-weight: 400;
@@ -56,7 +61,10 @@
     .title{
         margin-bottom: 15px;
     }
-    
+
+    /* Text Styles End */
+
+    /* Icons Style Start */
     .icons{
         width: 158px;
         display: flex;
@@ -71,48 +79,65 @@
         scale: 1.01;
 
     }
-    /* Main Style End */
-
-    /* English Styles Start */
-
-    /* English Styles End */
-
-    /* Ukrainian Styles Start */
-
-    /* Ukrainian Styles End */
+    
+    /* Icons Style End */
 
 }
 
-/* Tablet */
-@media only screen and (max-width: 960px) { 
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
+@media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
-    /* Main Style Start */
+     /* Main Styles Start */
 
-    /* Main Style End */
+    .community{
+        width: 100%;
+    }
+    
+    /* Main Styles End */
 
     /* Logo Styles Start */
 
-    /* Logo Styles End */
-
-    /* Lins Styles Start */
-
-    /* Links Styles End */
-}
-
-/* Mobile */
-@media only screen and (max-width: 540px) { 
-
-    /* Main Style Start */
-
-    /* Main Style End */
+    .logo{
+        width: 32px;
+        margin-bottom: 20px;
+    }
 
     /* Logo Styles Start */
 
-    /* Logo Styles End */
+    /* Text Styles Start */
+    .text, .title{
+        font-family: 'Mintserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--text-color-secondary);
+        margin-bottom: 20px;
+    }
 
-    /* Lins Styles Start */
+    .title{
+        margin-bottom: 15px;
+    }
 
-    /* Links Styles End */ 
+    /* Text Styles End */
 
+    /* Icons Style Start */
+
+    .icons{
+        width: 158px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icon{
+        transition: 0.2s;
+    }
+    .icon:hover{
+        cursor: pointer;
+        scale: 1.01;
+
+    }
+    
+    /* Icons Style End */
 }
+
 </style>

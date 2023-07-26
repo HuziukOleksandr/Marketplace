@@ -20,7 +20,7 @@ import Main from './views/Main.vue'
     min-height: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
     background-color: var(--background-color);
 }
 

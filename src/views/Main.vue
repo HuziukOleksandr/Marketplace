@@ -28,11 +28,6 @@ import Footer from '../components/Footer/Footer.vue'
     export default {
         components: {
             Header, Hero, Trending, Artists, Category, Discover, Highlight, Works, Subscribe, Footer
-        },
-        data(){
-            return {
-                languageVisible: false
-            }
         }
     }
 </script>
@@ -40,20 +35,16 @@ import Footer from '../components/Footer/Footer.vue'
 <style scoped>
 
 /* Desktop */
-@media only screen and (max-width: 1920px)  {
-    .main{
-        max-width: 1440px;
-        width: 100%;
-    }
-    
+@media only screen and (min-width: 1280px)  {
+   
 }
 
 /* Tablet */
-@media only screen and (max-width: 960px) {   
+@media only screen and (min-width: 960px) {   
 }
 
 /* Mobile */
-@media only screen and (max-width: 540px) {   
+@media only screen and (min-width: 540px) {   
 }
 
 </style>

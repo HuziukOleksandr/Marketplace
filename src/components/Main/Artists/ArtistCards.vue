@@ -5,7 +5,10 @@
             <div class="number">
                 <h3 class="number-text">{{ card.id }}</h3>
             </div>
-            <img :src="getUserImageUrl(card.name,'Large')" :alt="card.name">
+            <img 
+                :src="getUserImageUrl(card.name,'Large')" 
+                :alt="card.name"
+                class="user-picture">
         </div>
         <!-- Preview End -->
         
@@ -35,7 +38,7 @@
         },
         methods: {
             getUserImageUrl(name, size) {
-                return new URL(`../../../assets/images/Avatars/${size}/${name}.svg`, import.meta.url).href;
+                return new URL(`../../../assets/images/Avatars/${name}.svg`, import.meta.url).href;
             } 
         }
     }
@@ -139,17 +142,97 @@
 }
 
 /* Tablet */
-@media only screen and (max-width: 960px) {  
+@media only screen and (min-width: 768px) and (max-width: 1279px) {  
     
     /* Main Style Start */
+
+    .card{
+        max-width: 330px;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        gap: 20px;
+        background-color: var(--background-secondary) ;
+        border-radius: 20px;
+        padding: 20px;
+        transition: 0.2s;
+    }
+
+    .card:hover{
+        scale: 1.05;
+        cursor: pointer;
+    }
 
     /* Main Style End */
 
     /* Preview Styles Start*/
 
+    .preview{
+        display: flex;
+        gap: 10px;
+        position: relative;
+    }
+
+    .number{
+        position: absolute;
+        right: 40px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        color: var(--text-color-secondary);
+        background-color: var(--background-color);
+    }
+
+    .number-text{
+        font-family: "SpaceMono", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+    }
+
     /* Preview Styles End*/
     
     /* Title Styles Start */
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        width: 210px;
+        gap: 5px;
+    }
+    
+    .name-text{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        color: var(--text-color-white);
+    }
+
+    .sale{
+        display: flex;
+        gap: 10px;
+    }
+
+    .sale-text{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--text-color-secondary);
+    }
+
+    .sale-number{
+        font-family: "SpaceMono", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--text-color-white);
+    }
 
     /* Title Styles End */
 

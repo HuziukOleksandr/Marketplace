@@ -2,17 +2,13 @@
     <div class="footer">
         <!-- Content Start -->
         <div class="content">
-            <!-- Community Start -->
-            <Community/>
-            <!-- Community Start -->
-
-            <!-- Explore Start -->
-            <Explore />
-            <!-- Explore End -->
             
-            <!-- Digest Start -->
+            <Community/>
+
+            <Explore />
+        
             <Digest />
-            <!-- Digest End -->
+            
         </div>
         <!-- Content End -->
 
@@ -58,70 +54,35 @@ import Community from './Community.vue'
 
 <style scoped>
 
-/* Desktop */
+/* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
-
-    /* Main Style Start */
-    
+    /* Main Styles Start */
     .footer{
-        max-width: 1440px;
-        width: 100%;
-        height: 355px;
+        min-height: 355px;
         background-color: var(--background-secondary);
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 50px;
-        padding: 40px 0;
+        padding: 40px 100px;
     }
-
-    
-
-    /* Main Style End */
-
-    /* Content Styles Start */
 
     .content{
-        max-width: 1050px;
+        min-width: 690px;
         width: 100%;
-        height: 190px;
+        min-height: 190px;
         display: flex;
         justify-content: space-between;
-
     }
 
-    .community{
-        max-width: 328px;
-        width: 100%;
+    /* Main Styles End */
 
-    }
-
-    .community-header{
-        display: flex;
-        gap: 10px;
-        align-items: center;
-    }
-
-    /* English Styles Start */
-
-   
-
-    /* English Styles End */
-
-    /* Ukrainian Styles Start */
-
-    
-
-    /* Ukrainian Styles End */
-
-    /* Content Styles End */
-
-    /* Botton Styles Start */
+    /* Bottom Styles Start */
 
     .bottom{
-        max-width: 1050px;
+        min-width: 1050px;
         width: 100%;
-        height: 35px;   
+        min-height: 35px;   
         border-top: 1px solid var(--text-color-secondary);
         display: flex;
         align-items: end;
@@ -134,40 +95,58 @@ import Community from './Community.vue'
         line-height: 13px;
         color: #CCCCCC;
     }
-    /* Botton Styles End */
+
+    /* Bottom Styles End */
 
 }
 
-/* Tablet */
-@media only screen and (max-width: 960px) { 
+/* Стилі для моніторів і планшетів(більші планшетів та комп'ютерів) */
+@media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
-    /* Main Style Start */
+     /* Main Styles Start */
+     .footer{
+        min-height: 700px;
+        background-color: var(--background-secondary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding: 40px 0;
+    }
 
-    /* Main Style End */
+    .content{
+        max-width: 690px;
+        width: 100%;
+        min-height: 190px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
 
-    /* Logo Styles Start */
+    /* Main Styles End */
+    
+    /* Bottom Styles Start */
 
-    /* Logo Styles End */
+    .bottom{
+        max-width: 690px;
+        width: 100%;
+        min-height: 35px;   
+        border-top: 1px solid var(--text-color-secondary);
+        display: flex;
+        align-items: end;
+    }
 
-    /* Lins Styles Start */
+    .conporations{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 13px;
+        color: #CCCCCC;
+    }
 
-    /* Links Styles End */
+    /* Bottom Styles End */
 }
 
-/* Mobile */
-@media only screen and (max-width: 540px) { 
-
-    /* Main Style Start */
-
-    /* Main Style End */
-
-    /* Logo Styles Start */
-
-    /* Logo Styles End */
-
-    /* Lins Styles Start */
-
-    /* Links Styles End */ 
-
-}
 </style>

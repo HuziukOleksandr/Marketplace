@@ -9,7 +9,8 @@
 
         <!-- Content Start -->
         <div class="content">
-            <Card :cards="cards"/>
+            <Card v-if="shouldDisplayFullArray" :cards="cards"/>
+            <Card v-else :cards="cards.slice(0,2)"/>
         </div>
         <!-- Content End -->
     </div>
@@ -42,19 +43,37 @@ import Card from './TrendingCards.vue'
                         { id: 1, name: 'DiscoMachines-2' }
                     ],
                     lenght: '1025+', preview: 'Disco Machines', namePicture: 'BeKind2Robots', userName: 'BeKind2Robots' }
-                ]   
+                ],
+                shouldDisplayFullArray: true
             }
+        },
+        methods: {
+            handleResize() {
+                this.shouldDisplayFullArray = window.innerWidth >= 1280;
+            }
+        },
+        mounted() {
+
+            const storedWidth = localStorage.getItem('screenWidth');
+            if (storedWidth && parseInt(storedWidth) === window.innerWidth) {
+                this.shouldDisplayFullArray = localStorage.getItem('shouldDisplayFullArray') === 'true';
+            } else {
+                this.shouldDisplayFullArray = window.innerWidth >= 1280;
+                localStorage.setItem('screenWidth', window.innerWidth);
+                localStorage.setItem('shouldDisplayFullArray', this.shouldDisplayFullArray);
+            }
+            window.addEventListener('resize', this.handleResize);
+        },
+        beforeDestroy() {
+            window.removeEventListener('resize', this.handleResize);
         }
     }
 </script>
 
 <style scoped>
 
-/* Desktop */
+/* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
-
-    /* Main Style Start */
-
     .trending{
         min-height: 725px;
         margin: 0 auto;
@@ -64,10 +83,6 @@ import Card from './TrendingCards.vue'
         gap: 60px;
         padding: 80px 0;
     }
-
-    /* Main Style End */
-
-    /* Header Styles Start */
 
     .header{
         max-width: 1050px;
@@ -93,10 +108,6 @@ import Card from './TrendingCards.vue'
         line-height: 35px;
     }
 
-    /* Header Styles End */
-
-    /* Content Styles Start */
-
     .content{
         max-width: 1050px;
         width: 100%;
@@ -106,40 +117,54 @@ import Card from './TrendingCards.vue'
         flex-wrap: wrap;
     }
 
-    /* Content Styles End */
 }
 
-/* Tablet */
-@media only screen and (max-width: 960px) {   
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
+@media only screen and (min-width: 768px) and (max-width: 1279px) {   
 
-    /* Main Style Start */
+    .trending{
+        min-height: 716px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 0;
+    }
 
-    /* Main Style End */
+    .header{
+        max-width: 690px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;  
+    }
 
-    /* Header Styles Start */
+    .title{
+        color: var(--text-color-white);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 39px;
+    }
 
-    /* Header Styles End */
-    
-    /* Content Styles Start */
+    .sub-title{
+        color: var(--text-color-white);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
 
-    /* Content Styles End */
+    .content{
+        max-width: 690px;
+        width: 100%;
+        min-height: 525px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 
 }
 
-/* Mobile */
-@media only screen and (max-width: 540px) {  
-    
-    /* Main Style Start */
-
-    /* Main Style End */
-
-    /* Header Styles Start */
-
-    /* Header Styles End */
-    
-    /* Content Styles Start */
-
-    /* Content Styles End */
-
-}
 </style>

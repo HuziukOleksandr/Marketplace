@@ -63,24 +63,18 @@ import Navigation from '../Navigation/Navigation.vue'
 
 <style scoped>
 
-/* Desktop */
+/* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
-
-    /* Main Style Start */
 
     .navigation {
         display: flex;
     }
-
-    /* Main Style End */
 
     .link-item{
         display: flex;
         align-items: center;
         padding:0 20px;
     }
-
-    /* Links Styles Start */
 
     .nav-links{
         height: 60px;
@@ -107,45 +101,45 @@ import Navigation from '../Navigation/Navigation.vue'
         scale: 1.05;
     }
 
-    /* Links Styles End */
-   
 }
 
-/* Tablet */
-@media only screen and (max-width: 960px) { 
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
+@media only screen and (min-width: 1024px) { 
     
-    /* Main Style Start */
-    
-    /* Main Style End */
-    
-    /* Logo Styles Start */
+    .navigation {
+        display: flex;
+    }
 
-    /* Logo Styles End */
-    
-    /* Lins Styles Start */
-   
+    .link-item{
+        display: flex;
+        align-items: center;
+        padding:0 20px;
+    }
 
-    
+    .nav-links{
+        height: 60px;
+        display: flex;
+        gap: 10px;
+        position: relative;
+    }
 
-   
-    /* Links Styles End */
-}
+    .button{
+        height: 60px;
+        padding: 0 30px;
+        background-color: var(--button-background-color);
+        border: none;
+        color: var(--text-color-white);
+    }
 
-/* Mobile */
-@media only screen and (max-width: 540px) { 
+    .loc-icon{
+        width: 35px;
+        transition: 0.2s;
+    }  
 
-    /* Main Style Start */
-
-    /* Main Style End */
-    
-    /* Logo Styles Start */
-
-    /* Logo Styles End */
-    
-    /* Lins Styles Start */
-
-    /* Links Styles End */ 
-    
+    .loc-icon:hover{
+        cursor: pointer;
+        scale: 1.05;
+    }
 }
 
 </style>

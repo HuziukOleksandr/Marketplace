@@ -13,8 +13,6 @@
 .input{
     background-color: var(--text-color-white);
     border-radius: 20px;
-    padding: 16px 20px 16px 20px;
-    
 }
 .input:focus{
     outline: none;

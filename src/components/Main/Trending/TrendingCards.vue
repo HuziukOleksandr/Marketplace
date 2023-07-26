@@ -28,7 +28,7 @@
             <h2 class="title">{{ card.preview }}</h2>
             <div class="user">
                 <img 
-                    :src="getUserImageUrl(card.namePicture, 'Small')" 
+                    :src="getUserImageUrl(card.namePicture)" 
                     :alt="card.namePicture"
                     class="user-picture">
                 <h2 class="user-name">{{ card.userName }}</h2>
@@ -50,8 +50,8 @@
             getImageUrl(url) {  
                 return new URL(`../../../assets/images/Cards/${url}.svg`, import.meta.url).href;
             },
-            getUserImageUrl(name, size) {
-                return new URL(`../../../assets/images/Avatars/${size}/${name}.svg`, import.meta.url).href;
+            getUserImageUrl(name) {
+                return new URL(`../../../assets/images/Avatars/${name}.svg`, import.meta.url).href;
             } 
         },
     }
@@ -59,127 +59,80 @@
 
 <style scoped>
 
-/* Desktop */
-@media only screen and (min-width: 1280px) {
-
-    /* Main Styles Start */
-
-    .card{
-        width: 330px;
-        height: 525px;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .main-picture{
-        transition: .2s;
-    }
-
-    .main-picture:hover{
-        cursor: pointer;
-        scale:  1.01;
-    }
-
-    /* Main Styles End */
-
-    /* Secondary Styles Start */
-
-    .secondary{
-        display: flex;
-        gap: 15px;
-    }
-
-    .more{
-        width: 100px;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--button-background-color);
-        color: var(--text-color-white);
-        border: none;
-    }
-
-    .secondary-picture{
-        transition: 0.4s;
-    }   
-    .secondary-picture:hover{
-        cursor: pointer;
-        scale: 1.01;
-    }
-    /* Secondary Styles End */
-
-    /* Preview Styles Start */
-    
-    .preview{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        
-    }
-
-    .title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 30px;
-    }
-
-    .user{
-        display: flex;
-        gap: 10px;
-    }
-
-    .user-name{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-    }
-
-    .user-picture:hover, .user-name:hover{
-        cursor: pointer;
-    }
-
-    /* Preview Styles End */
-
+.card{
+    width: 330px;
+    height: 525px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* Tablet */
-@media only screen and (max-width: 960px) {   
-
-    /* Main Styles Start */
-
-    /* Main Styles End */
-
-    /* Secondary Styles Start */
-
-    /* Secondary Styles End */
-    
-    /* Preview Styles Start */
-    
-    /* Preview Styles End */
-
+.main-picture{
+    transition: .2s;
 }
 
-/* Mobile */
-@media only screen and (max-width: 540px) { 
+.main-picture:hover{
+    cursor: pointer;
+    scale:  1.01;
+}
 
-    /* Main Styles Start */
+.secondary{
+    display: flex;
+    gap: 15px;
+}
 
-    /* Main Styles End */
+.more{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-background-color);
+    color: var(--text-color-white);
+    border: none;
+}
 
-    /* Secondary Styles Start */
+.secondary-picture{
+    transition: 0.4s;
+}   
+.secondary-picture:hover{
+    cursor: pointer;
+    scale: 1.01;
+}
 
-    /* Secondary Styles End */
+.preview{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     
-    /* Preview Styles Start */
-    
-    /* Preview Styles End */
+}
 
+.title{
+    color: var(--text-color-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.user{
+    display: flex;
+    gap: 10px;
+}
+
+.user-name{
+    color: var(--text-color-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.user-picture{
+    width: 24px;
+}
+.user-picture:hover, .user-name:hover{
+    cursor: pointer;
 }
 
 </style>

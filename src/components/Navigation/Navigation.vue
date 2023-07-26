@@ -21,10 +21,8 @@
 
 <style scoped>
 
-/* Desktop */
+/* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
-
-    /* Links Styles Start */
 
     .link{
         
@@ -38,21 +36,22 @@
         transform: scale(1.01);
     }
 
-    /* Links Styles End */
-
 }
 
-/* Tablet */
-@media only screen and (max-width: 960px) { 
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
+@media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
-    
+    .link{
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        transition: 0.2s;
+    }
+
+    .link:hover{
+        transform: scale(1.01);
+    }
    
-
-}
-
-/* Mobile */
-@media only screen and (max-width: 540px) { 
-
 }
 
 </style>

@@ -18,7 +18,8 @@
 
         <!-- Content Start -->
         <div class="content">
-            <Card :cards="cards"/>
+            <Card v-if="shouldDisplayFullArray" :cards="cards"/>
+            <Card v-else :cards="cards.slice(0,6)"/>
         </div>
         <!-- Content End -->
     </div>
@@ -46,14 +47,15 @@ import { useI18n } from 'vue-i18n'
                     { id: 3, name: 'GravityOne', sale: '34.53 ETH'},
                     { id: 4, name: 'Juanie', sale: '34.53 ETH'},
                     { id: 5, name: 'BlueWhale', sale: '34.53 ETH'},
-                    { id: 6, name: 'Mr Fox', sale: '34.53 ETH'},
+                    { id: 6, name: 'MrFox', sale: '34.53 ETH'},
                     { id: 7, name: 'Shroomie', sale: '34.53 ETH'},
                     { id: 8, name: 'Robotica', sale: '34.53 ETH'},
                     { id: 9, name: 'RustyRobot', sale: '34.53 ETH'},
                     { id: 10, name: 'Animakid', sale: '34.53 ETH'},
                     { id: 11, name: 'Dotgu', sale: '34.53 ETH'},
                     { id: 12, name: 'Ghiblier', sale: '34.53 ETH'}
-                ]
+                ],
+                shouldDisplayFullArray: true
             }
         },
         methods: {
@@ -62,7 +64,26 @@ import { useI18n } from 'vue-i18n'
                     'english-subTitle': this.locale === 'EN',
                     'ukrainian-subTitle': this.locale === 'UA'
                 };
+            },
+            handleResize() {
+                this.shouldDisplayFullArray = window.innerWidth >= 1280;
             }
+        },
+        mounted() {
+
+            const storedWidth = localStorage.getItem('screenWidth');
+            if (storedWidth && parseInt(storedWidth) === window.innerWidth) {
+                this.shouldDisplayFullArray = localStorage.getItem('shouldDisplayFullArray') === 'true';
+            } else {
+                this.shouldDisplayFullArray = window.innerWidth >= 1280;
+                localStorage.setItem('screenWidth', window.innerWidth);
+                localStorage.setItem('shouldDisplayFullArray', this.shouldDisplayFullArray);
+            }
+            window.addEventListener('resize', this.handleResize);
+
+        },
+        beforeDestroy() {
+            window.removeEventListener('resize', this.handleResize);
         }
     }
 </script>
@@ -91,7 +112,6 @@ import { useI18n } from 'vue-i18n'
     .header{
         max-width: 1050px;
         width: 100%;
-        display: flex;
         display: flex;
         justify-content: space-between;
         align-items: end;
@@ -155,37 +175,88 @@ import { useI18n } from 'vue-i18n'
 }
 
 /* Tablet */
-@media only screen and (max-width: 960px) { 
-    
-    /* Main Styles Start */
-
-    /* Main Styles End */
-
-    /* Header Styles Start */
-
-    /* Header Styles End */
-
-    /* Content Styles Start */
-
-    /* Content Styles End */
-    
-}
-
-/* Mobile */
-@media only screen and (max-width: 540px) {   
+@media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
     /* Main Styles Start */
 
-    /* Main Styles End */
+    .artists{
+        min-height: 570px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        padding: 40px 0;
+    }
 
+    /* Main Styles End */
+    
     /* Header Styles Start */
+
+    .header{
+        max-width: 690px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .left-side{
+        max-width: 343px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .title{
+        color: var(--text-color-white);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 39px;
+        text-align: start;
+    }
+    
+    .sub-title{
+        color: var(--text-color-white);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: start;
+    }
+
+    .right{
+        display: flex;
+        justify-content: end;
+        align-items: end;
+    }
+
+    .button{
+        height: 60px;
+        padding: 0 50px;
+        background-color: var(--background-color);
+        border: 2px solid var(--button-background-color);
+        color: var(--text-color-white);
+    }
 
     /* Header Styles End */
 
-    /* Content Styles Start */
+     /* Content Styles Start */
+
+    .content{
+        max-width: 690px;
+        width: 100%;
+        min-height: 360px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
 
     /* Content Styles End */
-
 }
+
+
 
 </style>

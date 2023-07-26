@@ -89,8 +89,7 @@ import moment from 'moment';
 
 <style scoped>
 
-/* Desktop */
-@media only screen and (min-width: 1280px) {
+
 
     /* Main Styles Start */
 
@@ -161,18 +160,5 @@ import moment from 'moment';
     }
 
     /* Time Styles End */
-}
-
-/* Tablet */
-@media only screen and (max-width: 960px) { 
-
-
-}
-
-/* Mobile */
-@media only screen and (max-width: 540px) { 
-
-
-}
-
+    
 </style>

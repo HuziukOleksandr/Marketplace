@@ -2,7 +2,9 @@
     <div class="subscribe">
         <!-- Content Start -->
         <div class="content">
-            <img src="../../../assets/images/Subscribe/Photo.svg" alt="Subscribe/Photo">
+            <div class="picture">
+
+            </div>
             <!-- Preview Start -->
             <div class="preview">
                 <h2 :class="getTitleClasses()">{{ $t("Subscribe.title") }}</h2>
@@ -65,7 +67,6 @@ import {useI18n} from 'vue-i18n'
     .subscribe{
         padding: 80px 0;
         margin: 0 auto;
-        
     }
 
     /* Main Styles End */
@@ -85,6 +86,12 @@ import {useI18n} from 'vue-i18n'
         align-items: center;
     }
 
+    .picture{
+        width: 425px;
+        height: 310px;
+        background-image: url("../../../assets/images/Subscribe/Photo.svg");
+    }
+
     /* Content Styles End */
 
     /* Preview Styles Start */
@@ -93,7 +100,7 @@ import {useI18n} from 'vue-i18n'
         display: flex;
         flex-direction: column;
         max-width: 425px;
-        height: 272px;
+        min-height: 272px;
         width: 100%;
     }
 
@@ -114,13 +121,6 @@ import {useI18n} from 'vue-i18n'
         line-height: 35px;
         color: var(--text-color-white);
         margin-bottom: 40px;
-    }
-
-    .english-input{
-        border: none;
-        max-width: 425px;
-        width: 100%;
-        height: 60px;
     }
 
     /* English Styles End */
@@ -145,12 +145,6 @@ import {useI18n} from 'vue-i18n'
         margin-bottom: 40px;
     }
 
-    .ukrainian-input{
-        border: none;
-        max-width: 425px;
-        width: 100%;
-        height: 60px;
-    }
     /* Ukrainian Style End */
     
     /* Preview Styles End */
@@ -194,6 +188,7 @@ import {useI18n} from 'vue-i18n'
     }
 
     /* Ukrainian Style End */
+
     .button{
         position: absolute;
         right: 0;
@@ -209,14 +204,147 @@ import {useI18n} from 'vue-i18n'
 }
 
 /* Tablet */
-@media only screen and (max-width: 960px) { 
+@media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
+     /* Main Styles Start */
 
-}
+    .subscribe{
+        padding: 40px 0 80px 0  ;
+        margin: 0 auto;
+    }
 
-/* Mobile */
-@media only screen and (max-width: 540px) { 
+    /* Main Styles End */
 
+    /* Content Styles Start */
+
+    .content{
+        margin: 0 auto;
+        padding: 40px 30px;
+        max-width: 690px;
+        width: 100%;
+        height: 360px;
+        border-radius: 20px;
+        background-color: var(--background-secondary);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .picture{
+        width: 300px;
+        height: 280px;
+        background-image: url("../../../assets/images/Subscribe/PhotoMedium.svg");
+    }
+
+    /* Content Styles End */
+
+    /* Preview Styles Start */
+
+    .preview{
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        min-height: 280px;
+        width: 100%;
+    }
+
+    /* English Styles Start */
+
+    .english-title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 39px;
+        color: var(--text-color-white);
+        margin-bottom: 10px;
+    }
+    .english-text{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--text-color-white);
+        margin-bottom: 40px;
+    }
+
+    /* English Styles End */
+
+    /* Ukrainian Style Start */
+
+    .ukrainian-title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 40px;
+        color: var(--text-color-white);
+        margin-bottom: 10px;
+    }
+
+    .ukrainian-text{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: var(--text-color-white);
+        margin-bottom: 40px;
+    }
+
+    /* Ukrainian Style End */
+
+    /* Preview Styles End */
+
+    /* Bottom Style Start */
+
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        gap: 15px; 
+    }
+
+    /* English Styles Start */
+
+    .english-input{
+        border: none;
+        max-width: 425px;
+        width: 100%;
+        height: 46px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--background-color) ;
+        padding: 12px 20px;
+    }
+
+    /* English Styles End */
+
+    /* Ukrainian Style Start */
+
+    .ukrainian-input{
+        border: none;
+        max-width: 425px;
+        width: 100%;
+        height: 46px;
+        color: aqua;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--background-color) ;
+    }
+
+    /* Ukrainian Style End */
+
+    .button{
+        background-color: var(--button-background-color);
+        color: var(--text-color-white);
+        border: none;
+        max-width: 300px;
+        width: 100%;
+        height: 46px;
+        padding: 0px 50px;
+    }
+    /* Bottom Style End */
 }
 
 </style>

@@ -40,7 +40,8 @@ import Timer from './HighlightTimer.vue'
     .highlight{
         max-width: 1440px;
         width: 100%;
-        height: 640px; 
+        height: 640px;
+        margin: 0 auto;
         background-image:  url("../../../assets/images/Highlight/Highlight.svg");
     }
     .background{
@@ -56,7 +57,6 @@ import Timer from './HighlightTimer.vue'
 
     /* Main Style End */
 
-
     /* Content Styles Start */
 
     .content{
@@ -71,19 +71,40 @@ import Timer from './HighlightTimer.vue'
 }
 
 /* Tablet */
-@media only screen and (max-width: 960px) { 
+@media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
     /* Main Style Start */
+    
+    .highlight{
+        max-width: 834px;
+        width: 100%;
+        height: 630px;
+        margin: 0 auto;
+        background: url("../../../assets/images/Highlight/HighlightMedium.svg");
+        
+    }
+    .background{
+        width: 100%;
+        height: 630px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        padding-bottom: 60px;
+        background:  linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%);
+    }
 
     /* Main Style End */
 
-    /* Logo Styles Start */
+    /* Content Styles Start */
 
-    /* Logo Styles End */
+    .content{
+        max-width: 670px;
+        width: 100%;
+        height: 210px;
+        display: flex;
+    }
 
-    /* Lins Styles Start */
-
-    /* Links Styles End */
+    /* Content Styles End */
 
 }
 

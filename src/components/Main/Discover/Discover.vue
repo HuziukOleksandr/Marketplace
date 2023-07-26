@@ -18,7 +18,8 @@
 
         <!-- Content Start -->
         <div class="content">
-            <Card :cards="cards"/>
+            <Card v-if="shouldDisplayFullArray" :cards="cards"/>
+            <Card v-else :cards="cards.slice(0,2)"/>
         </div>
         <!-- Content End -->
     </div>
@@ -33,11 +34,33 @@ import Card from './DiscoverCard.vue'
         data() {
             return {
                 cards: [
-                    {id: "1", image: "Discover_1", name: "NFT Name", userIcon: "Keepitreal", userName: "NFT Artist", price: "1.63 ETH", bid: "0.33 wETH"},
-                    {id: "2", image: "Discover_2", name: "NFT Name", userIcon: "Keepitreal", userName: "NFT Artist", price: "1.63 ETH", bid: "0.33 wETH"},
-                    {id: "3", image: "Discover_3", name: "NFT Name", userIcon: "Keepitreal", userName: "NFT Artist", price: "1.63 ETH", bid: "0.33 wETH"}
-                ]
+                    {id: "1", image: "Discover_1", name: "NFT Name", userIcon: "MoonDancer", userName: "MoonDancer", price: "1.63 ETH", bid: "0.33 wETH"},
+                    {id: "2", image: "Discover_2", name: "NFT Name", userIcon: "NebulaKid", userName: "NebulaKid", price: "1.63 ETH", bid: "0.33 wETH"},
+                    {id: "3", image: "Discover_3", name: "NFT Name", userIcon: "Dotgu", userName: "Dotgu", price: "1.63 ETH", bid: "0.33 wETH"}
+                ],
+                shouldDisplayFullArray: true
             }
+        },
+        methods: {
+            handleResize() {
+                this.shouldDisplayFullArray = window.innerWidth >= 1280;
+            }
+        },
+        mounted() {
+
+            const storedWidth = localStorage.getItem('screenWidth');
+            if (storedWidth && parseInt(storedWidth) === window.innerWidth) {
+                this.shouldDisplayFullArray = localStorage.getItem('shouldDisplayFullArray') === 'true';
+            } else {
+                this.shouldDisplayFullArray = window.innerWidth >= 1280;
+                localStorage.setItem('screenWidth', window.innerWidth);
+                localStorage.setItem('shouldDisplayFullArray', this.shouldDisplayFullArray);
+            }
+            window.addEventListener('resize', this.handleResize);
+
+        },
+        beforeDestroy() {
+            window.removeEventListener('resize', this.handleResize);
         }
     }
 </script>
@@ -66,7 +89,6 @@ import Card from './DiscoverCard.vue'
     .header{
         max-width: 1050px;
         width: 100%;
-        display: flex;
         display: flex;
         justify-content: space-between;
         align-items: end;
@@ -129,17 +151,84 @@ import Card from './DiscoverCard.vue'
 
 }
 /* Tablet */
-@media only screen and (max-width: 960px) { 
+@media only screen and (min-width: 768px) and (max-width: 1279px) { 
     
     /* Main Styles Start */
+
+    .discover{
+        min-height: 240px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 0;
+    }
 
     /* Main Styles End */
 
     /* Header Styles Start */
 
+    .header{
+        max-width: 690px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .left-side{
+        max-width: 400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .title{
+        color: var(--text-color-white);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 39px;
+        text-align: start;
+    }
+    
+    .sub-title{
+        color: var(--text-color-white);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: start;
+    }
+
+    .right{
+        display: flex;
+        justify-content: end;
+        align-items: end;
+    }
+
+    .button{
+        height: 60px;
+        padding: 0 50px;
+        background-color: var(--background-color);
+        border: 2px solid var(--button-background-color);
+        color: var(--text-color-white);
+    }
+
     /* Header Styles End */
 
     /* Content Styles Start */
+
+    .content{
+        max-width: 690px;
+        width: 100%;
+        height: 470px;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
 
     /* Content Styles End */
     

@@ -18,20 +18,14 @@
 
 <style scoped>
 
-/* Desktop */
+/* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
-
-    /* Main Styles Start */
 
     .item{
         max-width: 150px;
         width: 100%;
         color: var(--text-color-white);
     }
-
-    /* Main Styles End */
-    
-    /* Content Styles Start */
 
     .number{
         font-family: "SpaceMono", sans-serif;
@@ -46,34 +40,32 @@
         font-size: 24px;
         line-height: 40px;
     }
-
-    /* Content Styles End */
    
 }
 
-/* Tablet */
-@media only screen and (max-width: 960px) {  
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
+@media only screen and (min-width: 768px) and (max-width: 1279px) {  
 
-    /* Main Styles Start */
+    .item{
+        max-width: 150px;
+        width: 100%;
+        color: var(--text-color-white);
+    }
 
-    /* Main Styles End */
-    
-    /* Content Styles Start */
+    .number{
+        font-family: "SpaceMono", sans-serif;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 25px;
+    }
 
-    /* Content Styles End */ 
+    .name{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
 
 }
 
-/* Mobile */
-@media only screen and (max-width: 540px) {   
-
-    /* Main Styles Start */
-
-    /* Main Styles End */
-    
-    /* Content Styles Start */
-
-    /* Content Styles End */ 
-
-}
 </style>
