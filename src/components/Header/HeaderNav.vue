@@ -188,7 +188,7 @@ import Navigation from '../Navigation/Navigation.vue'
     }
 
     .nav-links{
-        max-width: 690px;
+        
         width: 100%;
         min-height: 60px;
         display: flex;

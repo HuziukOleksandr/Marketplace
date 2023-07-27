@@ -124,14 +124,15 @@ import { useI18n } from 'vue-i18n';
     .localization{
         position: absolute;
         width: 49px;
-        right: 46.5%;
-        top: 320px;
+        left: 50%;
+        top: 360px;
         display: flex; 
         flex-direction: column;
         gap: 10px;
         padding: 7px;
         background-color: var(--background-secondary);
         border-radius: 5px;
+        transform: translate(-50%, -50%);
         
     }
 }
