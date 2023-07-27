@@ -3,17 +3,19 @@
 
         <Navigation class="navigation" :link-item-styles="customLinkItemStyles"/>
 
-        <my-button class="button">
-            <img src="../../assets/images/Buttons/User.svg" alt="user">
-            {{ $t("Header.button") }}
-        </my-button>
+        <div class="other">
+            <my-button class="button">
+                <img src="../../assets/images/Buttons/User.svg" alt="user">
+                {{ $t("Header.button") }}
+            </my-button>
 
-        <div class="link-item ">
-            <img 
-                :src="getImageUrl(language)" 
-                alt="Flag uk" 
-                class="loc-icon"
-                @click="dropDawnShow">
+            <div class="link-item ">
+                <img 
+                    :src="getImageUrl(language)" 
+                    alt="Flag uk" 
+                    class="loc-icon"
+                    @click="dropDawnShow">
+            </div>
         </div>
         
         <my-localization 
@@ -40,7 +42,8 @@ import Navigation from '../Navigation/Navigation.vue'
                     display: "flex",
                     padding: "0 20px",
                     alignItems: "center",
-                    color: "var(--text-color-white)"
+                    color: "var(--text-color-white)",
+                    height: "60px"
                 },
             }
         },
@@ -80,7 +83,6 @@ import Navigation from '../Navigation/Navigation.vue'
         height: 60px;
         display: flex;
         gap: 10px;
-        position: relative;
     }
 
     .button{
@@ -104,8 +106,62 @@ import Navigation from '../Navigation/Navigation.vue'
 }
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 1024px) { 
+@media only screen and (min-width: 768px) and (max-width: 1279px) { 
     
+    .other{
+        height: 60px;
+        display: flex;
+        gap: 30px;
+        margin: 0 auto;
+    }
+
+    .navigation {
+        display: flex;
+        
+        margin: 0 auto;
+    }
+
+    .link-item{
+        display: flex;
+        align-items: center;
+        padding:0 20px;
+    }
+
+    .nav-links{
+        max-width: 690px;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .button{
+        
+        height: 60px;
+        padding: 0 30px;
+        background-color: var(--button-background-color);
+        border: none;
+        color: var(--text-color-white);
+        padding: 20px 50px;
+    }
+
+    .loc-icon{
+        width: 35px;
+        transition: 0.2s;
+    }  
+
+    .loc-icon:hover{
+        cursor: pointer;
+        scale: 1.05;
+    }
+}
+
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) {
     .navigation {
         display: flex;
     }
@@ -141,6 +197,5 @@ import Navigation from '../Navigation/Navigation.vue'
         scale: 1.05;
     }
 }
-
 </style>
 

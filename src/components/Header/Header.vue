@@ -1,18 +1,14 @@
 <template>
     <div class="header">
-        <!-- Logo Start -->
 
         <my-logo/>
 
-        <!-- Logo End -->
-
         <img src="../../assets/images/svg/BurgerMenu.svg" alt="BurgerMenu" class="burger-menu">
-        <!-- Navigation Start -->
-       
-         <HeaderNav class="navigation"/>
+           
+        <HeaderNav class="navigation"/>
 
-        <!-- Navigation Start -->
         </div>
+        <HeaderNav class="burger-nav"/>
 </template>
 
 <script>
@@ -57,6 +53,8 @@ import HeaderNav from './HeaderNav.vue'
     .navigation{
         display: none;
     }
+
+    
 }
 
 /* Стилі для мобільних пристроїв */
@@ -72,6 +70,8 @@ import HeaderNav from './HeaderNav.vue'
     .navigation{
         display: none;
     }
+
+    
 }
     
 </style>
