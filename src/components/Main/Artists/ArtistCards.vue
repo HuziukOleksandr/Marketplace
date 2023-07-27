@@ -240,6 +240,7 @@
 
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
+
     /* Main Style Start */
 
     .card{
@@ -264,6 +265,7 @@
     /* Preview Styles Start*/
 
     .preview{
+        width: 60px;
         display: flex;
         gap: 10px;
         position: relative;
@@ -271,7 +273,8 @@
 
     .number{
         position: absolute;
-        right: 40px;
+        left: -10px;
+        top: -10px;
         width: 30px;
         height: 30px;
         display: flex;
@@ -297,7 +300,7 @@
     .title{
         display: flex;
         flex-direction: column;
-        width: 210px;
+        width: 195px;
         gap: 5px;
     }
     
