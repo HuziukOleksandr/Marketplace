@@ -124,7 +124,7 @@ import { useI18n } from 'vue-i18n';
     .localization{
         position: absolute;
         width: 49px;
-        right: 315px;
+        right: 46.5%;
         top: 320px;
         display: flex; 
         flex-direction: column;
@@ -132,6 +132,7 @@ import { useI18n } from 'vue-i18n';
         padding: 7px;
         background-color: var(--background-secondary);
         border-radius: 5px;
+        
     }
 }
 </style>
