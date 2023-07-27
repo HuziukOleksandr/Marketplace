@@ -3,12 +3,15 @@
 
         <my-logo/>
 
-        <img src="../../assets/images/svg/BurgerMenu.svg" alt="BurgerMenu" class="burger-menu">
+        <img 
+            src="../../assets/images/svg/BurgerMenu.svg" 
+            alt="BurgerMenu" 
+            class="burger-menu"
+            @click="dropDawnShow">
            
         <HeaderNav class="navigation"/>
-
         </div>
-        <HeaderNav class="burger-nav"/>
+        <HeaderNav v-if="dialogVisible" class="burger-nav"/>
 </template>
 
 <script>
@@ -17,7 +20,28 @@ import HeaderNav from './HeaderNav.vue'
     export default {
         components: {
             HeaderNav,
-        }
+        },
+        data() {
+            return {
+                language: "EN",
+                dialogVisible: false,
+               
+            }
+        },
+        methods: {
+            dropDawnShow(){
+                this.dialogVisible = !this.dialogVisible;
+            },
+            getImageUrl(name) {  
+                return new URL(`../../assets/images/svg/${name}.svg`, import.meta.url).href;
+            },
+            changeLanguage(lang){
+                this.language = lang;
+            },
+            closeWindow(dialogVisible){
+                this.dialogVisible = dialogVisible;
+            }
+        },
     }
 </script>
 
@@ -44,7 +68,7 @@ import HeaderNav from './HeaderNav.vue'
     
     .header{
         padding: 0 50px;
-        height: 54px;
+        min-height: 54px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -53,7 +77,6 @@ import HeaderNav from './HeaderNav.vue'
     .navigation{
         display: none;
     }
-
     
 }
 

@@ -1,30 +1,34 @@
 <template>
+    
     <div class="nav-links" >
 
         <Navigation class="navigation" :link-item-styles="customLinkItemStyles"/>
 
+    
         <div class="other">
             <my-button class="button">
-                <img src="../../assets/images/Buttons/User.svg" alt="user">
-                {{ $t("Header.button") }}
-            </my-button>
+            <img src="../../assets/images/Buttons/User.svg" alt="user">
+            {{ $t("Header.button") }}
+        </my-button>
 
-            <div class="link-item ">
-                <img 
-                    :src="getImageUrl(language)" 
-                    alt="Flag uk" 
-                    class="loc-icon"
-                    @click="dropDawnShow">
-            </div>
+        <div class="link-item ">
+            <img 
+                :src="getImageUrl(language)" 
+                alt="Flag uk" 
+                class="loc-icon"
+                @click="dropDawnShow">
         </div>
+        
         
         <my-localization 
             :dialogVisible="dialogVisible"
             @changeLanguage="changeLanguage"
             v-model:show="dialogVisible"
             @closeWindow="closeWindow"/>
+        </div>
 
     </div>
+
 </template>
 
 <script>
@@ -109,6 +113,7 @@ import Navigation from '../Navigation/Navigation.vue'
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
     
     .other{
+        
         height: 60px;
         display: flex;
         gap: 30px;
@@ -130,7 +135,7 @@ import Navigation from '../Navigation/Navigation.vue'
     .nav-links{
         max-width: 690px;
         width: 100%;
-        height: 60px;
+        min-height: 60px;
         display: flex;
         gap: 10px;
         flex-direction: column;
@@ -162,8 +167,18 @@ import Navigation from '../Navigation/Navigation.vue'
 
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
-    .navigation {
+    .other{
+        width: 315px;
+        min-height: 150px;
         display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .navigation {
+        margin: 0 auto;
     }
 
     .link-item{
@@ -173,18 +188,26 @@ import Navigation from '../Navigation/Navigation.vue'
     }
 
     .nav-links{
-        height: 60px;
+        max-width: 690px;
+        width: 100%;
+        min-height: 60px;
         display: flex;
         gap: 10px;
+        flex-direction: column;
         position: relative;
+        margin: 0 auto;
     }
 
     .button{
+        width: 315px;
         height: 60px;
         padding: 0 30px;
         background-color: var(--button-background-color);
         border: none;
         color: var(--text-color-white);
+        padding: 20px 50px;
+        margin: 0 auto;
+        justify-content: center;
     }
 
     .loc-icon{

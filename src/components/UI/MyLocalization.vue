@@ -120,5 +120,18 @@ import { useI18n } from 'vue-i18n';
 }
 
 /* Стилі для мобільних пристроїв */
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+    .localization{
+        position: absolute;
+        width: 49px;
+        right: 315px;
+        top: 320px;
+        display: flex; 
+        flex-direction: column;
+        gap: 10px;
+        padding: 7px;
+        background-color: var(--background-secondary);
+        border-radius: 5px;
+    }
+}
 </style>
