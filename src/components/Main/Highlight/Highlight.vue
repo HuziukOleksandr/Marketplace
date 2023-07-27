@@ -32,7 +32,7 @@ import Timer from './HighlightTimer.vue'
 
 <style scoped>
 
-/* Desktop */
+/* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
 
     /* Main Style Start */
@@ -70,7 +70,7 @@ import Timer from './HighlightTimer.vue'
 
 }
 
-/* Tablet */
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
     /* Main Style Start */
@@ -85,7 +85,7 @@ import Timer from './HighlightTimer.vue'
     }
     .background{
         width: 100%;
-        height: 630px;
+        min-height: 630px;
         display: flex;
         justify-content: center;
         align-items: end;
@@ -108,20 +108,43 @@ import Timer from './HighlightTimer.vue'
 
 }
 
-/* Mobile */
-@media only screen and (max-width: 540px) { 
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) { 
 
     /* Main Style Start */
+    
+    .highlight{
+        max-width: 375px;
+        width: 100%;
+        min-height:500px;
+        margin: 0 auto;
+        background: url("../../../assets/images/Highlight/HighlightMedium.svg") center/ cover;
+        
+    }
+    .background{
+        width: 100%;
+        min-height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        padding-bottom: 60px;
+        background:  linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%);
+    }
 
     /* Main Style End */
 
-    /* Logo Styles Start */
+    /* Content Styles Start */
 
-    /* Logo Styles End */
+    .content{
+        max-width: 315px;
+        width: 100%;
+        min-height: 210px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
 
-    /* Lins Styles Start */
-
-    /* Links Styles End */ 
+    /* Content Styles End */
 
 }
 

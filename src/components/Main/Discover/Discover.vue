@@ -18,8 +18,9 @@
 
         <!-- Content Start -->
         <div class="content">
-            <Card v-if="shouldDisplayFullArray" :cards="cards"/>
-            <Card v-else :cards="cards.slice(0,2)"/>
+            <Card v-if="shouldDisplayFullArray" :cards="cards" />
+            <Card v-else-if="shouldDisplayForTablet" :cards="cards.slice(0, 2)" />
+            <Card v-else :cards="cards" />
         </div>
         <!-- Content End -->
     </div>
@@ -38,12 +39,14 @@ import Card from './DiscoverCard.vue'
                     {id: "2", image: "Discover_2", name: "NFT Name", userIcon: "NebulaKid", userName: "NebulaKid", price: "1.63 ETH", bid: "0.33 wETH"},
                     {id: "3", image: "Discover_3", name: "NFT Name", userIcon: "Dotgu", userName: "Dotgu", price: "1.63 ETH", bid: "0.33 wETH"}
                 ],
-                shouldDisplayFullArray: true
+                shouldDisplayFullArray: true,
+                shouldDisplayForTablet: true
             }
         },
         methods: {
             handleResize() {
                 this.shouldDisplayFullArray = window.innerWidth >= 1280;
+                this.shouldDisplayForTablet = window.innerWidth >= 768 && window.innerWidth < 1280;
             }
         },
         mounted() {
@@ -53,6 +56,7 @@ import Card from './DiscoverCard.vue'
                 this.shouldDisplayFullArray = localStorage.getItem('shouldDisplayFullArray') === 'true';
             } else {
                 this.shouldDisplayFullArray = window.innerWidth >= 1280;
+                this.shouldDisplayForTablet = window.innerWidth >= 768 && window.innerWidth < 1280;
                 localStorage.setItem('screenWidth', window.innerWidth);
                 localStorage.setItem('shouldDisplayFullArray', this.shouldDisplayFullArray);
             }
@@ -67,7 +71,7 @@ import Card from './DiscoverCard.vue'
 
 <style scoped>
 
-/* Desktop */
+/* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
 
     /* Main Styles Start */
@@ -150,7 +154,8 @@ import Card from './DiscoverCard.vue'
     /* Content Styles End */
 
 }
-/* Tablet */
+
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
     
     /* Main Styles Start */
@@ -234,21 +239,92 @@ import Card from './DiscoverCard.vue'
     
 }
 
-/* Mobile */
-@media only screen and (max-width: 540px) {   
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) {  
 
     /* Main Styles Start */
+
+    .discover{
+        min-height: 240px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 0;
+    }
 
     /* Main Styles End */
 
     /* Header Styles Start */
 
+    .header{
+        max-width: 315px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+        gap: 10px;
+    }
+
+    .left-side{
+        max-width: 400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .title{
+        color: var(--text-color-white);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 39px;
+        text-align: start;
+    }
+    
+    .sub-title{
+        color: var(--text-color-white);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: start;
+    }
+
+    .right{
+        display: flex;
+        justify-content: end;
+        align-items: end;
+    }
+
+    .button{
+        width: 315px;
+        height: 60px;
+        padding: 0 50px;
+        background-color: var(--background-color);
+        border: 2px solid var(--button-background-color);
+        color: var(--text-color-white);
+        justify-content: center;
+    }
+
     /* Header Styles End */
 
     /* Content Styles Start */
 
-    /* Content Styles End */
+    .content{
+        max-width: 315px;
+        width: 100%;
+        min-height: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+    }
 
+    /* Content Styles End */
 }
 
 </style>

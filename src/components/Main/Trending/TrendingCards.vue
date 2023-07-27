@@ -78,7 +78,7 @@
 
 .secondary{
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
 }
 
 .more{
@@ -134,5 +134,29 @@
 .user-picture:hover, .user-name:hover{
     cursor: pointer;
 }
+
+/* Медіа-запит для мобільних пристроїв з шириною екрану до 767px */
+@media only screen and (max-width: 767px) {
+   
+    .card{
+        width: 315px;
+    }
+    .more{
+        width: 85px;
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--button-background-color);
+        color: var(--text-color-white);
+        border: none;
+    }
+
+    .secondary-picture{
+        width: 85px;
+        transition: 0.4s;
+    }
+}
+
 
 </style>

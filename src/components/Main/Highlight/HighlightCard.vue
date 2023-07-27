@@ -47,7 +47,7 @@
 
 <style scoped>
 
-/* Desktop */
+/* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
 
     /* Main Styles Start */
@@ -122,7 +122,7 @@
     /* Button Style End */
 }
 
-/* Tablet */
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
     /* Main Styles Start */
@@ -130,7 +130,7 @@
     .card{
         max-width: 375px;
         width: 100%;
-        height: 220px;
+        min-height: 220px;
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -196,10 +196,80 @@
     /* Button Style End */
 }
 
-/* Mobile */
-@media only screen and (max-width: 540px) { 
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) {  
 
+    /* Main Styles Start */
 
+    .card{
+        max-width: 315px;
+        width: 100%;
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Main Styles End */
+
+    /* User Styles Start */
+
+    .user{
+        max-width: 150px;
+        width: 100%;
+        min-height: 45px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        border-radius: 20px;
+        padding: 10px 20px;
+        background-color: var(--background-secondary);
+    }
+
+    .user:hover{
+        cursor: pointer;
+    }
+
+    .user-name{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--text-color-white);
+    }
+
+    .icon{
+        width: 24px;
+    }
+
+    /* User Styles End */
+
+    /* Title Styles Start */
+
+    .title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600px;
+        font-size: 38px;
+        line-height: 45px;
+        color:  var(--text-color-white);
+    }
+
+    /* Title Styles End */
+
+    /* Button Style Start */
+
+    .button{
+        width: 315px;
+        height: 60px;
+        color:black ;
+        padding: 22px 50px;
+        border: none;
+        font-size: 15px;
+        line-height: 22px;
+        justify-content: center;
+    }
+
+    /* Button Style End */
 }
 
 </style>

@@ -5,6 +5,7 @@
         <div class="input-btn">
             <my-input class="input" :placeholder="$t('Footer.input')"/>
             <my-button class="button">
+                <img src="../../assets/images/Buttons/EnvelopeSimple.svg" alt="EnvelopeSimple">
                 {{ $t("Footer.button") }}
             </my-button>
         </div>
@@ -74,7 +75,12 @@ import { useI18n } from 'vue-i18n';
         width: 100%;
         height: 60px;
         border: none;
-
+        padding: 16px 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--background-color);
     }
     .button{
         position: absolute;
@@ -113,7 +119,7 @@ import { useI18n } from 'vue-i18n';
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {   
 
-     /* Main Styles Start */
+    /* Main Styles Start */
     
     .digest{
         display: flex;
@@ -156,6 +162,82 @@ import { useI18n } from 'vue-i18n';
         color: var(--text-color-white);
         padding: 0 50px;
         border: none;
+    }
+    .button:hover{
+        scale: 1;
+    }
+
+    .english-title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 35px;
+        color: var(--text-color-white)
+    }
+
+    .ukrainian-title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 20px;
+        color: var(--text-color-white);
+        letter-spacing: 1px;
+    }
+
+    /* Input-Button Styles End */
+
+}
+
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) {
+
+    /* Main Styles Start */
+    
+    .digest{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    /* Main Styles End */
+
+     .sub-title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--text-color-secondary);
+    }
+
+    /* Input-Button Styles Start */
+
+    .input-btn{
+        max-width: 420px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .input{
+        width: 100%;
+        height: 45px;
+        border: none;
+        padding: 15px 20px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    .button{
+        height: 45px;
+        background-color: var(--button-background-color);
+        color: var(--text-color-white);
+        padding: 0 50px;
+        border: none;
+        justify-content: center;
     }
     .button:hover{
         scale: 1;

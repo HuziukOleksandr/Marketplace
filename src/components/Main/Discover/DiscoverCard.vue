@@ -2,7 +2,10 @@
     <div class="card" v-for="card in cards">
         <!-- Preview Start -->
         <div class="preview">
-            <img :src="getImageUrl(card.image)" :alt="card.image">
+            <img 
+                :src="getImageUrl(card.image)" 
+                :alt="card.image"
+                class="picture">
         </div>
         <!-- Preview End -->
 
@@ -22,7 +25,7 @@
                     <h2 class="price-number">{{ card.price }}</h2>
                 </div>
                 <div class="bid">
-                    <h2 class="bid-title">{{ $t("Discover.bid") }}</h2>
+                    <h2 class="bid-title">{{ $t("Discover.highestBid") }}</h2>
                     <h2 class="bid-number">{{ card.bid }}</h2>
                 </div>
             </div>
@@ -143,5 +146,19 @@
 }
 
 /* Content Styles End */
+
+
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) {
+    .card{
+        max-width: 315px;
+        width: 100%;
+        
+    }
+
+    .picture{
+        width: 315px;
+    }
+}
 
 </style>

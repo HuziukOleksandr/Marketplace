@@ -91,10 +91,80 @@ import moment from 'moment';
 
 
 
-    /* Main Styles Start */
+/* Main Styles Start */
 
+.timer{
+    max-width: 295px;
+    width: 100%;
+    height: 147px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    border: none;
+    background-color: var(--timer-background);
+    align-self: flex-end;
+}
+
+/* Main Styles End */
+
+/* Title Styles Start */
+
+.title{
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13px;
+    color: var(--text-color-white);
+}
+
+/* Title Styles End */
+
+/* Time Styles Start */
+
+.time{
+    max-width: 235px;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.point{
+    width: 18px;
+    font-family: "SpaceMono", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    color: var(--text-color-white);
+}
+
+.item{
+    width: 53px;
+}
+.number{
+    font-family: "SpaceMono", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 45px;
+    color: var(--text-color-white);
+}
+
+.text{
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13px;
+    color: var(--text-color-white);
+}
+
+/* Time Styles End */
+
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) { 
     .timer{
-        max-width: 295px;
+        max-width: 315px;
         width: 100%;
         height: 147px;
         border-radius: 20px;
@@ -106,59 +176,6 @@ import moment from 'moment';
         background-color: var(--timer-background);
         align-self: flex-end;
     }
-
-    /* Main Styles End */
-
-    /* Title Styles Start */
-
-    .title{
-        font-family: 'SpaceMono', sans-serif;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 13px;
-        color: var(--text-color-white);
-    }
-
-    /* Title Styles End */
-
-    /* Time Styles Start */
-
-    .time{
-        max-width: 235px;
-        width: 100%;
-        height: 65px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .point{
-        width: 18px;
-        font-family: "SpaceMono", sans-serif;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 40px;
-        color: var(--text-color-white);
-    }
-
-    .item{
-        width: 53px;
-    }
-    .number{
-        font-family: "SpaceMono", sans-serif;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 45px;
-        color: var(--text-color-white);
-    }
-
-    .text{
-        font-family: 'SpaceMono', sans-serif;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 13px;
-        color: var(--text-color-white);
-    }
-
-    /* Time Styles End */
+}
     
 </style>

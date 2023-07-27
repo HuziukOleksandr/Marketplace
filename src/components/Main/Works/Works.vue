@@ -56,7 +56,8 @@ import {useI18n} from 'vue-i18n'
 </script>
 
 <style scoped>
-/* Desktop */
+
+/* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
 
     /* Main Style Start */
@@ -114,7 +115,7 @@ import {useI18n} from 'vue-i18n'
     /* Content Styles End */
 }
 
-/* Tablet */
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {   
 
     /* Main Style Start */
@@ -166,6 +167,66 @@ import {useI18n} from 'vue-i18n'
         min-height: 320px; 
         display: flex;
         justify-content: space-between;
+    }
+
+    /* Content Styles End */
+
+}
+
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) { 
+
+    /* Main Style Start */
+
+    .work{
+        min-height: 520px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 0;
+    }
+
+    /* Main Style End */
+
+    /* Header Styles Start */
+    .header{
+        max-width: 315px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 39px;
+        color: var(--text-color-white);
+    }
+
+    .sub-title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--text-color-white);
+    }
+
+    /* Header Styles End */
+
+    /* Content Styles Start */
+
+    .content{
+        max-width: 315px;
+        width: 100%;
+        min-height: 320px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
     }
 
     /* Content Styles End */

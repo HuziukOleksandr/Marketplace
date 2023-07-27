@@ -53,7 +53,7 @@ import { useI18n } from 'vue-i18n'
 
 <style scoped>
 
-/* Desktop */
+/* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
    
     /* Main Styles Start */
@@ -104,7 +104,7 @@ import { useI18n } from 'vue-i18n'
 
 }
 
-/* Tablet */
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
     
     /* Main Styles Start */
@@ -152,6 +152,54 @@ import { useI18n } from 'vue-i18n'
 
     /* Content Styles End */
 
+}
+
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) {
+    /* Main Styles Start */
+    
+    .category{
+        min-height: 315px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 0;
+    }
+
+    /* Main Styles End */
+
+    /* Header Styles Start */ 
+
+    .header{
+        max-width: 315px;
+        width: 100%;
+    }
+
+    .title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 39px;
+        color: var(--text-color-white);    
+    }
+
+    /* Header Styles End */
+
+    /* Content Styles Start */
+
+    .content{
+        max-width: 315px;
+        width: 100%;
+        min-height: 470px;
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    /* Content Styles End */
 }
 
 </style>

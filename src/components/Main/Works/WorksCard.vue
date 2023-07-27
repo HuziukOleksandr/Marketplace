@@ -44,7 +44,7 @@ import { useI18n } from 'vue-i18n';
 
 <style scoped>
 
-/* Desktop */
+/* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
 
     /* Main Style Start */
@@ -120,7 +120,7 @@ import { useI18n } from 'vue-i18n';
 
 }
 
-/* Tablet */
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {   
 
     /* Main Style Start */
@@ -198,6 +198,84 @@ import { useI18n } from 'vue-i18n';
 
     /* Header Styles End */
 
+}
+
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) { 
+
+    /* Main Style Start */
+
+    .card{
+        max-width: 315px;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        align-items: start;
+        border-radius: 20px;
+        background-color: var(--background-secondary);
+    }
+
+    /* Main Style End */
+
+    /* Preview Styles Start */
+
+    .preview{
+        display: flex;
+        justify-content: center;
+    }
+
+    .picture{
+        width: 100px;
+    }
+
+    /* Preview Styles End */
+
+    /* Header Styles Start */
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    /* English Styles Start */
+
+    .english-title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--text-color-white);
+        text-align: center;
+    }
+
+    /* English Styles End */
+
+    /* Ukrainian Styles Start */
+
+    .ukrainian-title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text-color-white);
+        text-align: center;
+    }
+
+    /* Ukrainian Styles End */
+
+    .text{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16x;
+        color: var(--text-color-white);
+        text-align: center;
+    }
+
+    /* Header Styles End */
 }
 
 </style>

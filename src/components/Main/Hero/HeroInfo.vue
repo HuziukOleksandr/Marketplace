@@ -68,4 +68,27 @@
 
 }
 
+/* Медіа-запит для мобільних пристроїв з шириною екрану до 767px */
+@media only screen and (max-width: 767px) {
+    .item{
+        max-width: 85px;
+        width: 100%;
+        color: var(--text-color-white);
+    }
+
+    .number{
+        font-family: "SpaceMono", sans-serif;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .name{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
 </style>

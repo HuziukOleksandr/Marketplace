@@ -21,16 +21,7 @@ import HeaderNav from './HeaderNav.vue'
     export default {
         components: {
             HeaderNav,
-        },
-        data() {
-            return {
-                
-            }
-        },
-        methods : {
-            
         }
-        
     }
 </script>
 
@@ -66,9 +57,22 @@ import HeaderNav from './HeaderNav.vue'
     .navigation{
         display: none;
     }
-    
-
 }
 
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) {
+    .header{
+        padding: 0 50px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .navigation{
+        display: none;
+    }
+}
+    
 </style>
 

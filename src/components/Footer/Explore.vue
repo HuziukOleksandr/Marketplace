@@ -71,5 +71,30 @@ import Navigation from '../Navigation/Navigation.vue'
     }
 }
 
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) {
+
+    .explore{
+        max-width: 240px;
+        width: 100%;
+    }
+
+    .explore-header{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 35px;
+        color: var(--text-color-white);
+        margin-bottom: 30px;
+    } 
+
+    .navigation{
+        display: flex;
+        flex-direction: column ;
+        gap: 20px;
+    }
+    
+}
+
 </style>
 

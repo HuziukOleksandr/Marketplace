@@ -103,8 +103,8 @@ import Community from './Community.vue'
 /* Стилі для моніторів і планшетів(більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
-     /* Main Styles Start */
-     .footer{
+    /* Main Styles Start */
+    .footer{
         min-height: 700px;
         background-color: var(--background-secondary);
         display: flex;
@@ -131,6 +131,55 @@ import Community from './Community.vue'
 
     .bottom{
         max-width: 690px;
+        width: 100%;
+        min-height: 35px;   
+        border-top: 1px solid var(--text-color-secondary);
+        display: flex;
+        align-items: end;
+    }
+
+    .conporations{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 13px;
+        color: #CCCCCC;
+    }
+
+    /* Bottom Styles End */
+}
+
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) {
+
+    /* Main Styles Start */
+    .footer{
+        min-height: 700px;
+        background-color: var(--background-secondary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding: 40px 0;
+    }
+
+    .content{
+        max-width: 315px;
+        width: 100%;
+        min-height: 190px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    /* Main Styles End */
+    
+    /* Bottom Styles Start */
+
+    .bottom{
+        max-width: 315px;
         width: 100%;
         min-height: 35px;   
         border-top: 1px solid var(--text-color-secondary);
