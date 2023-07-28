@@ -7,9 +7,10 @@
             <h3 class="sub-title">{{ $t("Discover.subTitle") }}</h3>
             </div>
             <div class="right-side">
-                <my-button
-                    class="button">
-                    <img src="../../../assets/images/Buttons/RocketLaunch.svg" alt="RocketLaunch">
+                <my-button class="button">
+                    <img 
+                        src="../../../assets/images/Buttons/RocketLaunch.svg" 
+                        alt="RocketLaunch">
                     {{ $t("Discover.button") }}
                 </my-button>
             </div>
@@ -32,6 +33,7 @@ import Card from './DiscoverCard.vue'
         components:{
             Card
         },
+
         data() {
             return {
                 cards: [
@@ -43,12 +45,14 @@ import Card from './DiscoverCard.vue'
                 shouldDisplayForTablet: true
             }
         },
+
         methods: {
             handleResize() {
                 this.shouldDisplayFullArray = window.innerWidth >= 1280;
                 this.shouldDisplayForTablet = window.innerWidth >= 768 && window.innerWidth < 1280;
             }
         },
+
         mounted() {
 
             const storedWidth = localStorage.getItem('screenWidth');
@@ -63,6 +67,7 @@ import Card from './DiscoverCard.vue'
             window.addEventListener('resize', this.handleResize);
 
         },
+
         beforeDestroy() {
             window.removeEventListener('resize', this.handleResize);
         }
@@ -71,89 +76,84 @@ import Card from './DiscoverCard.vue'
 
 <style scoped>
 
-/* Стилі для великих моніторів та десктопів */
-@media only screen and (min-width: 1280px) {
+/* Main Styles Start */
 
-    /* Main Styles Start */
-
-    .discover{
-        min-height: 240px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 60px;
-        padding: 80px 0;
-    }
-
-    /* Main Styles End */
-
-    /* Header Styles Start */
-
-    .header{
-        max-width: 1050px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-    }
-
-    .left-side{
-        max-width: 800px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 38px;
-        line-height: 46px;
-        text-align: start;
-    }
-    
-    .sub-title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 35px;
-        text-align: start;
-    }
-
-    .right{
-        display: flex;
-        justify-content: end;
-        align-items: end;
-    }
-
-    .button{
-        height: 60px;
-        padding: 0 50px;
-        background-color: var(--background-color);
-        border: 2px solid var(--button-background-color);
-        color: var(--text-color-white);
-    }
-
-    /* Header Styles End */
-
-    /* Content Styles Start */
-
-    .content{
-        max-width: 1050px;
-        width: 100%;
-        height: 470px;
-        display: flex;
-        justify-content: space-between;
-        gap: 30px;
-    }
-
-    /* Content Styles End */
-
+.discover{
+    min-height: 240px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 0;
 }
+
+/* Main Styles End */
+
+/* Header Styles Start */
+
+.header{
+    max-width: 1050px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.left-side{
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title{
+    color: var(--text-color-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: start;
+}
+
+.sub-title{
+    color: var(--text-color-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+    text-align: start;
+}
+
+.right{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.button{
+    height: 60px;
+    padding: 0 50px;
+    background-color: var(--background-color);
+    border: 2px solid var(--button-background-color);
+    color: var(--text-color-white);
+}
+
+/* Header Styles End */
+
+/* Content Styles Start */
+
+.content{
+    max-width: 1050px;
+    width: 100%;
+    min-height: 470px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Content Styles End */
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
@@ -161,11 +161,6 @@ import Card from './DiscoverCard.vue'
     /* Main Styles Start */
 
     .discover{
-        min-height: 240px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 40px;
         padding: 40px 0;
     }
@@ -177,49 +172,21 @@ import Card from './DiscoverCard.vue'
     .header{
         max-width: 690px;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
     }
 
     .left-side{
         max-width: 400px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
     }
 
     .title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
         font-size: 28px;
         line-height: 39px;
-        text-align: start;
     }
     
     .sub-title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        text-align: start;
-    }
-
-    .right{
-        display: flex;
-        justify-content: end;
-        align-items: end;
-    }
-
-    .button{
-        height: 60px;
-        padding: 0 50px;
-        background-color: var(--background-color);
-        border: 2px solid var(--button-background-color);
-        color: var(--text-color-white);
     }
 
     /* Header Styles End */
@@ -228,11 +195,6 @@ import Card from './DiscoverCard.vue'
 
     .content{
         max-width: 690px;
-        width: 100%;
-        height: 470px;
-        display: flex;
-        justify-content: space-between;
-        gap: 30px;
     }
 
     /* Content Styles End */
@@ -245,11 +207,6 @@ import Card from './DiscoverCard.vue'
     /* Main Styles Start */
 
     .discover{
-        min-height: 240px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 40px;
         padding: 40px 0;
     }
@@ -260,53 +217,26 @@ import Card from './DiscoverCard.vue'
 
     .header{
         max-width: 315px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: end;
         gap: 10px;
+        flex-direction: column;
     }
 
     .left-side{
         max-width: 400px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
     }
 
     .title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
         font-size: 28px;
         line-height: 39px;
-        text-align: start;
     }
     
     .sub-title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        text-align: start;
-    }
-
-    .right{
-        display: flex;
-        justify-content: end;
-        align-items: end;
     }
 
     .button{
         width: 315px;
-        height: 60px;
-        padding: 0 50px;
-        background-color: var(--background-color);
-        border: 2px solid var(--button-background-color);
-        color: var(--text-color-white);
         justify-content: center;
     }
 
@@ -316,12 +246,7 @@ import Card from './DiscoverCard.vue'
 
     .content{
         max-width: 315px;
-        width: 100%;
-        min-height: 470px;
-        display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        gap: 30px;
     }
 
     /* Content Styles End */

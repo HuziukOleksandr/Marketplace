@@ -45,6 +45,7 @@ import { useI18n } from 'vue-i18n'
         components: {
             Info
         },
+
         setup(){
             const {t, locale}  = useI18n()
             return{
@@ -52,6 +53,7 @@ import { useI18n } from 'vue-i18n'
                 locale
             }
         },
+
         data(){
             return {
                 userName: 'Animakid',
@@ -60,6 +62,7 @@ import { useI18n } from 'vue-i18n'
             }
             
         },
+
         computed: {
             infoList(){
                 return [
@@ -69,6 +72,7 @@ import { useI18n } from 'vue-i18n'
                 ] 
             }
         },
+
         methods: {
             getTitleClasses(){
                 return {
@@ -76,6 +80,7 @@ import { useI18n } from 'vue-i18n'
                     'ukrainian-title': this.locale === 'UA'
                 };
             },
+
             getTextClasses(){
                 return {
                     'english-text': this.locale === 'EN',
@@ -88,211 +93,152 @@ import { useI18n } from 'vue-i18n'
 
 <style scoped>
 
-/* Стилі для великих моніторів та десктопів */
-@media only screen and (min-width: 1280px) {
-
-    /* Main Styles Start */
-    .hero{
-        min-height: 725px;
-        height: 565px;
-        display: flex;
-        gap: 30px;
-        padding: 80px 0;
-        margin: 0 auto;
-        justify-content: center;
-    }
-
-    /* Main Styles End */
-
-    /* Left-Side Styles Start */
-    .left-side{
-        max-width: 510px;
-        width: 100%;
-        min-height: 100%;
-    }
-
-    .english-title{ 
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 67px;
-        line-height: 74px;
-        text-align: start;
-        margin-bottom: 20px;
-    }
-
-    .english-text{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 35px;
-        margin-bottom: 40px;
-    }
-
-    .ukrainian-title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 49px;
-        line-height: 50px;
-        text-align: start;
-        margin-bottom: 20px;
-    }
-
-    .ukrainian-text{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 30px;
-        margin-bottom: 40px;
-    }
-
-    .button{
-        height: 60px;
-        padding: 0 50px;
-        margin-bottom: 40px;
-        background-color: var(--button-background-color);
-        border: none;
-        color: var(--text-color-white);
-    }
-
-    .info{
-        max-width: 100%;
-        display: flex;
-        gap: 30px;
-    }
-
-    .item{
-        max-width: 150px;
-        width: 100%;
-        height: 75px;
-    }
-
-    /* Left-Side Styles End */
-    /* Right-Side Styles Start */
-
-    .right-side{
-        max-width: 510px;
-        width: 100%;
-        min-height: 510px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .preview{
-        min-height: 110px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        border-radius: 0 0 20px 20px;
-        background-color: var(--background-secondary);
-        color: var(--text-color-white);
-        padding: 22px 20px;
-    }
-    
-    .preview-title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 30px;
-    }
-
-    .user {
-        display: flex;
-        gap: 10px;
-    }
-
-    .user-name{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .user-picture{
-        width: 24px;
-    }
-    /* Right-Side Styles Start */
-    
+/* Main Styles Start */
+.hero{
+    min-height: 725px;
+    min-height: 565px;
+    display: flex;
+    gap: 30px;
+    padding: 80px 0;
+    margin: 0 auto;
+    justify-content: center;
 }
+
+/* Main Styles End */
+
+/* Left-Side Styles Start */
+.left-side{
+    max-width: 510px;
+    width: 100%;
+}
+
+.english-title{ 
+    color: var(--text-color-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 67px;
+    line-height: 74px;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.english-text{
+    color: var(--text-color-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+    margin-bottom: 40px;
+}
+
+.ukrainian-title{
+    color: var(--text-color-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 49px;
+    line-height: 50px;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.ukrainian-text{
+    color: var(--text-color-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+.button{
+    height: 60px;
+    padding: 0 50px;
+    margin-bottom: 40px;
+    background-color: var(--button-background-color);
+    border: none;
+    color: var(--text-color-white);
+}
+
+.info{
+    max-width: 100%;
+    display: flex;
+    gap: 30px;
+}
+
+/* Left-Side Styles End */
+/* Right-Side Styles Start */
+
+.right-side{
+    max-width: 510px;
+    width: 100%;
+    min-height: 510px;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview{
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 0 0 20px 20px;
+    background-color: var(--background-secondary);
+    color: var(--text-color-white);
+    padding: 22px 20px;
+}
+
+.preview-title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.user {
+    display: flex;
+    gap: 10px;
+}
+
+.user-name{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.user-picture{
+    width: 24px;
+}
+
+/* Right-Side Styles Start */
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {   
 
-    /* Main Styles Start */
-
-    .hero{
-        min-height: 565px;
-        display: flex;
-        gap: 30px;
-        padding: 80px 0;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Main Styles Start */
-
     /* Left-Side Styles Start */
 
     .left-side{
         max-width: 330px;
-        width: 100%;
-        min-height: 100%;
     }
 
     .english-title{ 
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;   
         font-size: 38px;
         line-height: 45px;
-        text-align: start;
-        margin-bottom: 20px;
     }
+
     .english-text{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        margin-bottom: 40px;
     }
 
     .ukrainian-title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
         font-size: 30px;
         line-height: 35px;
-        text-align: start;
-        margin-bottom: 20px;
     }
 
     .ukrainian-text{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        margin-bottom: 40px;
-    }
-
-    .button{
-        height: 60px;
-        padding: 0 50px;
-        margin-bottom: 40px;
-        background-color: var(--button-background-color);
-        border: none;
-        color: var(--text-color-white);
-    }
-
-    .info{
-        max-width: 100%;
-        display: flex;
-        gap: 30px;
     }
 
     /* Left-Side Styles End */
@@ -301,49 +247,12 @@ import { useI18n } from 'vue-i18n'
     
     .right-side{
         max-width: 330px;
-        width: 100%;
         min-height: 330px;
-        display: flex;  
-        flex-direction: column;
         align-self: center;
     }
 
     .picture{
         width: 330px;
-    }
-
-    .preview{
-        min-height: 110px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        border-radius: 0 0 20px 20px;
-        background-color: var(--background-secondary);
-        color: var(--text-color-white);
-        padding: 22px 20px;
-    }
-    
-    .preview-title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 30px;
-    }
-
-    .user {
-        display: flex;
-        gap: 10px;
-    }
-
-    .user-name{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .user-picture{
-        width: 24px;
     }
 
     /* Right-Side Styles Start */
@@ -357,14 +266,8 @@ import { useI18n } from 'vue-i18n'
 
     .hero{
         max-width: 315px;
-        width: 100%;
-        min-height: 565px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
         padding: 40px 0;
-        margin: 0 auto;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
     } 
     
@@ -372,61 +275,31 @@ import { useI18n } from 'vue-i18n'
 
     /* Left-Side Styles Start */
 
-    .left-side{
-        min-height: 100%;
-    }
-
     .english-title{ 
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;   
         font-size: 28px;
         line-height: 39px;
-        text-align: start;
-        margin-bottom: 10px;
     }
     .english-text{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        margin-bottom: 40px;
     }
 
     .ukrainian-title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
         font-size: 20px;
         line-height: 25px;
-        text-align: start;
-        margin-bottom: 20px;
     }
 
     .ukrainian-text{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        margin-bottom: 40px;
     }
 
     .button{
         width: 100%;
-        height: 60px;
-        padding: 0 50px;
-        margin-bottom: 40px;
-        background-color: var(--button-background-color);
-        border: none;
-        color: var(--text-color-white);
         justify-content: center;
     }
 
     .info{
-        max-width: 100%;
-        display: flex;
         justify-content: space-between;
     }
 
@@ -436,10 +309,7 @@ import { useI18n } from 'vue-i18n'
     
     .right-side{
         max-width: 315px;
-        width: 100%;
         min-height: 330px;
-        display: flex;  
-        flex-direction: column;
         align-self: center;
     }
 
@@ -447,40 +317,7 @@ import { useI18n } from 'vue-i18n'
         width: 315px;
     }
 
-    .preview{
-        min-height: 110px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        border-radius: 0 0 20px 20px;
-        background-color: var(--background-secondary);
-        color: var(--text-color-white);
-        padding: 22px 20px;
-    }
-    
-    .preview-title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 30px;
-    }
-
-    .user {
-        display: flex;
-        gap: 10px;
-    }
-
-    .user-name{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .user-picture{
-        width: 24px;
-    }
-
     /* Right-Side Styles Start */
+    
 }
 </style>

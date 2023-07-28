@@ -42,6 +42,7 @@
                 reqired: true
             }
         },
+        
         methods: {
             getImageUrl(name) {
                 return new URL(`../../../assets/images/Discovers/${name}.svg`, import.meta.url).href;

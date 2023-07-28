@@ -49,12 +49,14 @@ import Card from './TrendingCards.vue'
                 shouldDisplayForTablet: true
             }
         },
+
         methods: {
             handleResize() {
                 this.shouldDisplayFullArray = window.innerWidth >= 1280;
                 this.shouldDisplayForTablet = window.innerWidth >= 768 && window.innerWidth < 1280;
             }
         },
+
         mounted() {
 
             const storedWidth = localStorage.getItem('screenWidth');
@@ -68,6 +70,7 @@ import Card from './TrendingCards.vue'
             }
             window.addEventListener('resize', this.handleResize);
         },
+
         beforeDestroy() {
             window.removeEventListener('resize', this.handleResize);
         }
@@ -76,69 +79,63 @@ import Card from './TrendingCards.vue'
 
 <style scoped>
 
-/* Стилі для великих моніторів та десктопів */
-@media only screen and (min-width: 1280px) {
+/* Main Styles Start */
 
-    /* Main Styles Start */
-
-    .trending{
-        min-height: 725px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 60px;
-        padding: 80px 0;
-    }
-
-    /* Main Styles Start */
-
-    /* Header Styles Start */
-
-    .header{
-        max-width: 1050px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;  
-    }
-
-    /* Header Styles Start */
-
-    /* Title Styles Start */
-
-    .title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 38px;
-        line-height: 45px;
-    }
-
-    .sub-title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 35px;
-    }
-
-    /* Title Styles Start */
-
-    /* Content Styles Start */
-
-    .content{
-        max-width: 1050px;
-        width: 100%;
-        min-height: 525px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    /* Content Styles Start */
-
+.trending{
+    min-height: 725px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 0;
 }
+
+/* Main Styles Start */
+
+/* Header Styles Start */
+
+.header{
+    max-width: 1050px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+}
+
+/* Header Styles Start */
+
+/* Title Styles Start */
+
+.title{
+    color: var(--text-color-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 45px;
+}
+
+.sub-title{
+    color: var(--text-color-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+}
+
+/* Title Styles Start */
+
+/* Content Styles Start */
+
+.content{
+    max-width: 1050px;
+    width: 100%;
+    min-height: 525px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Content Styles Start */
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {   
@@ -146,10 +143,6 @@ import Card from './TrendingCards.vue'
     /* Main Styles Start */
     .trending{
         min-height: 716px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 40px;
         padding: 40px 0;
     }
@@ -160,10 +153,6 @@ import Card from './TrendingCards.vue'
 
     .header{
         max-width: 690px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;  
     }
 
     /* Header Styles Start */
@@ -171,16 +160,12 @@ import Card from './TrendingCards.vue'
     /* Title Styles Start */
 
     .title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         font-size: 28px;
         line-height: 39px;
     }
 
     .sub-title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
@@ -192,11 +177,6 @@ import Card from './TrendingCards.vue'
 
     .content{
         max-width: 690px;
-        width: 100%;
-        min-height: 525px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
     }
 
     /* Content Styles Start */
@@ -210,10 +190,6 @@ import Card from './TrendingCards.vue'
 
     .trending{
         min-height: 716px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 40px;
         padding: 40px 0;
     }
@@ -224,10 +200,6 @@ import Card from './TrendingCards.vue'
 
     .header{
         max-width: 315px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;  
     }
 
     /* Header Styles Start */
@@ -235,16 +207,12 @@ import Card from './TrendingCards.vue'
     /* Title Styles Start */
 
     .title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         font-size: 28px;
         line-height: 39px;
     }
 
     .sub-title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
@@ -256,11 +224,6 @@ import Card from './TrendingCards.vue'
     
     .content{
         max-width: 315px;
-        width: 100%;
-        min-height: 525px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
     }
 
     /* Content Styles Start */

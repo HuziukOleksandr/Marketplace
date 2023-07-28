@@ -1,9 +1,7 @@
 <template>
     <div class="timer">
         <!-- Title Start -->
-        
         <p class="title">{{ $t("Highlight.title") }}</p>
-        
         <!-- Title End -->
 
         <!-- Time Start -->
@@ -37,11 +35,13 @@ import moment from 'moment';
                 reqired: true
             }
         },
+
         data(){
             return{
                 time: ''
             }
         },
+
         methods:{
             getTimeRemaining(endtime) {
                 const endMoment = moment(endtime);
@@ -68,10 +68,12 @@ import moment from 'moment';
                     'seconds': seconds
                 }
             },
+
             start() {
                 this.updateClock();
                 this.timeInterval = setInterval(this.updateClock, 1000);
             },
+
             updateClock() {
                 const remainingTime = this.getTimeRemaining(this.endtime);
                 this.time = remainingTime;
@@ -81,6 +83,7 @@ import moment from 'moment';
                 }
             }
         },
+
         mounted(){
             this.start()    
         }
@@ -88,8 +91,6 @@ import moment from 'moment';
 </script>
 
 <style scoped>
-
-
 
 /* Main Styles Start */
 
@@ -165,16 +166,6 @@ import moment from 'moment';
 @media only screen and (max-width: 767px) { 
     .timer{
         max-width: 315px;
-        width: 100%;
-        height: 147px;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 30px;
-        border: none;
-        background-color: var(--timer-background);
-        align-self: flex-end;
     }
 }
     

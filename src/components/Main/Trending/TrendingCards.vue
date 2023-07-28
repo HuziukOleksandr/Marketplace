@@ -46,10 +46,12 @@
                 reqired: true,
             }
         },
+
         methods: {
             getImageUrl(url) {  
                 return new URL(`../../../assets/images/Cards/${url}.svg`, import.meta.url).href;
             },
+
             getUserImageUrl(name) {
                 return new URL(`../../../assets/images/Avatars/${name}.svg`, import.meta.url).href;
             } 
@@ -139,22 +141,16 @@
 @media only screen and (max-width: 767px) {
    
     .card{
-        width: 315px;
+        max-width: 315px;
     }
+
     .more{
         width: 85px;
         height: 85px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--button-background-color);
-        color: var(--text-color-white);
-        border: none;
     }
 
     .secondary-picture{
         width: 85px;
-        transition: 0.4s;
     }
 }
 

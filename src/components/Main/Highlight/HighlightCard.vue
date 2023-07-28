@@ -21,7 +21,9 @@
         <!-- Button Start -->
         <div>
             <my-button class="button">
-            <img src="../../../assets/images/Buttons/Eye.svg" alt="Eye">   
+            <img 
+                src="../../../assets/images/Buttons/Eye.svg" 
+                alt="Eye">   
             {{ $t("Highlight.button") }}
         </my-button>
         </div>
@@ -37,6 +39,7 @@
                 reqired: true
             }
         },
+
         methods:{
             getUserImageUrl(name) {
                 return new URL(`../../../assets/images/Avatars/${name}.svg`, import.meta.url).href;
@@ -47,80 +50,74 @@
 
 <style scoped>
 
-/* Стилі для великих моніторів та десктопів */
-@media only screen and (min-width: 1280px) {
+/* Main Styles Start */
 
-    /* Main Styles Start */
-
-    .card{
-        max-width: 755px;
-        width: 100%;
-        height: 220px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    /* Main Styles End */
-
-    /* User Styles Start */
-
-    .user{
-        max-width: 150px;
-        width: 100%;
-        height: 45px;
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        border-radius: 20px;
-        padding: 10px 20px;
-        background-color: var(--background-secondary);
-    }
-
-    .user:hover{
-        cursor: pointer;
-    }
-
-    .user-name{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color: var(--text-color-white);
-    }
-
-    .icon{
-        width: 24px;
-    }
-
-    /* User Styles End */
-
-    /* Title Styles Start */
-
-    .title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600px;
-        font-size: 50px;
-        line-height: 56px;
-        color:  var(--text-color-white);
-    }
-
-    /* Title Styles End */
-
-    /* Button Style Start */
-
-    .button{
-        height: 60px;
-        color:black ;
-        padding: 22px 50px;
-        border: none;
-        font-size: 15px;
-        line-height: 22px;
-
-    }
-
-    /* Button Style End */
+.card{
+    max-width: 755px;
+    width: 100%;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
+
+/* Main Styles End */
+
+/* User Styles Start */
+
+.user{
+    max-width: 150px;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: var(--background-secondary);
+}
+
+.user:hover{
+    cursor: pointer;
+}
+
+.user-name{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--text-color-white);
+}
+
+.icon{
+    width: 24px;
+}
+
+/* User Styles End */
+
+/* Title Styles Start */
+
+.title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600px;
+    font-size: 50px;
+    line-height: 56px;
+    color:  var(--text-color-white);
+}
+
+/* Title Styles End */
+
+/* Button Style Start */
+
+.button{
+    height: 60px;
+    padding: 22px 50px;
+    border: none;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+/* Button Style End */
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
@@ -129,71 +126,20 @@
 
     .card{
         max-width: 375px;
-        width: 100%;
         min-height: 220px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
     }
 
     /* Main Styles End */
 
-    /* User Styles Start */
-
-    .user{
-        max-width: 150px;
-        width: 100%;
-        height: 45px;
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        border-radius: 20px;
-        padding: 10px 20px;
-        background-color: var(--background-secondary);
-    }
-
-    .user:hover{
-        cursor: pointer;
-    }
-
-    .user-name{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color: var(--text-color-white);
-    }
-
-    .icon{
-        width: 24px;
-    }
-
-    /* User Styles End */
-
     /* Title Styles Start */
 
     .title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600px;
         font-size: 38px;
         line-height: 45px;
-        color:  var(--text-color-white);
     }
 
     /* Title Styles End */
 
-    /* Button Style Start */
-
-    .button{
-        height: 60px;
-        color:black ;
-        padding: 22px 50px;
-        border: none;
-        font-size: 15px;
-        line-height: 22px;
-    }
-
-    /* Button Style End */
 }
 
 /* Стилі для мобільних пристроїв */
@@ -203,73 +149,19 @@
 
     .card{
         max-width: 315px;
-        width: 100%;
-        min-height: 220px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
     }
 
     /* Main Styles End */
 
-    /* User Styles Start */
-
-    .user{
-        max-width: 150px;
-        width: 100%;
-        min-height: 45px;
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        border-radius: 20px;
-        padding: 10px 20px;
-        background-color: var(--background-secondary);
-    }
-
-    .user:hover{
-        cursor: pointer;
-    }
-
-    .user-name{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color: var(--text-color-white);
-    }
-
-    .icon{
-        width: 24px;
-    }
-
-    /* User Styles End */
-
     /* Title Styles Start */
 
     .title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600px;
         font-size: 38px;
         line-height: 45px;
-        color:  var(--text-color-white);
     }
 
     /* Title Styles End */
 
-    /* Button Style Start */
-
-    .button{
-        width: 315px;
-        height: 60px;
-        color:black ;
-        padding: 22px 50px;
-        border: none;
-        font-size: 15px;
-        line-height: 22px;
-        justify-content: center;
-    }
-
-    /* Button Style End */
 }
 
 </style>

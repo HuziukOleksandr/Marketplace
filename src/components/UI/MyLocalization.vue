@@ -74,8 +74,6 @@ import { useI18n } from 'vue-i18n';
 .localization{
     position: absolute;
     width: 49px;
-    right: 12px;
-    top: 60px;
     display: flex; 
     flex-direction: column;
     gap: 10px;
@@ -101,39 +99,4 @@ import { useI18n } from 'vue-i18n';
   opacity: 0;
 }
 
-
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 768px) and (max-width: 1279px) { 
-
-    .localization{
-        position: absolute;
-        width: 49px;
-        right: 16px;
-        top: 60px;
-        display: flex; 
-        flex-direction: column;
-        gap: 10px;
-        padding: 7px;
-        background-color: var(--background-secondary);
-        border-radius: 5px;
-    }
-}
-
-/* Стилі для мобільних пристроїв */
-@media only screen and (max-width: 767px) {
-    .localization{
-        position: absolute;
-        width: 49px;
-        left: 50%;
-        top: 360px;
-        display: flex; 
-        flex-direction: column;
-        gap: 10px;
-        padding: 7px;
-        background-color: var(--background-secondary);
-        border-radius: 5px;
-        transform: translate(-50%, -50%);
-        
-    }
-}
 </style>

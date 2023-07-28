@@ -23,6 +23,7 @@ import {useI18n} from 'vue-i18n'
         components: {
             Card
         },
+
         setup(){
             const {t, locale}  = useI18n()
             return{
@@ -30,11 +31,7 @@ import {useI18n} from 'vue-i18n'
                 locale
             }
         },
-        data(){
-            return{
-                
-            }
-        },
+
         computed:{
             cards(){
                 return [
@@ -44,6 +41,7 @@ import {useI18n} from 'vue-i18n'
                 ]
             }
         },
+
         methods:{
             getTitleClasses(){
                 return {
@@ -57,63 +55,59 @@ import {useI18n} from 'vue-i18n'
 
 <style scoped>
 
-/* Стилі для великих моніторів та десктопів */
-@media only screen and (min-width: 1280px) {
-
-    /* Main Style Start */
+/* Main Style Start */
     
-    .work{
-        min-height: 740px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 60px;
-        padding: 80px 0;
-    }
-
-    /* Main Style End */
-
-    /* Header Styles Start */
-
-    .header{
-        max-width: 1050px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 38px;
-        line-height: 45px;
-        color: var(--text-color-white);
-    }
-
-    .sub-title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 35px;
-        color: var(--text-color-white);
-    }
-
-    /* Header Styles End */
-
-    /* Content Styles Start */
-
-    .content{
-        max-width: 1050px;
-        width: 100%;
-        min-height: 440px; 
-        display: flex;
-        justify-content: space-between;
-    }
-
-    /* Content Styles End */
+.work{
+    min-height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 0;
 }
+
+/* Main Style End */
+
+/* Header Styles Start */
+
+.header{
+    max-width: 1050px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 45px;
+    color: var(--text-color-white);
+}
+
+.sub-title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+    color: var(--text-color-white);
+}
+
+/* Header Styles End */
+
+/* Content Styles Start */
+
+.content{
+    max-width: 1050px;
+    width: 100%;
+    min-height: 300px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Content Styles End */
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {   
@@ -121,11 +115,6 @@ import {useI18n} from 'vue-i18n'
     /* Main Style Start */
 
     .work{
-        min-height: 520px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 40px;
         padding: 40px 0;
     }
@@ -135,26 +124,16 @@ import {useI18n} from 'vue-i18n'
     /* Header Styles Start */
     .header{
         max-width: 690px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
     }
 
     .title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
         font-size: 28px;
         line-height: 39px;
-        color: var(--text-color-white);
     }
 
     .sub-title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        color: var(--text-color-white);
     }
 
     /* Header Styles End */
@@ -163,10 +142,7 @@ import {useI18n} from 'vue-i18n'
 
     .content{
         max-width: 690px;
-        width: 100%;
-        min-height: 320px; 
-        display: flex;
-        justify-content: space-between;
+        min-height: 320px;
     }
 
     /* Content Styles End */
@@ -179,11 +155,6 @@ import {useI18n} from 'vue-i18n'
     /* Main Style Start */
 
     .work{
-        min-height: 520px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 40px;
         padding: 40px 0;
     }
@@ -193,26 +164,16 @@ import {useI18n} from 'vue-i18n'
     /* Header Styles Start */
     .header{
         max-width: 315px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
     }
 
     .title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
         font-size: 28px;
         line-height: 39px;
-        color: var(--text-color-white);
     }
 
     .sub-title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        color: var(--text-color-white);
     }
 
     /* Header Styles End */
@@ -222,10 +183,8 @@ import {useI18n} from 'vue-i18n'
     .content{
         max-width: 315px;
         width: 100%;
-        min-height: 320px; 
-        display: flex;
+        min-height: 320px;
         flex-direction: column;
-        justify-content: space-between;
         gap: 20px;
     }
 

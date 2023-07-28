@@ -24,16 +24,19 @@ import { useI18n } from 'vue-i18n'
         components:{
             Card
         },
+
         setup(){
             const {t}  = useI18n()
             return{
                 t
             }
         },
+
         data(){
             return{
             }
         },
+
         computed: {
             cards(){
                 return [
@@ -53,56 +56,51 @@ import { useI18n } from 'vue-i18n'
 
 <style scoped>
 
-/* Стилі для великих моніторів та десктопів */
-@media only screen and (min-width: 1280px) {
-   
-    /* Main Styles Start */
+/* Main Styles Start */
 
-    .category{
-        min-height: 840px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 60px;
-        padding: 80px 0;
-    }
-
-    /* Main Styles End */
-    
-    /* Header Styles Start */
-
-    .header{
-        max-width: 1050px;
-        width: 100%;
-    }
-
-    .title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 38px;
-        line-height: 45px;
-        color: var(--text-color-white);    
-    }   
-
-    /* Header Styles End */
-
-    /* Content Styles Start */
-
-    .content{
-        max-width: 1050px;
-        width: 100%;
-        min-height: 662px;
-        display: grid;
-        gap: 30px;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        
-    }
-
-    /* Content Styles End */
-
+.category{
+    min-height: 840px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 0;
 }
+
+/* Main Styles End */
+
+/* Header Styles Start */
+
+.header{
+    max-width: 1050px;
+    width: 100%;
+}
+
+.title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 45px;
+    color: var(--text-color-white);    
+}   
+
+/* Header Styles End */
+
+/* Content Styles Start */
+
+.content{
+    max-width: 1050px;
+    width: 100%;
+    min-height: 662px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+}
+
+/* Content Styles End */
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
@@ -111,10 +109,6 @@ import { useI18n } from 'vue-i18n'
     
     .category{
         min-height: 630px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 40px;
         padding: 40px 0;
     }
@@ -125,15 +119,11 @@ import { useI18n } from 'vue-i18n'
 
     .header{
         max-width: 690px;
-        width: 100%;
     }
 
     .title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
         font-size: 28px;
         line-height: 39px;
-        color: var(--text-color-white);    
     }
 
     /* Header Styles End */
@@ -142,12 +132,7 @@ import { useI18n } from 'vue-i18n'
 
     .content{
         max-width: 690px;
-        width: 100%;
         min-height: 470px;
-        display: grid;
-        gap: 30px;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
     }
 
     /* Content Styles End */
@@ -160,10 +145,6 @@ import { useI18n } from 'vue-i18n'
     
     .category{
         min-height: 315px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 40px;
         padding: 40px 0;
     }
@@ -174,15 +155,11 @@ import { useI18n } from 'vue-i18n'
 
     .header{
         max-width: 315px;
-        width: 100%;
     }
 
     .title{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
         font-size: 28px;
         line-height: 39px;
-        color: var(--text-color-white);    
     }
 
     /* Header Styles End */
@@ -191,9 +168,7 @@ import { useI18n } from 'vue-i18n'
 
     .content{
         max-width: 315px;
-        width: 100%;
         min-height: 470px;
-        display: grid;
         gap: 15px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);

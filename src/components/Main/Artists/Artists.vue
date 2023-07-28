@@ -27,19 +27,21 @@
 </template>
 
 <script>
-import Card from './ArtistCards.vue'
+import Card from './ArtistCard.vue'
 import { useI18n } from 'vue-i18n'
 
     export default {
         components: {
             Card
         }, 
+
         setup(){
             const {locale}  = useI18n()
             return{
                 locale
             }
         },
+
         data(){
             return {
                 cards: [
@@ -60,6 +62,7 @@ import { useI18n } from 'vue-i18n'
                 shouldDisplayForTablet: true
             }
         },
+
         methods: {
             getSubTitleClasses() { 
                 return {
@@ -67,11 +70,13 @@ import { useI18n } from 'vue-i18n'
                     'ukrainian-subTitle': this.locale === 'UA'
                 };
             },
+
             handleResize() {
                 this.shouldDisplayFullArray = window.innerWidth >= 1280;
                 this.shouldDisplayForTablet = window.innerWidth >= 768 && window.innerWidth < 1280;
             }
         },
+
         mounted() {
 
             const storedWidth = localStorage.getItem('screenWidth');
@@ -83,9 +88,11 @@ import { useI18n } from 'vue-i18n'
                 localStorage.setItem('screenWidth', window.innerWidth);
                 localStorage.setItem('shouldDisplayFullArray', this.shouldDisplayFullArray);
             }
+            
             window.addEventListener('resize', this.handleResize);
 
         },
+
         beforeDestroy() {
             window.removeEventListener('resize', this.handleResize);
         }
@@ -94,89 +101,86 @@ import { useI18n } from 'vue-i18n'
 
 <style  scoped>
 
-/* Стилі для великих моніторів та десктопів */
-@media only screen and (min-width: 1280px) {
+/* Main Styles Start */
 
-    /* Main Styles Start */
-
-    .artists{
-        min-height: 840px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 60px;
-        padding: 80px 0;
-    }
-
-    /* Main Styles End */
-
-    /* Header Styles Start */
-
-    .header{
-        max-width: 1050px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-    }
-
-    .left-side{
-        max-width: 800px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 38px;
-        line-height: 46px;
-        text-align: start;
-    }
-    
-    .sub-title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 35px;
-        text-align: start;
-    }
-
-    .right{
-        display: flex;
-        justify-content: end;
-        align-items: end;
-    }
-
-    .button{
-        height: 60px;
-        padding: 0 50px;
-        background-color: var(--background-color);
-        border: 2px solid var(--button-background-color);
-        color: var(--text-color-white);
-    }
-
-    /* Header Styles End */
-
-    /* Content Styles Start */
-
-    .content{
-        max-width: 1050px;
-        width: 100%;
-        min-height: 775px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-    }
-
-    /* Content Styles End */
-
+.artists{
+    min-height: 840px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 0;
 }
+
+/* Main Styles End */
+
+/* Header Styles Start */
+
+.header{
+    max-width: 1050px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.left-side{
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title{
+    color: var(--text-color-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: start;
+}
+
+.sub-title{
+    color: var(--text-color-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+    text-align: start;
+}
+
+.right{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.button{
+    height: 60px;
+    padding: 0 50px;
+    background-color: var(--background-color);
+    border: 2px solid var(--button-background-color);
+    color: var(--text-color-white);
+}
+
+/* Header Styles End */
+
+/* Content Styles Start */
+
+.content{
+    max-width: 1050px;
+    width: 100%;
+    min-height: 775px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/* Content Styles End */
+
+
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
@@ -185,11 +189,6 @@ import { useI18n } from 'vue-i18n'
 
     .artists{
         min-height: 570px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 60px;
         padding: 40px 0;
     }
 
@@ -199,50 +198,20 @@ import { useI18n } from 'vue-i18n'
 
     .header{
         max-width: 690px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
     }
 
     .left-side{
         max-width: 343px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
     }
 
     .title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
         font-size: 28px;
         line-height: 39px;
-        text-align: start;
     }
     
     .sub-title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        text-align: start;
-    }
-
-    .right{
-        display: flex;
-        justify-content: end;
-        align-items: end;
-    }
-
-    .button{
-        height: 60px;
-        padding: 0 50px;
-        background-color: var(--background-color);
-        border: 2px solid var(--button-background-color);
-        color: var(--text-color-white);
     }
 
     /* Header Styles End */
@@ -251,11 +220,8 @@ import { useI18n } from 'vue-i18n'
 
     .content{
         max-width: 690px;
-        width: 100%;
         min-height: 360px;
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
     }
 
     /* Content Styles End */
@@ -267,10 +233,6 @@ import { useI18n } from 'vue-i18n'
 
     .artists{
         min-height: 570px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 40px;
         padding: 40px 0;
     }
@@ -282,50 +244,26 @@ import { useI18n } from 'vue-i18n'
     .header{
         max-width: 315px;
         width: 100%;
-        display: flex;
         flex-direction: column;
         gap: 10px;
     }
 
     .left-side{
         max-width: 343px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
     }
 
     .title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
         font-size: 28px;
         line-height: 39px;
-        text-align: start;
     }
     
     .sub-title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        text-align: start;
-    }
-
-    .right{
-        display: flex;
-        justify-content: end;
-        align-items: end;
     }
 
     .button{
         width: 315px;
-        height: 60px;
-        padding: 0 50px;
-        background-color: var(--background-color);
-        border: 2px solid var(--button-background-color);
-        color: var(--text-color-white);
         justify-content: center;
     }
 
@@ -335,7 +273,6 @@ import { useI18n } from 'vue-i18n'
 
     .content{
         max-width: 315px;
-        width: 100%;
         min-height: 360px;
         display: flex;
         flex-direction: column;
