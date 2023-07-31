@@ -9,16 +9,19 @@
 
         <!-- Content Start -->
         <div class="content">
-            <Card v-if="shouldDisplayFullArray" :cards="cards" />
+
+            <!-- <Card v-if="shouldDisplayFullArray" :cards="cards" />
             <Card v-else-if="shouldDisplayForTablet" :cards="cards.slice(0, 2)" />
-            <Card v-else :cards="[cards[0]]" />
+            <Card v-else :cards="[cards[0]]" /> -->
+            <Card :cards="cards" />
         </div>
         <!-- Content End -->
     </div>
 </template>
 
 <script>
-import Card from './TrendingCards.vue'
+import Card from './TrendingCard.vue'
+
 
     export default {
         components: {
@@ -27,7 +30,8 @@ import Card from './TrendingCards.vue'
         data() {
             return {
                 cards: [
-                    { mainPicture: 'DSGNAnimals',
+                    { 
+                    mainPicture: 'DSGNAnimals',
                     secondaryPicture: [ 
                         { id: 1, name: 'DSGNAnimals-1' },
                         { id: 1,name: 'DSGNAnimals-2' }

@@ -4,21 +4,13 @@
         <div class="left-side">
             <h2 :class="getTitleClasses()">{{ $t("Hero.title") }}</h2>
             <p :class="getTextClasses()">{{ $t("Hero.text") }}</p>
-            <my-button class="button">
-                <img 
-                    src="../../../assets/images/Buttons/RocketLaunchWhite.svg" 
-                    alt="RocketLaunch">
-                {{ $t("Hero.button") }}
-            </my-button>
-            <div class="info">
-                <Info :infoList="infoList"
-            />
-            </div>
+
+            <Info :infoList="infoList"  class="main-info"/>
         </div>
         <!-- Left-Side End -->
 
         <!-- Right-Side Start -->
-        <div class="right-side">
+        <div class="card" id="card">
             <img 
                 src="../../../assets/images/Hero/hero.svg" 
                 alt="Space Walking"
@@ -33,6 +25,7 @@
                     <h2 class="user-name">{{ userName }}</h2>
                 </div>
             </div>
+            <Info :infoList="infoList"  class="second-info"/>
         </div>      
         <!-- Right-Side End -->
     </section>
@@ -150,25 +143,10 @@ import { useI18n } from 'vue-i18n'
     margin-bottom: 40px;
 }
 
-.button{
-    height: 60px;
-    padding: 0 50px;
-    margin-bottom: 40px;
-    background-color: var(--button-background-color);
-    border: none;
-    color: var(--text-color-white);
-}
-
-.info{
-    max-width: 100%;
-    display: flex;
-    gap: 30px;
-}
-
 /* Left-Side Styles End */
 /* Right-Side Styles Start */
 
-.right-side{
+.card{
     max-width: 510px;
     width: 100%;
     min-height: 510px;
@@ -210,6 +188,9 @@ import { useI18n } from 'vue-i18n'
     width: 24px;
 }
 
+.second-info{
+    display: none   ;
+}
 /* Right-Side Styles Start */
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
@@ -245,7 +226,7 @@ import { useI18n } from 'vue-i18n'
 
     /* Right-Side Styles Start */
     
-    .right-side{
+    .card{
         max-width: 330px;
         min-height: 330px;
         align-self: center;
@@ -292,22 +273,14 @@ import { useI18n } from 'vue-i18n'
     .ukrainian-text{
         font-size: 16px;
         line-height: 22px;
-    }
-
-    .button{
-        width: 100%;
-        justify-content: center;
-    }
-
-    .info{
-        justify-content: space-between;
+        margin-bottom: 0;
     }
 
     /* Left-Side Styles End */
 
-    /* Right-Side Styles Start */
+    /*Card Styles Start */
     
-    .right-side{
+    .card{
         max-width: 315px;
         min-height: 330px;
         align-self: center;
@@ -317,6 +290,17 @@ import { useI18n } from 'vue-i18n'
         width: 315px;
     }
 
+    .preview{
+        margin-bottom: 40px;
+    }
+
+    .main-info{
+        display: none;
+    }
+
+    .second-info{
+        display: flex;
+    }
     /* Right-Side Styles Start */
     
 }

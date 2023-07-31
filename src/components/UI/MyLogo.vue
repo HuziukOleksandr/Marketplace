@@ -20,37 +20,29 @@
 </script>
 
 <style scoped>
-/* Desktop */
-@media only screen and (max-width: 1920px) {
 
-    /* Logo Styles Start */
+/* Logo Styles Start */
 
-    .logo{
-        display: flex;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .logo-title, .logo-picture{
-        transition: 0.2s;
-    }
-
-    .logo-title:hover, .logo-picture:hover{
-        transform: scale(1.02);
-        cursor: pointer;
-    }
-
-    /* Logo Styles End */
-
+.logo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
-/* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 1279px) { 
+.logo-title, .logo-picture{
+    transition: 0.2s;
+}
+
+.logo-title:hover, .logo-picture:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+/* Logo Styles End */
+
+@media only screen and (max-width: 1279px) { 
     .logo{
-        display: flex;
-        gap: 10px;
         height: 24px;
-        align-items: center;
     }
 
     .logo-picture{
@@ -60,23 +52,6 @@
     .logo-title{
         height: 15px;
     }
-}
-
-/* Mobile */
-@media only screen and (max-width: 540px) { 
-
-/* Main Style Start */
-
-/* Main Style End */
-
-/* Logo Styles Start */
-
-/* Logo Styles End */
-
-/* Lins Styles Start */
-
-/* Links Styles End */ 
-
 }
 
 </style>

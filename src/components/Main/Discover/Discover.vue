@@ -24,6 +24,15 @@
             <Card v-else :cards="cards" />
         </div>
         <!-- Content End -->
+
+        <div class="bottom">
+                <my-button class="button">
+                    <img 
+                        src="../../../assets/images/Buttons/RocketLaunch.svg" 
+                        alt="RocketLaunch">
+                    {{ $t("Discover.button") }}
+                </my-button>
+            </div>
     </div>
 </template>
 
@@ -155,6 +164,10 @@ import Card from './DiscoverCard.vue'
 
 /* Content Styles End */
 
+.bottom{
+    display: none;
+}
+
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
     
@@ -234,6 +247,9 @@ import Card from './DiscoverCard.vue'
         font-size: 16px;
         line-height: 22px;
     }
+    .right-side{
+        display: none;
+    }
 
     .button{
         width: 315px;
@@ -250,6 +266,10 @@ import Card from './DiscoverCard.vue'
     }
 
     /* Content Styles End */
+
+    .bottom{
+        display: block;
+    }
 }
 
 </style>

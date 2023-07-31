@@ -136,7 +136,7 @@ import Localization from './HeaderLocalization.vue'
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
     .header{
-        padding: 0 50px;
+        padding:0 5px;
         min-height: 54px;
     }
     

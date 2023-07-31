@@ -56,7 +56,6 @@ import { useI18n } from 'vue-i18n';
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: start;
     border-radius: 20px;
     background-color: var(--background-secondary);
 }
@@ -161,7 +160,7 @@ import { useI18n } from 'vue-i18n';
 
     .text{
         font-size: 12px;
-        line-height: 16x;
+        line-height: 14x;
     }
 
     /* Header Styles End */
@@ -174,6 +173,7 @@ import { useI18n } from 'vue-i18n';
     /* Main Style Start */
 
     .card{
+        flex-direction: row;
         max-width: 315px;
         padding: 20px;
         gap: 20px;
@@ -211,7 +211,7 @@ import { useI18n } from 'vue-i18n';
 
     .text{
         font-size: 12px;
-        line-height: 16x;
+        line-height: 12px;
     }
 
     /* Header Styles End */

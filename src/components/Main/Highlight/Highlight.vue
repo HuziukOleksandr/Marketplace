@@ -19,7 +19,7 @@ import Timer from './HighlightTimer.vue'
 
         data(){
             return {
-                endtime: '2023-07-31',
+                endtime: '2023-08-6',
                 card:{
                     userIcon: "Shroomie",
                     userName: "Shroomie", 

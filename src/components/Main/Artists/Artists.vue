@@ -23,6 +23,13 @@
             <Card v-else :cards="cards.slice(0, 5)"/>
         </div>
         <!-- Content End -->
+        <div class="bottom">
+            <my-button
+                    class="button">
+                    <img src="../../../assets/images/Buttons/RocketLaunch.svg" alt="RocketLaunch">
+                    {{ $t("Artists.button") }}
+                </my-button>
+        </div>
     </div>
 </template>
 
@@ -180,6 +187,9 @@ import { useI18n } from 'vue-i18n'
 
 /* Content Styles End */
 
+.bottom{
+    display: none;
+}
 
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
@@ -262,6 +272,10 @@ import { useI18n } from 'vue-i18n'
         line-height: 22px;
     }
 
+    .right-side{
+        display: none;
+    }
+    
     .button{
         width: 315px;
         justify-content: center;
@@ -280,6 +294,10 @@ import { useI18n } from 'vue-i18n'
     }
 
     /* Content Styles End */
+
+    .bottom{
+        display: block;
+    }
 }
 
 </style>
