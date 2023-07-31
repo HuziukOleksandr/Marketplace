@@ -56,7 +56,7 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
         },
         data(){
             return{
-                slides: 2
+                slides: 1
             }
         },  
         props: {
