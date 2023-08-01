@@ -1,14 +1,17 @@
 <template>
     <div class="page">
-        <Main />
+        <router-view name="Header"/>
+        <router-view name="default"/>
+        <router-view name="Footer"/>
     </div>
 </template>
 
 <script>
-import Main from './views/Main.vue'
+import { RouterView } from 'vue-router';
+
     export default {
         components: {
-            Main
+            RouterView
         }
     }
 </script>

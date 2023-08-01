@@ -1,5 +1,5 @@
 <template>
-    <carousel :items-to-show="slides">
+    <carousel :items-to-show="slides" >
         <slide v-for="card in cards" :key="card">
             <div class="card">
                 <!-- Main Picture -->
@@ -54,11 +54,13 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
         components: {
             Carousel, Slide, Pagination, Navigation
         },
+
         data(){
             return{
                 slides: 1
             }
         },  
+
         props: {
             cards:{
                 type: Object,
@@ -73,8 +75,25 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
             getUserImageUrl(name) {
                 return new URL(`../../../assets/images/Avatars/${name}.svg`, import.meta.url).href;
-            } 
+            },
+
+            getSlidesNumber(){
+                if(window.innerWidth < 768 && window.innerWidth < 1280){
+                    this.slides = 1;
+                } else if(window.innerWidth > 768 && window.innerWidth < 1280){
+                    this.slides = 2;
+                } else {
+                    this.slides = 3;
+                }
+            }
         },
+        
+        mounted(){
+            this.getSlidesNumber();
+            window.addEventListener('resize', () => {
+                this.getSlidesNumber();
+            })
+        }
     }
 </script>
 
@@ -178,6 +197,35 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 <style>
 
+.carousel{
+    max-width: 1050px;
+    width: 100%;
+}
+.carousel__track{
+    display: flex;
+    gap: 30px;
+}
+
+.carousel__slide{
+    width: 330px;
+}
+
+.carousel__next{
+    color: var(--text-color-white);
+}
+
+.carousel__prev{
+    color: var(--text-color-white);
+}
+
+.carousel__pagination-button::after{
+    
+    background-color: var(--text-color-secondary);
+}
+.carousel__pagination-button--active::after{
+    background-color: var(--text-color-white);
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
 
     .carousel__viewport{
@@ -185,21 +233,7 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
         width: 100%;
     }
 
-    .carousel__next{
-        color: var(--text-color-white);
-    }
-
-    .carousel__prev{
-        color: var(--text-color-white);
-    }
-
-    .carousel__pagination-button::after{
-        
-        background-color: var(--text-color-secondary);
-    }
-    .carousel__pagination-button--active::after{
-        background-color: var(--text-color-white);
-    }
+    
 }
 
 @media only screen and (max-width: 767px) {
@@ -209,6 +243,10 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
         width: 100%;
     }
 
+    .carousel__track{
+        display: flex;
+        gap: 0;
+    }
     .carousel__next{
         display: none;
     }

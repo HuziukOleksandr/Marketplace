@@ -1,7 +1,7 @@
 <template>
     <div class="section">
         <div class="btn">
-            <my-button class="button">
+            <my-button class="button" @click="this.$router.push({name: 'Register'})">
                 <img 
                     src="../../../assets/images/Buttons/RocketLaunchWhite.svg" 
                     alt="RocketLaunch">

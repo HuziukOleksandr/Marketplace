@@ -1,6 +1,6 @@
 <template>
     <!-- Logo Start -->
-    <div class="logo">
+    <div class="logo" @click="this.$router.push({name: 'Main'})">
             <img 
                 src="../../assets/images/svg/favicon.svg" 
                 alt="icon" 

@@ -3,3 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+input {
+    appearance: none; /* Деякі браузери використовують це для збереження стандартного стилю */
+    -webkit-appearance: none; /* Для веб-кіт браузерів, як Safari і Chrome */
+    -moz-appearance: none; /* Для Firefox */
+  
+    /* Обнулення стандартних рамок і фону */
+    border: none;
+    background: none;
+  
+    /* Відміна стандартної внутрішньої заповненості (паддингу) */
+    padding: 0;
+  
+    /* Заборона зміни розмірів */
+    resize: none;
+  
+    /* Заборона зміни курсору при наведенні */
+    cursor: text;
+  }

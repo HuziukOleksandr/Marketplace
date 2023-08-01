@@ -90,6 +90,8 @@ import { useI18n } from 'vue-i18n';
         color: var(--text-color-white);
         padding: 0 50px;
         border: none;
+        font-size: 16px;
+        line-height: 22px;
     }
     .button:hover{
         scale: 1;

@@ -1,0 +1,18 @@
+<template>
+    <div class="main">
+        <Register />
+    </div>
+</template>
+
+<script>
+import Register from '../components/Register/Register.vue' 
+    export default {
+        components: {
+            Register
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>

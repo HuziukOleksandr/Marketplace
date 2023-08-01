@@ -81,5 +81,14 @@
         "text": "Get exclusive promotions & updates straight to your inbox.",
         "input": "Enter your email here",
         "button": "Subscribe"
+    },
+    "Register": {
+        "title": "Create account",
+        "subTitle": "Welcome! enter your details and start creating, collecting and selling NFTs.",
+        "button": "Create account",
+        "userName": "Username",
+        "email": "Email Address",
+        "password": "Password",
+        "confirm": "Confirm Password"
     }
 }

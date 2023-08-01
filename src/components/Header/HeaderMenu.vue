@@ -2,7 +2,7 @@
         <div class="menu" >
             <Navigation class="navigation" :link-item-styles="customLinkItemStyles"/>
 
-            <my-button class="button">
+            <my-button class="button" @click="this.$router.push({ name: 'Register' })">
                 <img src="../../assets/images/Buttons/User.svg" alt="user">
                 {{ $t("Header.button") }}
             </my-button>
@@ -43,6 +43,8 @@ import Navigation from '../Navigation/Navigation.vue'
     background-color: var(--button-background-color);
     border: none;
     color: var(--text-color-white);
+    font-size: 16px;
+    line-height: 22px;
 }
 
 
