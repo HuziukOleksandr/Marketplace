@@ -3,12 +3,12 @@
     <div>
         <a href="!#" class="link" :style="linkItemStyles">{{ $t("Navigation.marketplace") }}</a>
         
-        <a 
+        <router-link
             href="!#" 
             class="link" 
             :style="linkItemStyles">
             {{ $t("Navigation.rankings") }}
-        </a>
+        </router-link>
 
         <router-link to="/wallet"
             class="link" 
