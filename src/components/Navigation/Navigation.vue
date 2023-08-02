@@ -1,10 +1,21 @@
-<template>        
+
+    <template>        
     <div>
         <a href="!#" class="link" :style="linkItemStyles">{{ $t("Navigation.marketplace") }}</a>
         
-        <a href="!#" class="link" :style="linkItemStyles">{{ $t("Navigation.rankings") }}</a>
-        
-        <a href="!#" class="link" :style="linkItemStyles">{{ $t("Navigation.connectAWallet") }}</a>
+        <a 
+            href="!#" 
+            class="link" 
+            :style="linkItemStyles">
+            {{ $t("Navigation.rankings") }}
+        </a>
+
+        <a 
+            href="/wallet"
+            class="link" 
+            :style="linkItemStyles">
+            {{ $t("Navigation.connectAWallet") }}
+        </a>
     </div>
 </template>
 

@@ -13,7 +13,7 @@
                 <div class="bottom">    
                     <my-input 
                         :placeholder="$t('Subscribe.input')" 
-                        :class="getnputClasses()"/>
+                        class="input"/>
                     <my-button class="button">
                         <img 
                             src="../../../assets/images/Buttons/EnvelopeSimple.svg" 
@@ -160,9 +160,7 @@ import {useI18n} from 'vue-i18n'
     position: relative;
 }
 
-/* English Styles Start */
-
-.english-input{
+.input{
     border: none;
     max-width: 425px;
     width: 100%;
@@ -174,25 +172,6 @@ import {useI18n} from 'vue-i18n'
     color: var(--background-color);
     padding: 16px 20px;
 }
-
-/* English Styles End */
-
-/* Ukrainian Style Start */
-
-.ukrainian-input{
-    border: none;
-    max-width: 425px;
-    width: 100%;
-    height: 60px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--background-color);
-    padding: 16px 20px;
-}
-
-/* Ukrainian Style End */
 
 .button{
     position: absolute;
@@ -279,21 +258,9 @@ import {useI18n} from 'vue-i18n'
         gap: 15px; 
     }
 
-    /* English Styles Start */
-
-    .english-input{
+    .input{
         height: 46px;
     }
-
-    /* English Styles End */
-
-    /* Ukrainian Style Start */
-
-    .ukrainian-input{
-        height: 46px;
-    }
-
-    /* Ukrainian Style End */
 
     .button{
         position: static;

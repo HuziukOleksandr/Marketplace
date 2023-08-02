@@ -90,5 +90,12 @@
         "email": "Email Address",
         "password": "Password",
         "confirm": "Confirm Password"
+    },
+    "ConnectAWallet": {
+        "title": "Connect wallet",
+        "subTitle": "Choose a wallet you want to connect. There are several wallet providers.",
+        "metamask": "Metamask",
+        "walletConnect": "Wallet Connect",
+        "coinbase": "Coinbase"
     }
 }

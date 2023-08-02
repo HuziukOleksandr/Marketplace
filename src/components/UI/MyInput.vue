@@ -20,11 +20,11 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    border-radius: 20px;
 }
 
 .input{
     background-color: var(--text-color-white);
-    border-radius: 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;

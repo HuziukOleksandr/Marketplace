@@ -90,5 +90,12 @@
         "email": "Електронна адреса",
         "password": "Пароль",
         "confirm": "Підтвердити пароль"
+    },
+    "ConnectAWallet": {
+        "title": "Підключити гаманець",
+        "subTitle": "Виберіть гаманець, який ви хочете підключити. Існує кілька провайдерів гаманців.",
+        "metamask": "Metamask",
+        "walletConnect": "Wallet Connect",
+        "coinbase": "Coinbase"
     }
 }
