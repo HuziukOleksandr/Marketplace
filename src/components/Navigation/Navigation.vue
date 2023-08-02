@@ -4,7 +4,7 @@
         <a href="!#" class="link" :style="linkItemStyles">{{ $t("Navigation.marketplace") }}</a>
         
         <router-link
-            href="!#" 
+            to="/wallet"
             class="link" 
             :style="linkItemStyles">
             {{ $t("Navigation.rankings") }}
