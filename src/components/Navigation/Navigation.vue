@@ -10,12 +10,12 @@
             {{ $t("Navigation.rankings") }}
         </a>
 
-        <a 
-            href="/wallet"
+        <router-link to="/wallet"
             class="link" 
             :style="linkItemStyles">
             {{ $t("Navigation.connectAWallet") }}
-        </a>
+        </router-link> 
+        
     </div>
 </template>
 
