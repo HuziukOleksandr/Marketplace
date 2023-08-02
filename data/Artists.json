@@ -1,0 +1,17 @@
+{
+    "Artists": [
+        { "id": 1, "userName": "Keepitreal",  "sale": "34.53 ETH"},
+        { "id": 2, "userName": "DigiLab",     "sale": "34.53 ETH"},
+        { "id": 3, "userName": "GravityOne",  "sale": "34.53 ETH"},
+        { "id": 4, "userName": "Juanie",      "sale": "34.53 ETH"},
+        { "id": 5, "userName": "BlueWhale",   "sale": "34.53 ETH"},
+        { "id": 6, "userName": "MrFox",       "sale": "34.53 ETH"},
+        { "id": 7, "userName": "Shroomie",    "sale": "34.53 ETH"},
+        { "id": 8, "userName": "Robotica",    "sale": "34.53 ETH"},
+        { "id": 9, "userName": "RustyRobot",  "sale": "34.53 ETH"},
+        { "id": 10,"userName": "Animakid",    "sale": "34.53 ETH"},
+        { "id": 11,"userName": "Dotgu",       "sale": "34.53 ETH"},
+        { "id": 12,"userName": "Ghiblier",    "sale": "34.53 ETH"}
+    ]
+   
+}

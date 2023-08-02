@@ -6,18 +6,18 @@
                 <h3 class="number-text">{{ card.id }}</h3>
             </div>
             <img 
-                :src="getUserImageUrl(card.name)" 
-                :alt="card.name">
+                :src="getUserImageUrl(card.userName)" 
+                :alt="card.userName">
         </div>
         <!-- Preview End -->
         
         <!-- Title Start -->
         <div class="title">
-            <div class="name">
-                <h2 class="name-text">
-                    {{ card.name }}
-                </h2>
-            </div>
+            
+            <h2 class="name-text">
+                {{ card.userName }}
+            </h2>
+            
             <div class="sale">
                 <h3 class="sale-text">{{ $t("Artists.totalSale") }}</h3>
                 <h3 class="sale-number">{{ card.sale }}</h3>
@@ -111,6 +111,7 @@
     font-size: 22px;
     line-height: 30px;
     color: var(--text-color-white);
+    text-align: center;
 }
 
 .sale{
@@ -164,6 +165,9 @@
         width: 210px;
     }
 
+    .name-text{
+        text-align: start;
+    }
     /* Title Styles End */
 
 }
@@ -199,6 +203,10 @@
 
     .title{
         width: 195px;
+    }
+
+    .name-text{
+        text-align: start;
     }
 
     /* Title Styles End */

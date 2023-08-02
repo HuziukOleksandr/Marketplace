@@ -18,17 +18,17 @@
 
         <!-- Content Start -->
         <div class="content">
-            <Card v-if="shouldDisplayFullArray" :cards="cards" />
-            <Card v-else-if="shouldDisplayForTablet" :cards="cards.slice(0, 6)" />
-            <Card v-else :cards="cards.slice(0, 5)"/>
+            <Card v-if="shouldDisplayFullArray" :cards="info" />
+            <Card v-else-if="shouldDisplayForTablet" :cards="info.slice(0, 6)" />
+            <Card v-else :cards="info.slice(0, 5)"/>
         </div>
         <!-- Content End -->
         <div class="bottom">
             <my-button
                     class="button">
                     <img src="../../../assets/images/Buttons/RocketLaunch.svg" alt="RocketLaunch">
-                    {{ $t("Artists.button") }}
-                </my-button>
+                {{ $t("Artists.button") }}
+            </my-button>
         </div>
     </div>
 </template>
@@ -36,6 +36,7 @@
 <script>
 import Card from './ArtistCard.vue'
 import { useI18n } from 'vue-i18n'
+import axios from 'axios'
 
     export default {
         components: {
@@ -50,23 +51,10 @@ import { useI18n } from 'vue-i18n'
         },
 
         data(){
-            return {
-                cards: [
-                    { id: 1, name: 'Keepitreal', sale: '34.53 ETH'},
-                    { id: 2, name: 'DigiLab', sale: '34.53 ETH'},
-                    { id: 3, name: 'GravityOne', sale: '34.53 ETH'},
-                    { id: 4, name: 'Juanie', sale: '34.53 ETH'},
-                    { id: 5, name: 'BlueWhale', sale: '34.53 ETH'},
-                    { id: 6, name: 'MrFox', sale: '34.53 ETH'},
-                    { id: 7, name: 'Shroomie', sale: '34.53 ETH'},
-                    { id: 8, name: 'Robotica', sale: '34.53 ETH'},
-                    { id: 9, name: 'RustyRobot', sale: '34.53 ETH'},
-                    { id: 10, name: 'Animakid', sale: '34.53 ETH'},
-                    { id: 11, name: 'Dotgu', sale: '34.53 ETH'},
-                    { id: 12, name: 'Ghiblier', sale: '34.53 ETH'}
-                ],
+            return {    
                 shouldDisplayFullArray: true,
-                shouldDisplayForTablet: true
+                shouldDisplayForTablet: true,
+                info: ''
             }
         },
 
@@ -97,6 +85,12 @@ import { useI18n } from 'vue-i18n'
             }
             
             window.addEventListener('resize', this.handleResize);
+            axios
+                .get('../../../../data/Artists.json')
+                .then(response =>  {
+                    this.info = response.data.Artists
+                });
+            
 
         },
 

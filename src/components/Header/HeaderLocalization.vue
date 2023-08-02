@@ -25,6 +25,7 @@
                 dialogVisible: false,
             }
         },
+
         methods: {
             dropDawnShow(){
                 this.dialogVisible = !this.dialogVisible;
@@ -37,8 +38,16 @@
             },
             closeWindow(dialogVisible){
                 this.dialogVisible = dialogVisible;
+                
+            },
+            closeMenu(){
+                if(window.innerWidth > 1280){
+                    this.dialogVisible = false
+                }
             }
         }, 
+
+        
     }
 </script>
 

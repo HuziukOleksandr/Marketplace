@@ -9,8 +9,10 @@
                 alt="BurgerMenu" 
                 class="burger-menu"
                 @click="dropDawnShow">
-
-                <HeaderMenu class="navigation"/>
+                <Transition name="slide-fade">
+                    <HeaderMenu class="navigation"/>
+                </Transition>
+                
                 <Localization class="localization"/>
             </div>
         </div>
@@ -32,28 +34,28 @@ import Localization from './HeaderLocalization.vue'
         data() {
             return {
                 language: "EN",
-                dialogVisible: false,
-                
+                dialogVisible: false, 
             }
         },
 
         methods: {
             dropDawnShow(){
                 this.dialogVisible = !this.dialogVisible;
+                console.log(this.dialogVisible);
             },
-
-            getImageUrl(name) {  
-                return new URL(`../../assets/images/svg/${name}.svg`, import.meta.url).href;
-            },
-
-            changeLanguage(lang){
-                this.language = lang;
-            },
-
-            closeWindow(dialogVisible){
-                this.dialogVisible = dialogVisible;
+            
+            closeMenu(){
+                if(window.innerWidth >= 1280){
+                    this.dialogVisible = false;
+                }
             }
         },
+
+        mounted(){
+            window.addEventListener('resize', () => {
+                this.closeMenu();
+            })
+        }
 
         
     }
