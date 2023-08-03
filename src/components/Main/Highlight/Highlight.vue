@@ -19,13 +19,12 @@ import Timer from './HighlightTimer.vue'
 
         data(){
             return {
-                endtime: '2023-08-6',
+                endtime: '2023-12-29',
                 card:{
                     userIcon: "Shroomie",
                     userName: "Shroomie", 
                     title: "Magic Mashrooms"
                 }
-                
             }
         },
     }
@@ -40,7 +39,7 @@ import Timer from './HighlightTimer.vue'
     width: 100%;
     height: 640px;
     margin: 0 auto;
-    background-image:  url("../../../assets/images/Highlight/Highlight.svg");
+    background:  url("../../../assets/images/Highlight/Highlight.png") no-repeat center/cover;
 }
 .background{
     max-width: 1440px;
@@ -74,7 +73,7 @@ import Timer from './HighlightTimer.vue'
     .highlight{
         max-width: 834px;
         height: 630px;
-        background: url("../../../assets/images/Highlight/HighlightMedium.svg");
+        background: url("../../../assets/images/Highlight/HighlightMedium.png") no-repeat center/cover;
         
     }
 
@@ -103,7 +102,7 @@ import Timer from './HighlightTimer.vue'
     .highlight{
         max-width: 375px;
         min-height:500px;
-        background: url("../../../assets/images/Highlight/HighlightMedium.svg") center/ cover;
+        background: url("../../../assets/images/Highlight/HighlightMedium.png") center/ cover;
     }
 
     .background{

@@ -18,9 +18,9 @@
 
         <!-- Content Start -->
         <div class="content">
-            <Card v-if="shouldDisplayFullArray" :cards="info" />
-            <Card v-else-if="shouldDisplayForTablet" :cards="info.slice(0, 6)" />
-            <Card v-else :cards="info.slice(0, 5)"/>
+            <Card v-if="shouldDisplayFullArray" :cards="artists" />
+            <Card v-else-if="shouldDisplayForTablet" :cards="artists.slice(0, 6)" />
+            <Card v-else :cards="artists.slice(0, 5)"/>
         </div>
         <!-- Content End -->
         <div class="bottom">
@@ -35,37 +35,23 @@
 
 <script>
 import Card from './ArtistCard.vue'
-import { useI18n } from 'vue-i18n'
 import axios from 'axios'
+
 
     export default {
         components: {
             Card
         }, 
 
-        setup(){
-            const {locale}  = useI18n()
-            return{
-                locale
-            }
-        },
-
         data(){
             return {    
                 shouldDisplayFullArray: true,
                 shouldDisplayForTablet: true,
-                info: ''
+                artists: ''
             }
         },
 
         methods: {
-            getSubTitleClasses() { 
-                return {
-                    'english-subTitle': this.locale === 'EN',
-                    'ukrainian-subTitle': this.locale === 'UA'
-                };
-            },
-
             handleResize() {
                 this.shouldDisplayFullArray = window.innerWidth >= 1280;
                 this.shouldDisplayForTablet = window.innerWidth >= 768 && window.innerWidth < 1280;
@@ -88,7 +74,7 @@ import axios from 'axios'
             axios
                 .get('../../../../data/Artists.json')
                 .then(response =>  {
-                    this.info = response.data.Artists
+                    this.artists = response.data.Artists
                 });
             
 

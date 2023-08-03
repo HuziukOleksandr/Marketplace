@@ -30,114 +30,65 @@
 
 <style scoped>
 
-/* Стилі для великих моніторів та десктопів */
-@media only screen and (min-width: 1280px) {
-    /* Main Styles Start */
-    .community{
-        max-width: 328px;
-        width: 100%;
-    }
 
-    /* Main Styles End */
+/* Main Styles Start */
+.community{
+    max-width: 328px;
+    width: 100%;
+}
 
-    /* Logo Styles Start */
+/* Main Styles End */
 
-    .logo{
-        margin-bottom: 30px;
-    }
+/* Logo Styles Start */
 
-    /* Logo Styles Start */
+.logo{
+    margin-bottom: 30px;
+}
 
-    /* Text Styles Start */
-    .text, .title{
-        font-family: 'Mintserrat', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color: var(--text-color-secondary);
-        margin-bottom: 20px;
-    }
+/* Logo Styles Start */
 
-    .title{
-        margin-bottom: 15px;
-    }
+/* Text Styles Start */
+.text, .title{
+    font-family: 'Mintserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--text-color-secondary);
+    margin-bottom: 20px;
+}
 
-    /* Text Styles End */
+.title{
+    margin-bottom: 15px;
+}
 
-    /* Icons Style Start */
-    .icons{
-        width: 158px;
-        display: flex;
-        justify-content: space-between;
-    }
+/* Text Styles End */
 
-    .icon{
-        transition: 0.2s;
-    }
-    .icon:hover{
-        cursor: pointer;
-        scale: 1.01;
+/* Icons Style Start */
+.icons{
+    width: 158px;
+    display: flex;
+    justify-content: space-between;
+}
 
-    }
-    
-    /* Icons Style End */
+.icon{
+    transition: 0.2s;
+}
+.icon:hover{
+    cursor: pointer;
+    scale: 1.01;
 
 }
+
+/* Icons Style End */
+
+
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
-    /* Main Styles Start */
-
-    .community{
-        width: 100%;
-    }
-    
-    /* Main Styles End */
-
-    /* Logo Styles Start */
-
     .logo{
-        width: 32px;
         margin-bottom: 20px;
     }
-
-    /* Logo Styles Start */
-
-    /* Text Styles Start */
-    .text, .title{
-        font-family: 'Mintserrat', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color: var(--text-color-secondary);
-        margin-bottom: 20px;
-    }
-
-    .title{
-        margin-bottom: 15px;
-    }
-
-    /* Text Styles End */
-
-    /* Icons Style Start */
-
-    .icons{
-        width: 158px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .icon{
-        transition: 0.2s;
-    }
-    .icon:hover{
-        cursor: pointer;
-        scale: 1.01;
-
-    }
-    
-    /* Icons Style End */
 
 }
 
@@ -145,57 +96,9 @@
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
     
-    /* Main Styles Start */
-
-    .community{
-        width: 100%;
-    }
-    
-    /* Main Styles End */
-
-    /* Logo Styles Start */
-
     .logo{
-        width: 32px;
         margin-bottom: 20px;
     }
-
-    /* Logo Styles Start */
-
-    /* Text Styles Start */
-    .text, .title{
-        font-family: 'Mintserrat', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color: var(--text-color-secondary);
-        margin-bottom: 20px;
-    }
-
-    .title{
-        margin-bottom: 15px;
-    }
-
-    /* Text Styles End */
-
-    /* Icons Style Start */
-
-    .icons{
-        width: 158px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .icon{
-        transition: 0.2s;
-    }
-    .icon:hover{
-        cursor: pointer;
-        scale: 1.01;
-
-    }
-    
-    /* Icons Style End */
 
 }
 </style>

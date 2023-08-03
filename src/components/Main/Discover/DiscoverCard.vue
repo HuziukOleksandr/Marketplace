@@ -1,55 +1,81 @@
 <template>
-    <div class="card" v-for="card in cards">
-        <!-- Preview Start -->
-        <div class="preview">
-            <img 
-                :src="getImageUrl(card.image)" 
-                :alt="card.image"
-                class="picture">
-        </div>
-        <!-- Preview End -->
+    <carousel :items-to-show="slides" >
+        <slide v-for="card in cards" :key="card.id">
+            <div class="card">
+                <!-- Preview Start -->
+                <div class="preview">
+                    <img 
+                        :src="getImageUrl(card.picture)" 
+                        :alt="card.name"
+                        class="picture">
+                </div>
+                <!-- Preview End -->
 
-        <!-- Title Start -->
-        <div class="title">
-            <h2 class="name">{{ card.name }}</h2>
-            <div class="user">
-                <img 
-                    :src="getUserImageUrl(card.userIcon)" 
-                    :alt="card.userName"
-                    class="user-picture">
-                <h3 class="userName">{{ card.userName }}</h3>
-            </div>
-            <div class="numbers">
-                <div class="price">
-                    <h2 class="price-title">{{ $t("Discover.price") }}</h2>
-                    <h2 class="price-number">{{ card.price }}</h2>
+                <!-- Title Start -->
+                <div class="title">
+                    <h2 class="name">{{ card.name }}</h2>
+                    <div class="user">
+                        <img 
+                            :src="getUserImageUrl(card.userName)" 
+                            :alt="card.userName"
+                            class="user-picture">
+                        <h3 class="userName">{{ card.userName }}</h3>
+                    </div>
+                    <div class="numbers">
+                        <div class="price">
+                            <h2 class="price-title">{{ $t("Discover.price") }}</h2>
+                            <h2 class="price-number">{{ card.price }}</h2>
+                        </div>
+                        <div class="bid">
+                            <h2 class="bid-title">{{ $t("Discover.highestBid") }}</h2>
+                            <h2 class="bid-number">{{ card.bid }}</h2>
+                        </div>
+                    </div>
                 </div>
-                <div class="bid">
-                    <h2 class="bid-title">{{ $t("Discover.highestBid") }}</h2>
-                    <h2 class="bid-number">{{ card.bid }}</h2>
-                </div>
+                <!-- Title End -->
             </div>
-        </div>
-        <!-- Title End -->
-    </div>
+        </slide>
+        <template #addons>
+            <Navigation />
+            <Pagination />
+        </template>
+    </carousel>
 </template>
 
 <script>
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../../helpers/helpers'
     export default {
+
         props: {
             cards: {
                 type: Object,
                 reqired: true
             }
         },
-        
+
+        components: {
+            Carousel, Slide, Pagination, Navigation
+        },
+
+        data(){
+            return{
+                slides: 1
+            }
+        }, 
+
         methods: {
-            getImageUrl(name) {
-                return new URL(`../../../assets/images/Discovers/${name}.svg`, import.meta.url).href;
-            },
-            getUserImageUrl(name) {
-                return new URL(`../../../assets/images/Avatars/${name}.svg`, import.meta.url).href;
-            } 
+            getSlidesNumber,
+            getImageUrl,
+            getUserImageUrl,
+        },
+
+        mounted(){
+            this.slides = getSlidesNumber();
+            window.addEventListener('resize', () => {
+                this.slides = getSlidesNumber();
+            })
         }
     }
 </script>
@@ -79,6 +105,7 @@
     height: 296px;
 }
 
+
 /* Preview Styles End */
 
 /* Content Styles Start */
@@ -95,6 +122,7 @@
     line-height: 31px;
     color: var(--text-color-white);
     margin-bottom: 5px;
+    text-align: start;
 }
 
 .user{
@@ -133,7 +161,9 @@
     line-height: 13px;
     color: var(--text-color-secondary);
 }
-
+.price-title{
+    text-align: start;
+}
 .bid-title{
     text-align: end;
 }
@@ -159,6 +189,7 @@
 
     .picture{
         width: 315px;
+
     }
 }
 

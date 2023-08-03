@@ -32,11 +32,6 @@ import { useI18n } from 'vue-i18n'
             }
         },
 
-        data(){
-            return{
-            }
-        },
-
         computed: {
             cards(){
                 return [

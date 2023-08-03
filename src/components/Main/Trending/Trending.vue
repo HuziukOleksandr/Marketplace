@@ -9,11 +9,7 @@
 
         <!-- Content Start -->
         <div class="content">
-
-            <!-- <Card v-if="shouldDisplayFullArray" :cards="cards" />
-            <Card v-else-if="shouldDisplayForTablet" :cards="cards.slice(0, 2)" />
-            <Card v-else :cards="[cards[0]]" /> -->
-            <Card :cards="cards" />
+            <Card :collections="collections" />
         </div>
         <!-- Content End -->
     </div>
@@ -21,62 +17,27 @@
 
 <script>
 import Card from './TrendingCard.vue'
-
+import axios from 'axios'
 
     export default {
+
         components: {
             Card
         },
+
         data() {
             return {
-                cards: [
-                    { 
-                    mainPicture: 'DSGNAnimals',
-                    secondaryPicture: [ 
-                        { id: 1, name: 'DSGNAnimals-1' },
-                        { id: 1,name: 'DSGNAnimals-2' }
-                    ],
-                    lenght: '1025+', preview: 'DSGN Animals', namePicture: 'MrFox', userName: 'MrFox' },
-                    { mainPicture: 'MagicMushrooms', secondaryPicture: [ 
-                        { id: 1, name: 'MagicMushrooms-1' },
-                        { id: 1, name: 'MagicMushrooms-2' }
-                    ],
-                    lenght: '1025+', preview: 'Magic Mushrooms', namePicture: 'Shroomie', userName: 'Shroomie' },
-                    { mainPicture: 'DiscoMachines',
-                    secondaryPicture: [ 
-                        { id: 1, name: 'DiscoMachines-1' },
-                        { id: 1, name: 'DiscoMachines-2' }
-                    ],
-                    lenght: '1025+', preview: 'Disco Machines', namePicture: 'BeKind2Robots', userName: 'BeKind2Robots' }
-                ],
-                shouldDisplayFullArray: true,
-                shouldDisplayForTablet: true
-            }
-        },
-
-        methods: {
-            handleResize() {
-                this.shouldDisplayFullArray = window.innerWidth >= 1280;
-                this.shouldDisplayForTablet = window.innerWidth >= 768 && window.innerWidth < 1280;
+                collections: '',
             }
         },
 
         mounted() {
-
-            const storedWidth = localStorage.getItem('screenWidth');
-            if (storedWidth && parseInt(storedWidth) === window.innerWidth) {
-                this.shouldDisplayFullArray = localStorage.getItem('shouldDisplayFullArray') === 'true';
-            } else {
-                this.shouldDisplayFullArray = window.innerWidth >= 1280;
-                this.shouldDisplayForTablet = window.innerWidth >= 768 && window.innerWidth < 1280;
-                localStorage.setItem('screenWidth', window.innerWidth);
-                localStorage.setItem('shouldDisplayFullArray', this.shouldDisplayFullArray);
-            }
-            window.addEventListener('resize', this.handleResize);
-        },
-
-        beforeDestroy() {
-            window.removeEventListener('resize', this.handleResize);
+            axios
+                .get('../../../../data/Collections.json')
+                .then(response =>  {
+                    this.collections = response.data.Collections;
+                    console.log(this.collections);
+                });
         }
     }
 </script>
@@ -134,7 +95,7 @@ import Card from './TrendingCard.vue'
 .content{
     max-width: 1050px;
     width: 100%;
-    min-height: 525px;
+    min-height: 505px;
     display: flex;
     justify-content: space-between;
 }

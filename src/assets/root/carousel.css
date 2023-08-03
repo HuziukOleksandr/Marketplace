@@ -1,0 +1,57 @@
+.carousel{
+    max-width: 1050px;
+    width: 100%;
+}
+.carousel__track{
+    display: flex;
+    
+}
+
+.carousel__slide{
+    width: 330px;
+}
+
+.carousel__next{
+    color: var(--text-color-white);
+}
+
+.carousel__prev{
+    color: var(--text-color-white);
+}
+
+.carousel__pagination-button::after{
+    
+    background-color: var(--text-color-secondary);
+}
+.carousel__pagination-button--active::after{
+    background-color: var(--text-color-white);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+
+    .carousel__viewport{
+        max-width: 690px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+   
+    .carousel__viewport{
+        max-width: 315px;
+        
+        width: 100%;
+    }
+
+    .carousel__track{
+        display: flex;
+        gap: 0;
+    }
+    .carousel__next{
+        display: none;
+    }
+
+    .carousel__prev{
+        display: none;
+    }
+}

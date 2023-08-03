@@ -28,7 +28,9 @@
 </template>
 
 <script>
+import {getUserImageUrl} from '../../../helpers/helpers'
     export default {
+        
         props:{
             cards: {
                 type: Object,
@@ -37,9 +39,7 @@
         },
         
         methods: {
-            getUserImageUrl(name) {
-                return new URL(`../../../assets/images/Avatars/${name}.svg`, import.meta.url).href;
-            } 
+            getUserImageUrl
         }
     }
 </script>

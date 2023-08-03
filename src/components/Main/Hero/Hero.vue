@@ -34,6 +34,7 @@
 <script>
 import Info from './HeroInfo.vue'
 import { useI18n } from 'vue-i18n'
+import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
     export default {
         components: {
             Info
@@ -51,9 +52,7 @@ import { useI18n } from 'vue-i18n'
             return {
                 userName: 'Animakid',
                 previewTitle: 'Space Walking',
-                
             }
-            
         },
 
         computed: {
@@ -67,19 +66,8 @@ import { useI18n } from 'vue-i18n'
         },
 
         methods: {
-            getTitleClasses(){
-                return {
-                    'english-title': this.locale === 'EN',
-                    'ukrainian-title': this.locale === 'UA'
-                };
-            },
-
-            getTextClasses(){
-                return {
-                    'english-text': this.locale === 'EN',
-                    'ukrainian-text': this.locale === 'UA'
-                };
-            }
+            getTitleClasses,
+            getTextClasses
         },
     }
 </script>

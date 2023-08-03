@@ -3,11 +3,11 @@
         <!-- Preview Start -->
         <div class="preview">
             <img 
-                :src="getImageUrl(card.background)" 
+                :src="getCategoryImageUrl(card.background)" 
                 :alt="card.background" 
                 class="bg-img">
             <img 
-                :src="getImageUrl(card.image)" 
+                :src="getCategoryIconUrl(card.image)" 
                 :alt="card.image" 
                 class="preview-icon">
         </div>
@@ -23,6 +23,8 @@
 
 <script>
 import { useI18n } from 'vue-i18n'
+import { getCategoryImageUrl, getCategoryIconUrl} from '../../../helpers/helpers'
+import { getTitleClasses } from '../../../helpers/localization'
     export default {
         props: {
             cards:{
@@ -32,22 +34,16 @@ import { useI18n } from 'vue-i18n'
         },
 
         setup(){
-            const {t, locale}  = useI18n()
+            const { locale }  = useI18n()
             return{
-                t, locale
+                locale
             }
         },
 
         methods: {
-            getTitleClasses(){
-                return {
-                    'english-title': this.locale === 'EN',
-                    'ukrainian-title': this.locale === 'UA'
-                };
-            },
-            getImageUrl(name) {
-                return new URL(`../../../assets/images/Categories/${name}.svg`, import.meta.url).href;
-            } 
+            getCategoryImageUrl,
+            getCategoryIconUrl,
+            getTitleClasses
         }
     }
 </script>
@@ -176,8 +172,8 @@ import { useI18n } from 'vue-i18n'
     /* Ukrainian Style Start */
 
     .ukrainian-title{
-        font-size: 20px;
-        line-height: 31px;
+        font-size: 16px;
+        line-height: 22px;
     }
 
     /* Ukrainian Style End */
@@ -222,7 +218,7 @@ import { useI18n } from 'vue-i18n'
     /* English Style Start */
 
     .english-title{
-        font-size: 16px;
+        font-size: 14px;
         line-height: 22px;
     }
 
@@ -231,8 +227,8 @@ import { useI18n } from 'vue-i18n'
     /* Ukrainian Style Start */
 
     .ukrainian-title{
-        font-size: 20px;
-        line-height: 31px;
+        font-size: 16px;
+        line-height: 22px;
     }
 
     /* Ukrainian Style End */

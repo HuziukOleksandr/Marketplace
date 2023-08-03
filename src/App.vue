@@ -19,6 +19,7 @@ import { RouterView } from 'vue-router';
 <style scoped>
 
 .page{
+    padding-top: 10px;
     width: 100%;
     min-height: 500px;
     display: flex;

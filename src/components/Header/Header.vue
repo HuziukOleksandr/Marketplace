@@ -39,9 +39,9 @@ import Localization from './HeaderLocalization.vue'
         },
 
         methods: {
+
             dropDawnShow(){
-                this.dialogVisible = !this.dialogVisible;
-                console.log(this.dialogVisible);
+                this.dialogVisible = !this.dialogVisible
             },
             
             closeMenu(){

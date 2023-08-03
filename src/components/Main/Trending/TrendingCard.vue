@@ -1,39 +1,39 @@
 <template>
     <carousel :items-to-show="slides" >
-        <slide v-for="card in cards" :key="card">
+        <slide v-for="collection in collections" :key="collection">
             <div class="card">
                 <!-- Main Picture -->
                 <img 
-                    :src="getImageUrl(card.mainPicture)" 
-                    :alt="card.mainPicture"
+                    :src="getImageUrl(collection.Cards[0].picture)" 
+                    :alt="collection.Cards[0].picture"
                     class="main-picture">
                 
                 <!-- Secondary Start -->
                 <div class="secondary">
                     <img 
-                        :src="getImageUrl(card.secondaryPicture[0].name)" 
-                        :alt="card.secondaryPicture[0].name"
+                        :src="getImageUrl(collection.Cards[1].picture)" 
+                        :alt="collection.Cards[1].picture"
                         class="secondary-picture">
                     <img 
-                        :src="getImageUrl(card.secondaryPicture[1].name)" 
-                        :alt="card.secondaryPicture[1].name"
+                        :src="getImageUrl(collection.Cards[2].picture)" 
+                        :alt="collection.Cards[2].picture"
                         class="secondary-picture">
 
                     <my-button class="more">
-                        {{ card.lenght }}
+                        +{{ collection.Cards.length }}
                     </my-button>
                 </div>
                 <!-- Secondary End -->
 
                 <!-- Preview Start -->
                 <div class="preview">
-                    <h2 class="title">{{ card.preview }}</h2>
+                    <h2 class="title">{{ collection.name }}</h2>
                     <div class="user">
                         <img 
-                            :src="getUserImageUrl(card.namePicture)" 
-                            :alt="card.namePicture"
+                            :src="getUserImageUrl(collection.userName)" 
+                            :alt="collection.userName"
                             class="user-picture">
-                        <h2 class="user-name">{{ card.userName }}</h2>
+                        <h2 class="user-name">{{ collection.userName}}</h2>
                     </div>
                 </div>
             <!-- Preview End -->
@@ -49,6 +49,7 @@
 <script>
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import {getSlidesNumber, getImageUrl, getUserImageUrl } from '../../../helpers/helpers'
 
     export default {
         components: {
@@ -62,36 +63,22 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
         },  
 
         props: {
-            cards:{
+            collections:{
                 type: Object,
                 reqired: true,
             }
         },
 
         methods: {
-            getImageUrl(url) {  
-                return new URL(`../../../assets/images/Cards/${url}.svg`, import.meta.url).href;
-            },
-
-            getUserImageUrl(name) {
-                return new URL(`../../../assets/images/Avatars/${name}.svg`, import.meta.url).href;
-            },
-
-            getSlidesNumber(){
-                if(window.innerWidth < 768 && window.innerWidth < 1280){
-                    this.slides = 1;
-                } else if(window.innerWidth > 768 && window.innerWidth < 1280){
-                    this.slides = 2;
-                } else {
-                    this.slides = 3;
-                }
-            }
+            getSlidesNumber,
+            getImageUrl,
+            getUserImageUrl
         },
         
         mounted(){
-            this.getSlidesNumber();
+            this.slides = getSlidesNumber()
             window.addEventListener('resize', () => {
-                this.getSlidesNumber();
+                this.slides = getSlidesNumber()
             })
         }
     }
@@ -101,13 +88,14 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 .card{
     width: 330px;
-    height: 525px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
 .main-picture{
+    border-radius: 20px;
     transition: .2s;
 }
 
@@ -133,6 +121,8 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 }
 
 .secondary-picture{
+    width: 100px;
+    border-radius: 20px;
     transition: 0.4s;
 }   
 .secondary-picture:hover{
@@ -153,6 +143,7 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
     font-weight: 600;
     font-size: 22px;
     line-height: 30px;
+    text-align: start;
 }
 
 .user{
@@ -183,76 +174,12 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
     }
 
     .more{
-        width: 85px;
-        height: 85px;
+        width: 95px;
+        height: 95px;
     }
 
     .secondary-picture{
-        width: 85px;
-    }
-}
-
-
-</style>
-
-<style>
-
-.carousel{
-    max-width: 1050px;
-    width: 100%;
-}
-.carousel__track{
-    display: flex;
-    gap: 30px;
-}
-
-.carousel__slide{
-    width: 330px;
-}
-
-.carousel__next{
-    color: var(--text-color-white);
-}
-
-.carousel__prev{
-    color: var(--text-color-white);
-}
-
-.carousel__pagination-button::after{
-    
-    background-color: var(--text-color-secondary);
-}
-.carousel__pagination-button--active::after{
-    background-color: var(--text-color-white);
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
-
-    .carousel__viewport{
-        max-width: 690px;
-        width: 100%;
-    }
-
-    
-}
-
-@media only screen and (max-width: 767px) {
-   
-    .carousel__viewport{
-        max-width: 315px;
-        width: 100%;
-    }
-
-    .carousel__track{
-        display: flex;
-        gap: 0;
-    }
-    .carousel__next{
-        display: none;
-    }
-
-    .carousel__prev{
-        display: none;
+        width: 95px;
     }
 }
 

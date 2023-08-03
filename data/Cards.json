@@ -1,0 +1,32 @@
+{
+    "Cards": [
+        {"id": "1", "picture": "DistantGalaxy", "name": "Distant Galaxy", "userName": "MoonDancer", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "2", "picture": "LifeOnEdena", "name": "Life On Edena", "userName": "NebulaKid", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "3", "picture": "AstroFiction", "name": "AstroFiction", "userName": "Dotgu", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "4", "picture": "PsychoDog", "name": "PsychoDog", "userName": "Animakid", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "5", "picture": "ColorfulDog0524", "name": "ColorfulDog 0524", "userName": "Animakid", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "6", "picture": "FoxyLife", "name": "Foxy Life", "userName": "Animakid", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "7", "picture": "DesignerBear", "name": "Designer Bear", "userName": "Animakid", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "8", "picture": "CatFromFuture", "name": "Cat From Future", "userName": "Animakid", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "9", "picture": "ColorfulDog0344", "name": "Colorful Dog 0344", "userName": "Animakid", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "10", "picture": "IceCreamApe0324", "name": "IceCream Ape 0324", "userName": "Animakid", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "11", "picture": "DancingRobot0375", "name": "Dancing Robot 0375", "userName": "Orbitian", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "12", "picture": "DancingRobot0321", "name": "Dancing Robot 0321", "userName": "Orbitian", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "13", "picture": "DancingRobot0512", "name": "Dancing Robot 0512", "userName": "Orbitian", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "14", "picture": "DancingRobot0024", "name": "Dancing Robot 0024", "userName": "Orbitian", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "15", "picture": "DancingRobots0987", "name": "Dancing Robots 0987", "userName": "Orbitian", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "16", "picture": "DesertWalk", "name": "Desert Walk", "userName": "Orbitian", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "17", "picture": "HappyRobot024", "name": "Happy Robot 024", "userName": "Orbitian", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "18", "picture": "HappyRobot032", "name": "Happy Robot 032", "userName": "Orbitian", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "19", "picture": "IceCreamApe", "name": "Ice Cream Ape", "userName": "Animakid", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "20", "picture": "SunsetDimension", "name": "Sunset Dimension", "userName": "MoonDancer", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "21", "picture": "SpaceTravel", "name": "Space Travel", "userName": "MoonDancer", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "22", "picture": "SpaceTales", "name": "Space Tales", "userName": "MoonDancer", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "23", "picture": "CherryBlossomGirl01", "name": "Cherry Blossom Girl 01", "userName": "Animakid", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "24", "picture": "CherryBlossomGirl03", "name": "Cherry Blossom Girl 03", "userName": "Animakid", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "25", "picture": "CryptoCity", "name": "CryptoCity   ", "userName": "Animakid", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "26", "picture": "MagicMushroom0325", "name": "Magic Mushroom 0325", "userName": "Orbitian", "price": "1.63 ETH", "bid": "0.33 wETH"},
+        {"id": "27", "picture": "MagicMushroom03", "name": "Magic Mushroom 03", "userName": "Orbitian", "price": "1.63 ETH", "bid": "0.33 wETH"}
+        
+    ]
+}

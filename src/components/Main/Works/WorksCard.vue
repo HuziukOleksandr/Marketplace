@@ -2,7 +2,7 @@
     <div class="card" v-for="card in cards">
         <div class="preview">
             <img 
-                :src="getImageUrl(card.icon)" 
+                :src="getWorkImageUrl(card.icon)" 
                 :alt="card.icon"
                 class="picture">
         </div>
@@ -14,7 +14,9 @@
 </template>
 
 <script>
-import { useI18n } from 'vue-i18n';
+import { useI18n } from 'vue-i18n'
+import { getWorkImageUrl } from '../../../helpers/helpers'
+import { getTitleClasses} from '../../../helpers/localization'
     export default {
         props: {
             cards: {
@@ -31,16 +33,8 @@ import { useI18n } from 'vue-i18n';
         },
 
         methods: {
-            getImageUrl(name) {
-                return new URL(`../../../assets/images/Work/${name}.svg`, import.meta.url).href;
-            },
-
-            getTitleClasses(){
-                return {
-                    'english-title': this.locale === 'EN',
-                    'ukrainian-title': this.locale === 'UA'
-                };
-            },
+            getWorkImageUrl,
+            getTitleClasses
         },
     }
 </script>

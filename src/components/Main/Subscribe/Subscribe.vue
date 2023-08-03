@@ -31,7 +31,10 @@
 
 <script>
 import {useI18n} from 'vue-i18n'
+import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
+
     export default {
+
         setup(){
             const {locale} = useI18n();
             return {
@@ -40,26 +43,8 @@ import {useI18n} from 'vue-i18n'
         },
 
         methods:{
-            getTitleClasses(){
-                return {
-                    'english-title': this.locale === 'EN',
-                    'ukrainian-title': this.locale === 'UA'
-                };
-            },
-
-            getTextClasses(){
-                return {
-                    'english-text': this.locale === 'EN',
-                    'ukrainian-text': this.locale === 'UA'
-                };
-            },
-
-            getnputClasses(){
-                return {
-                    'english-input': this.locale === 'EN',
-                    'ukrainian-input': this.locale === 'UA'
-                };
-            }
+            getTitleClasses,
+            getTextClasses
         }
     }
 </script>
@@ -93,7 +78,7 @@ import {useI18n} from 'vue-i18n'
 .picture{
     width: 425px;
     height: 310px;
-    background-image: url("../../../assets/images/Subscribe/Photo.svg");
+    background-image: url("../../../assets/images/Subscribe/Photo.png");
 }
 
 /* Content Styles End */
@@ -209,7 +194,7 @@ import {useI18n} from 'vue-i18n'
     .picture{
         width: 300px;
         height: 280px;
-        background-image: url("../../../assets/images/Subscribe/PhotoMedium.svg");
+        background: url("../../../assets/images/Subscribe/PhotoMedium.png") no-repeat center/cover;
     }
 
     /* Content Styles End */
@@ -295,7 +280,7 @@ import {useI18n} from 'vue-i18n'
         width: 315px;
         height: 255px;
         border-radius: 20px;
-        background: url("../../../assets/images/Subscribe/PhotoMedium.svg") center/cover no-repeat;
+        background: url("../../../assets/images/Subscribe/PhotoMedium.png") center/cover no-repeat;
     }
 
     /* Content Styles End */
@@ -343,30 +328,9 @@ import {useI18n} from 'vue-i18n'
         flex-direction: column;
         gap: 15px; 
     }
-
-    /* English Styles Start */
-
-    .english-input{
-        max-width: 425px;
-        height: 46px;
-        font-size: 16px;
-        line-height: 22px;
-        padding: 12px 20px;
+    .input{
+        height: 46px;   
     }
-
-    /* English Styles End */
-
-    /* Ukrainian Style Start */
-
-    .ukrainian-input{
-        max-width: 425px;
-        height: 46px;
-        font-size: 16px;
-        line-height: 22px;
-        padding: 12px 20px;
-    }
-
-    /* Ukrainian Style End */
 
     .button{
         position: static;

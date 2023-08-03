@@ -19,9 +19,7 @@
 
         <!-- Content Start -->
         <div class="content">
-            <Card v-if="shouldDisplayFullArray" :cards="cards" />
-            <Card v-else-if="shouldDisplayForTablet" :cards="cards.slice(0, 2)" />
-            <Card v-else :cards="cards" />
+            <Card :cards="cards.slice(0,4)" />
         </div>
         <!-- Content End -->
 
@@ -38,6 +36,8 @@
 
 <script>
 import Card from './DiscoverCard.vue'
+import axios from 'axios';
+
     export default {
         components:{
             Card
@@ -45,40 +45,18 @@ import Card from './DiscoverCard.vue'
 
         data() {
             return {
-                cards: [
-                    {id: "1", image: "Discover_1", name: "NFT Name", userIcon: "MoonDancer", userName: "MoonDancer", price: "1.63 ETH", bid: "0.33 wETH"},
-                    {id: "2", image: "Discover_2", name: "NFT Name", userIcon: "NebulaKid", userName: "NebulaKid", price: "1.63 ETH", bid: "0.33 wETH"},
-                    {id: "3", image: "Discover_3", name: "NFT Name", userIcon: "Dotgu", userName: "Dotgu", price: "1.63 ETH", bid: "0.33 wETH"}
-                ],
-                shouldDisplayFullArray: true,
-                shouldDisplayForTablet: true
-            }
-        },
-
-        methods: {
-            handleResize() {
-                this.shouldDisplayFullArray = window.innerWidth >= 1280;
-                this.shouldDisplayForTablet = window.innerWidth >= 768 && window.innerWidth < 1280;
+                cards: '',
             }
         },
 
         mounted() {
 
-            const storedWidth = localStorage.getItem('screenWidth');
-            if (storedWidth && parseInt(storedWidth) === window.innerWidth) {
-                this.shouldDisplayFullArray = localStorage.getItem('shouldDisplayFullArray') === 'true';
-            } else {
-                this.shouldDisplayFullArray = window.innerWidth >= 1280;
-                this.shouldDisplayForTablet = window.innerWidth >= 768 && window.innerWidth < 1280;
-                localStorage.setItem('screenWidth', window.innerWidth);
-                localStorage.setItem('shouldDisplayFullArray', this.shouldDisplayFullArray);
-            }
-            window.addEventListener('resize', this.handleResize);
+            axios
+                .get('../../../../data/Cards.json')
+                .then(response =>  {
+                    this.cards = response.data.Cards
+                });
 
-        },
-
-        beforeDestroy() {
-            window.removeEventListener('resize', this.handleResize);
         }
     }
 </script>
@@ -157,8 +135,11 @@ import Card from './DiscoverCard.vue'
     max-width: 1050px;
     width: 100%;
     min-height: 470px;
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
+    gap: 30px; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 

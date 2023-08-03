@@ -1,0 +1,64 @@
+{
+    "Collections": {
+        "Space" : {
+            "name": "Space",
+            "userName": "MoonDancer",
+            "Cards": [
+                {"id": "1", "name": "Sunset Dimension", "picture": "SunsetDimension" },
+                {"id": "2", "name": "Space Travel", "picture": "SpaceTravel" },
+                {"id": "3", "name": "Space Tales", "picture": "SpaceTales" },
+                {"id": "4", "name": "Distant Galaxy", "picture": "DistantGalaxy" },
+                {"id": "5", "name": "Life On Edena", "picture": "LifeOnEdena" },
+                {"id": "6", "name": "Life On Edena", "picture": "LifeOnEdena" }
+            ]
+        },
+        "DSGNAnimals" : {
+            "name": "DSGN Animals",
+            "userName": "MrFox",
+            "Cards": [
+                {"id": "1", "name": "Psycho Dog", "picture": "PsychoDog" },
+                {"id": "2", "name": "ColorfulDog 0524", "picture": "ColorfulDog0524" },
+                {"id": "3", "name": "Foxy Life", "picture": "FoxyLife" },
+                {"id": "4", "name": "Colorful Dog 0524", "picture": "ColorfulDog0524" },
+                {"id": "5", "name": "Designer Bear", "picture": "DesignerBear" },
+                {"id": "6", "name": "Cat From Future", "picture": "CatFromFuture" },
+                {"id": "7", "name": "Colorful Dog 0344", "picture": "ColorfulDog0344" },
+                {"id": "8", "name": "IceCream Ape0324", "picture": "IceCreamApe0324" },
+                {"id": "9", "name": "IceCream Ape", "picture": "IceCreamApe" }
+                
+            ]
+        },
+        "DiscoMashines" : {
+            "name": "Disco Mashines",
+            "userName": "BeKind2Robots",
+            "Cards": [
+                {"id": "1", "name": "Dancing Robot 0321", "picture": "DancingRobot0321" },
+                {"id": "2", "name": "Desert Walk", "picture": "DesertWalk" },
+                {"id": "3", "name": "Happy Robot 032", "picture": "HappyRobot032" },
+                {"id": "4", "name": "Happy Robot 024", "picture": "HappyRobot024" },
+                {"id": "5", "name": "Dancing Robot 0375", "picture": "DancingRobot0375" },
+                {"id": "6", "name": "Dancing Robot 0987", "picture": "DancingRobot0987" },
+                {"id": "7", "name": "Dancing Robot 0512", "picture": "DancingRobot0512" },
+                {"id": "8", "name": "Dancing Robot 0024", "picture": "DancingRobot0024" }
+            ]
+        },
+        "CherryBlossom" : {
+            "name": "Cherry Blossom",
+            "userName": "Juanie",
+            "Cards": [
+                {"id": "1", "name": "Cherry BlossomGirl 01", "picture": "CherryBlossomGirl01" },
+                {"id": "2", "name": "Cherry Blossom Girl 03", "picture": "CherryBlossomGirl03" },
+                {"id": "2", "name": "Cherry Blossom Girl 03", "picture": "CherryBlossomGirl03" }
+            ]
+        },
+        "MagicMushroom" : {
+            "name": "Magic Mushroom",
+            "userName": "Juanie",
+            "Cards": [
+                {"id": "1", "name": "Magic Mushroom 0325", "picture": "MagicMushroom0325" },
+                {"id": "2", "name": "Magic Mushroom 03", "picture": "MagicMushroom03" },
+                {"id": "2", "name": "Magic Mushroom 0325", "picture": "MagicMushroom0325" }
+            ]
+        }
+    }
+}

@@ -37,21 +37,5 @@
     transform: scale(1.02);
     cursor: pointer;
 }
-
-/* Logo Styles End */
-
-@media only screen and (max-width: 1279px) { 
-    .logo{
-        height: 24px;
-    }
-
-    .logo-picture{
-        height: 24px;
-    }
-
-    .logo-title{
-        height: 15px;
-    }
-}
-
+    
 </style>

@@ -18,6 +18,7 @@
 <script>
 import Card from './WorksCard.vue'
 import {useI18n} from 'vue-i18n'
+import { getTitleClasses } from '../../../helpers/localization'
 
     export default {
         components: {
@@ -43,12 +44,7 @@ import {useI18n} from 'vue-i18n'
         },
 
         methods:{
-            getTitleClasses(){
-                return {
-                    'english-title': this.locale === 'EN',
-                    'ukrainian-title': this.locale === 'UA'
-                };
-            },
+            getTitleClasses
         }
     }
 </script>
