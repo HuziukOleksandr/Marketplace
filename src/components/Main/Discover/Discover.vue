@@ -52,7 +52,7 @@ import axios from 'axios';
         mounted() {
 
             axios
-                .get('/data/Cards.json')
+                .get('https://marketplace-orcin-sigma.vercel.app/data/Cards.json')
                 .then(response =>  {
                     this.cards = response.data.Cards
                 });
