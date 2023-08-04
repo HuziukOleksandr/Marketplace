@@ -1,23 +1,25 @@
 <template>        
     <div>
-        
         <router-link 
             to="/marketplace" 
             class="link" 
-            :style="linkItemStyles">
+            :style="linkItemStyles"
+            @click="menuClose">
             {{ $t("Navigation.marketplace") }}
         </router-link>
         
         <router-link
-            to="/market"
+            to="/ranking"
             class="link" 
-            :style="linkItemStyles">
+            :style="linkItemStyles"
+            @click="menuClose">
             {{ $t("Navigation.rankings") }}
         </router-link>
 
         <router-link to="/wallet"
             class="link" 
-            :style="linkItemStyles">
+            :style="linkItemStyles"
+            @click="menuClose">
             {{ $t("Navigation.connectAWallet") }}
         </router-link> 
         
@@ -33,6 +35,12 @@
                 default: () => ({}),
             },
         },
+
+        methods:{
+            menuClose(){
+                this.$emit("menuClose")
+            }
+        }
     }
 </script>
 

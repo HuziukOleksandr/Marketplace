@@ -1,16 +1,16 @@
 <template>
     <div class="main">
-        <Market/>
+        <Ranks/>
     </div>
 </template>
 
 <script>
-import Market from '../components/Marketplace/Market.vue'
+import Ranks from '../components/Ranking/Ranks.vue'
 
     export default {
-        components: {
-            Market
-        } 
+        components:{
+            Ranks
+        }
     }
 </script>
 

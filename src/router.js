@@ -5,6 +5,7 @@ import Main from './views/Main.vue'
 import Register from './views/Registration.vue' 
 import Wallet from './views/ConnectWallet.vue'
 import Marketplace from './views/Marketplace.vue'
+import Ranking from './views/Ranking.vue'
 
 const routes = [
     {
@@ -40,6 +41,15 @@ const routes = [
         components:{
             Header,
             default: Marketplace,
+            Footer
+        }
+    },
+    {
+        path: '/ranking',
+        name: 'Ranking',
+        components:{
+            Header,
+            default: Ranking,
             Footer
         }
     }

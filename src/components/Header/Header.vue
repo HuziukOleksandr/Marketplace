@@ -15,9 +15,14 @@
                 
                 <Localization class="localization"/>
             </div>
+
         </div>
+        
         <Transition name="slide-fade">
-            <HeaderMenu v-if="dialogVisible" class="dropdawn-menu"/>
+            <HeaderMenu 
+                v-if="dialogVisible" 
+                class="dropdawn-menu"
+                @menuClose="dropDawnShow"/>
         </Transition>
     </div> 
 </template>
@@ -33,7 +38,7 @@ import Localization from './HeaderLocalization.vue'
 
         data() {
             return {
-                dialogVisible: false, 
+                dialogVisible: false
             }
         },
 
@@ -56,7 +61,6 @@ import Localization from './HeaderLocalization.vue'
             })
         }
 
-        
     }
 </script>
 
@@ -64,21 +68,26 @@ import Localization from './HeaderLocalization.vue'
 
 /* Animation Styles Start */
 
+    
 .slide-fade-enter-active {
   transition: all 0.3s ease-out;
 }
 
 .slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
-.slide-fade-enter-from,
-
-.slide-fade-leave-to {
-  transform: translateX(20px);
+.slide-fade-enter-from,.slide-fade-leave-to {
+  transform: translateY(-20px);
   opacity: 0;
 }
 
+@media only screen and (min-width: 1280px){
+    .slide-fade-leave-active {
+        transition: none;
+    }
+}
+  
 /* Animation Styles End */
 
 
@@ -109,7 +118,7 @@ import Localization from './HeaderLocalization.vue'
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
-    
+
     .header{
         padding: 0 25px;
         min-height: 54px;
@@ -139,6 +148,7 @@ import Localization from './HeaderLocalization.vue'
 
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
+
     .header{
         padding:0 5px;
         min-height: 54px;   
@@ -153,8 +163,10 @@ import Localization from './HeaderLocalization.vue'
     }
 
     .dropdawn-menu{
+        padding: 20px;
         margin-bottom: 40px;
-        border-bottom:1px solid black ;
+        border-radius: 20px;
+        background-color: var(--background-secondary);
     }
     
     .burger-menu:hover{

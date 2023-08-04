@@ -104,5 +104,13 @@
         "input": "Search your favourite NFTs",
         "NFT": "NFTs",
         "collection": "Collection"
+    },
+    "Ranking":{
+        "title": "Top Creators",
+        "subTitle": "Check out top ranking NFT artists on the NFT Marketplace.",
+        "today": "Today",
+        "week": "This Week",
+        "month": "This Month",
+        "time": "All Time"
     }
 }

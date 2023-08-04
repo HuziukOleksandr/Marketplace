@@ -1,11 +1,13 @@
 <template>
         <div class="menu" >
-            <Navigation class="navigation" :link-item-styles="customLinkItemStyles"/>
-
+            <Navigation 
+                class="navigation" 
+                :linkItemStyles="customLinkItemStyles"
+                @menuClose="this.$emit('menuClose', false);"/>
+                
             <my-button 
-                class="button"
-
-                @click="this.$router.push({ name: 'Register' })">
+                class="button" 
+                @click="buttonClick">
                     <img src="../../assets/images/Buttons/User.svg" alt="user">
                     {{ $t("Header.button") }}
             </my-button>
@@ -27,8 +29,16 @@ import Navigation from '../Navigation/Navigation.vue'
                     padding: "0 20px",
                     alignItems: "center",
                     color: "var(--text-color-white)",
-                    height: "60px"
+                    height: "45px"
                 },
+            }
+        },
+
+        methods: {
+            buttonClick(){
+                this.$emit('menuClose', false);
+                
+                this.$router.push({ name: 'Register' });
             }
         },
     }
@@ -50,21 +60,22 @@ import Navigation from '../Navigation/Navigation.vue'
     line-height: 22px;
 }
 
-
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
     .menu{
+        max-width: 690px;
         width: 100%;
         min-height: 60px;
-        display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 30px;
+        border: 2px solid var(--button-background-color);
+        margin: 30px auto;
     }
 
     .button{
-        padding: 20px 50px;
+        height: 45px;
+        padding: 20px 45px;
     }
 }
 
@@ -76,12 +87,15 @@ import Navigation from '../Navigation/Navigation.vue'
         flex-direction: column;
         margin: 0 auto;
     }
+
     .menu{
+        max-width: 330px;
         flex-direction: column;
+        border: 2px solid var(--button-background-color);
+        margin: 30px auto;
     }
 
     .button{
-        width: 315px;
         height: 45px;
         padding: 15px 50px;
         margin: 0 auto;

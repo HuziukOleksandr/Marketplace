@@ -2,26 +2,26 @@
     <div class="section">
         <!-- Header Start -->
         <div class="header">
-            <h2 class="title">{{ $t("Marketplace.title") }}</h2>
-            <h2 class="sub-title">{{ $t("Marketplace.subTitle") }}</h2>
-            <my-search class="input" :placeholder='$t("Marketplace.input")'>
-                <template #image>
-                    <img src="../../assets/images/svg/MagnifyingGlass.svg" alt="MagnifyingGlass" />
-                </template>
-            </my-search>
+            <h2 class="title">{{ $t("Ranking.title") }}</h2>
+            <h2 class="sub-title">{{ $t("Ranking.subTitle") }}</h2>
         </div>
         <!-- Header End -->
+
         <!-- Content Start -->
         <div class="container">
             <div class="content-header">
                 <div class="items">
                     <div class="item">
-                        <a href="" class="link">{{ $t("Marketplace.NFT") }}</a>
-                        <div class="number">305</div>
+                        <a href="" class="link">{{ $t("Ranking.today") }}</a>
                     </div>
                     <div class="item">
-                        <a href="" class="link">{{ $t("Marketplace.collection") }}</a>
-                        <div class="number">8</div>
+                        <a href="" class="link">{{ $t("Ranking.week") }}</a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="link">{{ $t("Ranking.month") }}</a>
+                    </div>
+                    <div class="item">
+                        <a href="" class="link">{{ $t("Ranking.time") }}</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
     min-height: 600px;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 80px;
 }
 
 .header{
@@ -69,10 +69,6 @@
     margin-bottom: 30px;
 }
 
-.input{
-    width: 100%;
-}
-
 .content-header{
     width: 100%;
     height: 70px;
@@ -90,8 +86,9 @@
     display: flex;
 }
 
+
 .item{
-    width: 50%;
+    width: 25%;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -117,43 +114,5 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-}
-
-
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
-
-    .header{
-        max-width: 690px;  
-    }
-
-    .title{
-        font-size: 38px;
-        line-height: 45px;
-    }
-
-    .sub-title{
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-}
-
-/* Стилі для мобільних пристроїв */
-@media only screen and (max-width: 767px) {
-
-    .header{
-        max-width: 315px;  
-    }
-
-    .title{
-        font-size: 28px;
-        line-height: 35px;
-    }
-
-    .sub-title{
-        font-size: 16px;
-        line-height: 22px;
-    }
 }
 </style>

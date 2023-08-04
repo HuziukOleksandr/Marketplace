@@ -1,10 +1,12 @@
-.carousel{
+
+
+.carousel__viewport{
     max-width: 1050px;
     width: 100%;
 }
-.carousel__track{
-    display: flex;
-    
+.carousel{
+    max-width: 1050px;
+    width: 100%
 }
 
 .carousel__slide{

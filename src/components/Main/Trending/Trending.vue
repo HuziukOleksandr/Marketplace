@@ -31,7 +31,7 @@ import axios from 'axios'
             }
         },
 
-        async mounted() {
+        mounted() {
             axios
                 .get('/data/Collections.json')
                 .then(response =>  {

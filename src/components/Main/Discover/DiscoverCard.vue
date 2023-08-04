@@ -61,7 +61,7 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../../helpers/he
 
         data(){
             return{
-                slides: 1
+                slides: 1,
             }
         }, 
 
