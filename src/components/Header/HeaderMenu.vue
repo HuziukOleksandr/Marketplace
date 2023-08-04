@@ -2,9 +2,12 @@
         <div class="menu" >
             <Navigation class="navigation" :link-item-styles="customLinkItemStyles"/>
 
-            <my-button class="button" @click="this.$router.push({ name: 'Register' })">
-                <img src="../../assets/images/Buttons/User.svg" alt="user">
-                {{ $t("Header.button") }}
+            <my-button 
+                class="button"
+
+                @click="this.$router.push({ name: 'Register' })">
+                    <img src="../../assets/images/Buttons/User.svg" alt="user">
+                    {{ $t("Header.button") }}
             </my-button>
         </div>
 </template>
@@ -79,7 +82,8 @@ import Navigation from '../Navigation/Navigation.vue'
 
     .button{
         width: 315px;
-        padding: 20px 50px;
+        height: 45px;
+        padding: 15px 50px;
         margin: 0 auto;
         justify-content: center;
     }

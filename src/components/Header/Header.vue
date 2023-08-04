@@ -33,7 +33,6 @@ import Localization from './HeaderLocalization.vue'
 
         data() {
             return {
-                language: "EN",
                 dialogVisible: false, 
             }
         },
@@ -127,8 +126,10 @@ import Localization from './HeaderLocalization.vue'
     .dropdawn-menu{
         display: flex;
         flex-direction: row;
-        padding: 0 20px;
-        margin-bottom: 10px;
+        padding: 10px 20px;
+        margin-bottom: 40px;
+        border-radius: 20px;
+        background-color: var(--background-secondary);
     }
 
     .burger-menu:hover{
@@ -152,7 +153,8 @@ import Localization from './HeaderLocalization.vue'
     }
 
     .dropdawn-menu{
-        margin-bottom: 10px;
+        margin-bottom: 40px;
+        border-bottom:1px solid black ;
     }
     
     .burger-menu:hover{

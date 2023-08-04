@@ -38,7 +38,6 @@
             },
             closeWindow(dialogVisible){
                 this.dialogVisible = dialogVisible;
-                
             },
             closeMenu(){
                 if(window.innerWidth > 1280){

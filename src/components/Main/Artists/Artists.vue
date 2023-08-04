@@ -76,6 +76,9 @@ import axios from 'axios'
                 .then(response =>  {
                     this.artists = response.data.Artists
                 });
+
+
+            
         },
 
         beforeDestroy() {
