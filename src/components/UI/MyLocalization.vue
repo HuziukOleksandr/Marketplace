@@ -32,9 +32,8 @@ import { useI18n } from 'vue-i18n';
             }
         },
         data() {
-            localStorage.setItem('language', language)
             return {
-            language: "EN",
+                language: "EN",
             }
         },
         name: 'my-localization',
@@ -63,6 +62,7 @@ import { useI18n } from 'vue-i18n';
             }
         },
         mounted() {
+            localStorage.setItem('language', this.language)
             this.language = localStorage.getItem('language')
             this.$emit('changeLanguage', this.language);
             this.change(this.language);

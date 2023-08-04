@@ -13,7 +13,18 @@
         <!-- Header End -->
         <!-- Content Start -->
         <div class="container">
-
+            <div class="content-header">
+                <div class="items">
+                    <div class="item">
+                        <a href="" class="link">{{ $t("Marketplace.NFT") }}</a>
+                        <div class="number">305</div>
+                    </div>
+                    <div class="item">
+                        <a href="" class="link">{{ $t("Marketplace.collection") }}</a>
+                        <div class="number">8</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Content End -->
     </div>
@@ -28,10 +39,18 @@
 <style scoped>
 
 .section{
-    max-width: 1050px;
-    width: 100%;
+    
     min-height: 600px;
-    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.header{
+    max-width: 1050px;
+    width: 100%; 
+    margin: 0 auto;  
 }
 
 .title{
@@ -57,11 +76,60 @@
 
 }
 
+.content-header{
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid var(--background-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.items{
+    max-width: 1050px;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+.item{
+    max-width: 525px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.link{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    color: var(--text-color-secondary);
+    text-decoration: none;
+}
+
+.number{
+    padding: 5px 10px;
+    background-color: var(--background-secondary);
+    color: var(--text-color-secondary);
+    border-radius: 20px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
 
-    .section{
-        max-width: 680px;
+    .header{
+        max-width: 690px;  
     }
 
     .title{
@@ -74,5 +142,23 @@
         line-height: 22px;
     }
 
+}
+
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) {
+
+    .header{
+        max-width: 315px;  
+    }
+
+    .title{
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .sub-title{
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 </style>

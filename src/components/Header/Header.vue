@@ -140,7 +140,7 @@ import Localization from './HeaderLocalization.vue'
 @media only screen and (max-width: 767px) {
     .header{
         padding:0 5px;
-        min-height: 54px;
+        min-height: 54px;   
     }
     
     .navigation{
@@ -149,8 +149,12 @@ import Localization from './HeaderLocalization.vue'
 
     .burger-menu{
         display: block;
+    }
+
+    .dropdawn-menu{
         margin-bottom: 10px;
     }
+    
     .burger-menu:hover{
         cursor: pointer;
     }
