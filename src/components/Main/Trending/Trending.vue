@@ -33,7 +33,7 @@ import axios from 'axios'
 
         async mounted() {
             axios
-                .get('https://marketplace-orcin-sigma.vercel.app/data/Collections.json')
+                .get('https://marketplace-orcin-sigma.vercel.app/Merketplace/data/Collections.json')
                 .then(response =>  {
                     this.collections = response.data.Collections;
                     console.log(this.collections);
