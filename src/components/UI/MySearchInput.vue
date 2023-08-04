@@ -16,25 +16,34 @@
 <style scoped>
 .input-wrapper{
     display: flex;
-    align-items: center;
     gap: 10px;
     border-radius: 20px;
+    height: 60px;
+    border: 1px solid  var(--background-secondary);
+    padding: 18px 20px;
 }
 
 .input{
-    background-color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    color: black;
+    color: var(--text-color-white);
+}
+
+.image-slot{
+    height: 24px;
+}
+
+.image-slot:hover{
+    cursor: pointer;
 }
 .input:focus{
     outline: none;
 }
 
 .input{
-    width: 300px;
+    width: 100%;
     height: 100%;
 }
 </style>

@@ -32,8 +32,9 @@ import { useI18n } from 'vue-i18n';
             }
         },
         data() {
+            localStorage.setItem('language', language)
             return {
-            language: "",
+            language: "EN",
             }
         },
         name: 'my-localization',

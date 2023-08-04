@@ -111,7 +111,7 @@
 }
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 768px) and (max-width: 1279px) {   
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
 
     .section{
         max-width: 834px;
