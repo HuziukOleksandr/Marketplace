@@ -45,7 +45,7 @@
 .section{
     max-width: 1280px;
     width: 100%;
-    height: 642px;
+    height: 100vh;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -54,7 +54,7 @@
 .picture{
     max-width: 610px;
     width: 100%;
-    background-image: url('../../assets/images/Wallet/Picture.jpg');
+    background: url('../../assets/images/Wallet/Picture.jpg') no-repeat;
 }
 
 .form{
