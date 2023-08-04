@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer.vue'
 import Main from './views/Main.vue' 
 import Register from './views/Registration.vue' 
 import Wallet from './views/ConnectWallet.vue'
+import Marketplace from './views/Marketplace.vue'
 
 const routes = [
     {
@@ -30,6 +31,15 @@ const routes = [
         components:{
             Header,
             default: Wallet,
+            Footer
+        }
+    },
+    {
+        path: '/marketplace',
+        name: 'Marketplace',
+        components:{
+            Header,
+            default: Marketplace,
             Footer
         }
     }

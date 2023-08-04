@@ -97,5 +97,12 @@
         "metamask": "Metamask",
         "walletConnect": "Wallet Connect",
         "coinbase": "Coinbase"
+    },
+    "Marketplace":{
+        "title": "Browse Marketplace",
+        "subTitle": "Browse through more than 50k NFTs on the NFT Marketplace.",
+        "input": "Search your favourite NFTs",
+        "NFT": "NFTs",
+        "collection": "Collection"
     }
 }

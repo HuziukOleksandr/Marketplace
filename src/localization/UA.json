@@ -97,5 +97,12 @@
         "metamask": "Metamask",
         "walletConnect": "Wallet Connect",
         "coinbase": "Coinbase"
+    },
+    "Marketplace":{
+        "title": "Огляд ринку",
+        "subTitle": "Перегляньте понад 50 тис. NFT на NFT Marketplace.",
+        "input": "Шукайте улюблені NFT",
+        "NFT": "NFTs",
+        "collection": "Колекції"
     }
 }

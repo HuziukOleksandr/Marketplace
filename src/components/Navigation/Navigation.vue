@@ -1,10 +1,15 @@
-
-    <template>        
+<template>        
     <div>
-        <a href="!#" class="link" :style="linkItemStyles">{{ $t("Navigation.marketplace") }}</a>
+        
+        <router-link 
+            to="/marketplace" 
+            class="link" 
+            :style="linkItemStyles">
+            {{ $t("Navigation.marketplace") }}
+        </router-link>
         
         <router-link
-            to="/wallet"
+            to="/market"
             class="link" 
             :style="linkItemStyles">
             {{ $t("Navigation.rankings") }}
