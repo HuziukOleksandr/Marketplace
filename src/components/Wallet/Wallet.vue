@@ -7,7 +7,7 @@
             <div class="buttons">
                 <my-button class="button">
                     <img 
-                        src="../../assets/images/Wallet/Coinbase.svg" 
+                        src="../../assets/images/Wallet/Metamask.svg" 
                         alt="Metamask"
                         class="icon">
                     {{ $t("ConnectAWallet.metamask") }}
