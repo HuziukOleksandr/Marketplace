@@ -72,7 +72,7 @@ import axios from 'axios'
             
             window.addEventListener('resize', this.handleResize);
             await axios
-                .get('../../../../data/Artists.json')
+                .get('/data/Artists.json')
                 .then(response =>  {
                     this.artists = response.data.Artists
                 });
