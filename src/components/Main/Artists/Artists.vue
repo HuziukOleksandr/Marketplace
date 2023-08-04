@@ -58,7 +58,7 @@ import axios from 'axios'
             }
         },
 
-        mounted() {
+        async mounted() {
 
             const storedWidth = localStorage.getItem('screenWidth');
             if (storedWidth && parseInt(storedWidth) === window.innerWidth) {
@@ -71,13 +71,11 @@ import axios from 'axios'
             }
             
             window.addEventListener('resize', this.handleResize);
-            axios
+            await axios
                 .get('../../../../data/Artists.json')
                 .then(response =>  {
                     this.artists = response.data.Artists
                 });
-            
-
         },
 
         beforeDestroy() {
