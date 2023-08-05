@@ -75,7 +75,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 <style scoped>
 
 /* Main Styles Start */
-.hero{
+.hero {
     min-height: 725px;
     min-height: 565px;
     display: flex;
@@ -88,12 +88,12 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 /* Main Styles End */
 
 /* Left-Side Styles Start */
-.left-side{
+.left-side {
     max-width: 510px;
     width: 100%;
 }
 
-.english-title{ 
+.english-title { 
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -103,7 +103,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
     margin-bottom: 20px;
 }
 
-.english-text{
+.english-text {
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -112,7 +112,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
     margin-bottom: 40px;
 }
 
-.ukrainian-title{
+.ukrainian-title {
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -122,7 +122,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
     margin-bottom: 20px;
 }
 
-.ukrainian-text{
+.ukrainian-text {
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -132,9 +132,10 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 }
 
 /* Left-Side Styles End */
+
 /* Right-Side Styles Start */
 
-.card{
+.card {
     max-width: 510px;
     width: 100%;
     min-height: 510px;
@@ -142,7 +143,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
     flex-direction: column;
 }
 
-.preview{
+.preview {
     min-height: 110px;
     display: flex;
     flex-direction: column;
@@ -153,7 +154,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
     padding: 22px 20px;
 }
 
-.preview-title{
+.preview-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 22px;
@@ -165,19 +166,19 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
     gap: 10px;
 }
 
-.user-name{
+.user-name {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
 }
 
-.user-picture{
+.user-picture {
     width: 24px;
 }
 
-.second-info{
-    display: none   ;
+.second-info {
+    display: none;
 }
 /* Right-Side Styles Start */
 
@@ -186,26 +187,26 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /* Left-Side Styles Start */
 
-    .left-side{
+    .left-side {
         max-width: 330px;
     }
 
-    .english-title{ 
+    .english-title { 
         font-size: 38px;
         line-height: 45px;
     }
 
-    .english-text{
+    .english-text {
         font-size: 16px;
         line-height: 22px;
     }
 
-    .ukrainian-title{
+    .ukrainian-title {
         font-size: 30px;
         line-height: 35px;
     }
 
-    .ukrainian-text{
+    .ukrainian-text {
         font-size: 16px;
         line-height: 22px;
     }
@@ -214,13 +215,13 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /* Right-Side Styles Start */
     
-    .card{
+    .card {
         max-width: 330px;
         min-height: 330px;
         align-self: center;
     }
 
-    .picture{
+    .picture {
         width: 330px;
     }
 
@@ -233,7 +234,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
     
     /* Main Styles Start */
 
-    .hero{
+    .hero {
         max-width: 315px;
         padding: 40px 0;
         flex-direction: column;
@@ -244,21 +245,21 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /* Left-Side Styles Start */
 
-    .english-title{ 
+    .english-title { 
         font-size: 28px;
         line-height: 39px;
     }
-    .english-text{
+    .english-text {
         font-size: 16px;
         line-height: 22px;
     }
 
-    .ukrainian-title{
+    .ukrainian-title {
         font-size: 20px;
         line-height: 25px;
     }
 
-    .ukrainian-text{
+    .ukrainian-text {
         font-size: 16px;
         line-height: 22px;
         margin-bottom: 0;
@@ -268,27 +269,28 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /*Card Styles Start */
     
-    .card{
+    .card {
         max-width: 315px;
         min-height: 330px;
         align-self: center;
     }
 
-    .picture{
+    .picture {
         width: 315px;
     }
 
-    .preview{
+    .preview {
         margin-bottom: 40px;
     }
 
-    .main-info{
+    .main-info {
         display: none;
     }
 
-    .second-info{
+    .second-info {
         display: flex;
     }
+    
     /* Right-Side Styles Start */
     
 }

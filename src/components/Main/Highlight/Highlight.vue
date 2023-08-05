@@ -34,14 +34,15 @@ import Timer from './HighlightTimer.vue'
 
 /* Main Style Start */
 
-.highlight{
+.highlight {
     max-width: 1440px;
     width: 100%;
     height: 640px;
     margin: 0 auto;
     background:  url("../../../assets/images/Highlight/Highlight.png") no-repeat center/cover;
 }
-.background{
+
+.background {
     max-width: 1440px;
     width: 100%;
     height: 640px;
@@ -56,7 +57,7 @@ import Timer from './HighlightTimer.vue'
 
 /* Content Styles Start */
 
-.content{
+.content {
     max-width: 1050px;
     width: 100%;
     min-height: 220px;
@@ -70,14 +71,13 @@ import Timer from './HighlightTimer.vue'
 
     /* Main Style Start */
     
-    .highlight{
+    .highlight {
         max-width: 834px;
         height: 630px;
         background: url("../../../assets/images/Highlight/HighlightMedium.png") no-repeat center/cover;
-        
     }
 
-    .background{
+    .background {
         min-height: 630px;
     }
 
@@ -85,7 +85,7 @@ import Timer from './HighlightTimer.vue'
 
     /* Content Styles Start */
 
-    .content{
+    .content {
         max-width: 670px;
         height: 210px;
     }
@@ -99,13 +99,13 @@ import Timer from './HighlightTimer.vue'
 
     /* Main Style Start */
     
-    .highlight{
+    .highlight {
         max-width: 375px;
         min-height:500px;
         background: url("../../../assets/images/Highlight/HighlightMedium.png") center/ cover;
     }
 
-    .background{
+    .background {
         min-height: 600px;
     }
 
@@ -113,7 +113,7 @@ import Timer from './HighlightTimer.vue'
 
     /* Content Styles Start */
 
-    .content{
+    .content {
         max-width: 315px;   
         min-height: 210px;
         flex-direction: column;

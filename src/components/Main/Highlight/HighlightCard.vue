@@ -51,7 +51,7 @@ import { getUserImageUrl } from '../../../helpers/helpers';
 
 /* Main Styles Start */
 
-.card{
+.card {
     max-width: 755px;
     width: 100%;
     min-height: 220px;
@@ -64,7 +64,7 @@ import { getUserImageUrl } from '../../../helpers/helpers';
 
 /* User Styles Start */
 
-.user{
+.user {
     max-width: 150px;
     width: 100%;
     height: 45px;
@@ -76,11 +76,11 @@ import { getUserImageUrl } from '../../../helpers/helpers';
     background-color: var(--background-secondary);
 }
 
-.user:hover{
+.user:hover {
     cursor: pointer;
 }
 
-.user-name{
+.user-name {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -88,7 +88,7 @@ import { getUserImageUrl } from '../../../helpers/helpers';
     color: var(--text-color-white);
 }
 
-.icon{
+.icon {
     width: 24px;
 }
 
@@ -96,7 +96,7 @@ import { getUserImageUrl } from '../../../helpers/helpers';
 
 /* Title Styles Start */
 
-.title{
+.title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600px;
     font-size: 50px;
@@ -108,7 +108,7 @@ import { getUserImageUrl } from '../../../helpers/helpers';
 
 /* Button Style Start */
 
-.button{
+.button {
     height: 60px;
     padding: 22px 50px;
     border: none;
@@ -123,7 +123,7 @@ import { getUserImageUrl } from '../../../helpers/helpers';
 
     /* Main Styles Start */
 
-    .card{
+    .card {
         max-width: 375px;
         min-height: 220px;
     }
@@ -132,7 +132,7 @@ import { getUserImageUrl } from '../../../helpers/helpers';
 
     /* Title Styles Start */
 
-    .title{
+    .title {
         font-size: 38px;
         line-height: 45px;
     }
@@ -146,7 +146,7 @@ import { getUserImageUrl } from '../../../helpers/helpers';
 
     /* Main Styles Start */
 
-    .card{
+    .card {
         max-width: 315px;
     }
 
@@ -154,7 +154,7 @@ import { getUserImageUrl } from '../../../helpers/helpers';
 
     /* Title Styles Start */
 
-    .title{
+    .title {
         font-size: 38px;
         line-height: 45px;
     }

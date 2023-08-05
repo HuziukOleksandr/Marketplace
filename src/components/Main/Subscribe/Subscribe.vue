@@ -53,7 +53,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
 /* Main Styles Start */
 
-.subscribe{
+.subscribe {
     padding: 80px 0;
     margin: 0 auto;
 }
@@ -62,7 +62,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
 /* Content Styles Start */
 
-.content{
+.content {
     margin: 0 auto;
     padding: 60px;
     max-width: 1050px;
@@ -75,7 +75,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
     align-items: center;
 }
 
-.picture{
+.picture {
     width: 425px;
     height: 310px;
     background-image: url("../../../assets/images/Subscribe/Photo.png");
@@ -85,7 +85,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
 /* Preview Styles Start */
 
-.preview{
+.preview {
     display: flex;
     flex-direction: column;
     max-width: 425px;
@@ -95,7 +95,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
 /* English Styles Start */
 
-.english-title{
+.english-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 38px;
@@ -103,7 +103,8 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
     color: var(--text-color-white);
     margin-bottom: 10px;
 }
-.english-text{
+
+.english-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 22px;
@@ -116,7 +117,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
 /* Ukrainian Style Start */
 
-.ukrainian-title{
+.ukrainian-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 30px;
@@ -125,7 +126,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
     margin-bottom: 10px;
 }
 
-.ukrainian-text{
+.ukrainian-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 20px;
@@ -140,12 +141,12 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
 /* Bottom Style Start */
 
-.bottom{
+.bottom {
     display: flex;
     position: relative;
 }
 
-.input{
+.input {
     border: none;
     max-width: 425px;
     width: 100%;
@@ -158,7 +159,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
     padding: 16px 20px;
 }
 
-.button{
+.button {
     position: absolute;
     right: 0;
     background-color: var(--button-background-color);
@@ -169,6 +170,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
     height: 60px;
     padding: 0px 50px;
 }
+
 /* Bottom Style End */
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
@@ -176,7 +178,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /* Main Styles Start */
 
-    .subscribe{
+    .subscribe {
         padding: 40px 0 80px 0  ;
     }
 
@@ -184,14 +186,14 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /* Content Styles Start */
 
-    .content{
+    .content {
         
         padding: 40px 30px;
         max-width: 690px;
         min-height: 360px;
     }
 
-    .picture{
+    .picture {
         width: 300px;
         height: 280px;
         background: url("../../../assets/images/Subscribe/PhotoMedium.png") no-repeat center/cover;
@@ -201,18 +203,18 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /* Preview Styles Start */
 
-    .preview{
+    .preview {
         max-width: 300px;
         min-height: 280px;
     }
 
     /* English Styles Start */
 
-    .english-title{
+    .english-title {
         font-size: 28px;
         line-height: 39px;
     }
-    .english-text{
+    .english-text {
         font-size: 16px;
         line-height: 22px;
     }
@@ -221,12 +223,12 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /* Ukrainian Style Start */
 
-    .ukrainian-title{
+    .ukrainian-title {
         font-size: 25px;
         line-height: 30px;
     }
 
-    .ukrainian-text{
+    .ukrainian-text {
         font-size: 16px;
         line-height: 22px;
     }
@@ -237,21 +239,22 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /* Bottom Style Start */
 
-    .bottom{
+    .bottom {
        
         flex-direction: column;
         gap: 15px; 
     }
 
-    .input{
+    .input {
         height: 46px;
     }
 
-    .button{
+    .button {
         position: static;
         max-width: 300px;
         height: 46px;
     }
+
     /* Bottom Style End */
 
 }
@@ -261,7 +264,7 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /* Main Styles Start */
 
-    .subscribe{
+    .subscribe {
         padding: 40px 0;
     }
 
@@ -269,14 +272,14 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /* Content Styles Start */
 
-    .content{
+    .content {
         min-height: 360px;
         display: flex;
         flex-direction: column;
         gap: 30px;
     }
 
-    .picture{
+    .picture {
         width: 315px;
         height: 255px;
         border-radius: 20px;
@@ -287,18 +290,18 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /* Preview Styles Start */
 
-    .preview{
+    .preview {
         max-width: 315px;
         min-height: 280px;
     }
 
     /* English Styles Start */
 
-    .english-title{
+    .english-title {
         font-size: 28px;
         line-height: 39px;
     }
-    .english-text{
+    .english-text {
         font-size: 16px;
         line-height: 22px;
     }
@@ -307,12 +310,12 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /* Ukrainian Style Start */
 
-    .ukrainian-title{
+    .ukrainian-title {
         font-size: 25px;
         line-height: 30px;
     }
 
-    .ukrainian-text{
+    .ukrainian-text {
         font-size: 16px;
         line-height: 22px;
     }
@@ -323,20 +326,22 @@ import { getTitleClasses, getTextClasses } from '../../../helpers/localization'
 
     /* Bottom Style Start */
 
-    .bottom{
+    .bottom {
         position: static;
         flex-direction: column;
         gap: 15px; 
     }
-    .input{
+    
+    .input {
         height: 46px;   
     }
 
-    .button{
+    .button {
         position: static;
         max-width: 315px;
         height: 46px;
     }
+
     /* Bottom Style End */
 }
 

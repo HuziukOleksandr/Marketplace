@@ -60,7 +60,7 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../../helpers/he
         },
 
         data(){
-            return{
+            return {
                 slides: 1,
             }
         }, 
@@ -71,7 +71,7 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../../helpers/he
             getUserImageUrl,
         },
 
-        mounted(){
+        mounted() {
             this.slides = getSlidesNumber();
             window.addEventListener('resize', () => {
                 this.slides = getSlidesNumber();
@@ -84,7 +84,7 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../../helpers/he
 
 /* Main Styles Start */
 
-.card{
+.card {
     max-width: 330px;
     width: 100%;
     display: flex;
@@ -93,7 +93,7 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../../helpers/he
     background-color: var(--background-secondary);
 }
 
-.card:hover{
+.card:hover {
     cursor: pointer;
 }
 
@@ -101,7 +101,7 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../../helpers/he
 
 /* Preview Styles Start */
 
-.preview{
+.preview {
     height: 296px;
 }
 
@@ -110,12 +110,12 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../../helpers/he
 
 /* Content Styles Start */
 
-.title{
+.title {
     padding: 20px 30px 25px 30px;
     height: 100%;
 }
 
-.name{
+.name {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 22px;
@@ -125,17 +125,17 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../../helpers/he
     text-align: start;
 }
 
-.user{
+.user {
     display: flex;
     gap: 10px;
     margin-bottom: 25px;
 }
 
-.user-picture{
+.user-picture {
     width: 24px;
 }
 
-.userName{
+.userName {
     font-family: 'SpaceMono', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -143,32 +143,32 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../../helpers/he
     color: var(--text-color-white);
 }
 
-.numbers{
+.numbers {
     display: flex;
     justify-content: space-between;
 }
 
-.price, .bid{
+.price, .bid {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.price-title, .bid-title{
+.price-title, .bid-title {
     font-family: 'SpaceMono', sans-serif;
     font-weight: 400;
     font-size: 12px;
     line-height: 13px;
     color: var(--text-color-secondary);
 }
-.price-title{
+.price-title {
     text-align: start;
 }
-.bid-title{
+.bid-title {
     text-align: end;
 }
 
-.price-number, .bid-number{
+.price-number, .bid-number {
     font-family: 'SpaceMono', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -181,16 +181,17 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../../helpers/he
 
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
-    .card{
+
+    .card {
         max-width: 315px;
         width: 100%;
         
     }
 
-    .picture{
+    .picture {
         width: 315px;
-
     }
+
 }
 
 </style>

@@ -30,36 +30,36 @@
 
 <style scoped>
 
-.section{
+.section {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.items{
+.items {
     display: flex;
     justify-content: space-between;
 }
-.item{
+.item {
     max-width: 150px;
     width: 100%;
     color: var(--text-color-white);
 }
 
-.number{
+.number {
     font-family: "SpaceMono", sans-serif;
     font-weight: 700;
     font-size: 28px;
     line-height: 40px;
 }
 
-.name{
+.name {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 40px;
 }
 
-.button{
+.button {
     height: 60px;
     padding: 0 50px;
     background-color: var(--button-background-color);
@@ -70,16 +70,16 @@
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {  
 
-    .item{
+    .item {
         max-width: 90px;
     }
 
-    .number{
+    .number {
         font-size: 22px;
         line-height: 25px;
     }
 
-    .name{
+    .name {
         font-size: 15px;
         line-height: 22px;
     }
@@ -88,29 +88,30 @@
 
 /* Медіа-запит для мобільних пристроїв з шириною екрану до 767px */
 @media only screen and (max-width: 767px) {
-    .section{
+    .section {
         gap: 40px;
     }
 
-    .item{
+    .item {
         max-width: 85px;
     }
 
-    .number{
+    .number {
         font-size: 22px;
         line-height: 25px;
     }
 
-    .name{
+    .name {
         font-size: 14px;
         line-height: 22px;
     }
 
-    .button{
+    .button {
         width: 315px;
         display: flex;
         justify-content: center;
     }
+    
 }
 
 </style>

@@ -48,7 +48,7 @@ import {getUserImageUrl} from '../../../helpers/helpers'
 
 /* Main Style Start */
 
-.card{
+.card {
     max-width: 240px;
     width: 100%;
     height: 240px;
@@ -61,7 +61,7 @@ import {getUserImageUrl} from '../../../helpers/helpers'
     transition: 0.2s;
 }
 
-.card:hover{
+.card:hover {
     scale: 1.05;
     cursor: pointer;
 }
@@ -70,13 +70,13 @@ import {getUserImageUrl} from '../../../helpers/helpers'
 
 /* Preview Styles Start*/
 
-.preview{
+.preview {
     display: flex;
     gap: 10px;
     position: relative;
 }
 
-.number{
+.number {
     width: 30px;
     height: 30px;
     display: flex;
@@ -87,7 +87,7 @@ import {getUserImageUrl} from '../../../helpers/helpers'
     background-color: var(--background-color);
 }
 
-.number-text{
+.number-text {
     font-family: "SpaceMono", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -99,13 +99,13 @@ import {getUserImageUrl} from '../../../helpers/helpers'
 
 /* Title Styles Start */
 
-.title{
+.title {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.name-text{
+.name-text {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 22px;
@@ -114,12 +114,12 @@ import {getUserImageUrl} from '../../../helpers/helpers'
     text-align: center;
 }
 
-.sale{
+.sale {
     display: flex;
     gap: 10px;
 }
 
-.sale-text{
+.sale-text {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -127,7 +127,7 @@ import {getUserImageUrl} from '../../../helpers/helpers'
     color: var(--text-color-secondary);
 }
 
-.sale-number{
+.sale-number {
     font-family: "SpaceMono", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -142,7 +142,7 @@ import {getUserImageUrl} from '../../../helpers/helpers'
     
     /* Main Style Start */
 
-    .card{
+    .card {
         flex-direction: row;
         max-width: 330px;
         height: 100px;
@@ -152,7 +152,7 @@ import {getUserImageUrl} from '../../../helpers/helpers'
 
     /* Preview Styles Start*/
 
-    .number{
+    .number {
         position: absolute;
         right: 40px;
     }
@@ -161,13 +161,14 @@ import {getUserImageUrl} from '../../../helpers/helpers'
     
     /* Title Styles Start */
 
-    .title{
+    .title {
         width: 210px;
     }
 
-    .name-text{
+    .name-text {
         text-align: start;
     }
+
     /* Title Styles End */
 
 }
@@ -177,7 +178,7 @@ import {getUserImageUrl} from '../../../helpers/helpers'
 
     /* Main Style Start */
 
-    .card{
+    .card {
         max-width: 315px;
         height: 100px;
         flex-direction: row;
@@ -187,11 +188,11 @@ import {getUserImageUrl} from '../../../helpers/helpers'
 
     /* Preview Styles Start*/
 
-    .preview{
+    .preview {
         width: 60px;  
     }
 
-    .number{
+    .number {
         position: absolute;
         left: -10px;
         top: -10px;
@@ -201,11 +202,11 @@ import {getUserImageUrl} from '../../../helpers/helpers'
 
     /* Title Styles Start */
 
-    .title{
+    .title {
         width: 195px;
     }
 
-    .name-text{
+    .name-text {
         text-align: start;
     }
 

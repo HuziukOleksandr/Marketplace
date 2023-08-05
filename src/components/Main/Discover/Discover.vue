@@ -39,7 +39,7 @@ import Card from './DiscoverCard.vue'
 import axios from 'axios';
 
     export default {
-        components:{
+        components: {
             Card
         },
 
@@ -65,7 +65,7 @@ import axios from 'axios';
 
 /* Main Styles Start */
 
-.discover{
+.discover {
     min-height: 240px;
     margin: 0 auto;
     display: flex;
@@ -79,7 +79,7 @@ import axios from 'axios';
 
 /* Header Styles Start */
 
-.header{
+.header {
     max-width: 1050px;
     width: 100%;
     display: flex;
@@ -87,7 +87,7 @@ import axios from 'axios';
     align-items: end;
 }
 
-.left-side{
+.left-side {
     max-width: 800px;
     width: 100%;
     display: flex;
@@ -95,7 +95,7 @@ import axios from 'axios';
     gap: 10px;
 }
 
-.title{
+.title {
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -104,7 +104,7 @@ import axios from 'axios';
     text-align: start;
 }
 
-.sub-title{
+.sub-title {
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -113,13 +113,13 @@ import axios from 'axios';
     text-align: start;
 }
 
-.right{
+.right {
     display: flex;
     justify-content: end;
     align-items: end;
 }
 
-.button{
+.button {
     height: 60px;
     padding: 0 50px;
     background-color: var(--background-color);
@@ -131,13 +131,10 @@ import axios from 'axios';
 
 /* Content Styles Start */
 
-.content{
+.content {
     max-width: 1050px;
     width: 100%;
     min-height: 470px;
-    /* display: flex;
-    justify-content: space-between;
-    gap: 30px; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -145,7 +142,7 @@ import axios from 'axios';
 
 /* Content Styles End */
 
-.bottom{
+.bottom {
     display: none;
 }
 
@@ -154,7 +151,7 @@ import axios from 'axios';
     
     /* Main Styles Start */
 
-    .discover{
+    .discover {
         gap: 40px;
         padding: 40px 0;
     }
@@ -163,21 +160,21 @@ import axios from 'axios';
 
     /* Header Styles Start */
 
-    .header{
+    .header {
         max-width: 690px;
         width: 100%;
     }
 
-    .left-side{
+    .left-side {
         max-width: 400px;
     }
 
-    .title{
+    .title {
         font-size: 28px;
         line-height: 39px;
     }
     
-    .sub-title{
+    .sub-title {
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
@@ -187,7 +184,7 @@ import axios from 'axios';
 
     /* Content Styles Start */
 
-    .content{
+    .content {
         max-width: 690px;
     }
 
@@ -200,7 +197,7 @@ import axios from 'axios';
 
     /* Main Styles Start */
 
-    .discover{
+    .discover {
         gap: 40px;
         padding: 40px 0;
     }
@@ -209,30 +206,30 @@ import axios from 'axios';
 
     /* Header Styles Start */
 
-    .header{
+    .header {
         max-width: 315px;
         gap: 10px;
         flex-direction: column;
     }
 
-    .left-side{
+    .left-side {
         max-width: 400px;
     }
 
-    .title{
+    .title {
         font-size: 28px;
         line-height: 39px;
     }
     
-    .sub-title{
+    .sub-title {
         font-size: 16px;
         line-height: 22px;
     }
-    .right-side{
+    .right-side {
         display: none;
     }
 
-    .button{
+    .button {
         width: 315px;
         justify-content: center;
     }
@@ -241,16 +238,17 @@ import axios from 'axios';
 
     /* Content Styles Start */
 
-    .content{
+    .content {
         max-width: 315px;
         flex-direction: column;
     }
 
     /* Content Styles End */
 
-    .bottom{
+    .bottom {
         display: block;
     }
+    
 }
 
 </style>

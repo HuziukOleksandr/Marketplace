@@ -53,7 +53,7 @@ import { useI18n } from 'vue-i18n'
 
 /* Main Styles Start */
 
-.category{
+.category {
     min-height: 840px;
     margin: 0 auto;
     display: flex;
@@ -67,12 +67,12 @@ import { useI18n } from 'vue-i18n'
 
 /* Header Styles Start */
 
-.header{
+.header {
     max-width: 1050px;
     width: 100%;
 }
 
-.title{
+.title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 38px;
@@ -84,7 +84,7 @@ import { useI18n } from 'vue-i18n'
 
 /* Content Styles Start */
 
-.content{
+.content {
     max-width: 1050px;
     width: 100%;
     min-height: 662px;
@@ -102,7 +102,7 @@ import { useI18n } from 'vue-i18n'
     
     /* Main Styles Start */
     
-    .category{
+    .category {
         min-height: 630px;
         gap: 40px;
         padding: 40px 0;
@@ -112,11 +112,11 @@ import { useI18n } from 'vue-i18n'
     
     /* Header Styles Start */ 
 
-    .header{
+    .header {
         max-width: 690px;
     }
 
-    .title{
+    .title {
         font-size: 28px;
         line-height: 39px;
     }
@@ -125,7 +125,7 @@ import { useI18n } from 'vue-i18n'
 
     /* Content Styles Start */
 
-    .content{
+    .content {
         max-width: 690px;
         min-height: 470px;
     }
@@ -136,9 +136,10 @@ import { useI18n } from 'vue-i18n'
 
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
+
     /* Main Styles Start */
     
-    .category{
+    .category {
         min-height: 315px;
         gap: 40px;
         padding: 40px 0;
@@ -148,11 +149,11 @@ import { useI18n } from 'vue-i18n'
 
     /* Header Styles Start */ 
 
-    .header{
+    .header {
         max-width: 315px;
     }
 
-    .title{
+    .title {
         font-size: 28px;
         line-height: 39px;
     }
@@ -161,7 +162,7 @@ import { useI18n } from 'vue-i18n'
 
     /* Content Styles Start */
 
-    .content{
+    .content {
         max-width: 315px;
         min-height: 470px;
         gap: 15px;
@@ -170,6 +171,7 @@ import { useI18n } from 'vue-i18n'
     }
 
     /* Content Styles End */
+    
 }
 
 </style>

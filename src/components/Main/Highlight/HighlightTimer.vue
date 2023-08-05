@@ -94,7 +94,7 @@ import moment from 'moment';
 
 /* Main Styles Start */
 
-.timer{
+.timer {
     max-width: 295px;
     width: 100%;
     height: 147px;
@@ -112,7 +112,7 @@ import moment from 'moment';
 
 /* Title Styles Start */
 
-.title{
+.title {
     font-family: 'SpaceMono', sans-serif;
     font-weight: 400;
     font-size: 12px;
@@ -124,7 +124,7 @@ import moment from 'moment';
 
 /* Time Styles Start */
 
-.time{
+.time {
     max-width: 235px;
     width: 100%;
     height: 65px;
@@ -132,7 +132,7 @@ import moment from 'moment';
     justify-content: space-between;
 }
 
-.point{
+.point {
     width: 18px;
     font-family: "SpaceMono", sans-serif;
     font-weight: 700;
@@ -141,10 +141,10 @@ import moment from 'moment';
     color: var(--text-color-white);
 }
 
-.item{
+.item {
     width: 53px;
 }
-.number{
+.number {
     font-family: "SpaceMono", sans-serif;
     font-weight: 700;
     font-size: 28px;
@@ -152,7 +152,7 @@ import moment from 'moment';
     color: var(--text-color-white);
 }
 
-.text{
+.text {
     font-family: 'SpaceMono', sans-serif;
     font-weight: 400;
     font-size: 12px;
@@ -164,7 +164,7 @@ import moment from 'moment';
 
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) { 
-    .timer{
+    .timer {
         max-width: 315px;
     }
 }
