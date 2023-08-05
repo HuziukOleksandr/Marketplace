@@ -35,6 +35,7 @@ import Navigation from '../Navigation/Navigation.vue'
         },
 
         methods: {
+            
             buttonClick(){
                 this.$emit('menuClose', false);
                 

@@ -70,17 +70,14 @@ import Collentions from './Collection.vue'
         methods: {
             changeTabs(type) {
                 this.active = type;
-                console.log(this.active);
             }
         },
 
-        mounted(){
+        mounted() {
             axios
                 .get('/data/Cards.json')
                 .then(response =>  {
                     this.cards = response.data.Cards;
-                    console.log(response);
-                    
             });
 
             axios
@@ -170,7 +167,6 @@ import Collentions from './Collection.vue'
     font-size: 22px;
     line-height: 30px;
     color: var(--text-color-secondary);
-    text-decoration: none;
     transition: 0.4s;
 }
 
@@ -282,13 +278,11 @@ import Collentions from './Collection.vue'
     .link {
         font-size: 16px;
         line-height: 22px;
-        color: var(--text-color-secondary);
-        text-decoration: none;
-        transition: 0.4s;
     }
 
     .number {
         display: none;
     }
+
 }
 </style>

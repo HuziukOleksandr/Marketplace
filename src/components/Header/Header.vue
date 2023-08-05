@@ -56,9 +56,11 @@ import Localization from './HeaderLocalization.vue'
         },
 
         mounted(){
-            window.addEventListener('resize', () => {
-                this.closeMenu();
-            })
+            window.addEventListener('resize', this.closeMenu)
+        },
+
+        beforeUnmount(){
+            window.removeEventListener('resize', this.closeMenu)
         }
 
     }

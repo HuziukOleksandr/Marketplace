@@ -78,7 +78,7 @@ import axios from 'axios'
                 });
         },
 
-        beforeDestroy() {
+        beforeUnmount() {
             window.removeEventListener('resize', this.handleResize);
         }
     }

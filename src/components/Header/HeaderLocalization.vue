@@ -30,15 +30,19 @@
             dropDawnShow(){
                 this.dialogVisible = !this.dialogVisible;
             },
+            
             getImageUrl(name) {  
                 return new URL(`../../assets/images/svg/${name}.svg`, import.meta.url).href;
             },
+
             changeLanguage(lang){
                 this.language = lang;
             },
+
             closeWindow(dialogVisible){
                 this.dialogVisible = dialogVisible;
             },
+
             closeMenu(){
                 if(window.innerWidth > 1280){
                     this.dialogVisible = false

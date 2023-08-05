@@ -111,6 +111,9 @@
         "today": "Today",
         "week": "This Week",
         "month": "This Month",
-        "time": "All Time"
+        "time": "All Time",
+        "todayShort": "1d",
+        "weekShort": "7d",
+        "monthShort": "30d"
     }
 }
