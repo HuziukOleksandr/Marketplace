@@ -23,7 +23,8 @@
 </template>
 
 <script>
-import { useI18n } from 'vue-i18n';
+import { useI18n } from 'vue-i18n'
+
     export default {
         setup(){
             const { locale } = useI18n()
@@ -72,7 +73,7 @@ import { useI18n } from 'vue-i18n';
 
 <style scoped>
 
-.localization{
+.localization {
     position: absolute;
     width: 49px;
     display: flex; 
@@ -83,12 +84,12 @@ import { useI18n } from 'vue-i18n';
     border-radius: 5px;
 }
 
-.loc-icon{
+.loc-icon {
     width: 35px;
     transition: 0.2s;
 }
 
-.loc-icon:hover{
+.loc-icon:hover {
     cursor: pointer;
     scale: 1.05;
 }

@@ -45,7 +45,7 @@ import axios from 'axios'
 
 /* Main Styles Start */
 
-.trending{
+.trending {
     min-height: 725px;
     margin: 0 auto;
     display: flex;
@@ -59,7 +59,7 @@ import axios from 'axios'
 
 /* Header Styles Start */
 
-.header{
+.header {
     max-width: 1050px;
     width: 100%;
     display: flex;
@@ -71,7 +71,7 @@ import axios from 'axios'
 
 /* Title Styles Start */
 
-.title{
+.title {
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -79,7 +79,7 @@ import axios from 'axios'
     line-height: 45px;
 }
 
-.sub-title{
+.sub-title {
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -91,7 +91,7 @@ import axios from 'axios'
 
 /* Content Styles Start */
 
-.content{
+.content {
     max-width: 1050px;
     width: 100%;
     min-height: 505px;
@@ -105,7 +105,7 @@ import axios from 'axios'
 @media only screen and (min-width: 768px) and (max-width: 1279px) {   
 
     /* Main Styles Start */
-    .trending{
+    .trending {
         min-height: 716px;
         gap: 40px;
         padding: 40px 0;
@@ -115,7 +115,7 @@ import axios from 'axios'
 
     /* Header Styles Start */
 
-    .header{
+    .header {
         max-width: 690px;
     }
 
@@ -123,13 +123,13 @@ import axios from 'axios'
 
     /* Title Styles Start */
 
-    .title{
+    .title {
         font-weight: 600;
         font-size: 28px;
         line-height: 39px;
     }
 
-    .sub-title{
+    .sub-title {
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
@@ -139,7 +139,7 @@ import axios from 'axios'
 
     /* Content Styles Start */
 
-    .content{
+    .content {
         max-width: 690px;
     }
 
@@ -152,7 +152,7 @@ import axios from 'axios'
 
     /* Main Styles Start */
 
-    .trending{
+    .trending {
         min-height: 716px;
         gap: 40px;
         padding: 40px 0;
@@ -162,7 +162,7 @@ import axios from 'axios'
 
     /* Header Styles Start */
 
-    .header{
+    .header {
         max-width: 315px;
     }
 
@@ -170,13 +170,13 @@ import axios from 'axios'
 
     /* Title Styles Start */
 
-    .title{
+    .title {
         font-weight: 600;
         font-size: 28px;
         line-height: 39px;
     }
 
-    .sub-title{
+    .sub-title {
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
@@ -186,7 +186,7 @@ import axios from 'axios'
 
     /* Content Styles Start */
     
-    .content{
+    .content {
         max-width: 315px;
     }
 

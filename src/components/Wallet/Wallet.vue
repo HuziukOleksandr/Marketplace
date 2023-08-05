@@ -42,7 +42,7 @@
 
 <style scoped>
 
-.section{
+.section {
     max-width: 1280px;
     width: 100%;
     height: 100vh;
@@ -51,13 +51,13 @@
     justify-content: space-between;
 }
 
-.picture{
+.picture {
     max-width: 610px;
     width: 100%;
     background: url('../../assets/images/Wallet/Picture.jpg') no-repeat;
 }
 
-.form{
+.form {
     max-width: 610px;
     width: 100%;
     padding: 100px 0;
@@ -65,7 +65,7 @@
     flex-direction: column;
 }
 
-.title{
+.title {
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -75,7 +75,7 @@
     margin-bottom: 20px;
 }
 
-.sub-title{
+.sub-title {
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -84,17 +84,17 @@
     margin-bottom: 40px;
 }
 
-.buttons{
+.buttons {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.icon{
+.icon {
     width: 40px;
 }
 
-.button{
+.button {
     max-width: 320px;
     width: 100%;
     height: 72px;
@@ -113,7 +113,7 @@
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {   
 
-    .section{
+    .section {
         max-width: 834px;
         width: 100%;
         height: 530px;
@@ -122,7 +122,7 @@
         justify-content: space-between;
     }
 
-    .picture{
+    .picture {
         max-width: 397px;
         width: 100%;
         background: url('../../assets/images/Wallet/PictureMedium.jpg') center/cover;
@@ -136,7 +136,7 @@
         flex-direction: column;
     }
 
-    .title{
+    .title {
         color: var(--text-color-white);
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
@@ -146,7 +146,7 @@
         margin-bottom: 20px;
     }
 
-    .sub-title{
+    .sub-title {
         color: var(--text-color-white);
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
@@ -155,11 +155,11 @@
         margin-bottom: 40px;
     }
 
-    .icon{
+    .icon {
         width: 32px;
     }
 
-    .button{
+    .button {
         width: 325px;
         height: 60px;
     }
@@ -168,7 +168,7 @@
 /* Медіа-запит для мобільних пристроїв з шириною екрану до 767px */
 @media only screen and (max-width: 767px) {
 
-    .section{
+    .section {
         max-width: 375px;
         width: 100%;
         min-height: 662px;
@@ -178,13 +178,14 @@
         justify-content: space-between;
     }
 
-    .picture{
+    .picture {
         max-width: 375px;
         width: 100%;
         min-height: 232px;
         background-image: url('../../assets/images/Wallet/PictureSmall.jpg');
     }
-    .form{
+
+    .form {
         max-width: 315px;
         width: 100%;
         padding: 30px 0;
@@ -194,7 +195,7 @@
         margin: 0 auto;
     }
 
-    .title{
+    .title {
         color: var(--text-color-white);
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
@@ -204,7 +205,7 @@
         margin-bottom: 20px;
     }
 
-    .sub-title{
+    .sub-title {
         color: var(--text-color-white);
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
@@ -213,16 +214,11 @@
         margin-bottom: 40px;
     }
 
-    .input{
-        max-width: 315px;
-        width: 100%;
-        height: 45px;
-        padding: 0 30px;
-    }
-
-    .button{
+    .button {
         width: 315px;
         height: 60px;
     }
+
 }
+
 </style>

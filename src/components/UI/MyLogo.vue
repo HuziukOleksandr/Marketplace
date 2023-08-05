@@ -23,17 +23,17 @@
 
 /* Logo Styles Start */
 
-.logo{
+.logo {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.logo-title, .logo-picture{
+.logo-title, .logo-picture {
     transition: 0.2s;
 }
 
-.logo-title:hover, .logo-picture:hover{
+.logo-title:hover, .logo-picture:hover {
     transform: scale(1.02);
     cursor: pointer;
 }

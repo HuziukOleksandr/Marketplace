@@ -34,7 +34,13 @@
             </div>
             <div class="content-bgr">
                 <div class="content">
-                    <Cards :cards="cards"/>
+                    <Cards 
+                        :cards="cards" 
+                        v-if="this.active === 'NFT'"/>
+                    <Collentions 
+                        :collections="collections"
+                        v-if="this.active === 'Collection'"/>
+
                 </div>
 
             </div>
@@ -56,13 +62,15 @@ import Collentions from './Collection.vue'
         data() {
             return {
                 active: "NFT",
-                cards: ''
+                cards: '',
+                collections: ''
             }
         },
 
         methods: {
             changeTabs(type) {
                 this.active = type;
+                console.log(this.active);
             }
         },
 
@@ -70,9 +78,16 @@ import Collentions from './Collection.vue'
             axios
                 .get('/data/Cards.json')
                 .then(response =>  {
+                    this.cards = response.data.Cards;
                     console.log(response);
-                    this.cards = response.data.Cards
-                });
+                    
+            });
+
+            axios
+                .get('/data/Collections.json')
+                .then(response =>  {
+                    this.collections = response.data.Collections;
+            });
         }
     }
 </script>
@@ -197,6 +212,14 @@ import Collentions from './Collection.vue'
     border-bottom: 3px solid var(--text-color-secondary);
 }
 
+.show {
+    display: grid;
+}
+
+.hide {
+    display: none;
+}
+
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
 
@@ -204,12 +227,12 @@ import Collentions from './Collection.vue'
         max-width: 690px;  
     }
 
-    .title{
+    .title {
         font-size: 38px;
         line-height: 45px;
     }
 
-    .sub-title{
+    .sub-title {
         font-size: 16px;
         line-height: 22px;
     }
@@ -264,7 +287,7 @@ import Collentions from './Collection.vue'
         transition: 0.4s;
     }
 
-    .number{
+    .number {
         display: none;
     }
 }

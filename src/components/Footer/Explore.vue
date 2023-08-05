@@ -25,12 +25,12 @@ import Navigation from '../Navigation/Navigation.vue'
 
 <style scoped>
 
-.explore{
+.explore {
     max-width: 240px;
     width: 100%;
 }
 
-.explore-header{
+.explore-header {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 22px;
@@ -39,7 +39,7 @@ import Navigation from '../Navigation/Navigation.vue'
     margin-bottom: 30px;
 }
 
-.navigation{
+.navigation {
     display: flex;
     flex-direction: column ;
     gap: 20px;

@@ -36,8 +36,8 @@
             },
         },
 
-        methods:{
-            menuClose(){
+        methods: {
+            menuClose() {
                 this.$emit("menuClose")
             }
         }
@@ -46,14 +46,14 @@
 
 <style scoped>
 
-.link{
+.link {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     transition: 0.2s;
 }
 
-.link:hover{
+.link:hover {
     transform: scale(1.01);
 }
 

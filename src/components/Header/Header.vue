@@ -82,7 +82,7 @@ import Localization from './HeaderLocalization.vue'
   opacity: 0;
 }
 
-@media only screen and (min-width: 1280px){
+@media only screen and (min-width: 1280px) {
     .slide-fade-leave-active {
         transition: none;
     }
@@ -91,48 +91,48 @@ import Localization from './HeaderLocalization.vue'
 /* Animation Styles End */
 
 
-.header{
+.header {
     padding: 0 50px    ;
     min-height: 100px;
 }
 
-.content{
+.content {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.menu{
+.menu {
     display: flex;
     align-items: center;
 }
 
-.burger-menu{
+.burger-menu {
     display: none;
 }
 
-.localization{
+.localization {
     padding: 0 13px;
 }
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
-    .header{
+    .header {
         padding: 0 25px;
         min-height: 54px;
     }
     
-    .navigation{
+    .navigation {
         display: none;
     }
 
-    .burger-menu{
+    .burger-menu {
         display: block;
     }
     
-    .dropdawn-menu{
+    .dropdawn-menu {
         display: flex;
         flex-direction: row;
         padding: 10px 20px;
@@ -141,7 +141,7 @@ import Localization from './HeaderLocalization.vue'
         background-color: var(--background-secondary);
     }
 
-    .burger-menu:hover{
+    .burger-menu:hover {
         cursor: pointer;
     }
 }
@@ -149,27 +149,27 @@ import Localization from './HeaderLocalization.vue'
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
 
-    .header{
+    .header {
         padding:0 5px;
         min-height: 54px;   
     }
     
-    .navigation{
+    .navigation {
         display: none;
     }
 
-    .burger-menu{
+    .burger-menu {
         display: block;
     }
 
-    .dropdawn-menu{
+    .dropdawn-menu {
         padding: 20px;
         margin-bottom: 40px;
         border-radius: 20px;
         background-color: var(--background-secondary);
     }
     
-    .burger-menu:hover{
+    .burger-menu:hover {
         cursor: pointer;
     }
 }

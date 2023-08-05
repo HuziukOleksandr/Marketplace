@@ -12,7 +12,7 @@
 
 <style scoped>
 
-.btn{
+.btn {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -22,7 +22,7 @@
     transition: 0.2s;
 }
 
-.btn:hover{
+.btn:hover {
     scale: 1.01;
     cursor: pointer;
 }

@@ -16,14 +16,14 @@
 <style scoped>
 
 
-.input-wrapper{
+.input-wrapper {
     display: flex;
     align-items: center;
     gap: 10px;
     border-radius: 20px;
 }
 
-.input{
+.input {
     background-color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -31,7 +31,7 @@
     line-height: 22px;
     color: black;
 }
-.input:focus{
+.input:focus {
     outline: none;
 }
 

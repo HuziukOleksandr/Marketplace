@@ -14,7 +14,7 @@
 </script>
 
 <style scoped>
-.input-wrapper{
+.input-wrapper {
     display: flex;
     gap: 10px;
     border-radius: 20px;
@@ -23,7 +23,7 @@
     padding: 18px 20px;
 }
 
-.input{
+.input {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -31,18 +31,18 @@
     color: var(--text-color-white);
 }
 
-.image-slot{
+.image-slot {
     height: 24px;
 }
 
-.image-slot:hover{
+.image-slot:hover {
     cursor: pointer;
 }
-.input:focus{
+.input:focus {
     outline: none;
 }
 
-.input{
+.input {
     width: 100%;
     height: 100%;
 }

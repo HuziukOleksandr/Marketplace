@@ -57,13 +57,13 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl } from '../../../helpers/h
         },
 
         data(){
-            return{
+            return {
                 slides: 1
             }
         },  
 
         props: {
-            collections:{
+            collections: {
                 type: Object,
                 reqired: true,
             }
@@ -75,7 +75,7 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl } from '../../../helpers/h
             getUserImageUrl
         },
         
-        mounted(){
+        mounted() {
             this.slides = getSlidesNumber()
             window.addEventListener('resize', () => {
                 this.slides = getSlidesNumber()
@@ -86,7 +86,7 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl } from '../../../helpers/h
 
 <style scoped>
 
-.card{
+.card {
     width: 330px;
     min-height: 400px;
     display: flex;
@@ -94,22 +94,22 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl } from '../../../helpers/h
     gap: 15px;
 }
 
-.main-picture{
+.main-picture {
     border-radius: 20px;
     transition: .2s;
 }
 
-.main-picture:hover{
+.main-picture:hover {
     cursor: pointer;
     scale:  1.01;
 }
 
-.secondary{
+.secondary {
     display: flex;
     justify-content: space-between;
 }
 
-.more{
+.more {
     width: 100px;
     height: 100px;
     display: flex;
@@ -120,24 +120,24 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl } from '../../../helpers/h
     border: none;
 }
 
-.secondary-picture{
+.secondary-picture {
     width: 100px;
     border-radius: 20px;
     transition: 0.4s;
 }   
-.secondary-picture:hover{
+.secondary-picture:hover {
     cursor: pointer;
     scale: 1.01;
 }
 
-.preview{
+.preview {
     display: flex;
     flex-direction: column;
     gap: 10px;
     
 }
 
-.title{
+.title {
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -146,12 +146,12 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl } from '../../../helpers/h
     text-align: start;
 }
 
-.user{
+.user {
     display: flex;
     gap: 10px;
 }
 
-.user-name{
+.user-name {
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -159,26 +159,26 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl } from '../../../helpers/h
     line-height: 22px;
 }
 
-.user-picture{
+.user-picture {
     width: 24px;
 }
-.user-picture:hover, .user-name:hover{
+.user-picture:hover, .user-name:hover {
     cursor: pointer;
 }
 
 /* Медіа-запит для мобільних пристроїв з шириною екрану до 767px */
 @media only screen and (max-width: 767px) {
    
-    .card{
+    .card {
         max-width: 315px;
     }
 
-    .more{
+    .more {
         width: 95px;
         height: 95px;
     }
 
-    .secondary-picture{
+    .secondary-picture {
         width: 95px;
     }
 }

@@ -27,18 +27,18 @@ import { getTitleClasses } from '../../../helpers/localization'
 
         setup(){
             const {t, locale}  = useI18n()
-            return{
+            return {
                 t,
                 locale
             }
         },
 
-        computed:{
-            cards(){
+        computed: {
+            cards() {
                 return [
-                {ad: 1, icon: "First", title: this.t("Works.cardTitle.first"), text: this.t("Works.cardText.first")},
-                {ad: 1, icon: "Second", title: this.t("Works.cardTitle.second"), text: this.t("Works.cardText.second")},
-                {ad: 1, icon: "Third", title: this.t("Works.cardTitle.third"), text: this.t("Works.cardText.third")}
+                { ad: 1, icon: "First", title: this.t("Works.cardTitle.first"), text: this.t("Works.cardText.first") },
+                { ad: 1, icon: "Second", title: this.t("Works.cardTitle.second"), text: this.t("Works.cardText.second") },
+                { ad: 1, icon: "Third", title: this.t("Works.cardTitle.third"), text: this.t("Works.cardText.third") }
                 ]
             }
         },
@@ -53,7 +53,7 @@ import { getTitleClasses } from '../../../helpers/localization'
 
 /* Main Style Start */
     
-.work{
+.work {
     min-height: 500px;
     margin: 0 auto;
     display: flex;
@@ -67,7 +67,7 @@ import { getTitleClasses } from '../../../helpers/localization'
 
 /* Header Styles Start */
 
-.header{
+.header {
     max-width: 1050px;
     width: 100%;
     display: flex;
@@ -75,7 +75,7 @@ import { getTitleClasses } from '../../../helpers/localization'
     gap: 10px;
 }
 
-.title{
+.title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 38px;
@@ -83,7 +83,7 @@ import { getTitleClasses } from '../../../helpers/localization'
     color: var(--text-color-white);
 }
 
-.sub-title{
+.sub-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 22px;
@@ -95,7 +95,7 @@ import { getTitleClasses } from '../../../helpers/localization'
 
 /* Content Styles Start */
 
-.content{
+.content {
     max-width: 1050px;
     width: 100%;
     min-height: 300px; 
@@ -110,7 +110,7 @@ import { getTitleClasses } from '../../../helpers/localization'
 
     /* Main Style Start */
 
-    .work{
+    .work {
         gap: 40px;
         padding: 40px 0;
     }
@@ -118,16 +118,16 @@ import { getTitleClasses } from '../../../helpers/localization'
     /* Main Style End */
 
     /* Header Styles Start */
-    .header{
+    .header {
         max-width: 690px;
     }
 
-    .title{
+    .title {
         font-size: 28px;
         line-height: 39px;
     }
 
-    .sub-title{
+    .sub-title {
         font-size: 16px;
         line-height: 22px;
     }
@@ -136,7 +136,7 @@ import { getTitleClasses } from '../../../helpers/localization'
     
     /* Content Styles Start */
 
-    .content{
+    .content {
         max-width: 690px;
         min-height: 320px;
     }
@@ -150,7 +150,7 @@ import { getTitleClasses } from '../../../helpers/localization'
 
     /* Main Style Start */
 
-    .work{
+    .work {
         gap: 40px;
         padding: 40px 0;
     }
@@ -158,16 +158,16 @@ import { getTitleClasses } from '../../../helpers/localization'
     /* Main Style End */
 
     /* Header Styles Start */
-    .header{
+    .header {
         max-width: 315px;
     }
 
-    .title{
+    .title {
         font-size: 28px;
         line-height: 39px;
     }
 
-    .sub-title{
+    .sub-title {
         font-size: 16px;
         line-height: 22px;
     }
@@ -176,7 +176,7 @@ import { getTitleClasses } from '../../../helpers/localization'
 
     /* Content Styles Start */
 
-    .content{
+    .content {
         max-width: 315px;
         width: 100%;
         min-height: 320px;

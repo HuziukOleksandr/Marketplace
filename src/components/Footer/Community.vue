@@ -25,14 +25,15 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        
+    }
 </script>
 
 <style scoped>
 
-
 /* Main Styles Start */
-.community{
+.community {
     max-width: 328px;
     width: 100%;
 }
@@ -41,14 +42,14 @@
 
 /* Logo Styles Start */
 
-.logo{
+.logo {
     margin-bottom: 30px;
 }
 
 /* Logo Styles Start */
 
 /* Text Styles Start */
-.text, .title{
+.text, .title {
     font-family: 'Mintserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -57,23 +58,23 @@
     margin-bottom: 20px;
 }
 
-.title{
+.title {
     margin-bottom: 15px;
 }
 
 /* Text Styles End */
 
 /* Icons Style Start */
-.icons{
+.icons {
     width: 158px;
     display: flex;
     justify-content: space-between;
 }
 
-.icon{
+.icon {
     transition: 0.2s;
 }
-.icon:hover{
+.icon:hover {
     cursor: pointer;
     scale: 1.01;
 
@@ -81,24 +82,21 @@
 
 /* Icons Style End */
 
-
-
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
-    .logo{
+    .logo {
         margin-bottom: 20px;
     }
 
 }
 
-
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
     
-    .logo{
+    .logo {
         margin-bottom: 20px;
     }
-
+    
 }
 </style>

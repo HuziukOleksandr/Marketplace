@@ -40,7 +40,8 @@ import Navigation from '../Navigation/Navigation.vue'
                 
                 this.$router.push({ name: 'Register' });
             }
-        },
+        }
+
     }
 </script>
 
@@ -50,7 +51,7 @@ import Navigation from '../Navigation/Navigation.vue'
     display: flex;
 }
 
-.button{
+.button {
     height: 60px;
     padding: 0 30px;
     background-color: var(--button-background-color);
@@ -63,7 +64,7 @@ import Navigation from '../Navigation/Navigation.vue'
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
-    .menu{
+    .menu {
         max-width: 690px;
         width: 100%;
         min-height: 60px;
@@ -73,7 +74,7 @@ import Navigation from '../Navigation/Navigation.vue'
         margin: 30px auto;
     }
 
-    .button{
+    .button {
         height: 45px;
         padding: 20px 45px;
     }
@@ -88,14 +89,14 @@ import Navigation from '../Navigation/Navigation.vue'
         margin: 0 auto;
     }
 
-    .menu{
+    .menu {
         max-width: 330px;
         flex-direction: column;
         border: 2px solid var(--button-background-color);
         margin: 30px auto;
     }
 
-    .button{
+    .button {
         height: 45px;
         padding: 15px 50px;
         margin: 0 auto;

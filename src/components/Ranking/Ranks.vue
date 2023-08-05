@@ -38,20 +38,20 @@
 
 <style scoped>
 
-.section{
+.section {
     min-height: 600px;
     display: flex;
     flex-direction: column;
     gap: 80px;
 }
 
-.header{
+.header {
     max-width: 1050px;
     width: 100%; 
     margin: 0 auto;  
 }
 
-.title{
+.title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 50px;
@@ -60,7 +60,7 @@
     margin-bottom: 10px;
 }
 
-.sub-title{
+.sub-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 22px;
@@ -69,7 +69,7 @@
     margin-bottom: 30px;
 }
 
-.content-header{
+.content-header {
     width: 100%;
     height: 70px;
     border-top: 1px solid var(--background-secondary);
@@ -78,7 +78,7 @@
     justify-content: end;
 }
 
-.items{
+.items {
     max-width: 1050px;
     width: 100%;
     height: 60px;
@@ -87,7 +87,7 @@
 }
 
 
-.item{
+.item {
     width: 25%;
     height: 60px;
     display: flex;
@@ -96,7 +96,7 @@
     gap: 15px;
 }
 
-.link{
+.link {
     font-family: 'Montserrat',sans-serif;
     font-weight: 600;
     font-size: 22px;
@@ -105,7 +105,7 @@
     text-decoration: none;
 }
 
-.number{
+.number {
     padding: 5px 10px;
     background-color: var(--background-secondary);
     color: var(--text-color-secondary);
@@ -115,4 +115,5 @@
     font-size: 16px;
     line-height: 22px;
 }
+
 </style>

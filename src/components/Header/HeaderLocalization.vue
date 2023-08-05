@@ -45,25 +45,24 @@
                 }
             }
         }, 
-
         
     }
 </script>
 
 <style scoped>
 
-.link-item{
+.link-item {
     display: flex;
     align-items: center;
     padding:10px 7px;
 }
 
-.loc-icon{
+.loc-icon {
     width: 35px;
     transition: 0.2s;
 }  
 
-.loc-icon:hover{
+.loc-icon:hover {
     cursor: pointer;
     scale: 1.05;
 }

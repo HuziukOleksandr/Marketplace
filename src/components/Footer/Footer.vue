@@ -25,29 +25,23 @@ import { useI18n } from 'vue-i18n';
 import Digest from './Digest.vue'
 import Explore from './Explore.vue'
 import Community from './Community.vue'
+import { getTitleClasses, getTextClasses } from '../../helpers/localization';
+
     export default {
         components: {
             Digest, Explore, Community
         },
+
         setup(){
             const {locale} = useI18n();
             return {
                 locale
             };
         },
+
         methods: {
-            getTitleClasses(){
-                return {
-                    'english-title': this.locale === 'EN',
-                    'ukrainian-title': this.locale === 'UA'
-                };
-            },
-            getTextClasses(){
-                return {
-                    'english-text': this.locale === 'EN',
-                    'ukrainian-text': this.locale === 'UA'
-                };
-            }
+            getTitleClasses,
+            getTextClasses
         }
     }
 </script>
@@ -57,7 +51,7 @@ import Community from './Community.vue'
 /* Стилі для великих моніторів та десктопів */
 @media only screen and (min-width: 1280px) {
     /* Main Styles Start */
-    .footer{
+    .footer {
         min-height: 355px;
         background-color: var(--background-secondary);
         display: flex;
@@ -67,7 +61,7 @@ import Community from './Community.vue'
         padding: 40px 100px;
     }
 
-    .content{
+    .content {
         min-width: 690px;
         width: 100%;
         min-height: 190px;
@@ -79,7 +73,7 @@ import Community from './Community.vue'
 
     /* Bottom Styles Start */
 
-    .bottom{
+    .bottom {
         min-width: 1050px;
         width: 100%;
         min-height: 35px;   
@@ -88,7 +82,7 @@ import Community from './Community.vue'
         align-items: end;
     }
 
-    .conporations{
+    .conporations {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 12px;
@@ -104,7 +98,7 @@ import Community from './Community.vue'
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
     /* Main Styles Start */
-    .footer{
+    .footer {
         min-height: 700px;
         background-color: var(--background-secondary);
         display: flex;
@@ -114,7 +108,7 @@ import Community from './Community.vue'
         padding: 40px 0;
     }
 
-    .content{
+    .content {
         max-width: 690px;
         width: 100%;
         min-height: 190px;
@@ -129,7 +123,7 @@ import Community from './Community.vue'
     
     /* Bottom Styles Start */
 
-    .bottom{
+    .bottom {
         max-width: 690px;
         width: 100%;
         min-height: 35px;   
@@ -138,7 +132,7 @@ import Community from './Community.vue'
         align-items: end;
     }
 
-    .conporations{
+    .conporations {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 12px;
@@ -153,7 +147,7 @@ import Community from './Community.vue'
 @media only screen and (max-width: 767px) {
 
     /* Main Styles Start */
-    .footer{
+    .footer {
         min-height: 700px;
         background-color: var(--background-secondary);
         display: flex;
@@ -163,7 +157,7 @@ import Community from './Community.vue'
         padding: 40px 0;
     }
 
-    .content{
+    .content {
         max-width: 315px;
         width: 100%;
         min-height: 190px;
@@ -178,7 +172,7 @@ import Community from './Community.vue'
     
     /* Bottom Styles Start */
 
-    .bottom{
+    .bottom {
         max-width: 315px;
         width: 100%;
         min-height: 35px;   
@@ -187,7 +181,7 @@ import Community from './Community.vue'
         align-items: end;
     }
 
-    .conporations{
+    .conporations {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 12px;

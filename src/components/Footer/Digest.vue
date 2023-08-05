@@ -36,7 +36,7 @@ import { getTitleClasses, getTextClasses } from '../../helpers/localization';
 
 /* Main Styles Start */
 
-.digest{
+.digest {
     max-width: 420px;
     width: 100%;
     display: flex;
@@ -46,7 +46,7 @@ import { getTitleClasses, getTextClasses } from '../../helpers/localization';
 
 /* Main Styles End */
 
-.sub-title{
+.sub-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -56,12 +56,12 @@ import { getTitleClasses, getTextClasses } from '../../helpers/localization';
 
 /* Input-Button Styles Start */
 
-.input-btn{
+.input-btn {
     position: relative;
     display: flex;
 }
 
-.input{
+.input {
     max-width: 420px;
     width: 100%;
     height: 60px;
@@ -73,7 +73,7 @@ import { getTitleClasses, getTextClasses } from '../../helpers/localization';
     line-height: 22px;
     color: var(--background-color);
 }
-.button{
+.button {
     position: absolute;
     right: 0;
     height: 60px;
@@ -84,11 +84,11 @@ import { getTitleClasses, getTextClasses } from '../../helpers/localization';
     font-size: 16px;
     line-height: 22px;
 }
-.button:hover{
+.button:hover {
     scale: 1;
 }
 
-.english-title{
+.english-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 22px;
@@ -96,7 +96,7 @@ import { getTitleClasses, getTextClasses } from '../../helpers/localization';
     color: var(--text-color-white)
 }
 
-.ukrainian-title{
+.ukrainian-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 22px;
@@ -107,14 +107,12 @@ import { getTitleClasses, getTextClasses } from '../../helpers/localization';
 
 /* Input-Button Styles End */
 
-
-
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {   
 
     /* Main Styles Start */
     
-    .digest{
+    .digest {
         max-width:690px;
         width: 100%;   
         gap: 20px;
@@ -124,12 +122,12 @@ import { getTitleClasses, getTextClasses } from '../../helpers/localization';
 
     /* Input-Button Styles Start */
 
-    .input-btn{
+    .input-btn {
         max-width: 420px;
         width: 100%;
     }
 
-    .input{
+    .input {
         padding: 10px 20px;
     }
 
@@ -142,31 +140,30 @@ import { getTitleClasses, getTextClasses } from '../../helpers/localization';
 
     /* Main Styles Start */
     
-    .digest{
+    .digest {
         gap: 20px;
     }
 
-    
-
-    .input-btn{
+    .input-btn {
         display: flex;
         flex-direction: column;
         position: static;
         gap: 15px;
     }
 
-    .input{
+    .input {
         height: 45px;
         padding: 12px 20px;
     }
     
-    .button{
+    .button {
         position: static;
         height: 45px;
         justify-content: center;
     }
 
     /* Input-Button Styles End */
+    
 }
 
 </style>

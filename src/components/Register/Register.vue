@@ -42,7 +42,7 @@
 
 <style scoped>
 
-.section{
+.section {
     max-width: 1280px;
     width: 100%;
     height: 690px;
@@ -51,13 +51,13 @@
     justify-content: space-between;
 }
 
-.picture{
+.picture {
     max-width: 610px;
     width: 100%;
     background-image: url('../../assets/images/Register/Picture.svg');
 }
 
-.form{
+.form {
     max-width: 610px;
     width: 100%;
     padding: 100px 0;
@@ -65,7 +65,7 @@
     flex-direction: column;
 }
 
-.title{
+.title {
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -75,7 +75,7 @@
     margin-bottom: 20px;
 }
 
-.sub-title{
+.sub-title {
     color: var(--text-color-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -84,14 +84,14 @@
     margin-bottom: 40px;
 }
 
-.inputs{
+.inputs {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 30px;
 }
 
-.button{
+.button {
     max-width: 330px;
     width: 100%;
     height: 45px;
@@ -103,7 +103,7 @@
     line-height: 22px;
 }
 
-.input{
+.input {
     max-width: 330px;
     width: 100%;
     height: 45px;
@@ -113,7 +113,7 @@
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
 
-    .section{
+    .section {
         max-width: 834px;
         width: 100%;
         height: 615px;
@@ -122,12 +122,13 @@
         justify-content: space-between;
     }
 
-    .picture{
+    .picture {
         max-width: 397px;
         width: 100%;
         background-image: url('../../assets/images/Register/PictureMedium.svg');
     }
-    .form{
+
+    .form {
         max-width: 397px;
         width: 100%;
         padding: 80px 0;
@@ -136,7 +137,7 @@
         flex-direction: column;
     }
 
-    .title{
+    .title {
         color: var(--text-color-white);
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
@@ -146,7 +147,7 @@
         margin-bottom: 20px;
     }
 
-    .sub-title{
+    .sub-title {
         color: var(--text-color-white);
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
@@ -155,14 +156,14 @@
         margin-bottom: 40px;
     }
 
-    .input{
+    .input {
         max-width: 325px;
         width: 100%;
         height: 45px;
         padding: 0 30px;
     }
 
-    .button{
+    .button {
         width: 325px;
     }
 }
