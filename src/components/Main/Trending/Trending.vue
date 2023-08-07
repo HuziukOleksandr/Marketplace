@@ -35,6 +35,7 @@ import axios from 'axios'
             axios
                 .get('/data/Collections.json')
                 .then(response =>  {
+                    console.log(response.data.Collections);
                     this.collections = response.data.Collections;
                 });
         }

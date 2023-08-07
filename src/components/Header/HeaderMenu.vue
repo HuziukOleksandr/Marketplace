@@ -38,7 +38,6 @@ import Navigation from '../Navigation/Navigation.vue'
             
             buttonClick(){
                 this.$emit('menuClose', false);
-                
                 this.$router.push({ name: 'Register' });
             }
         }

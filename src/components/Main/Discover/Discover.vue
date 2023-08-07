@@ -19,7 +19,7 @@
 
         <!-- Content Start -->
         <div class="content">
-            <Card :cards="cards.slice(0,4)" />
+            <Card :cards="cards.slice(0,5)" />
         </div>
         <!-- Content End -->
 

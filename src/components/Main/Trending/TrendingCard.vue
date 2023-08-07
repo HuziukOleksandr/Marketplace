@@ -77,11 +77,16 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl } from '../../../helpers/h
         
         mounted() {
             this.slides = getSlidesNumber()
-            window.addEventListener('resize', this.slides = getSlidesNumber)
+            
+            window.addEventListener('resize',() =>  {
+                this.slides = getSlidesNumber()
+            })
         },
 
-        beforeUnmount() {
-            window.removeEventListener('resize', this.slides = getSlidesNumber)
+        beforeDestroy() {
+            window.removeEventListener('resize', () => {
+                this.slides = getSlidesNumber()
+            })
         }
     }
 </script>

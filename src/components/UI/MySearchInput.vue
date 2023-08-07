@@ -1,6 +1,6 @@
 <template>
     <div class="input-wrapper">
-        <input v-bind="$attrs"  class="input" />
+        <input v-bind="$attrs"  class="input" @input="updateInput" type="text" />
         <div class="image-slot">
             <slot name="image"></slot>
         </div>
@@ -9,7 +9,13 @@
 
 <script>
     export default {
-        name: "my-search"
+        name: "my-search",
+
+        methods: {
+            updateInput(event){
+                this.$emit('update:value', event.target.value)
+            }
+        }
     }
 </script>
 

@@ -22,7 +22,6 @@
 }
 
 .carousel__pagination-button::after{
-    
     background-color: var(--text-color-secondary);
 }
 .carousel__pagination-button--active::after{

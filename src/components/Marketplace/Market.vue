@@ -4,10 +4,13 @@
         <div class="header">
             <h2 class="title">{{ $t("Marketplace.title") }}</h2>
             <h2 class="sub-title">{{ $t("Marketplace.subTitle") }}</h2>
-            <my-search class="input" :placeholder='$t("Marketplace.input")'>
-                <template #image>
-                    <img src="../../assets/images/svg/MagnifyingGlass.svg" alt="MagnifyingGlass" />
-                </template>
+            <my-search 
+                class="input" 
+                :placeholder='$t("Marketplace.input")'
+                v-model:value="name">
+                    <template #image>
+                        <img src="../../assets/images/svg/MagnifyingGlass.svg" alt="MagnifyingGlass" />
+                    </template>
             </my-search>
         </div>
         <!-- Header End -->
@@ -28,17 +31,17 @@
                         @click="changeTabs('Collection')" 
                         :class="{ active: this.active === 'Collection' }">
                         <div href="" class="link" >{{ $t("Marketplace.collection") }}</div>
-                        <div class="number">8</div>
+                        <div class="number">{{ Object.keys(collections).length }}</div>
                     </div>
                 </div>
             </div>
             <div class="content-bgr">
                 <div class="content">
                     <Cards 
-                        :cards="cards" 
+                        :cards="searchCard(cards)" 
                         v-if="this.active === 'NFT'"/>
                     <Collentions 
-                        :collections="collections"
+                        :collections="searchCard(collections)"
                         v-if="this.active === 'Collection'"/>
 
                 </div>
@@ -62,25 +65,40 @@ import Collentions from './Collection.vue'
         data() {
             return {
                 active: "NFT",
-                cards: '',
-                collections: ''
+                cards: [],
+                collections: [],
+                name: ''
+                
             }
         },
 
         methods: {
             changeTabs(type) {
                 this.active = type;
-            }
+                this.name =''
+            },
+
+            searchCard(array){
+                if( this.name === '' || this.name == null){
+                    return array
+                } else {
+                    return array.filter(elem =>
+                        elem.name.toLowerCase().includes(this.name.toLowerCase())
+                    );
+                }
+            },
+
+            
         },
 
-        mounted() {
-            axios
+        async mounted() {
+            await axios
                 .get('/data/Cards.json')
                 .then(response =>  {
                     this.cards = response.data.Cards;
             });
 
-            axios
+            await axios
                 .get('/data/Collections.json')
                 .then(response =>  {
                     this.collections = response.data.Collections;
@@ -92,7 +110,7 @@ import Collentions from './Collection.vue'
 <style scoped>
 
 .section {
-    min-height: 600px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -195,7 +213,7 @@ import Collentions from './Collection.vue'
 .content {
     max-width: 1050px;
     width: 100%;
-    min-height: 775px;
+    min-height: 400px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;

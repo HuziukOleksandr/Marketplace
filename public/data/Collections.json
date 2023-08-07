@@ -1,6 +1,6 @@
 {
-    "Collections": {
-        "Space" : {
+    "Collections": [
+        {
             "name": "Space",
             "userName": "MoonDancer",
             "Cards": [
@@ -12,7 +12,7 @@
                 {"id": "6", "name": "Life On Edena", "picture": "LifeOnEdena" }
             ]
         },
-        "DSGNAnimals" : {
+        {
             "name": "DSGN Animals",
             "userName": "MrFox",
             "Cards": [
@@ -28,7 +28,7 @@
                 
             ]
         },
-        "DiscoMashines" : {
+        {
             "name": "Disco Mashines",
             "userName": "BeKind2Robots",
             "Cards": [
@@ -42,7 +42,7 @@
                 {"id": "8", "name": "Dancing Robot 0024", "picture": "DancingRobot0024" }
             ]
         },
-        "CherryBlossom" : {
+        {
             "name": "Cherry Blossom",
             "userName": "Juanie",
             "Cards": [
@@ -51,7 +51,7 @@
                 {"id": "2", "name": "Cherry Blossom Girl 03", "picture": "CherryBlossomGirl03" }
             ]
         },
-        "MagicMushroom" : {
+        {
             "name": "Magic Mushroom",
             "userName": "Juanie",
             "Cards": [
@@ -60,5 +60,5 @@
                 {"id": "2", "name": "Magic Mushroom 0325", "picture": "MagicMushroom0325" }
             ]
         }
-    }
+    ]
 }

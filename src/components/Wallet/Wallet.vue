@@ -45,7 +45,6 @@
 .section {
     max-width: 1280px;
     width: 100%;
-    height: 100vh;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -115,46 +114,33 @@
 
     .section {
         max-width: 834px;
-        width: 100%;
-        height: 530px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
+        min-height: 530px;
     }
 
     .picture {
         max-width: 397px;
-        width: 100%;
         background: url('../../assets/images/Wallet/PictureMedium.jpg') center/cover;
     }
     .form{
-        max-width: 397px;
-        width: 100%;
+        max-width: 325px;
         padding: 80px 0;
-        height: 530px;
-        display: flex;
-        flex-direction: column;
+        min-height: 530px;
     }
 
     .title {
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
         font-size: 33px;
         line-height: 45px;
-        text-align: start;
-        margin-bottom: 20px;
     }
 
     .sub-title {
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        margin-bottom: 40px;
     }
 
+    .title, .sub-title{
+        max-width: 325px;
+        width: 100%;
+    }
     .icon {
         width: 32px;
     }
@@ -170,48 +156,32 @@
 
     .section {
         max-width: 375px;
-        width: 100%;
         min-height: 662px;
-        margin: 0 auto;
-        display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        gap: 40px;
     }
 
     .picture {
         max-width: 375px;
-        width: 100%;
         min-height: 232px;
         background-image: url('../../assets/images/Wallet/PictureSmall.jpg');
     }
 
     .form {
         max-width: 315px;
-        width: 100%;
         padding: 30px 0;
-        height: 430px;
-        display: flex;
-        flex-direction: column;
+        min-height: 430px;
         margin: 0 auto;
     }
 
     .title {
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
         font-size: 26px;
         line-height: 30px;
-        text-align: start;
-        margin-bottom: 20px;
     }
 
     .sub-title {
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
         font-size: 16px;
         line-height: 22px;  
-        margin-bottom: 40px;
     }
 
     .button {
