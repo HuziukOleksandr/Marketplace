@@ -4,15 +4,29 @@
             <div class="header-colums">#</div>
             <div class="header-colums">{{ $t("Ranking.artists") }}</div>
             <div class="header-colums">{{ $t("Ranking.change") }}</div>
-            <div class="header-colums">{{ $t("Ranking.sold") }}</div>
-            <div class="header-colums">{{ $t("Ranking.volume") }}</div>
+            <div class="header-colums" @click="sortItem('sold')">
+                    {{ $t("Ranking.sold") }}
+                <div 
+                    class="sort"
+                    v-show="sortTable.sold.active" 
+                    :class="{ showtriangle : this.sortTable.sold.rotate === true}">
+                </div>
+            </div>
+            <div class="header-colums" @click="sortItem('volume')">
+                    {{ $t("Ranking.volume") }}
+                <div 
+                    class="sort"
+                    v-show="sortTable.volume.active" 
+                    :class="{ showtriangle : this.sortTable.volume.rotate === true}">
+                </div>
+            </div>
         </div>
         <div class="content" v-for="artist in artists">
             <div class="content-colums">{{ artist.id }}</div>
             <div class="content-colums">
                 <img 
                     :src="getUserImageUrl(artist.userName)" 
-                    alt="" 
+                    :alt="artist.userName" 
                     class="picture">
                 <div class="name">{{ artist.name }}</div></div>
             <div class="content-colums">{{ getValue(artist)[0] }}</div>
@@ -37,7 +51,21 @@ import {getUserImageUrl} from '../../helpers/helpers'
 
         data() {
             return {
-                artists: []
+                artists: [],
+                sortTable: {
+                    volume: {
+                        rotate: false,
+                        active: false
+                    },
+                    sold: {
+                        rotate: false,
+                        active: false
+                    },
+                    change: {
+                        rotate: false,
+                        active: false
+                    }
+                }
             }
         },
 
@@ -54,6 +82,17 @@ import {getUserImageUrl} from '../../helpers/helpers'
                 } else if(this.period === 'allTime'){
                     return [ artist.change.allTime, artist.sold.allTime, artist.volume.allTime ]
                 } 
+            },
+
+            sortItem(name){
+                this.sortTable[name].active = true
+                this.sortTable[name].rotate = !this.sortTable[name].rotate
+                Object.keys(this.sortTable).forEach(item => {
+                    if(item != name){
+                        this.sortTable[item].active = false
+                        this.sortTable[item].rotate = false
+                    }
+                })
             }
         },
 
@@ -75,7 +114,6 @@ import {getUserImageUrl} from '../../helpers/helpers'
     width: 100%;
 }
 
-
 .header {
     height: 46px;
     display: flex;
@@ -92,6 +130,17 @@ import {getUserImageUrl} from '../../helpers/helpers'
     margin-bottom: 20px;
 }
 
+.header-colums{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.header-colums:hover{
+    cursor: pointer;
+    color: var(--text-color-white);
+}
 .header-colums:nth-child(1) {
     width: 30px;
     display: flex;
@@ -100,6 +149,10 @@ import {getUserImageUrl} from '../../helpers/helpers'
 
 .header-colums:nth-child(2) {
     width: 400px;
+}
+
+.header-colums:nth-child(2)::after{
+    content: '';
 }
 
 .header-colums:nth-child(3),
@@ -123,6 +176,12 @@ import {getUserImageUrl} from '../../helpers/helpers'
     line-height: 22px;
     color: var(--text-color-white);
     margin-bottom: 20px;
+    transition: 0.2s;
+}
+
+.content:hover{
+    cursor: pointer;
+    scale: 1.01;
 }
 
 .content-colums:nth-child(1) {
@@ -160,6 +219,20 @@ import {getUserImageUrl} from '../../helpers/helpers'
 .content-colums:nth-child(4),
 .content-colums:nth-child(5) {
     width:160px;
+}
+
+.sort {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid var(--background-secondary);
+  cursor: pointer;
+}
+
+.sort.showtriangle {
+  transform: rotate(180deg); /* Повертаємо трикутник вгору */
 }
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
