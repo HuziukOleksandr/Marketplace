@@ -18,7 +18,7 @@
 
         <!-- Content Start -->
         <div class="content">
-            <Card v-if="shouldDisplayFullArray" :cards="artists" />
+            <Card v-if="shouldDisplayFullArray" :cards="artists.slice(0, 12)" />
             <Card v-else-if="shouldDisplayForTablet" :cards="artists.slice(0, 6)" />
             <Card v-else :cards="artists.slice(0, 5)"/>
         </div>
@@ -160,7 +160,7 @@ import axios from 'axios'
     min-height: 775px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
 }
 
 /* Content Styles End */

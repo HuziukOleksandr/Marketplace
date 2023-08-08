@@ -114,6 +114,10 @@
         "time": "All Time",
         "todayShort": "1d",
         "weekShort": "7d",
-        "monthShort": "30d"
+        "monthShort": "30d",
+        "artists": "Artists",
+        "change": "Change",
+        "sold": "NFT's Sold",
+        "volume": "Volume"
     }
 }

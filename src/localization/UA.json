@@ -114,6 +114,10 @@
         "time": "Весь Час",
         "todayShort": "1д",
         "weekShort": "7д",
-        "monthShort": "30д"
+        "monthShort": "30д",
+        "artists": "Митці",
+        "change": "Зміна",
+        "sold": "NFT Продано",
+        "volume": "Обсяг"
     }
 }

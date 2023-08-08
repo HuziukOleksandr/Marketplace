@@ -7,7 +7,8 @@
             </div>
             <img 
                 :src="getUserImageUrl(card.userName)" 
-                :alt="card.userName">
+                :alt="card.userName"
+                class="picture">
         </div>
         <!-- Preview End -->
         
@@ -54,7 +55,7 @@ import {getUserImageUrl} from '../../../helpers/helpers'
     height: 240px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    
     background-color: var(--background-secondary) ;
     border-radius: 20px;
     padding: 20px;
@@ -93,6 +94,10 @@ import {getUserImageUrl} from '../../../helpers/helpers'
     font-size: 16px;
     line-height: 20px;
     text-align: center;
+}
+
+.picture {
+    width: 120px;
 }
 
 /* Preview Styles End*/
@@ -169,6 +174,10 @@ import {getUserImageUrl} from '../../../helpers/helpers'
         text-align: start;
     }
 
+    .picture {
+        width: 60px;
+    }
+
     /* Title Styles End */
 
 }
@@ -208,6 +217,10 @@ import {getUserImageUrl} from '../../../helpers/helpers'
 
     .name-text {
         text-align: start;
+    }
+
+    .picture {
+        width: 60px;
     }
 
     /* Title Styles End */

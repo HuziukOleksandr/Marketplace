@@ -31,14 +31,14 @@
                     </div>
                     <div 
                         class="item"
-                        :class="{active: this.active === 'time'}"
-                        @click="changeTabs('time')">
+                        :class="{active: this.active === 'allTime'}"
+                        @click="changeTabs('allTime')">
                             <div href="" class="link">{{ $t("Ranking.time") }}</div>
                     </div>
                 </div>
             </div>
             <div class="content">
-
+                <Table :period="active"/>
             </div>
         </div>
         <!-- Content End -->
@@ -47,8 +47,13 @@
 
 <script>
 import { useI18n } from 'vue-i18n';
+import Table from './Table.vue'
 
     export default {
+        components: {
+            Table
+        },
+
         setup() {
             const {t, locale} = useI18n()
             return {
