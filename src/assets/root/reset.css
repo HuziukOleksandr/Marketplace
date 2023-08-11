@@ -21,4 +21,5 @@ input {
     box-sizing: border-box;
     /* Заборона зміни курсору при наведенні */
     cursor: text;
-  }
+}
+

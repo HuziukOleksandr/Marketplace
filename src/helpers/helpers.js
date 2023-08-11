@@ -27,3 +27,8 @@ export function getCategoryIconUrl(name) {
 export function getWorkImageUrl(name){
     return new URL(`../assets/images/Work/${name}.svg`, import.meta.url).href;
 }
+
+export function getUserBackgroundUrl(name){
+    
+    return new URL(`../assets/images/Background/${name}.png`, import.meta.url).href;
+}

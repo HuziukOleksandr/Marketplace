@@ -3,14 +3,14 @@
         <!-- Header Start -->
         <div class="header">
             <div class="left-side">
-                <h2 class="title">{{ $t("Artists.title") }}</h2>
-            <h3 class="sub-title">{{ $t("Artists.subTitle") }}</h3>
+                <h2 class="title">{{ $t("Creators.title") }}</h2>
+            <h3 class="sub-title">{{ $t("Creators.subTitle") }}</h3>
             </div>
             <div class="right-side">
                 <my-button
                     class="button">
                     <img src="../../../assets/images/Buttons/RocketLaunch.svg" alt="RocketLaunch">
-                    {{ $t("Artists.button") }}
+                    {{ $t("Creators.button") }}
                 </my-button>
             </div>
         </div>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import Card from './ArtistCard.vue'
+import Card from './CreatorsCard.vue'
 import axios from 'axios'
 
 

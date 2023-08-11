@@ -1,5 +1,5 @@
 <template>
-    <div class="card" v-for="card in cards" :key="card.id">
+    <div  class="card" v-for="card in cards" :key="card.id" @click="cardClick(card.userName)" >
         <!-- Preview Start -->
         <div class="preview">
             <div class="number">
@@ -20,7 +20,7 @@
             </h2>
             
             <div class="sale">
-                <h3 class="sale-text">{{ $t("Artists.totalSale") }}</h3>
+                <h3 class="sale-text">{{ $t("Creators.totalSale") }}</h3>
                 <h3 class="sale-number">{{ card.sale }}</h3>
             </div>
         </div>
@@ -30,6 +30,7 @@
 
 <script>
 import {getUserImageUrl} from '../../../helpers/helpers'
+
     export default {
         
         props:{
@@ -40,7 +41,11 @@ import {getUserImageUrl} from '../../../helpers/helpers'
         },
         
         methods: {
-            getUserImageUrl
+            getUserImageUrl,
+
+            cardClick(name){
+                this.$router.push({name: 'Artists', query: { artistName: name}})
+            }
         }
     }
 </script>

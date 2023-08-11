@@ -31,7 +31,7 @@
         "title": "Trending Collection",
         "subTitle": "Checkout our weekly updated trending collection."
     },
-    "Artists": {
+    "Creators": {
         "title": "Top creators",
         "subTitle": "Checkout Top Rated Creators on the NFT Marketplace",
         "button": "View Rankings",
@@ -119,5 +119,13 @@
         "change": "Change",
         "sold": "NFT's Sold",
         "volume": "Volume"
+    },
+    "Artist": {
+        "volume": "Volume",
+        "sold": "NFT's Sold",
+        "followers": "Followers",
+        "button": "Follow",
+        "bio": "Bio",
+        "links": "Links"
     }
 }

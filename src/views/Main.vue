@@ -2,7 +2,7 @@
     <div class="main">
         <Hero/>
         <Trending/>
-        <Artists/>
+        <Creators/>
         <Category/>
         <Discover/>
         <Highlight/>
@@ -15,7 +15,7 @@
 
 import Hero from '../components/Main/Hero/Hero.vue'
 import Trending from '../components/Main/Trending/Trending.vue'
-import Artists from '../components/Main/Artists/Artists.vue'
+import Creators from '../components/Main/Creators/Creators.vue'
 import Category from '../components/Main/Category/Category.vue'
 import Discover from '../components/Main/Discover/Discover.vue'
 import Highlight from '../components/Main/Highlight/Highlight.vue'
@@ -24,7 +24,7 @@ import Subscribe from '../components/Main//Subscribe/Subscribe.vue'
 
     export default {
         components: {
-            Hero, Trending, Artists, Category, Discover, Highlight, Works, Subscribe
+            Hero, Trending, Creators, Category, Discover, Highlight, Works, Subscribe
         }
     }
 </script>

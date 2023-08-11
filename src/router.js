@@ -6,6 +6,7 @@ import Register from './views/Registration.vue'
 import Wallet from './views/ConnectWallet.vue'
 import Marketplace from './views/Marketplace.vue'
 import Ranking from './views/Ranking.vue'
+import Artists from './views/Artists.vue'
 
 const routes = [
     {
@@ -29,7 +30,7 @@ const routes = [
     {
         path: '/wallet',
         name: 'Wallet',
-        components:{
+        components: {
             Header,
             default: Wallet,
             Footer
@@ -38,7 +39,7 @@ const routes = [
     {
         path: '/marketplace',
         name: 'Marketplace',
-        components:{
+        components: {
             Header,
             default: Marketplace,
             Footer
@@ -47,11 +48,23 @@ const routes = [
     {
         path: '/ranking',
         name: 'Ranking',
-        components:{
+        components: {
             Header,
             default: Ranking,
             Footer
         }
+    },
+    {
+        path: '/artist',
+        name: 'Artists',
+        components: {
+            Header,
+            default: Artists,
+            Footer
+        },
+        props: route => ({
+            artistName: route.query.artistName
+        })
     }
 ]
 

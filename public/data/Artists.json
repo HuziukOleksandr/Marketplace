@@ -1,484 +1,684 @@
 {
     "Artists": [
         {   
-          "id": 1, 
-          "name": "Jaydon Ekstrom Bothman", 
-          "userName": "Keepitreal", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.35%",
-              "week": "0.45%",
-              "month": "0.91%",
-              "allTime": "1.2%"
-          }, 
-          "sold": { 
-              "day": "100",
-              "week": "200",
-              "month": "150",
-              "allTime": "300"
-          },
-          "volume": { 
-              "day": "15.7 ETH",
-              "week": "20.2 ETH",
-              "month": "25.9 ETH",
-              "allTime": "8.5 ETH"
-          }
+            "id": 1, 
+            "name": "Jaydon Ekstrom Bothman", 
+            "userName": "Keepitreal", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.35%",
+                "week": "0.45%",
+                "month": "0.91%",
+                "allTime": "1.2%"
+            }, 
+            "sold": { 
+                "day": "100",
+                "week": "200",
+                "month": "150",
+                "allTime": "300"
+            },
+            "volume": { 
+                "day": "15.7 ETH",
+                "week": "20.2 ETH",
+                "month": "25.9 ETH",
+                "allTime": "8.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 2, 
-          "name": "Ruben Carder", 
-          "userName": "DigiLab", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.47%",
-              "week": "0.34%",
-              "month": "0.56%",
-              "allTime": "7.2%"
-          }, 
-          "sold": { 
-              "day": "500",
-              "week": "300",
-              "month": "400",
-              "allTime": "600"
-          },
-          "volume": { 
-              "day": "10.5 ETH",
-              "week": "15.2 ETH",
-              "month": "30.9 ETH",
-              "allTime": "18.5 ETH"
-          }
+            "id": 2, 
+            "name": "Ruben Carder", 
+            "userName": "DigiLab", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.47%",
+                "week": "0.34%",
+                "month": "0.56%",
+                "allTime": "7.2%"
+            }, 
+            "sold": { 
+                "day": "500",
+                "week": "300",
+                "month": "400",
+                "allTime": "600"
+            },
+            "volume": { 
+                "day": "10.5 ETH",
+                "week": "15.2 ETH",
+                "month": "30.9 ETH",
+                "allTime": "18.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 3, 
-          "name": "Alfredo Septimus", 
-          "userName": "GravityOne", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.67%",
-              "week": "0.37%",
-              "month": "0.59%",
-              "allTime": "5.4%"
-          },
-          "sold": { 
-              "day": "300",
-              "week": "100",
-              "month": "250",
-              "allTime": "200"
-          },
-          "volume": { 
-              "day": "5.7 ETH",
-              "week": "30.2 ETH",
-              "month": "15.9 ETH",
-              "allTime": "28.5 ETH"
-          }
+            "id": 3, 
+            "name": "Alfredo Septimus", 
+            "userName": "GravityOne", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.67%",
+                "week": "0.37%",
+                "month": "0.59%",
+                "allTime": "5.4%"
+            },
+            "sold": { 
+                "day": "300",
+                "week": "100",
+                "month": "250",
+                "allTime": "200"
+            },
+            "volume": { 
+                "day": "5.7 ETH",
+                "week": "30.2 ETH",
+                "month": "15.9 ETH",
+                "allTime": "28.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 4, 
-          "name": "Davis Franci", 
-          "userName": "Juanie", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.68%",
-              "week": "0.67%",
-              "month": "0.44%",
-              "allTime": "2.6%"
-          },
-          "sold": { 
-              "day": "150",
-              "week": "250",
-              "month": "100",
-              "allTime": "400"
-          },
-          "volume": { 
-              "day": "18.7 ETH",
-              "week": "25.2 ETH",
-              "month": "20.9 ETH",
-              "allTime": "38.5 ETH"
-          }
+            "id": 4, 
+            "name": "Davis Franci", 
+            "userName": "Juanie", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.68%",
+                "week": "0.67%",
+                "month": "0.44%",
+                "allTime": "2.6%"
+            },
+            "sold": { 
+                "day": "150",
+                "week": "250",
+                "month": "100",
+                "allTime": "400"
+            },
+            "volume": { 
+                "day": "18.7 ETH",
+                "week": "25.2 ETH",
+                "month": "20.9 ETH",
+                "allTime": "38.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 5, 
-          "name": "Livia Rosser", 
-          "userName": "BlueWhale", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.35%",
-              "week": "0.45%",
-              "month": "0.91%",
-              "allTime": "1.2%"
-          },
-          "sold": { 
-              "day": "400",
-              "week": "300",
-              "month": "250",
-              "allTime": "500"
-          },
-          "volume": { 
-              "day": "12.7 ETH",
-              "week": "15.2 ETH",
-              "month": "20.9 ETH",
-              "allTime": "25.5 ETH"
-          }
+            "id": 5, 
+            "name": "Livia Rosser", 
+            "userName": "BlueWhale", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.35%",
+                "week": "0.45%",
+                "month": "0.91%",
+                "allTime": "1.2%"
+            },
+            "sold": { 
+                "day": "400",
+                "week": "300",
+                "month": "250",
+                "allTime": "500"
+            },
+            "volume": { 
+                "day": "12.7 ETH",
+                "week": "15.2 ETH",
+                "month": "20.9 ETH",
+                "allTime": "25.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 6, 
-          "name": "Kianna Donin", 
-          "userName": "MrFox", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.35%",
-              "week": "0.45%",
-              "month": "0.91%",
-              "allTime": "1.2%"
-          },
-          "sold": { 
-              "day": "200",
-              "week": "250",
-              "month": "150",
-              "allTime": "350"
-          },
-          "volume": { 
-              "day": "30.7 ETH",
-              "week": "35.2 ETH",
-              "month": "40.9 ETH",
-              "allTime": "48.5 ETH"
-          }
+            "id": 6, 
+            "name": "Kianna Donin", 
+            "userName": "MrFox", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.35%",
+                "week": "0.45%",
+                "month": "0.91%",
+                "allTime": "1.2%"
+            },
+            "sold": { 
+                "day": "200",
+                "week": "250",
+                "month": "150",
+                "allTime": "350"
+            },
+            "volume": { 
+                "day": "30.7 ETH",
+                "week": "35.2 ETH",
+                "month": "40.9 ETH",
+                "allTime": "48.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 7, 
-          "name": "Phillip Lipshutz", 
-          "userName": "Shroomie", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.01%",
-              "week": "0.78%",
-              "month": "0.41%",
-              "allTime": "6.8%"
-          },
-          "sold": { 
-              "day": "50",
-              "week": "10",
-              "month": "20",
-              "allTime": "90"
-          },
-          "volume": { 
-              "day": "8.7 ETH",
-              "week": "9.2 ETH",
-              "month": "14.9 ETH",
-              "allTime": "6.5 ETH"
-          }
+            "id": 7, 
+            "name": "Phillip Lipshutz", 
+            "userName": "Shroomie", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.01%",
+                "week": "0.78%",
+                "month": "0.41%",
+                "allTime": "6.8%"
+            },
+            "sold": { 
+                "day": "50",
+                "week": "10",
+                "month": "20",
+                "allTime": "90"
+            },
+            "volume": { 
+                "day": "8.7 ETH",
+                "week": "9.2 ETH",
+                "month": "14.9 ETH",
+                "allTime": "6.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 8, 
-          "name": "Maria Rosser", 
-          "userName": "Robotica", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.87%",
-              "week": "0.45%",
-              "month": "0.31%",
-              "allTime": "4.2%"
-          },
-          "sold": { 
-              "day": "250",
-              "week": "200",
-              "month": "150",
-              "allTime": "300"
-          },
-          "volume": { 
-              "day": "20.7 ETH",
-              "week": "25.2 ETH",
-              "month": "35.9 ETH",
-              "allTime": "38.5 ETH"
-          }
+            "id": 8, 
+            "name": "Maria Rosser", 
+            "userName": "Robotica", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.87%",
+                "week": "0.45%",
+                "month": "0.31%",
+                "allTime": "4.2%"
+            },
+            "sold": { 
+                "day": "250",
+                "week": "200",
+                "month": "150",
+                "allTime": "300"
+            },
+            "volume": { 
+                "day": "20.7 ETH",
+                "week": "25.2 ETH",
+                "month": "35.9 ETH",
+                "allTime": "38.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 9, 
-          "name": "Kianna Stanton", 
-          "userName": "RustyRobot", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.45%",
-              "week": "0.78%",
-              "month": "0.34%",
-              "allTime": "6.2%"
-          },
-          "sold": { 
-              "day": "300",
-              "week": "150",
-              "month": "200",
-              "allTime": "250"
-          },
-          "volume": { 
-              "day": "15.7 ETH",
-              "week": "30.2 ETH",
-              "month": "15.9 ETH",
-              "allTime": "28.5 ETH"
-          }
+            "id": 9, 
+            "name": "Kianna Stanton", 
+            "userName": "RustyRobot", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.45%",
+                "week": "0.78%",
+                "month": "0.34%",
+                "allTime": "6.2%"
+            },
+            "sold": { 
+                "day": "300",
+                "week": "150",
+                "month": "200",
+                "allTime": "250"
+            },
+            "volume": { 
+                "day": "15.7 ETH",
+                "week": "30.2 ETH",
+                "month": "15.9 ETH",
+                "allTime": "28.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 10, 
-          "name": "Randy Carder", 
-          "userName": "Animakid", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.67%",
-              "week": "0.49%",
-              "month": "0.34%",
-              "allTime": "1.9%"
-          },
-          "sold": { 
-              "day": "200",
-              "week": "300",
-              "month": "400",
-              "allTime": "600"
-          },
-          "volume": { 
-              "day": "10.5 ETH",
-              "week": "15.2 ETH",
-              "month": "30.9 ETH",
-              "allTime": "18.5 ETH"
-          }
+            "id": 10, 
+            "name": "Randy Carder", 
+            "userName": "Animakid", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.67%",
+                "week": "0.49%",
+                "month": "0.34%",
+                "allTime": "1.9%"
+            },
+            "sold": { 
+                "day": "200",
+                "week": "300",
+                "month": "400",
+                "allTime": "600"
+            },
+            "volume": { 
+                "day": "10.5 ETH",
+                "week": "15.2 ETH",
+                "month": "30.9 ETH",
+                "allTime": "18.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 11, 
-          "name": "Lydia Culhane", 
-          "userName": "Dotgu", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.34%",
-              "week": "0.55%",
-              "month": "0.84%",
-              "allTime": "1.6%"
-          },
-          "sold": { 
-              "day": "400",
-              "week": "200",
-              "month": "250",
-              "allTime": "300"
-          },
-          "volume": { 
-              "day": "15.7 ETH",
-              "week": "20.2 ETH",
-              "month": "25.9 ETH",
-              "allTime": "28.5 ETH"
-          }
+            "id": 11, 
+            "name": "Lydia Culhane", 
+            "userName": "Dotgu", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.34%",
+                "week": "0.55%",
+                "month": "0.84%",
+                "allTime": "1.6%"
+            },
+            "sold": { 
+                "day": "400",
+                "week": "200",
+                "month": "250",
+                "allTime": "300"
+            },
+            "volume": { 
+                "day": "15.7 ETH",
+                "week": "20.2 ETH",
+                "month": "25.9 ETH",
+                "allTime": "28.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 12, 
-          "name": "Angel Lubin", 
-          "userName": "Lubin", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.86%",
-              "week": "0.97%",
-              "month": "0.31%",
-              "allTime": "4.2%"
-          },
-          "sold": { 
-              "day": "100",
-              "week": "200",
-              "month": "150",
-              "allTime": "300"
-          },
-          "volume": { 
-              "day": "18.7 ETH",
-              "week": "25.2 ETH",
-              "month": "20.9 ETH",
-              "allTime": "38.5 ETH"
-          }
+            "id": 12, 
+            "name": "Angel Lubin", 
+            "userName": "Lubin", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.86%",
+                "week": "0.97%",
+                "month": "0.31%",
+                "allTime": "4.2%"
+            },
+            "sold": { 
+                "day": "100",
+                "week": "200",
+                "month": "150",
+                "allTime": "300"
+            },
+            "volume": { 
+                "day": "18.7 ETH",
+                "week": "25.2 ETH",
+                "month": "20.9 ETH",
+                "allTime": "38.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 13, 
-          "name": "Allison Torff", 
-          "userName": "Allison", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.75%",
-              "week": "0.29%",
-              "month": "0.48%",
-              "allTime": "5.6%"
-          },
-          "sold": { 
-              "day": "200",
-              "week": "150",
-              "month": "100",
-              "allTime": "250"
-          },
-          "volume": { 
-              "day": "20.7 ETH",
-              "week": "15.2 ETH",
-              "month": "30.9 ETH",
-              "allTime": "28.5 ETH"
-          }
+            "id": 13, 
+            "name": "Allison Torff", 
+            "userName": "Allison", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.75%",
+                "week": "0.29%",
+                "month": "0.48%",
+                "allTime": "5.6%"
+            },
+            "sold": { 
+                "day": "200",
+                "week": "150",
+                "month": "100",
+                "allTime": "250"
+            },
+            "volume": { 
+                "day": "20.7 ETH",
+                "week": "15.2 ETH",
+                "month": "30.9 ETH",
+                "allTime": "28.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 14, 
-          "name": "Davis Workman", 
-          "userName": "Workman", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.87%",
-              "week": "0.54%",
-              "month": "0.86%",
-              "allTime": "2.7%"
-          },
-          "sold": { 
-              "day": "300",
-              "week": "200",
-              "month": "150",
-              "allTime": "400"
-          },
-          "volume": { 
-              "day": "15.7 ETH",
-              "week": "25.2 ETH",
-              "month": "20.9 ETH",
-              "allTime": "38.5 ETH"
-          }
+            "id": 14, 
+            "name": "Davis Workman", 
+            "userName": "Workman", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.87%",
+                "week": "0.54%",
+                "month": "0.86%",
+                "allTime": "2.7%"
+            },
+            "sold": { 
+                "day": "300",
+                "week": "200",
+                "month": "150",
+                "allTime": "400"
+            },
+            "volume": { 
+                "day": "15.7 ETH",
+                "week": "25.2 ETH",
+                "month": "20.9 ETH",
+                "allTime": "38.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 15, 
-          "name": "Lindsey Lipshutz", 
-          "userName": "Lipshutz", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.23%",
-              "week": "0.99%",
-              "month": "0.64%",
-              "allTime": "7.9%"
-          },
-          "sold": { 
-              "day": "400",
-              "week": "300",
-              "month": "250",
-              "allTime": "500"
-          },
-          "volume": { 
-              "day": "12.7 ETH",
-              "week": "15.2 ETH",
-              "month": "20.9 ETH",
-              "allTime": "25.5 ETH"
-          }
+            "id": 15, 
+            "name": "Lindsey Lipshutz", 
+            "userName": "Lipshutz", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.23%",
+                "week": "0.99%",
+                "month": "0.64%",
+                "allTime": "7.9%"
+            },
+            "sold": { 
+                "day": "400",
+                "week": "300",
+                "month": "250",
+                "allTime": "500"
+            },
+            "volume": { 
+                "day": "12.7 ETH",
+                "week": "15.2 ETH",
+                "month": "20.9 ETH",
+                "allTime": "25.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 16, 
-          "name": "Rayna Bator", 
-          "userName": "Bator", 
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.24%",
-              "week": "0.34%",
-              "month": "0.45%",
-              "allTime": "4.7%"
-          },
-          "sold": { 
-              "day": "200",
-              "week": "150",
-              "month": "100",
-              "allTime": "250"
-          },
-          "volume": { 
-              "day": "20.7 ETH",
-              "week": "15.2 ETH",
-              "month": "30.9 ETH",
-              "allTime": "28.5 ETH"
-          }
+            "id": 16, 
+            "name": "Rayna Bator", 
+            "userName": "Bator", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.24%",
+                "week": "0.34%",
+                "month": "0.45%",
+                "allTime": "4.7%"
+            },
+            "sold": { 
+                "day": "200",
+                "week": "150",
+                "month": "100",
+                "allTime": "250"
+            },
+            "volume": { 
+                "day": "20.7 ETH",
+                "week": "15.2 ETH",
+                "month": "30.9 ETH",
+                "allTime": "28.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 17, 
-          "name": "Marilyn Torff", 
-          "userName": "Marilyn",    
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.45%",
-              "week": "0.85%",
-              "month": "0.34%",
-              "allTime": "2.9%"
-          },
-          "sold": { 
-              "day": "150",
-              "week": "200",
-              "month": "100",
-              "allTime": "300"
-          },
-          "volume": { 
-              "day": "18.7 ETH",
-              "week": "20.2 ETH",
-              "month": "25.9 ETH",
-              "allTime": "38.5 ETH"
-          }
+            "id": 17, 
+            "name": "Marilyn Torff", 
+            "userName": "Marilyn",    
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.45%",
+                "week": "0.85%",
+                "month": "0.34%",
+                "allTime": "2.9%"
+            },
+            "sold": { 
+                "day": "150",
+                "week": "200",
+                "month": "100",
+                "allTime": "300"
+            },
+            "volume": { 
+                "day": "18.7 ETH",
+                "week": "20.2 ETH",
+                "month": "25.9 ETH",
+                "allTime": "38.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 18, 
-          "name": "Skylar Levin", 
-          "userName": "Skylar",    
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.87%",
-              "week": "0.32%",
-              "month": "0.98%",
-              "allTime": "3.6%"
-          },
-          "sold": { 
-              "day": "100",
-              "week": "150",
-              "month": "200",
-              "allTime": "250"
-          },
-          "volume": { 
-              "day": "8.7 ETH",
-              "week": "15.2 ETH",
-              "month": "10.9 ETH",
-              "allTime": "28.5 ETH"
-          }
+            "id": 18, 
+            "name": "Skylar Levin", 
+            "userName": "Skylar",    
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.87%",
+                "week": "0.32%",
+                "month": "0.98%",
+                "allTime": "3.6%"
+            },
+            "sold": { 
+                "day": "100",
+                "week": "150",
+                "month": "200",
+                "allTime": "250"
+            },
+            "volume": { 
+                "day": "8.7 ETH",
+                "week": "15.2 ETH",
+                "month": "10.9 ETH",
+                "allTime": "28.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 19, 
-          "name": "Terry Dorwart", 
-          "userName": "Dorwart",    
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.34%",
-              "week": "0.89%",
-              "month": "0.65%",
-              "allTime": "4.4%"
-          },
-          "sold": { 
-              "day": "200",
-              "week": "250",
-              "month": "150",
-              "allTime": "300"
-          },
-          "volume": { 
-              "day": "18.7 ETH",
-              "week": "15.2 ETH",
-              "month": "20.9 ETH",
-              "allTime": "38.5 ETH"
-          }
+            "id": 19, 
+            "name": "Terry Dorwart", 
+            "userName": "Dorwart",    
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.34%",
+                "week": "0.89%",
+                "month": "0.65%",
+                "allTime": "4.4%"
+            },
+            "sold": { 
+                "day": "200",
+                "week": "250",
+                "month": "150",
+                "allTime": "300"
+            },
+            "volume": { 
+                "day": "18.7 ETH",
+                "week": "15.2 ETH",
+                "month": "20.9 ETH",
+                "allTime": "38.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         },
         { 
-          "id": 20, 
-          "name": "Jocelyn Westervelt", 
-          "userName": "Ghiblier",    
-          "sale": "34.53 ETH", 
-          "change": { 
-              "day": "0.95%",
-              "week": "0.15%",
-              "month": "0.51%",
-              "allTime": "5.2%"
-          },
-          "sold": { 
-              "day": "500",
-              "week": "300",
-              "month": "400",
-              "allTime": "600"
-          },
-          "volume": { 
-              "day": "10.5 ETH",
-              "week": "15.2 ETH",
-              "month": "30.9 ETH",
-              "allTime": "18.5 ETH"
-          }
+            "id": 20, 
+            "name": "Jocelyn Westervelt", 
+            "userName": "Ghiblier",    
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.95%",
+                "week": "0.15%",
+                "month": "0.51%",
+                "allTime": "5.2%"
+            },
+            "sold": { 
+                "day": "500",
+                "week": "300",
+                "month": "400",
+                "allTime": "600"
+            },
+            "volume": { 
+                "day": "10.5 ETH",
+                "week": "15.2 ETH",
+                "month": "30.9 ETH",
+                "allTime": "18.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
         }
       ]
 }

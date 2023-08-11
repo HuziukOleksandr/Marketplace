@@ -5,19 +5,19 @@
         <h2 class="title">{{ $t("Footer.community") }}</h2>
         <div class="icons">
             <img 
-                src="../../assets/images/Footer/DiscordLogo.svg" 
+                src="../../assets/images/svg/DiscordLogo.svg" 
                 alt="DiscordLogo" 
                 class="icon">
             <img 
-                src="../../assets/images/Footer/YoutubeLogo.svg" 
+                src="../../assets/images/svg/YoutubeLogo.svg" 
                 alt="YoutubeLogo" 
                 class="icon">
             <img 
-                src="../../assets/images/Footer/TwitterLogo.svg" 
+                src="../../assets/images/svg/TwitterLogo.svg" 
                 alt="TwitterLogo" 
                 class="icon">
             <img 
-                src="../../assets/images/Footer/InstagramLogo.svg" 
+                src="../../assets/images/svg/InstagramLogo.svg" 
                 alt="InstagramLogo" 
                 class="icon">
         </div>

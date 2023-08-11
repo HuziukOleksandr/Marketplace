@@ -24,7 +24,6 @@ import { RouterView } from 'vue-router';
     min-height: 500px;
     display: flex;
     flex-direction: column;
-    
     background-color: var(--background-color);
 }
 

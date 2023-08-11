@@ -1,9 +1,30 @@
 <template>
     <div class="table">
         <div class="header">
-            <div class="header-colums">#</div>
-            <div class="header-colums">{{ $t("Ranking.artists") }}</div>
-            <div class="header-colums">{{ $t("Ranking.change") }}</div>
+            <div class="header-colums" @click="sortItem('number')">
+                #
+                <div 
+                    class="sort"
+                    v-show="sortTable.number.active" 
+                    :class="{ showtriangle : this.sortTable.number.rotate === true}">
+                </div>
+            </div>
+            <div class="header-colums" @click="sortItem('artist')">
+                {{ $t("Ranking.artists") }}
+                <div 
+                    class="sort"
+                    v-show="sortTable.artist.active" 
+                    :class="{ showtriangle : this.sortTable.artist.rotate === true}">
+                </div>
+            </div>
+            <div class="header-colums" @click="sortItem('change')">
+                {{ $t("Ranking.change") }}
+                <div 
+                    class="sort"
+                    v-show="sortTable.change.active" 
+                    :class="{ showtriangle : this.sortTable.change.rotate === true}">
+                </div>
+            </div>
             <div class="header-colums" @click="sortItem('sold')">
                     {{ $t("Ranking.sold") }}
                 <div 
@@ -53,7 +74,15 @@ import {getUserImageUrl} from '../../helpers/helpers'
             return {
                 artists: [],
                 sortTable: {
-                    volume: {
+                    number: {
+                        rotate: false,
+                        active: false
+                    },
+                    artist: {
+                        rotate: false,
+                        active: false
+                    },
+                    change: {
                         rotate: false,
                         active: false
                     },
@@ -61,7 +90,7 @@ import {getUserImageUrl} from '../../helpers/helpers'
                         rotate: false,
                         active: false
                     },
-                    change: {
+                    volume: {
                         rotate: false,
                         active: false
                     }
