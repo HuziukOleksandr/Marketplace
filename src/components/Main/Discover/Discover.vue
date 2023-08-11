@@ -7,7 +7,9 @@
             <h3 class="sub-title">{{ $t("Discover.subTitle") }}</h3>
             </div>
             <div class="right-side">
-                <my-button class="button">
+                <my-button 
+                    class="button"
+                    @click="this.$router.push( {name: 'Marketplace'} )">
                     <img 
                         src="../../../assets/images/Buttons/RocketLaunch.svg" 
                         alt="RocketLaunch">
@@ -24,7 +26,9 @@
         <!-- Content End -->
 
         <div class="bottom">
-                <my-button class="button">
+                <my-button 
+                    class="button"
+                    @click="this.$router.push( {name: 'Marketplace'} )">
                     <img 
                         src="../../../assets/images/Buttons/RocketLaunch.svg" 
                         alt="RocketLaunch">

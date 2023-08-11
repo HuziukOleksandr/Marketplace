@@ -8,7 +8,8 @@
             </div>
             <div class="right-side">
                 <my-button
-                    class="button">
+                    class="button"
+                    @click="this.$router.push( {name: 'Ranking'} )">
                     <img src="../../../assets/images/Buttons/RocketLaunch.svg" alt="RocketLaunch">
                     {{ $t("Creators.button") }}
                 </my-button>
@@ -25,9 +26,10 @@
         <!-- Content End -->
         <div class="bottom">
             <my-button
-                    class="button">
+                    class="button"
+                    @click="this.$router.push( {name: 'Ranking'} )">
                     <img src="../../../assets/images/Buttons/RocketLaunch.svg" alt="RocketLaunch">
-                {{ $t("Artists.button") }}
+                {{ $t("Creators.button") }}
             </my-button>
         </div>
     </div>
