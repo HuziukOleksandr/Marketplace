@@ -126,6 +126,9 @@
         "followers": "Followers",
         "button": "Follow",
         "bio": "Bio",
-        "links": "Links"
+        "links": "Links",
+        "created": "Created",
+        "owned": "Owned",
+        "collection": "Collection"
     }
 }

@@ -23,31 +23,7 @@
                         <p class="bio-text">{{ artist.bio }}</p>
                     </div>
 
-                    <div class="links">
-                        <h3 class="links-title">{{ $t("Artist.links") }}</h3>
-                        <div class="links-pic">
-                            <img 
-                                src="../../assets/images/svg/InternetLogo.svg" 
-                                alt="InternetLogo" 
-                                class="link">
-                            <img 
-                                src="../../assets/images/svg/DiscordLogo.svg" 
-                                alt="DiscordLogo" 
-                                class="link">
-                            <img 
-                                src="../../assets/images/svg/YoutubeLogo.svg" 
-                                alt="YoutubeLogo" 
-                                class="link">
-                            <img 
-                                src="../../assets/images/svg/TwitterLogo.svg" 
-                                alt="TwitterLogo" 
-                                class="link">
-                            <img 
-                                src="../../assets/images/svg/InstagramLogo.svg" 
-                                alt="InstagramLogo" 
-                                class="link">
-                        </div>
-                    </div>
+                    <Links/>
                 </div>
 
                 <div class="right">
@@ -69,6 +45,64 @@
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div class="content-header">
+                <div class="items">
+                    <div 
+                        class="item" 
+                        :class="{ active: this.active === 'Created' }" 
+                        @click="changeTabs('Created')">
+                            <div class="link">{{ $t("Artist.created") }}</div>
+                            <!-- <div class="number">{{ cards.length }}</div> -->
+                    </div>
+                    <div
+                        class="item"   
+                        :class="{ active: this.active === 'Owned' }"
+                        @click="changeTabs('Owned')" >
+                        <div href="" class="link" >{{ $t("Artist.owned") }}</div>
+                        <!-- <div class="number">{{ Object.keys(collections).length }}</div> -->
+                    </div>
+                    <div 
+                        class="item" 
+                        :class="{ active: this.active === 'Collection' }" 
+                        @click="changeTabs('Collection')">
+                            <div class="link">{{ $t("Artist.collection") }}</div>
+                            <!-- <div class="number">{{ cards.length }}</div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="content-bgr">
+                <my-nothing v-if="nothing"/>
+                <div class="content" v-else>
+                    <div 
+                       
+                        v-for="item in created"
+                        v-if="this.active === 'Created'">
+                            <my-card 
+                                :card="item"
+                                :background="background"/>
+                    </div>
+                    
+                    <div 
+                        
+                        v-for="item in owned"
+                        v-if="this.active === 'Owned'">
+                            <my-card 
+                                :card="item"
+                                :background="background"/>
+                    </div>
+
+                    <div 
+                        v-for="collection in collections"
+                        v-if="this.active === 'Collection'">
+                            <my-collection 
+                                :collection="collection"/>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 </template>
 
@@ -76,10 +110,11 @@
 import { getUserImageUrl, getUserBackgroundUrl } from '../../helpers/helpers'
 import axios from 'axios'
 import Stats from './Stats.vue'
+import Links from './Links.vue'
 
     export default {
         components: {
-            Stats
+            Stats, Links
         },
 
         props: {
@@ -91,9 +126,14 @@ import Stats from './Stats.vue'
 
         data() {
             return {
+                active: "Created",
                 artist: {},
-                stats: {}
-               
+                stats: {},
+                nothing: false,
+                created: [],
+                owned: [],
+                collections: [],
+                background: 'var(--background-color)'
             }
         },
 
@@ -108,7 +148,11 @@ import Stats from './Stats.vue'
                     sold: this.artist.sold.allTime,
                     followers: this.artist.followers
                 }
-            }
+            },
+
+            changeTabs(type) {
+                this.active = type;
+            },
         },
 
         async mounted() {
@@ -117,7 +161,33 @@ import Stats from './Stats.vue'
                 .then(response =>  {
                     this.artist = response.data.Artists.find(element => element.userName === this.name) || null                    
                     this.getStats()
-                });
+            });
+
+            await axios
+                .get('data/Cards.json')
+                .then(response => {
+                    response.data.Cards.forEach(element => {
+                        
+                            if( element.userName === this.name) {
+                                this.created.push(element)
+                            } 
+                            if( element.owner === this.name) {
+                                this.owned.push(element)
+                            } 
+                        }
+                    )
+            });
+
+            await axios
+                .get('data/Collections.json')
+                .then(response => {
+                    response.data.Collections.forEach(element => {
+                            if(element.userName === this.name) {
+                                this.collections.push(element)
+                            } 
+                        }
+                    )
+            });
         }
     }
 </script>
@@ -127,8 +197,6 @@ import Stats from './Stats.vue'
 /* Main Style Start */
 
 .section {
-    max-width: 1280px;
-    width: 100%;
     min-height: 500px;
     margin: 0 auto;
     display: flex;
@@ -152,10 +220,13 @@ import Stats from './Stats.vue'
 
 
 .preview {
+    max-width: 1280px;
+    width: 100%;
     width: 100%;
     min-height: 100px;
     position: relative;
     padding-top: 60px;
+    margin: 0 auto;
 }
 
 .picture {
@@ -192,13 +263,13 @@ import Stats from './Stats.vue'
     color: var(--text-color-white);
 }
 
-.bio, .links {
+.bio {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.bio-title, .links-title {
+.bio-title {
     font-family: 'SpaceMono', sans-serif;
     font-weight: 700;
     font-size: 22px;
@@ -212,20 +283,6 @@ import Stats from './Stats.vue'
     font-size: 22px;
     line-height: 35px;
     color: var(--text-color-white);
-}
-
-.links-pic {
-    display: flex;
-    gap: 10px;
-}
-
-.link {
-    transition: 0.2s;
-}
-
-.link:hover {
-    cursor: pointer;
-    scale: 1.02;
 }
 
 .right {
@@ -265,8 +322,91 @@ import Stats from './Stats.vue'
     border: 2px solid var(--button-background-color);
 }
 
-
-
 /* Preview Styles End */
+
+/* Container Styles Start */
+
+.content-header {
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid var(--background-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.items {
+    max-width: 1050px;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.item {
+    width: 50%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+.item:hover > .link {
+    cursor: pointer;
+    color: var(--text-color-white);
+}
+
+.link {
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    color: var(--text-color-secondary);
+    transition: 0.4s;
+}
+
+.number {
+    padding: 5px 10px;
+    background-color: var(--text-color-secondary);
+    color: var(--text-color-white);
+    border-radius: 20px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.content-bgr {
+    width: 100%;
+    min-height: 400px;
+    margin: 0 auto;
+    background-color: var(--background-secondary);
+    border-bottom: 2px solid var(--background-color);
+    display: flex;
+    justify-content: center;
+    padding: 60px 0 60px 0;
+}
+
+.content {
+    max-width: 1050px;
+    width: 100%;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.active > .link {
+    color: var(--text-color-white);
+}
+.active {
+    border-bottom: 3px solid var(--text-color-secondary);
+}
+/* Container Styles End */
 
 </style>

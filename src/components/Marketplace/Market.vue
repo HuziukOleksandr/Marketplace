@@ -23,7 +23,7 @@
                         class="item" 
                         :class="{ active: this.active === 'NFT' }" 
                         @click="changeTabs('NFT')">
-                            <div href="" class="link">{{ $t("Marketplace.NFT") }}</div>
+                            <div class="link">{{ $t("Marketplace.NFT") }}</div>
                             <div class="number">{{ cards.length }}</div>
                     </div>
                     <div
@@ -37,15 +37,20 @@
             </div>
             <div class="content-bgr">
                 <div class="content">
-                    <Cards 
-                        :cards="searchCard(cards)" 
-                        v-if="this.active === 'NFT'"/>
-                    <Collentions 
-                        :collections="searchCard(collections)"
-                        v-if="this.active === 'Collection'"/>
-
+                    <div 
+                        v-for="card in searchCard(cards)"
+                        v-if="this.active === 'NFT'">
+                            <my-card 
+                                :card="card"
+                                :background="background"/>
+                    </div>
+                    <div 
+                        v-for="collection in searchCard(collections)"
+                        v-if="this.active === 'Collection'">
+                            <my-collection 
+                                :collection="collection"/>
+                    </div>
                 </div>
-
             </div>
         </div>
         <!-- Content End -->
@@ -53,29 +58,25 @@
 </template>
 
 <script>
-import axios from 'axios';
-import Cards from './Card.vue'
-import Collentions from './Collection.vue'
+import axios from 'axios'
 
     export default {
-        components: {
-            Cards, Collentions
-        },
 
         data() {
+        
             return {
                 active: "NFT",
                 cards: [],
                 collections: [],
-                name: ''
-                
+                name: '',
+                background: 'var(--background-color)'
             }
         },
 
         methods: {
             changeTabs(type) {
                 this.active = type;
-                this.name =''
+                this.name = ''
             },
 
             searchCard(array){
@@ -86,9 +87,7 @@ import Collentions from './Collection.vue'
                         elem.name.toLowerCase().includes(this.name.toLowerCase())
                     );
                 }
-            },
-
-            
+            } 
         },
 
         async mounted() {
@@ -226,13 +225,7 @@ import Collentions from './Collection.vue'
     border-bottom: 3px solid var(--text-color-secondary);
 }
 
-.show {
-    display: grid;
-}
 
-.hide {
-    display: none;
-}
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {

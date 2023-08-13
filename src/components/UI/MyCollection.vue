@@ -1,69 +1,46 @@
 <template>
-    <carousel :items-to-show="slides" >
-        <slide v-for="collection in collections" :key="collection">
-            <div class="card">
-                <!-- Main Picture -->
-                <img 
-                    :src="getImageUrl(collection.Cards[0].picture)" 
-                    :alt="collection.Cards[0].picture"
-                    class="main-picture">
-                
-                <!-- Secondary Start -->
-                <div class="secondary">
-                    <img 
-                        :src="getImageUrl(collection.Cards[1].picture)" 
-                        :alt="collection.Cards[1].picture"
-                        class="secondary-picture">
-                    <img 
-                        :src="getImageUrl(collection.Cards[2].picture)" 
-                        :alt="collection.Cards[2].picture"
-                        class="secondary-picture">
+   <div class="card">
+        <!-- Main Picture -->
+        <img 
+            :src="getImageUrl(collection.Cards[0].picture)" 
+            :alt="collection.Cards[0].picture"
+            class="main-picture">
+        
+        <!-- Secondary Start -->
+        <div class="secondary">
+            <img 
+                :src="getImageUrl(collection.Cards[1].picture)" 
+                :alt="collection.Cards[1].picture"
+                class="secondary-picture">
+            <img 
+                :src="getImageUrl(collection.Cards[2].picture)" 
+                :alt="collection.Cards[2].picture"
+                class="secondary-picture">
 
-                    <my-button class="more">
-                        +{{ collection.Cards.length }}
-                    </my-button>
-                </div>
-                <!-- Secondary End -->
+            <my-button class="more">
+                +{{ collection.Cards.length }}
+            </my-button>
+        </div>
+        <!-- Secondary End -->
 
-                <!-- Preview Start -->
-                <div class="preview">
-                    <h2 class="title">{{ collection.name }}</h2>
-                    <div class="user">
-                        <img 
-                            :src="getUserImageUrl(collection.userName)" 
-                            :alt="collection.userName"
-                            class="user-picture">
-                        <h2 class="user-name">{{ collection.userName}}</h2>
-                    </div>
-                </div>
-            <!-- Preview End -->
-            </div>
-        </slide>
-        <template #addons>
-            <Navigation />
-            <Pagination />
-        </template>
-    </carousel>      
+        <!-- Preview Start -->
+        <div class="preview">
+            <h2 class="title">{{ collection.name }}</h2>
+            <my-user :userName="collection.userName"/>
+        </div>
+    <!-- Preview End -->
+    </div>
 </template>
 
 <script>
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-import {getSlidesNumber, getImageUrl, getUserImageUrl } from '../../../helpers/helpers'
+
+import {getSlidesNumber, getImageUrl, getUserImageUrl } from '../../helpers/helpers'
 
     export default {
-        components: {
-            Carousel, Slide, Pagination, Navigation
-        },
-
-        data(){
-            return {
-                slides: 1
-            }
-        },  
+        name: 'my-collection',
 
         props: {
-            collections: {
+            collection: {
                 type: Object,
                 reqired: true,
             }
@@ -89,9 +66,11 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl } from '../../../helpers/h
             })
         }
     }
+
 </script>
 
 <style scoped>
+
 
 .card {
     width: 330px;

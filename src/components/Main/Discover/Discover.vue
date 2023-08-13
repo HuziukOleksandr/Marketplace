@@ -21,46 +21,76 @@
 
         <!-- Content Start -->
         <div class="content">
-            <Card :cards="cards.slice(0,5)" />
+            <carousel :items-to-show="slides" >
+                <slide v-for="card in cards" :key="card.id">
+                    <my-card 
+                        :card="card"
+                        :background="background" 
+                        />
+                </slide>
+                <template #addons>
+                    <Navigation />
+                    <Pagination />
+                </template>
+            </carousel>
         </div>
         <!-- Content End -->
 
         <div class="bottom">
-                <my-button 
-                    class="button"
-                    @click="this.$router.push( {name: 'Marketplace'} )">
-                    <img 
-                        src="../../../assets/images/Buttons/RocketLaunch.svg" 
-                        alt="RocketLaunch">
-                    {{ $t("Discover.button") }}
-                </my-button>
-            </div>
+            <my-button 
+                class="button"
+                @click="this.$router.push( {name: 'Marketplace'} )">
+                <img 
+                    src="../../../assets/images/Buttons/RocketLaunch.svg" 
+                    alt="RocketLaunch">
+                {{ $t("Discover.button") }}
+            </my-button>
+        </div>
     </div>
 </template>
 
 <script>
-import Card from './DiscoverCard.vue'
+
 import axios from 'axios';
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import { getSlidesNumber } from '../../../helpers/helpers'
 
     export default {
         components: {
-            Card
+            Carousel, Slide, Pagination, Navigation
         },
 
         data() {
             return {
                 cards: '',
+                slides: 1,
+                background: 'var(--background-secondary)'
             }
         },
 
-        mounted() {
+        methods: {
+            getSlidesNumber
+        },
 
-            axios
+        async mounted() {
+            await axios
                 .get('/data/Cards.json')
                 .then(response =>  {
-                    this.cards = response.data.Cards
-                });
+                    this.cards = response.data.Cards.slice(0, 5)
+            });
+            
+            this.slides = getSlidesNumber()
+            
+            window.addEventListener('resize',() =>  {
+                this.slides = getSlidesNumber()
+            })    
+        },
 
+        beforeDestroy() {
+            window.removeEventListener('resize', () => {
+                this.slides = getSlidesNumber()
+            })
         }
     }
 </script>
@@ -143,6 +173,8 @@ import axios from 'axios';
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
+
+
 
 /* Content Styles End */
 

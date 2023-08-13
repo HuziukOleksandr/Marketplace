@@ -1,5 +1,5 @@
 <template>
-    <div class="card" v-for="card in cards">
+    <div class="card" :style="{ backgroundColor: background}" >
         <!-- Preview Start -->
         <div class="preview">
             <img 
@@ -12,13 +12,7 @@
         <!-- Title Start -->
         <div class="title">
             <h2 class="name">{{ card.name }}</h2>
-            <div class="user">
-                <img 
-                    :src="getUserImageUrl(card.userName)" 
-                    :alt="card.userName"
-                    class="user-picture">
-                <h3 class="userName">{{ card.userName }}</h3>
-            </div>
+            <my-user :userName="card.userName"/>
             <div class="numbers">
                 <div class="price">
                     <h2 class="price-title">{{ $t("Discover.price") }}</h2>
@@ -32,24 +26,50 @@
         </div>
         <!-- Title End -->
     </div>
+        
 </template>
 
 <script>
-import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../helpers/helpers'
 
+import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../helpers/helpers'
     export default {
+
+        name: 'my-card',
+
         props: {
-            cards: {
+            card: {
                 type: Object,
+                reqired: true
+            },
+
+            background: {
+                type: String,
                 reqired: true
             }
         },
+
 
         methods: {
             getSlidesNumber,
             getImageUrl,
             getUserImageUrl,
         },
+
+        mounted() {
+            this.slides = getSlidesNumber()
+            
+            window.addEventListener('resize',() =>  {
+                this.slides = getSlidesNumber()
+            })
+
+            console.log(this.background);
+        },
+
+        beforeDestroy() {
+            window.removeEventListener('resize', () => {
+                this.slides = getSlidesNumber()
+            })
+        }
     }
 </script>
 
@@ -63,7 +83,7 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../helpers/helpe
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    background-color: var(--background-secondary);
+    
 }
 
 .card:hover {
@@ -86,8 +106,6 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../helpers/helpe
 .title {
     padding: 20px 30px 25px 30px;
     height: 100%;
-    background-color: var(--background-color);
-    border-radius: 0 0 20px 20px    ;
 }
 
 .name {
@@ -156,6 +174,7 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../helpers/helpe
 
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
+
     .card {
         max-width: 315px;
         width: 100%;
@@ -164,8 +183,8 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../helpers/helpe
 
     .picture {
         width: 315px;
-
     }
+
 }
 
 </style>

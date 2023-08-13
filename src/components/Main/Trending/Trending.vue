@@ -9,34 +9,54 @@
 
         <!-- Content Start -->
         <div class="content">
-            <Card :collections="collections" />
+            <carousel :items-to-show="slides">
+                <slide v-for="collection in collections" :key="collection">
+                    <my-collection :collection="collection"/>
+                </slide>
+                <template #addons>
+                    <Navigation />
+                    <Pagination />
+                </template>
+            </carousel>
         </div>
         <!-- Content End -->
     </div>
 </template>
 
 <script>
-import Card from './TrendingCard.vue'
 import axios from 'axios'
-
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import {getSlidesNumber } from '../../../helpers/helpers'
     export default {
 
         components: {
-            Card
+            Carousel, Slide, Pagination, Navigation
         },
 
         data() {
             return {
                 collections: '',
+                slides: 1
             }
         },
 
-        mounted() {
-            axios
+        methods: {
+            getSlidesNumber
+        },
+
+        async mounted() {
+            await axios
                 .get('/data/Collections.json')
                 .then(response =>  {
                     this.collections = response.data.Collections;
-                });
+            });
+
+            this.slides = getSlidesNumber()
+            
+            window.addEventListener('resize',() =>  {
+                this.slides = getSlidesNumber()
+            })
         }
     }
 </script>

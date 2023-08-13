@@ -21,10 +21,15 @@ import Discover from '../components/Main/Discover/Discover.vue'
 import Highlight from '../components/Main/Highlight/Highlight.vue'
 import Works from '../components/Main/Works/Works.vue'
 import Subscribe from '../components/Main//Subscribe/Subscribe.vue'
+import { scrollTop } from '../helpers/helpers'
 
     export default {
         components: {
             Hero, Trending, Creators, Category, Discover, Highlight, Works, Subscribe
+        },
+
+        mounted() {
+            scrollTop()
         }
     }
 </script>

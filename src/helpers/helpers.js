@@ -32,3 +32,10 @@ export function getUserBackgroundUrl(name){
     
     return new URL(`../assets/images/Background/${name}.png`, import.meta.url).href;
 }
+
+export const scrollTop = () => {
+    window.scrollTo({
+        top: 0, 
+        behavior: 'smooth'
+    });
+} 
