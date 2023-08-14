@@ -22,9 +22,9 @@
 .title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 50px;
+    font-size: 22px;
     line-height: 55px;
-    color: var(--text-color-secondary);
+    color: var(--background-color);
     text-align: center;
 }
 </style>

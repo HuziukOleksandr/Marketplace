@@ -61,8 +61,6 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../helpers/helpe
             window.addEventListener('resize',() =>  {
                 this.slides = getSlidesNumber()
             })
-
-            console.log(this.background);
         },
 
         beforeDestroy() {

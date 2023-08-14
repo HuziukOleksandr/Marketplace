@@ -53,6 +53,10 @@
     justify-content: space-between;
 }
 
+.item {
+    width: 155px;
+}
+
 .number {
     font-family: "SpaceMono", sans-serif;
     font-weight: 700;
@@ -70,5 +74,18 @@
 }
 
 /* Main Styles End */
+
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
+@media only screen and (max-width: 1279px) {
+    .number {
+        font-size: 22px;
+        line-height: 35px;
+    }
+
+    .text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
 
 </style>

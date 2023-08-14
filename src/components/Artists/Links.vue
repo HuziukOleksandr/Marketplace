@@ -1,7 +1,7 @@
 <template>
     <div class="links">
         <h3 class="links-title">{{ $t("Artist.links") }}</h3>
-        <div class="links-pic">
+        <div class="links-icons">
             <img 
                 src="../../assets/images/svg/InternetLogo.svg" 
                 alt="InternetLogo" 
@@ -48,7 +48,7 @@
     color: var(--text-color-secondary);
 }
 
-.links-pic {
+.links-icons {
     display: flex;
     gap: 10px;
 }
@@ -62,4 +62,14 @@
     scale: 1.02;
 }
 
+@media only screen and (max-width: 1279px) {
+    .links-title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .link {
+        width: 24px;
+    }
+}
 </style>

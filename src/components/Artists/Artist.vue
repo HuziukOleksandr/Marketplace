@@ -1,48 +1,55 @@
 <template>
     <div class="section">
-        <img 
-            :src="getUserBackgroundUrl(artist.background)" 
-            :alt="artist.background" 
-            class="background">
+        <div class="background" :style="{ backgroundImage: backgroundImage }"></div>
         <div class="preview">
             <img 
                 :src="getUserImageUrl(name)" 
                 :alt="name"
                 class="picture">
 
-            <div class="info">
-                <div class="left">
-                    <h2 class="name">
-                        {{ artist.userName }}
-                    </h2>
+            <div class="left">
+                <h2 class="name">
+                    {{ artist.userName }}
+                </h2>
 
-                   <Stats :stats="stats"/>
-
-                    <div class="bio">
-                        <h3 class="bio-title">{{ $t("Artist.bio") }}</h3>
-                        <p class="bio-text">{{ artist.bio }}</p>
-                    </div>
-
-                    <Links/>
+                <div class="buttons-second">
+                    <my-button class="userId">
+                        <img 
+                            src="../../assets/images/svg/Copy.svg" 
+                            alt="Copy">
+                        {{ artist.id }}
+                    </my-button>
+                    <my-button class="follow">
+                        <img 
+                            src="../../assets/images/svg/Plus.svg" 
+                            alt="Plus">
+                        {{ $t("Artist.button") }}
+                    </my-button>
                 </div>
 
-                <div class="right">
-                    <div class="buttons">
-                        <my-button class="userId">
-                            <img 
-                                src="../../assets/images/svg/Copy.svg" 
-                                alt="Copy">
-                            {{ artist.id }}
-                        </my-button>
-                        <my-button class="follow">
-                            <img 
-                                src="../../assets/images/svg/Plus.svg" 
-                                alt="Plus">
-                            {{ $t("Artist.button") }}
-                        </my-button>
-                    </div>
-                    
+                <Stats :stats="stats"/>
+
+                <div class="bio">
+                    <h3 class="bio-title">{{ $t("Artist.bio") }}</h3>
+                    <p class="bio-text">{{ artist.bio }}</p>
                 </div>
+
+                <Links/>
+            </div>
+                
+            <div class="buttons">
+                <my-button class="userId">
+                    <img 
+                        src="../../assets/images/svg/Copy.svg" 
+                        alt="Copy">
+                    {{ artist.id }}
+                </my-button>
+                <my-button class="follow">
+                    <img 
+                        src="../../assets/images/svg/Plus.svg" 
+                        alt="Plus">
+                    {{ $t("Artist.button") }}
+                </my-button>
             </div>
         </div>
 
@@ -54,29 +61,28 @@
                         :class="{ active: this.active === 'Created' }" 
                         @click="changeTabs('Created')">
                             <div class="link">{{ $t("Artist.created") }}</div>
-                            <!-- <div class="number">{{ cards.length }}</div> -->
+                            <div class="number">{{ created.length }}</div>
                     </div>
                     <div
                         class="item"   
                         :class="{ active: this.active === 'Owned' }"
                         @click="changeTabs('Owned')" >
                         <div href="" class="link" >{{ $t("Artist.owned") }}</div>
-                        <!-- <div class="number">{{ Object.keys(collections).length }}</div> -->
+                        <div class="number">{{ owned.length }}</div>
                     </div>
                     <div 
                         class="item" 
                         :class="{ active: this.active === 'Collection' }" 
                         @click="changeTabs('Collection')">
                             <div class="link">{{ $t("Artist.collection") }}</div>
-                            <!-- <div class="number">{{ cards.length }}</div> -->
+                            <div class="number">{{ collections.length }}</div>
                     </div>
                 </div>
             </div>
             <div class="content-bgr">
-                <my-nothing v-if="nothing"/>
-                <div class="content" v-else>
-                    <div 
-                       
+                
+                <div class="content">
+                    <div
                         v-for="item in created"
                         v-if="this.active === 'Created'">
                             <my-card 
@@ -84,8 +90,7 @@
                                 :background="background"/>
                     </div>
                     
-                    <div 
-                        
+                    <div
                         v-for="item in owned"
                         v-if="this.active === 'Owned'">
                             <my-card 
@@ -93,12 +98,16 @@
                                 :background="background"/>
                     </div>
 
-                    <div 
+                    <div
                         v-for="collection in collections"
                         v-if="this.active === 'Collection'">
-                            <my-collection 
+                            
+                            <my-collection v-show="nothing.collection"
+
                                 :collection="collection"/>
+                            
                     </div>
+                    
                 </div>
 
             </div>
@@ -127,13 +136,22 @@ import Links from './Links.vue'
         data() {
             return {
                 active: "Created",
+
                 artist: {},
                 stats: {},
-                nothing: false,
+
                 created: [],
                 owned: [],
                 collections: [],
-                background: 'var(--background-color)'
+
+                nothing: {
+                    created: false,
+                    owned: false,
+                    collection: true
+                },
+
+                background: 'var(--background-color)',
+                backgroundImage: ``
             }
         },
 
@@ -156,6 +174,7 @@ import Links from './Links.vue'
         },
 
         async mounted() {
+
             await axios
                 .get('/data/Artists.json')
                 .then(response =>  {
@@ -167,7 +186,6 @@ import Links from './Links.vue'
                 .get('data/Cards.json')
                 .then(response => {
                     response.data.Cards.forEach(element => {
-                        
                             if( element.userName === this.name) {
                                 this.created.push(element)
                             } 
@@ -177,7 +195,7 @@ import Links from './Links.vue'
                         }
                     )
             });
-
+            
             await axios
                 .get('data/Collections.json')
                 .then(response => {
@@ -188,6 +206,8 @@ import Links from './Links.vue'
                         }
                     )
             });
+            
+            this.backgroundImage= `url('${this.getUserBackgroundUrl(this.artist.background)}') `
         }
     }
 </script>
@@ -201,7 +221,6 @@ import Links from './Links.vue'
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-
 }
 
   
@@ -212,6 +231,9 @@ import Links from './Links.vue'
 .background{
     width: 100%;
     height: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* Background Styles End */
@@ -220,36 +242,27 @@ import Links from './Links.vue'
 
 
 .preview {
-    max-width: 1280px;
-    width: 100%;
+    max-width: 1050px;
     width: 100%;
     min-height: 100px;
     position: relative;
-    padding-top: 60px;
+    padding: 100px 0 40px 0;
     margin: 0 auto;
+    display: flex;   
 }
 
 .picture {
     width: 120px;
     height: 120px;
     position: absolute;
-    left: 115px;
+    left: 0;
     top: -60px; 
-}
-
-.info {
-    max-width: 1050px;
-    width: 100%;
-    min-height: 460px;
-    display: flex;
-    margin: 0 auto;
-    padding: 40px 0;
 }
 
 .left {
     max-width: 510px;
     width: 100%;
-    height: 300px;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -285,9 +298,8 @@ import Links from './Links.vue'
     color: var(--text-color-white);
 }
 
-.right {
-    width: 100%;
-
+.buttons-second{
+    display: none;
 }
 
 .buttons {
@@ -408,5 +420,112 @@ import Links from './Links.vue'
     border-bottom: 3px solid var(--text-color-secondary);
 }
 /* Container Styles End */
+
+/* Стилі для моніторів (більші планшетів та комп'ютерів) */
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+
+    .preview {
+        max-width: 690px;
+        padding: 100px 0 30px 0;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+    .buttons-second {
+        display: flex;
+        gap: 20px;
+    }
+
+    .name {
+        font-size: 38px;
+        line-height: 45px;
+    }
+
+    .bio-title {
+        font-size: 16px;
+        line-height:22px;
+    }
+
+    .bio-text { 
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .items {
+        max-width: 690px;
+    }
+
+    .link {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .number {
+        font-size: 12px;
+        line-height: 13px;
+    }
+
+    .content {
+        max-width: 690px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Стилі для мобільних пристроїв */
+@media only screen and (max-width: 767px) {
+
+    .preview {
+        max-width: 315px;
+        padding: 100px 0 30px 0;
+    }
+
+    .picture {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .name {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+    .buttons-second {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .number { 
+        display: none;
+    }
+
+    .bio-title {
+        font-size: 16px;
+        line-height:22px;
+    }
+
+    .bio-text { 
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .items {
+        max-width: 315px;
+    }
+
+    .link {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .content {
+        max-width: 315px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
 </style>

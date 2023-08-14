@@ -6,7 +6,7 @@ import MySearch from './MySearchInput.vue'
 import MyUser from './MyUser.vue'
 import MyCard from './MyCard.vue'
 import MyCollection from './MyCollection.vue'
-import NyNothing from './MyNothing.vue'
+import MyNothing from './MyNothing.vue'
 
 export default [
     MyButton,
@@ -17,5 +17,5 @@ export default [
     MyUser,
     MyCard,
     MyCollection,
-    NyNothing
+    MyNothing
 ]

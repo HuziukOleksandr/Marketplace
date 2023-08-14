@@ -156,6 +156,7 @@ import {getUserImageUrl} from '../../../helpers/helpers'
         flex-direction: row;
         max-width: 330px;
         height: 100px;
+        justify-content: space-between;
     }
 
     /* Main Style End */
@@ -196,6 +197,7 @@ import {getUserImageUrl} from '../../../helpers/helpers'
         max-width: 315px;
         height: 100px;
         flex-direction: row;
+        justify-content: space-between;
     }
 
     /* Main Style End */
