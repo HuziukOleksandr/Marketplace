@@ -7,6 +7,7 @@ import Wallet from './views/ConnectWallet.vue'
 import Marketplace from './views/Marketplace.vue'
 import Ranking from './views/Ranking.vue'
 import Artists from './views/Artists.vue'
+import NFTPage from './views/NFT.vue'
 
 const routes = [
     {
@@ -64,6 +65,18 @@ const routes = [
         },
         props: route => ({
             artistName: route.query.artistName
+        })
+    },
+    {
+        path: '/nft',
+        name: 'NFTPage',
+        components: {
+            Header,
+            default: NFTPage,
+            Footer
+        },
+        props: route => ({
+            cardName: route.query.cardName
         })
     }
 ]

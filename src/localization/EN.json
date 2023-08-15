@@ -56,11 +56,7 @@
         "highestBid": "Highest Bid"
     },
     "Highlight": {
-        "button": "See NFT",
-        "title": "Auction ends in:",
-        "hours": "Hours",
-        "minutes": "Minutes",
-        "seconds": "Seconds"
+        "button": "See NFT"
     },
     "Works": {
         "title": "How it works",
@@ -130,5 +126,23 @@
         "created": "Created",
         "owned": "Owned",
         "collection": "Collection"
+    },
+    "NFTPage": {
+        "minted": "Minted On",
+        "timerButton": "Place Bid",
+        "created": "Created By",
+        "description": "Description",
+        "details": "Details",
+        "tags": "Tags",
+        "more": "More from this artist",
+        "button": "Go To Artist Page",
+        "etherscan": "View on Etherscan",
+        "original": "View on Original"
+    },
+    "Timer": {
+        "title": "Auction ends in:",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds"
     }
 }

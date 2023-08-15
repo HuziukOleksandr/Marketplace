@@ -1,27 +1,29 @@
 <template>
     <div class="timer">
         <!-- Title Start -->
-        <p class="title">{{ $t("Highlight.title") }}</p>
+        <p class="title">{{ $t("Timer.title") }}</p>
         <!-- Title End -->
 
         <!-- Time Start -->
         <div class="time">
             <div class="item">
                 <h2 class="number">{{time.hours}}</h2>
-                <p class="text">{{ $t("Highlight.hours") }}</p>
+                <p class="text">{{ $t("Timer.hours") }}</p>
             </div>
             <h2 class="point">:</h2>
             <div class="item">
                 <h2 class="number">{{time.minutes}}</h2>
-                <p class="text">{{ $t("Highlight.minutes") }}</p>
+                <p class="text">{{ $t("Timer.minutes") }}</p>
             </div>
             <h2 class="point">:</h2>
             <div class="item">
                 <h2 class="number">{{time.seconds}}</h2>
-                <p class="text">{{ $t("Highlight.seconds") }}</p>
+                <p class="text">{{ $t("Timer.seconds") }}</p>
             </div>
         </div>
         <!-- Time End -->
+
+        <slot></slot>
     </div>
 </template>
 
@@ -29,6 +31,8 @@
 import moment from 'moment';
 
     export default {
+        name: "my-timer",
+
         props:{
             endtime:{
                 type: Date,
@@ -97,7 +101,7 @@ import moment from 'moment';
 .timer {
     max-width: 295px;
     width: 100%;
-    height: 147px;
+    min-height: 147px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;

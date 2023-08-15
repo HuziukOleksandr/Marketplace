@@ -2,15 +2,8 @@
     <div class="card">
         <!-- User Start -->
         <div class="user">
-            <div class="user-icon">
-                <img 
-                    :src="getUserImageUrl(card.userIcon)" 
-                    :alt="card.userName" 
-                    class="icon">
-            </div>
-            <div class="user-name">
-                <p  class="name">{{ card.userName }}</p>
-            </div>
+        
+            <my-user :userName="card.userName"/>
         </div>
         <!-- User End -->
 
@@ -41,9 +34,15 @@ import { getUserImageUrl } from '../../../helpers/helpers';
             }
         },
 
+
+
         methods:{
             getUserImageUrl
-        }
+        },
+
+        mounted() {
+            console.log(this.card.userName);
+        },
     }
 </script>
 
@@ -71,8 +70,9 @@ import { getUserImageUrl } from '../../../helpers/helpers';
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
     border-radius: 20px;
-    padding: 10px 20px;
+    
     background-color: var(--background-secondary);
 }
 

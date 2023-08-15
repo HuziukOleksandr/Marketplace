@@ -1,5 +1,5 @@
 <template>
-    <div class="user" @click="userClick(userName)">
+    <div class="user" @click.stop="userClick(userName)">
         <img 
             :src="getUserImageUrl(userName)" 
             :alt="userName"
@@ -35,6 +35,7 @@ import { getUserImageUrl } from '../../helpers/helpers'
 <style scoped>
 
 .user {
+    width: fit-content;
     display: flex;
     gap: 10px;
 }

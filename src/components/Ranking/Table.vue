@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="content" v-for="artist in artists">
+        <div class="content" v-for="artist in artists" @click="userClick(artist.userName)" >
             <div class="content-colums">{{ artist.id }}</div>
             <div class="content-colums">
                 <img 
@@ -122,6 +122,10 @@ import {getUserImageUrl} from '../../helpers/helpers'
                         this.sortTable[item].rotate = false
                     }
                 })
+            },
+
+            userClick(name){
+                this.$router.push({name: 'Artists', query: { artistName: name}})
             }
         },
 

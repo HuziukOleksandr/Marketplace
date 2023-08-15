@@ -18,11 +18,7 @@
             <div class="preview">
                 <h2 class="preview-title">{{previewTitle}}</h2>
                 <div class="user">
-                    <img 
-                        src="../../../assets/images/Avatars/Animakid.svg" 
-                        alt="Animakid" 
-                        class="user-picture">
-                    <h2 class="user-name">{{ userName }}</h2>
+                   <my-user :userName="userName" />
                 </div>
             </div>
             <Info :infoList="infoList"  class="second-info"/>

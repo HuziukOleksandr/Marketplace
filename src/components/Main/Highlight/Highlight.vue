@@ -3,7 +3,7 @@
         <div class="background">
             <div class="content">
                 <Card :card="card"/>
-                <Timer :endtime="endtime"/>
+                <my-timer :endtime="endtime"/>
             </div>
         </div>
     </div>
@@ -11,10 +11,10 @@
 
 <script>
 import Card from './HighlightCard.vue'
-import Timer from './HighlightTimer.vue'
+
     export default {
         components: {
-            Card, Timer
+            Card
         },
 
         data(){

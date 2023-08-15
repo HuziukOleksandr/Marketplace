@@ -1,5 +1,8 @@
 <template>
-    <div class="card" :style="{ backgroundColor: background}" >
+    <div 
+        class="card" 
+        :style="{ backgroundColor: background}"
+        @click="cardClick(card.name)">
         <!-- Preview Start -->
         <div class="preview">
             <img 
@@ -12,7 +15,7 @@
         <!-- Title Start -->
         <div class="title">
             <h2 class="name">{{ card.name }}</h2>
-            <my-user :userName="card.userName"/>
+            <my-user :userName="card.userName" />
             <div class="numbers">
                 <div class="price">
                     <h2 class="price-title">{{ $t("Discover.price") }}</h2>
@@ -53,6 +56,11 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../helpers/helpe
             getSlidesNumber,
             getImageUrl,
             getUserImageUrl,
+
+            cardClick(name) {
+                this.$router.push({name: 'NFTPage', query: { cardName: name}})
+            }
+
         },
 
         mounted() {

@@ -7,6 +7,7 @@ import MyUser from './MyUser.vue'
 import MyCard from './MyCard.vue'
 import MyCollection from './MyCollection.vue'
 import MyNothing from './MyNothing.vue'
+import MyTimer from './MyTimer.vue'
 
 export default [
     MyButton,
@@ -17,5 +18,6 @@ export default [
     MyUser,
     MyCard,
     MyCollection,
-    MyNothing
+    MyNothing,
+    MyTimer
 ]

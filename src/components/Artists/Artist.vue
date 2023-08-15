@@ -207,7 +207,7 @@ import Links from './Links.vue'
                     )
             });
             
-            this.backgroundImage= `url('${this.getUserBackgroundUrl(this.artist.background)}') `
+            this.backgroundImage= `url('${this.getUserBackgroundUrl(this.artist.background)}')`
         }
     }
 </script>
