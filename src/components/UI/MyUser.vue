@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import { getUserImageUrl } from '../../helpers/helpers'
 
     export default {
@@ -21,13 +22,29 @@ import { getUserImageUrl } from '../../helpers/helpers'
             }
         }, 
 
+        data() {
+            return {
+                user: {}
+            }
+        },
+
         methods: {
             getUserImageUrl,
 
             userClick(name){
-                this.$router.push({name: 'Artists', query: { artistName: name}})
-            }
-        }
+                axios
+                .get('/data/Artists.json')
+                    .then(response =>  {
+                        this.user = response.data.Artists.find(element => element.userName == name) || null 
+                        
+                });
+                this.$router.push({name: 'Artists', params: { id: this.user.id}})
+            },
+
+            
+        },
+
+        
 
     }
 </script>

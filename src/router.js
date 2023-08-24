@@ -56,7 +56,7 @@ const routes = [
         }
     },
     {
-        path: '/artist',
+        path: '/artist/#:id',
         name: 'Artists',
         components: {
             Header,
@@ -64,11 +64,11 @@ const routes = [
             Footer
         },
         props: route => ({
-            artistName: route.query.artistName
+            id: route.query.id
         })
     },
     {
-        path: '/nft',
+        path: '/nft/#:id',
         name: 'NFTPage',
         components: {
             Header,
@@ -76,7 +76,7 @@ const routes = [
             Footer
         },
         props: route => ({
-            cardName: route.query.cardName
+            id: route.query.id
         })
     }
 ]

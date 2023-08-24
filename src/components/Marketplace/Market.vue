@@ -96,7 +96,7 @@ import axios from 'axios'
                 .then(response =>  {
                     this.cards = response.data.Cards;
             });
-
+            
             await axios
                 .get('/data/Collections.json')
                 .then(response =>  {

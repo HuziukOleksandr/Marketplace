@@ -3,8 +3,8 @@
         <div class="background" :style="{ backgroundImage: backgroundImage }"></div>
         <div class="preview">
             <img 
-                :src="getUserImageUrl(name)" 
-                :alt="name"
+                :src="getUserImageUrl(artist.userName)" 
+                :alt="artist.userName"
                 class="picture">
 
             <div class="left">
@@ -127,9 +127,8 @@ import Links from './Links.vue'
         },
 
         props: {
-            name: {
-                type: String,
-                required: true
+            id: {
+                type: String
             }
         },
 
@@ -178,18 +177,18 @@ import Links from './Links.vue'
             await axios
                 .get('/data/Artists.json')
                 .then(response =>  {
-                    this.artist = response.data.Artists.find(element => element.userName === this.name) || null                    
+                    this.artist = response.data.Artists.find(element => element.id == this.id) || null               
                     this.getStats()
             });
 
             await axios
-                .get('data/Cards.json')
+                .get('/data/Cards.json')
                 .then(response => {
                     response.data.Cards.forEach(element => {
-                            if( element.userName === this.name) {
+                            if( element.userName === this.artist.userName) {
                                 this.created.push(element)
                             } 
-                            if( element.owner === this.name) {
+                            if( element.owner === this.artist.userName) {
                                 this.owned.push(element)
                             } 
                         }
@@ -197,10 +196,10 @@ import Links from './Links.vue'
             });
             
             await axios
-                .get('data/Collections.json')
+                .get('/data/Collections.json')
                 .then(response => {
                     response.data.Collections.forEach(element => {
-                            if(element.userName === this.name) {
+                            if(element.userName === this.artist.userName) {
                                 this.collections.push(element)
                             } 
                         }

@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="content" v-for="artist in artists" @click="userClick(artist.userName)" >
+        <div class="content" v-for="artist in artists" @click="userClick(artist.id)" >
             <div class="content-colums">{{ artist.id }}</div>
             <div class="content-colums">
                 <img 
@@ -125,7 +125,7 @@ import {getUserImageUrl} from '../../helpers/helpers'
             },
 
             userClick(name){
-                this.$router.push({name: 'Artists', query: { artistName: name}})
+                this.$router.push({name: 'Artists',  params: { id: name}})
             }
         },
 

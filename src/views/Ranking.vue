@@ -1,7 +1,7 @@
 <template>
-    <div class="main">
-        <Ranks/>
-    </div>
+    <router-view class="main" :key="$route.fullPath">
+        <Ranks />
+    </router-view>
 </template>
 
 <script>

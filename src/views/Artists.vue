@@ -1,7 +1,6 @@
 <template>
-    <div class="main">
-        <Artist :name="artistName"/>
-
+    <div class="main" :key="$route.fullPath">
+        <Artist :id="this.$route.params.id" />
     </div>
 </template>
 
@@ -13,8 +12,6 @@ import { scrollTop } from '../helpers/helpers'
         components: {
             Artist
         },
-
-        props: ['artistName'],
 
         mounted() {
             scrollTop()

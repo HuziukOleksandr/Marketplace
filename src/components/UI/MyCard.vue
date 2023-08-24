@@ -2,7 +2,7 @@
     <div 
         class="card" 
         :style="{ backgroundColor: background}"
-        @click="cardClick(card.name)">
+        @click="cardClick(card.id)">
         <!-- Preview Start -->
         <div class="preview">
             <img 
@@ -58,7 +58,7 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl} from '../../helpers/helpe
             getUserImageUrl,
 
             cardClick(name) {
-                this.$router.push({name: 'NFTPage', query: { cardName: name}})
+                this.$router.push({name: 'NFTPage', params: { id: name}})
             }
 
         },

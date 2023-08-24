@@ -92,56 +92,57 @@ import axios from 'axios';
 import { getUserBackgroundUrl } from '../../helpers/helpers'
 import Tags from './Tags.vue'
 
-    export default {
-        props: {
-            name: {
-                type: String,
-                required: true
-            }
+export default {
+
+    components: {
+        Tags
+    },
+
+    data() {
+        return {
+        card: {},
+        cards: [],
+        background: 'var(--background-secondary)',
+        backgroundImage: ``,
+        
+        }
+    },
+
+    methods: {
+        getUserBackgroundUrl,
+
+        buttonClick() {
+            this.$router.push({ name: 'Artists', query: { artistName: this.card.userName } })
         },
 
-        components: {
-            Tags
-        },
-
-        data() {
-            return {
-                card: {},
-                cards: [],
-                background: 'var(--background-secondary)',
-                backgroundImage: ``
-            }
-        },
-
-        methods: {
-            getUserBackgroundUrl,
-
-            buttonClick(userName) {
-                this.$router.push({name: 'Artists', query: { artistName: this.card.userName}})
-            }
-        },
-
-        async mounted() {
+        async loadData() {
+            
             await axios
-                .get('data/Cards.json')
+                .get('/data/Cards.json')
                 .then(response => {
-                    this.card = response.data.Cards.find(element => element.name === this.name || null)
-            });
+                    this.card  = response.data.Cards.find(element => element.id === this.$route.params.id || null);
+                
+                });
 
             await axios
-                .get('data/Cards.json')
+                .get('/data/Cards.json')
                 .then(response => {
                     response.data.Cards.forEach(element => {
-                        if(element.userName === this.card.userName && element.name != this.card.name)
-                        {
-                            this.cards.push(element)
-                        }
+                    if (element.userName === this.card.userName && element.name !== this.card.name) {
+                        this.cards.push(element)
+                    }
                     })
-            });
+                });
 
             this.backgroundImage = `url('${this.getUserBackgroundUrl(this.card.background)}')`
         }
+    },
+
+    async mounted() {
+        await this.loadData();
     }
+
+}
 </script>
 
 <style scoped>

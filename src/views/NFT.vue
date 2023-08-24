@@ -1,7 +1,7 @@
 <template>
-    <div class="main">
-        <Page :name="cardName"/>
-    </div>
+    <router-view class="main" :key="$route.fullPath">
+        <Page :id="this.$route.params.id"/>
+    </router-view>
 </template>
 
 <script>
@@ -11,9 +11,7 @@ import { scrollTop } from '../helpers/helpers'
     export default {
         components: {
             Page
-        },
-
-        props: ['cardName'],
+        }, 
 
         mounted() {
             scrollTop()
