@@ -1,12 +1,12 @@
 <template>
-        <div class="menu" >
+        <div class="flex justify-center md:max-w-[690px] md:mt-[30px] m-auto sm:flex-col sm:max-w-[330px] sm:mt-[20px]" >
             <Navigation 
-                class="navigation" 
-                :linkItemStyles="customLinkItemStyles"
+                :linkItemStyles="styles"
+                class="sm:m-3"
                 @menuClose="this.$emit('menuClose', false);"/>
                 
             <my-button 
-                class="button" 
+                class="h-[60px] p-[30px] bg-btn-bg-color text-white border-none text-base sm:flex sm:justify-center" 
                 @click="buttonClick">
                     <img src="../../assets/images/Buttons/User.svg" alt="user">
                     {{ $t("Header.button") }}
@@ -24,18 +24,11 @@ import Navigation from '../Navigation/Navigation.vue'
 
         data() {
             return {
-                customLinkItemStyles: {
-                    display: "flex",
-                    padding: "0 20px",
-                    alignItems: "center",
-                    color: "var(--text-color-white)",
-                    height: "45px"
-                },
+                styles: "text-white items-center px-[20px] text-center flex sm:flex sm:justify-center sm:mb-[20px]"
             }
         },
 
         methods: {
-            
             buttonClick(){
                 this.$emit('menuClose', false);
                 this.$router.push({ name: 'Register' });
@@ -44,65 +37,3 @@ import Navigation from '../Navigation/Navigation.vue'
 
     }
 </script>
-
-<style scoped>
-
-.navigation {
-    display: flex;
-}
-
-.button {
-    height: 60px;
-    padding: 0 30px;
-    background-color: var(--button-background-color);
-    border: none;
-    color: var(--text-color-white);
-    font-size: 16px;
-    line-height: 22px;
-}
-
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 768px) and (max-width: 1279px) { 
-
-    .menu {
-        max-width: 690px;
-        width: 100%;
-        min-height: 60px;
-        flex-direction: column;
-        justify-content: center;
-        border: 2px solid var(--button-background-color);
-        margin: 30px auto;
-    }
-
-    .button {
-        height: 45px;
-        padding: 20px 45px;
-    }
-}
-
-/* Стилі для мобільних пристроїв */
-@media only screen and (max-width: 767px) {
-
-    .navigation {
-        align-items: center;
-        flex-direction: column;
-        margin: 0 auto;
-    }
-
-    .menu {
-        max-width: 330px;
-        flex-direction: column;
-        border: 2px solid var(--button-background-color);
-        margin: 30px auto;
-    }
-
-    .button {
-        height: 45px;
-        padding: 15px 50px;
-        margin: 0 auto;
-        justify-content: center;
-    }
-
-}
-</style>
-

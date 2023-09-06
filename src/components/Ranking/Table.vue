@@ -142,7 +142,7 @@ import {getUserImageUrl} from '../../helpers/helpers'
 
 <style scoped>
 
-.table {
+/* .table {
     max-width: 1050px;
     width: 100%;
 }
@@ -255,23 +255,23 @@ import {getUserImageUrl} from '../../helpers/helpers'
 }
 
 .sort {
-  position: relative;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 10px solid var(--background-secondary);
-  cursor: pointer;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid var(--background-secondary);
+    cursor: pointer;
 }
 
 .sort.showtriangle {
-  transform: rotate(180deg); /* Повертаємо трикутник вгору */
-}
+    transform: rotate(180deg); 
+} */
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
 
-    .header-colums:nth-child(3),
+    /* .header-colums:nth-child(3),
     .header-colums:nth-child(5) {
         width:100px;
     }
@@ -306,13 +306,13 @@ import {getUserImageUrl} from '../../helpers/helpers'
 
     .content-colums:nth-child(4) {
         display: none;
-    }
+    } */
 }
 
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
 
-    .header {
+    /* .header {
         height: 46px;
         display: flex;
         align-items: center;
@@ -381,7 +381,7 @@ import {getUserImageUrl} from '../../helpers/helpers'
     .content-colums:nth-child(3),
     .content-colums:nth-child(4) {
         display: none;
-    }
+    } */
 
 }
 </style>

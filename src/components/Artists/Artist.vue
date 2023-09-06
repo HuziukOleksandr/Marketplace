@@ -215,32 +215,32 @@ import Links from './Links.vue'
 
 /* Main Style Start */
 
-.section {
+/* .section {
     min-height: 500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-}
+} */
 
   
 /* Main Style End */
 
 /* Background Styles Start */
 
-.background{
+/* .background{
     width: 100%;
     height: 320px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
+} */
 
 /* Background Styles End */
 
 /* Preview Styles Start */
 
 
-.preview {
+/* .preview {
     max-width: 1050px;
     width: 100%;
     min-height: 100px;
@@ -331,13 +331,13 @@ import Links from './Links.vue'
     padding: 0 30px;
     background-color: var(--background-color);
     border: 2px solid var(--button-background-color);
-}
+} */
 
 /* Preview Styles End */
 
 /* Container Styles Start */
 
-.content-header {
+/* .content-header {
     width: 100%;
     height: 70px;
     border-top: 1px solid var(--background-secondary);
@@ -417,13 +417,13 @@ import Links from './Links.vue'
 }
 .active {
     border-bottom: 3px solid var(--text-color-secondary);
-}
+} */
 /* Container Styles End */
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
 
-    .preview {
+    /* .preview {
         max-width: 690px;
         padding: 100px 0 30px 0;
     }
@@ -469,13 +469,13 @@ import Links from './Links.vue'
     .content {
         max-width: 690px;
         grid-template-columns: repeat(2, 1fr);
-    }
+    } */
 }
 
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
 
-    .preview {
+    /* .preview {
         max-width: 315px;
         padding: 100px 0 30px 0;
     }
@@ -524,7 +524,7 @@ import Links from './Links.vue'
     .content {
         max-width: 315px;
         grid-template-columns: repeat(1, 1fr);
-    }
+    } */
 }
 
 </style>

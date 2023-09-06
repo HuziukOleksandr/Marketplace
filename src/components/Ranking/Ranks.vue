@@ -109,7 +109,7 @@ import Table from './Table.vue'
 
 <style scoped>
 
-.section {
+/* .section {
     min-height: 600px;
     display: flex;
     flex-direction: column;
@@ -196,12 +196,12 @@ import Table from './Table.vue'
     width: 100%;
     min-height: 100vh;
     margin: 30px auto;
-}
+} */
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
 
-    .header {
+    /* .header {
         max-width: 690px;  
     }
 
@@ -221,14 +221,14 @@ import Table from './Table.vue'
 
     .content {
         max-width: 690px;
-    }
+    } */
 
 }
 
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
 
-    .header {
+    /* .header {
         max-width: 315px;  
     }
 
@@ -266,6 +266,6 @@ import Table from './Table.vue'
 
     .number {
         display: none;
-    }
+    } */
 }
 </style>

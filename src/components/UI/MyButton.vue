@@ -1,5 +1,7 @@
 <template>
-    <button class="btn">
+    <button 
+        class="button flex items-center font-serrat font-semibold rounded-[20px] gap-[10px]"
+    >
         <slot></slot>
     </button>
 </template>
@@ -12,19 +14,10 @@
 
 <style scoped>
 
-.btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-radius: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    transition: 0.2s;
-}
-
-.btn:hover {
-    scale: 1.01;
-    cursor: pointer;
+.button { 
+    @apply
+    transition duration-300
+    hover:scale-102
 }
 
 </style>

@@ -1,34 +1,31 @@
 <template>
-   <div class="card">
-        <!-- Main Picture -->
+   <div class="w-[330px] min-h-100 flex flex-col gap-[15px] mb:w-[315px]">
+        
         <img 
             :src="getImageUrl(collection.Cards[0].picture)" 
             :alt="collection.Cards[0].picture"
-            class="main-picture">
+            class="rounded-[20px] hover:cursor-pointer">
         
-        <!-- Secondary Start -->
-        <div class="secondary">
+        <div class="flex justify-between">
             <img 
                 :src="getImageUrl(collection.Cards[1].picture)" 
                 :alt="collection.Cards[1].picture"
-                class="secondary-picture">
+                class="w-[100px] rounded-[20px] mb:w-[95px] hover:cursor-pointer">
             <img 
                 :src="getImageUrl(collection.Cards[2].picture)" 
                 :alt="collection.Cards[2].picture"
-                class="secondary-picture">
+                class="w-[100px] rounded-[20px] mb:w-[95px] hover:cursor-pointer">
 
-            <my-button class="more">
+            <my-button class="w-[100px] h-[100px] flex justify-center items-center bg-btn-bg-color text-white mb:w-[95px]">
                 +{{ collection.Cards.length }}
             </my-button>
         </div>
-        <!-- Secondary End -->
-
-        <!-- Preview Start -->
-        <div class="preview">
-            <h2 class="title">{{ collection.name }}</h2>
+        
+        <div class="flex flex-col gap-[10px]">
+            <h2 class="text-2xl  text-start custom-text-lg">{{ collection.name }}</h2>
             <my-user :userName="collection.userName"/>
         </div>
-    <!-- Preview End -->
+    
     </div>
 </template>
 
@@ -68,105 +65,3 @@ import {getSlidesNumber, getImageUrl, getUserImageUrl } from '../../helpers/help
     }
 
 </script>
-
-<style scoped>
-
-
-.card {
-    width: 330px;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.main-picture {
-    border-radius: 20px;
-    transition: .2s;
-}
-
-.main-picture:hover {
-    cursor: pointer;
-    scale:  1.01;
-}
-
-.secondary {
-    display: flex;
-    justify-content: space-between;
-}
-
-.more {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--button-background-color);
-    color: var(--text-color-white);
-    border: none;
-}
-
-.secondary-picture {
-    width: 100px;
-    border-radius: 20px;
-    transition: 0.4s;
-}   
-.secondary-picture:hover {
-    cursor: pointer;
-    scale: 1.01;
-}
-
-.preview {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    
-}
-
-.title {
-    color: var(--text-color-white);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 30px;
-    text-align: start;
-}
-
-.user {
-    display: flex;
-    gap: 10px;
-}
-
-.user-name {
-    color: var(--text-color-white);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-}
-
-.user-picture {
-    width: 24px;
-}
-.user-picture:hover, .user-name:hover {
-    cursor: pointer;
-}
-
-/* Медіа-запит для мобільних пристроїв з шириною екрану до 767px */
-@media only screen and (max-width: 767px) {
-   
-    .card {
-        max-width: 315px;
-    }
-
-    .more {
-        width: 95px;
-        height: 95px;
-    }
-
-    .secondary-picture {
-        width: 95px;
-    }
-}
-
-</style>

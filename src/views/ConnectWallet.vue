@@ -17,7 +17,3 @@ import { scrollTop } from '../helpers/helpers'
         }
     }
 </script>
-
-<style scoped>
-
-</style>

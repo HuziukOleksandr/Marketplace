@@ -5,21 +5,14 @@
 }
 
 input {
-    appearance: none; /* Деякі браузери використовують це для збереження стандартного стилю */
-    -webkit-appearance: none; /* Для веб-кіт браузерів, як Safari і Chrome */
-    -moz-appearance: none; /* Для Firefox */
-  
-    /* Обнулення стандартних рамок і фону */
+    appearance: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
     border: none;
     background: none;
-  
-    /* Відміна стандартної внутрішньої заповненості (паддингу) */
     padding: 0;
     margin: 0;
-    /* Заборона зміни розмірів */
     resize: none;
     box-sizing: border-box;
-    /* Заборона зміни курсору при наведенні */
     cursor: text;
 }
-

@@ -1,5 +1,5 @@
 <template>
-    <div class="main" :key="$route.fullPath">
+    <div :key="$route.fullPath">
         <Artist :id="this.$route.params.id" />
     </div>
 </template>
@@ -18,7 +18,3 @@ import { scrollTop } from '../helpers/helpers'
         }
     }
 </script>
-
-<style scoped>
-
-</style>

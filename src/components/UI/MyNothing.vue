@@ -1,6 +1,6 @@
 <template>
-    <div class="nothing">
-        <h1 class="title">Woops, nothing here</h1>
+    <div class="w-[800px] h-[70px] m-auto mt-0">
+        <h1 class="text-base text-center custom-text-lg">Woops, nothing here</h1>
     </div>
 </template>
 
@@ -9,22 +9,3 @@
         name: 'my-nothing',
     }
 </script>
-
-<style scoped>
-
-.nothing {
-    width: 800px;
-   
-    height: 70px;
-    margin: 0 auto;
-}
-
-.title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 55px;
-    color: var(--background-color);
-    text-align: center;
-}
-</style>

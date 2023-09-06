@@ -1,24 +1,22 @@
 <template>
     <TransitionGroup>
-        <div 
-            class="localization" 
-            v-if="dialogVisible" 
-            v-click-away="onClickAway"
-            >
-            <img 
-                src="../../assets/images/svg/EN.svg" 
-                alt="Flag uk" 
-                class="loc-icon"
-                @click="close('EN')"
-                
-                >
-            <img 
-                src="../../assets/images/svg/UA.svg" 
-                alt="Flag uk" 
-                class="loc-icon"
-                @click="close('UA')"> 
-
-        </div>
+    
+            <div 
+                class="flex flex-col p-[7px] gap-[10px] rounded-[5px] w-[49px] bg-bg-secondary absolute " 
+                v-if="dialogVisible" 
+                v-click-away="onClickAway">
+                <img 
+                    src="../../assets/images/svg/EN.svg" 
+                    alt="Flag uk"
+                    class="w-[35px] hover:cursor-pointer hover:scale-105 transition duration-200"
+                    @click="close('EN')">
+                <img 
+                    src="../../assets/images/svg/UA.svg" 
+                    alt="Flag uk" 
+                    class="w-[35px] hover:cursor-pointer hover:scale-105 transition duration-200"
+                    @click="close('UA')"> 
+            </div>
+            
     </TransitionGroup>
 </template>
 
@@ -73,26 +71,6 @@ import { useI18n } from 'vue-i18n'
 
 <style scoped>
 
-.localization {
-    position: absolute;
-    width: 49px;
-    display: flex; 
-    flex-direction: column;
-    gap: 10px;
-    padding: 7px;
-    background-color: var(--background-secondary);
-    border-radius: 5px;
-}
-
-.loc-icon {
-    width: 35px;
-    transition: 0.2s;
-}
-
-.loc-icon:hover {
-    cursor: pointer;
-    scale: 1.05;
-}
 .v-enter-active, .v-leave-active {
   transition: opacity 1s ease;
 }

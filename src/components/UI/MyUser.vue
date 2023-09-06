@@ -1,10 +1,10 @@
 <template>
-    <div class="user" @click.stop="userClick(userName)">
+    <div class="flex gap-[10px] items-center" @click.stop="userClick(userName)">
         <img 
             :src="getUserImageUrl(userName)" 
             :alt="userName"
-            class="user-picture">
-        <h2 class="user-name">{{userName}}</h2>
+            class="w-6 hover:cursor-pointer">
+        <h2 class="font-serrat text-white font-normal leading-[22px] text-[16px] text-center hover:cursor-pointer">{{userName}}</h2>
     </div>
 </template>
 
@@ -40,36 +40,6 @@ import { getUserImageUrl } from '../../helpers/helpers'
                 });
                 this.$router.push({name: 'Artists', params: { id: this.user.id}})
             },
-
-            
-        },
-
-        
-
+        }
     }
 </script>
-
-<style scoped>
-
-.user {
-    width: fit-content;
-    display: flex;
-    gap: 10px;
-}
-
-.user-name {
-    color: var(--text-color-white);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-}
-
-.user-picture {
-    width: 24px;
-}
-.user-picture:hover, .user-name:hover {
-    cursor: pointer;
-}
-
-</style>

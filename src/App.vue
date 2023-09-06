@@ -1,5 +1,5 @@
 <template>
-    <div class="page">
+    <div class="pt-[10px] flex flex-col bg-bg-color">
         <router-view name="Header"/>
         <router-view name="default"/>
         <router-view name="Footer"/>
@@ -15,16 +15,3 @@ import { RouterView } from 'vue-router';
         }
     }
 </script>
-
-<style scoped>
-
-.page{
-    padding-top: 10px;
-    width: 100%;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--background-color);
-}
-
-</style>

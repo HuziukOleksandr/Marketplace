@@ -34,19 +34,3 @@ import { scrollTop } from '../helpers/helpers'
     }
 </script>
 
-<style scoped>
-
-/* Desktop */
-@media only screen and (min-width: 1280px)  {
-   
-}
-
-/* Tablet */
-@media only screen and (min-width: 960px) {   
-}
-
-/* Mobile */
-@media only screen and (min-width: 540px) {   
-}
-
-</style>

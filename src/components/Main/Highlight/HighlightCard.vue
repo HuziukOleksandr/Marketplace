@@ -1,24 +1,24 @@
 <template>
-    <div class="card">
+    <div class="w-[100%] max-w-[755px] flex flex-col gap-[30px] sm:max-w-[315px]">
         <!-- User Start -->
-        <div class="user">
-        
+        <div class="user ">
             <my-user :userName="card.userName"/>
         </div>
         <!-- User End -->
 
         <!-- Title Start -->
-        <h2 class="title">{{ card.title }}</h2>
+        <h2 class="custom-title sm:self-center">{{ card.title }}</h2>
         <!-- Title End -->
 
         <!-- Button Start -->
         <div>
-            <my-button class="button">
-            <img 
-                src="../../../assets/images/Buttons/Eye.svg" 
-                alt="Eye">   
-            {{ $t("Highlight.button") }}
-        </my-button>
+            <my-button class="h-[60px] bg-white px-[50px] sm:hidden">
+                <img 
+                    src="../../../assets/images/Buttons/Eye.svg" 
+                    alt="Eye"
+                >   
+                    {{ $t("Highlight.button") }}
+            </my-button>
         </div>
         <!-- Button End -->
     </div>
@@ -34,133 +34,19 @@ import { getUserImageUrl } from '../../../helpers/helpers';
             }
         },
 
-
-
         methods:{
             getUserImageUrl
-        },
-
-        mounted() {
-            console.log(this.card.userName);
-        },
+        }
     }
 </script>
 
 <style scoped>
 
-/* Main Styles Start */
-
-.card {
-    max-width: 755px;
-    width: 100%;
-    min-height: 220px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* Main Styles End */
-
-/* User Styles Start */
-
 .user {
-    max-width: 150px;
-    width: 100%;
-    height: 45px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    
-    background-color: var(--background-secondary);
-}
-
-.user:hover {
-    cursor: pointer;
-}
-
-.user-name {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--text-color-white);
-}
-
-.icon {
-    width: 24px;
-}
-
-/* User Styles End */
-
-/* Title Styles Start */
-
-.title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600px;
-    font-size: 50px;
-    line-height: 56px;
-    color:  var(--text-color-white);
-}
-
-/* Title Styles End */
-
-/* Button Style Start */
-
-.button {
-    height: 60px;
-    padding: 22px 50px;
-    border: none;
-    font-size: 15px;
-    line-height: 22px;
-}
-
-/* Button Style End */
-
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 768px) and (max-width: 1279px) { 
-
-    /* Main Styles Start */
-
-    .card {
-        max-width: 375px;
-        min-height: 220px;
-    }
-
-    /* Main Styles End */
-
-    /* Title Styles Start */
-
-    .title {
-        font-size: 38px;
-        line-height: 45px;
-    }
-
-    /* Title Styles End */
-
-}
-
-/* Стилі для мобільних пристроїв */
-@media only screen and (max-width: 767px) {  
-
-    /* Main Styles Start */
-
-    .card {
-        max-width: 315px;
-    }
-
-    /* Main Styles End */
-
-    /* Title Styles Start */
-
-    .title {
-        font-size: 38px;
-        line-height: 45px;
-    }
-
-    /* Title Styles End */
-
+    @apply 
+    w-[100%] max-w-[150px] h-[45px] 
+    flex items-center justify-center gap-[10px]
+    rounded-[20px] bg-bg-secondary
 }
 
 </style>

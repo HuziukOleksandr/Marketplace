@@ -1,19 +1,19 @@
 <template>
-    <div class="header">
-        <div class="content">
+    <div class="px-[50px] w-[100%] sm:p-0">
+        <div class="flex justify-between">
             <my-logo/>
 
-            <div class="menu">
+            <div class="flex items-center justify-between">
                 <img 
                 src="../../assets/images/svg/BurgerMenu.svg" 
                 alt="BurgerMenu" 
-                class="burger-menu"
+                class="hidden md:block sm:block hover:cursor-pointer"
                 @click="dropDawnShow">
                 <Transition name="slide-fade">
-                    <HeaderMenu class="navigation"/>
+                    <HeaderMenu class="md:hidden sm:hidden"/>
                 </Transition>
                 
-                <Localization class="localization"/>
+                <Localization class="px-[13px] sm:px-0"/>
             </div>
 
         </div>
@@ -21,7 +21,7 @@
         <Transition name="slide-fade">
             <HeaderMenu 
                 v-if="dialogVisible" 
-                class="dropdawn-menu"
+                class="flex px-[20px] py-[10px] mb-[40px] rounded-[20px] bg-bg-secondary"
                 @menuClose="dropDawnShow"/>
         </Transition>
     </div> 
@@ -70,7 +70,6 @@ import Localization from './HeaderLocalization.vue'
 
 /* Animation Styles Start */
 
-    
 .slide-fade-enter-active {
   transition: all 0.3s ease-out;
 }
@@ -93,7 +92,7 @@ import Localization from './HeaderLocalization.vue'
 /* Animation Styles End */
 
 
-.header {
+/* .header {
     padding: 0 50px    ;
     min-height: 100px;
 }
@@ -118,7 +117,7 @@ import Localization from './HeaderLocalization.vue'
     padding: 0 13px;
 }
 
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
+/* Стилі для моніторів (більші планшетів та комп'ютерів) 
 @media only screen and (min-width: 768px) and (max-width: 1279px) { 
 
     .header {
@@ -148,7 +147,7 @@ import Localization from './HeaderLocalization.vue'
     }
 }
 
-/* Стилі для мобільних пристроїв */
+/* Стилі для мобільних пристроїв 
 @media only screen and (max-width: 767px) {
 
     .header {
@@ -174,7 +173,6 @@ import Localization from './HeaderLocalization.vue'
     .burger-menu:hover {
         cursor: pointer;
     }
-}
-    
+} */
 </style>
 

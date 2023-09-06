@@ -1,195 +1,25 @@
 <template>
-    <div class="footer">
-        <!-- Content Start -->
-        <div class="content">
-            
+    <div class="bg-bg-secondary flex flex-col gap-[50px] py-10 ">
+        <div class="w-[1050px] m-auto flex justify-between md:flex-col md:gap-[30px] md:w-[690px] sm:w-[315px] sm:flex-col sm:gap-[30px]">
             <Community/>
-
             <Explore />
-        
             <Digest />
-            
         </div>
-        <!-- Content End -->
 
-        <!-- Bottom Start -->
-        <div class="bottom">
-            <p class="conporations">Ⓒ NFT Market. Use this template freely.</p>
+        <div class="min-h-[35px] w-[1050px] m-auto  border-t-solid border-t-2 border-grey flex items-end md:w-[690px] sm:w-[315px]">
+            <p class="font-serrat font-normal text-xs text-[#CCCCCC]">Ⓒ NFT Market. Use this template freely.</p>
         </div>
-        <!-- Bottom End -->
     </div>
 </template>
 
 <script>
-import { useI18n } from 'vue-i18n';
 import Digest from './Digest.vue'
 import Explore from './Explore.vue'
 import Community from './Community.vue'
-import { getTitleClasses, getTextClasses } from '../../helpers/localization';
 
     export default {
         components: {
             Digest, Explore, Community
-        },
-
-        setup(){
-            const {locale} = useI18n();
-            return {
-                locale
-            };
-        },
-
-        methods: {
-            getTitleClasses,
-            getTextClasses
         }
     }
 </script>
-
-<style scoped>
-
-/* Стилі для великих моніторів та десктопів */
-@media only screen and (min-width: 1280px) {
-    /* Main Styles Start */
-    .footer {
-        min-height: 355px;
-        background-color: var(--background-secondary);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-        padding: 40px 100px;
-    }
-
-    .content {
-        min-width: 690px;
-        width: 100%;
-        min-height: 190px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    /* Main Styles End */
-
-    /* Bottom Styles Start */
-
-    .bottom {
-        min-width: 1050px;
-        width: 100%;
-        min-height: 35px;   
-        border-top: 1px solid var(--text-color-secondary);
-        display: flex;
-        align-items: end;
-    }
-
-    .conporations {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 13px;
-        color: #CCCCCC;
-    }
-
-    /* Bottom Styles End */
-
-}
-
-/* Стилі для моніторів і планшетів(більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 768px) and (max-width: 1279px) { 
-
-    /* Main Styles Start */
-    .footer {
-        min-height: 700px;
-        background-color: var(--background-secondary);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-        padding: 40px 0;
-    }
-
-    .content {
-        max-width: 690px;
-        width: 100%;
-        min-height: 190px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        justify-content: space-between;
-        margin: 0 auto;
-    }
-
-    /* Main Styles End */
-    
-    /* Bottom Styles Start */
-
-    .bottom {
-        max-width: 690px;
-        width: 100%;
-        min-height: 35px;   
-        border-top: 1px solid var(--text-color-secondary);
-        display: flex;
-        align-items: end;
-    }
-
-    .conporations {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 13px;
-        color: #CCCCCC;
-    }
-
-    /* Bottom Styles End */
-}
-
-/* Стилі для мобільних пристроїв */
-@media only screen and (max-width: 767px) {
-
-    /* Main Styles Start */
-    .footer {
-        min-height: 700px;
-        background-color: var(--background-secondary);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-        padding: 40px 0;
-    }
-
-    .content {
-        max-width: 315px;
-        width: 100%;
-        min-height: 190px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        justify-content: space-between;
-        margin: 0 auto;
-    }
-
-    /* Main Styles End */
-    
-    /* Bottom Styles Start */
-
-    .bottom {
-        max-width: 315px;
-        width: 100%;
-        min-height: 35px;   
-        border-top: 1px solid var(--text-color-secondary);
-        display: flex;
-        align-items: end;
-    }
-
-    .conporations {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 13px;
-        color: #CCCCCC;
-    }
-
-    /* Bottom Styles End */
-}
-
-</style>

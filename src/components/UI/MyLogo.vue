@@ -1,16 +1,16 @@
 <template>
-    <!-- Logo Start -->
-    <div class="logo" @click="this.$router.push({name: 'Main'})">
+    <div 
+        class="flex gap-[10px] items-center" 
+        @click="this.$router.push({name: 'Main'})">
             <img 
                 src="../../assets/images/svg/favicon.svg" 
                 alt="icon" 
-                class="logo-picture">
+                class="transition duration-200 hover:cursor-pointer hover:scale-102">
             <img 
                 src="../../assets/images/svg/logo-title.svg" 
                 alt="title"
-                class="logo-title">
+                class="transition duration-200 hover:cursor-pointer hover:scale-102">
     </div>
-    <!-- Logo End -->
 </template>
 
 <script>
@@ -18,24 +18,3 @@
         name: "my-logo"
     }
 </script>
-
-<style scoped>
-
-/* Logo Styles Start */
-
-.logo {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.logo-title, .logo-picture {
-    transition: 0.2s;
-}
-
-.logo-title:hover, .logo-picture:hover {
-    transform: scale(1.02);
-    cursor: pointer;
-}
-    
-</style>

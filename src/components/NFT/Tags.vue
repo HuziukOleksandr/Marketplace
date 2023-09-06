@@ -20,7 +20,7 @@
 
 <style scoped>
 
-.title {
+/* .title {
     font-family: "SpaceMono",sans-serif;
     font-weight: 700;
     font-size: 22px;
@@ -54,13 +54,13 @@
 .tag:hover {
     cursor: pointer;
     scale: 1.02;
-}
+} */
 
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
    
-    .title {
+    /* .title {
         font-size: 22px;
         line-height: 35px;
     }
@@ -70,7 +70,7 @@
         flex-direction: column;
         gap: 20px;
        
-    }
+    } */
 
    
 
@@ -79,7 +79,7 @@
 
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
-    .title {
+    /* .title {
         font-size: 16px;
         line-height: 22px;
     }
@@ -88,8 +88,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-    }
-
+    } */
     
 } 
 

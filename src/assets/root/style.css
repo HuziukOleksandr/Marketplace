@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-text-lg {
+    @apply font-serrat font-semibold text-white
+}
+
+.custom-text-nm {
+    @apply font-serrat font-normal text-white
+}
+
+.custom-text-lg-sec {
+    @apply font-space font-bold text-white
+}
+
+.custom-text-nm-sec {
+    @apply font-space font-normal text-white
+}
+
+.custom-text-input {
+    @apply font-serrat font-normal text-black
+}
+
+.custom-creator-card {
+    @apply 
+    md:flex-row md:max-w-[330px] md:h-[100px] md:gap-[20px] 
+    sm:max-w-[315px]  sm:gap-[20px] sm:flex-row sm:h-[100px]
+}
+
+/* Title and Sub-Title Start*/
+
+.custom-title {
+    @apply 
+    font-serrat 
+    font-semibold 
+    text-white
+    text-4xl
+    md:text-[26px]
+    sm:text-3xl
+}
+
+.custom-sub-title {
+    @apply 
+    font-serrat 
+    font-normal 
+    text-white
+    text-2xl 
+    md:text-base
+    sm:text-xl
+}
+
+/* Title and Sub-Title End */
+
+
+.custom-frame-styles {
+    @apply 
+    m-auto flex flex-col items-center gap-[60px] py-[80px] w-[100%] max-w-[1050px] 
+    md:max-w-[690px] 
+    sm:max-w-[315px] sm:gap-[40px] sm:py-[40px]
+}
+
+.custom-empty-btn {
+    @apply 
+    h-[60px] px-[50px] 
+    border-solid border-2
+    bg-bg-color
+    border-btn-bg-color 
+    text-white
+}

@@ -34,7 +34,7 @@
 
 <style scoped>
 
-.links {
+/* .links {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -60,16 +60,16 @@
 .link:hover {
     cursor: pointer;
     scale: 1.02;
-}
+} */
 
 @media only screen and (max-width: 1279px) {
-    .links-title {
+    /* .links-title {
         font-size: 16px;
         line-height: 22px;
     }
 
     .link {
         width: 24px;
-    }
+    } */
 }
 </style>

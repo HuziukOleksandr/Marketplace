@@ -9,7 +9,8 @@ import router from './router.js'
 import './assets/root/carousel.css'
 import './assets/root/colors.css'
 import './assets/root/fonts.css'
-import './assets/root/reset.css'
+// import './assets/root/reset.css'
+import './assets/root/style.css'
 
 const app = createApp(App);
 

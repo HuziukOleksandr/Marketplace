@@ -1,9 +1,30 @@
 <template>
-    <div class="highlight">
+    <div class="w-[100%] custom-frame md:max-w-[835px] sm:max-w-[375px]">
         <div class="background">
-            <div class="content">
+            <div 
+                class="w-[100%] flex  max-w-[1050px] 
+                    md:max-w-[690px] 
+                    sm-max-w-[315px] sm:flex-col sm:items-center sm:gap-[30px]"
+            >
                 <Card :card="card"/>
-                <my-timer :endtime="endtime"/>
+
+                <my-timer 
+                    :endtime="endtime" 
+                    class="w-[295px] sm:self-center sm:w-[315px]"
+                />
+
+                <div>
+                    <my-button 
+                        class="h-[60px] bg-white px-[50px] hidden 
+                            sm:flex sm:w-[315px] sm:justify-center"
+                    >
+                        <img 
+                            src="../../../assets/images/Buttons/Eye.svg" 
+                            alt="Eye"
+                        >   
+                            {{ $t("Highlight.button") }}
+                    </my-button>
+                </div>
             </div>
         </div>
     </div>
@@ -32,96 +53,26 @@ import Card from './HighlightCard.vue'
 
 <style scoped>
 
-/* Main Style Start */
-
-.highlight {
-    max-width: 1440px;
-    width: 100%;
-    height: 640px;
-    margin: 0 auto;
-    background:  url("../../../assets/images/Highlight/Highlight.png") no-repeat center/cover;
+.custom-frame {
+    @apply 
+    max-w-[1440px]
+    h-[640px]
+    m-auto
+    bg-[url('./../../../assets/images/Highlight/Highlight.png')]
+    bg-center bg-cover bg-no-repeat
+    md:max-w-[835px]
+    md:h-[630px]
 }
 
 .background {
-    max-width: 1440px;
-    width: 100%;
-    height: 640px;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    padding-bottom: 60px;
-    background:  linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%);
-}
-
-/* Main Style End */
-
-/* Content Styles Start */
-
-.content {
-    max-width: 1050px;
-    width: 100%;
-    min-height: 220px;
-    display: flex;
-}
-
-/* Content Styles End */
-
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 768px) and (max-width: 1279px) { 
-
-    /* Main Style Start */
-    
-    .highlight {
-        max-width: 834px;
-        height: 630px;
-        background: url("../../../assets/images/Highlight/HighlightMedium.png") no-repeat center/cover;
-    }
-
-    .background {
-        min-height: 630px;
-    }
-
-    /* Main Style End */
-
-    /* Content Styles Start */
-
-    .content {
-        max-width: 670px;
-        height: 210px;
-    }
-
-    /* Content Styles End */
-
-}
-
-/* Стилі для мобільних пристроїв */
-@media only screen and (max-width: 767px) { 
-
-    /* Main Style Start */
-    
-    .highlight {
-        max-width: 375px;
-        min-height:500px;
-        background: url("../../../assets/images/Highlight/HighlightMedium.png") center/ cover;
-    }
-
-    .background {
-        min-height: 600px;
-    }
-
-    /* Main Style End */
-
-    /* Content Styles Start */
-
-    .content {
-        max-width: 315px;   
-        min-height: 210px;
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    /* Content Styles End */
-
+    @apply
+    w-[100%]
+    max-w-[1440px]
+    h-full
+    flex justify-center
+    pb-[60px]
+    items-end
+    bg-gradient-to-t from-purple-600 to-transparent
 }
 
 </style>

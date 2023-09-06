@@ -1,14 +1,26 @@
 <template>
-    <div class="card" v-for="card in cards">
-        <div class="preview">
+    <div 
+        class="w-[100%] max-w-[330px] p-[30px] pt-[10px] flex flex-col 
+            gap-[10px] rounded-[20px] bg-bg-secondary md:max-w-[210px] 
+            md:px-[20px] sm:max-w-[315px] sm:flex-row sm:p-[20px] sm:gap-[20px]" 
+        v-for="card in cards"
+    >
+        <div class="flex justify-center items-center">
             <img 
                 :src="getWorkImageUrl(card.icon)" 
                 :alt="card.icon"
-                class="picture">
+                class="sm:w-[100px] sm:h-[100px]"
+            >
         </div>
-        <div class="header">
-            <h2 :class="getTitleClasses()">{{ card.title }}</h2>
-            <p class="text">{{ card.text }}</p>
+        
+        <div class="flex flex-col gap-[10px] justify-center sm:w-[150px]">
+            <h2 class="custom-text-lg text-xl text-center sm:text-base">
+                {{ card.title }}
+            </h2>
+
+            <p class="custom-text-nm text-base text-center  sm:text-xs">
+                {{ card.text }}
+            </p>
         </div>
     </div>
 </template>
@@ -16,7 +28,6 @@
 <script>
 import { useI18n } from 'vue-i18n'
 import { getWorkImageUrl } from '../../../helpers/helpers'
-import { getTitleClasses} from '../../../helpers/localization'
     export default {
         props: {
             cards: {
@@ -33,181 +44,7 @@ import { getTitleClasses} from '../../../helpers/localization'
         },
 
         methods: {
-            getWorkImageUrl,
-            getTitleClasses
+            getWorkImageUrl
         },
     }
 </script>
-
-<style scoped>
-
-/* Main Style Start */
-
-.card {
-    max-width: 330px;
-    width: 100%;
-    padding: 10px 30px 30px 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 20px;
-    background-color: var(--background-secondary);
-}
-
-/* Main Style End */
-
-/* Preview Styles Start */
-
-.preview {
-    display: flex;
-    justify-content: center;
-}
-
-/* Preview Styles End */
-
-/* Header Styles Start */
-
-.header {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-}
-
-/* English Styles Start */
-
-.english-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-    color: var(--text-color-white);
-    text-align: center;
-}
-
-/* English Styles End */
-
-/* Ukrainian Styles Start */
-
-.ukrainian-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 25px;
-    color: var(--text-color-white);
-    text-align: center;
-}
-
-/* Ukrainian Styles End */
-
-.text {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--text-color-white);
-    text-align: center;
-}
-
-/* Header Styles End */
-
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 768px) and (max-width: 1279px) {   
-
-    /* Main Style Start */
-
-    .card {
-        max-width: 210px;
-        padding: 10px 25px 30px 25px;
-    }
-
-    /* Main Style End */
-
-    /* Preview Styles Start */
-
-    .picture {
-        width: 160px;
-    }
-
-    /* Preview Styles End */
-
-    /* Header Styles Start */
-
-    /* English Styles Start */
-
-    .english-title {
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    /* English Styles End */
-
-    /* Ukrainian Styles Start */
-
-    .ukrainian-title {
-        font-size: 18px;
-        line-height: 25px;
-    }
-
-    /* Ukrainian Styles End */
-
-    .text {
-        font-size: 12px;
-        line-height: 14x;
-    }
-
-    /* Header Styles End */
-
-}
-
-/* Стилі для мобільних пристроїв */
-@media only screen and (max-width: 767px) { 
-
-    /* Main Style Start */
-
-    .card {
-        flex-direction: row;
-        max-width: 315px;
-        padding: 20px;
-        gap: 20px;
-    }
-
-    /* Main Style End */
-
-    /* Preview Styles Start */
-
-    .picture {
-        width: 100px;
-    }
-
-    /* Preview Styles End */
-
-    /* Header Styles Start */
-
-    /* English Styles Start */
-
-    .english-title {
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    /* English Styles End */
-
-    /* Ukrainian Styles Start */
-
-    .ukrainian-title {
-        font-size: 14px;
-        line-height: 20px;
-    }
-
-    /* Ukrainian Styles End */
-
-    .text {
-        font-size: 12px;
-        line-height: 12px;
-    }
-
-    /* Header Styles End */
-}
-
-</style>

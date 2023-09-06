@@ -1,15 +1,15 @@
 <template>
-    <div class="category">
+    <div class="m-auto flex flex-col items-center gap-[60px] py-[80px] md:gap-[40px] md:py-[40px] ">
         <!-- Header Start -->
-        <div class="header">
-            <h2 class="title">
+        <div class="max-w-[1050px] w-[100%] md:max-w-[690px] sm:max-w-[315px]">
+            <h2 class="custom-title">
                 {{ $t("Category.title") }}
             </h2>
         </div>
         <!-- Header End -->
 
         <!-- Content Start -->
-        <div class="content">
+        <div class="max-w-[1050px] w-[100%] grid gap-[30px] grid-cols-4 grid-rows-2 md:max-w-[690px] sm:max-w-[315px] sm:grid-cols-2">
             <Card :cards="cards"/>
         </div>
         <!-- Content End -->
@@ -48,130 +48,3 @@ import { useI18n } from 'vue-i18n'
         }
     }
 </script>
-
-<style scoped>
-
-/* Main Styles Start */
-
-.category {
-    min-height: 840px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
-    padding: 80px 0;
-}
-
-/* Main Styles End */
-
-/* Header Styles Start */
-
-.header {
-    max-width: 1050px;
-    width: 100%;
-}
-
-.title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 38px;
-    line-height: 45px;
-    color: var(--text-color-white);    
-}   
-
-/* Header Styles End */
-
-/* Content Styles Start */
-
-.content {
-    max-width: 1050px;
-    width: 100%;
-    min-height: 662px;
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    
-}
-
-/* Content Styles End */
-
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 768px) and (max-width: 1279px) { 
-    
-    /* Main Styles Start */
-    
-    .category {
-        min-height: 630px;
-        gap: 40px;
-        padding: 40px 0;
-    }
-
-    /* Main Styles End */
-    
-    /* Header Styles Start */ 
-
-    .header {
-        max-width: 690px;
-    }
-
-    .title {
-        font-size: 28px;
-        line-height: 39px;
-    }
-
-    /* Header Styles End */
-
-    /* Content Styles Start */
-
-    .content {
-        max-width: 690px;
-        min-height: 470px;
-    }
-
-    /* Content Styles End */
-
-}
-
-/* Стилі для мобільних пристроїв */
-@media only screen and (max-width: 767px) {
-
-    /* Main Styles Start */
-    
-    .category {
-        min-height: 315px;
-        gap: 40px;
-        padding: 40px 0;
-    }
-
-    /* Main Styles End */
-
-    /* Header Styles Start */ 
-
-    .header {
-        max-width: 315px;
-    }
-
-    .title {
-        font-size: 28px;
-        line-height: 39px;
-    }
-
-    /* Header Styles End */
-
-    /* Content Styles Start */
-
-    .content {
-        max-width: 315px;
-        min-height: 470px;
-        gap: 15px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
-
-    /* Content Styles End */
-    
-}
-
-</style>

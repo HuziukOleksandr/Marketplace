@@ -1,27 +1,24 @@
 <template>
-    <div class="timer">
-        <!-- Title Start -->
-        <p class="title">{{ $t("Timer.title") }}</p>
-        <!-- Title End -->
-
-        <!-- Time Start -->
-        <div class="time">
-            <div class="item">
-                <h2 class="number">{{time.hours}}</h2>
-                <p class="text">{{ $t("Timer.hours") }}</p>
+    <div class=" w-[100%] rounded-[20px] flex flex-col gap-[10px] p-[30px] bg-timer-bg self-end">
+        
+        <p class="text-sm custom-text-nm-sec">{{ $t("Timer.title") }}</p>
+        
+        <div class="max-w-[235px] w-[100%] h-[65px] flex justify-between">
+            <div class="w-[53px]">
+                <h2 class="text-2xl custom-text-lg-sec">{{time.hours}}</h2>
+                <p class="text-xs custom-text-nm-sec">{{ $t("Timer.hours") }}</p>
             </div>
-            <h2 class="point">:</h2>
-            <div class="item">
-                <h2 class="number">{{time.minutes}}</h2>
-                <p class="text">{{ $t("Timer.minutes") }}</p>
+            <h2 class="w-[18px] text-2xl custom-text-lg-sec">:</h2>
+            <div class="w-[53px]">
+                <h2 class="text-2xl custom-text-lg-sec">{{time.minutes}}</h2>
+                <p class="text-xs custom-text-nm-sec">{{ $t("Timer.minutes") }}</p>
             </div>
-            <h2 class="point">:</h2>
-            <div class="item">
-                <h2 class="number">{{time.seconds}}</h2>
-                <p class="text">{{ $t("Timer.seconds") }}</p>
+            <h2 class="w-[18px] text-2xl custom-text-lg-sec">:</h2>
+            <div class="w-[53px]">
+                <h2 class="text-2xl custom-text-lg-sec">{{time.seconds}}</h2>
+                <p class="text-xs custom-text-nm-sec">{{ $t("Timer.seconds") }}</p>
             </div>
         </div>
-        <!-- Time End -->
 
         <slot></slot>
     </div>
@@ -93,84 +90,3 @@ import moment from 'moment';
         }
     }
 </script>
-
-<style scoped>
-
-/* Main Styles Start */
-
-.timer {
-    max-width: 295px;
-    width: 100%;
-    min-height: 147px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 30px;
-    border: none;
-    background-color: var(--timer-background);
-    align-self: flex-end;
-}
-
-/* Main Styles End */
-
-/* Title Styles Start */
-
-.title {
-    font-family: 'SpaceMono', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 13px;
-    color: var(--text-color-white);
-}
-
-/* Title Styles End */
-
-/* Time Styles Start */
-
-.time {
-    max-width: 235px;
-    width: 100%;
-    height: 65px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.point {
-    width: 18px;
-    font-family: "SpaceMono", sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 40px;
-    color: var(--text-color-white);
-}
-
-.item {
-    width: 53px;
-}
-.number {
-    font-family: "SpaceMono", sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 45px;
-    color: var(--text-color-white);
-}
-
-.text {
-    font-family: 'SpaceMono', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 13px;
-    color: var(--text-color-white);
-}
-
-/* Time Styles End */
-
-/* Стилі для мобільних пристроїв */
-@media only screen and (max-width: 767px) { 
-    .timer {
-        max-width: 315px;
-    }
-}
-    
-</style>

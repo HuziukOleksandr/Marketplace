@@ -1,28 +1,46 @@
 <template>
-    <div  class="card" v-for="card in cards" :key="card.id" @click="cardClick(card.userName)" >
+    <div  class="hover-styles max-w-[240px] w-[100%] h-[240px] flex flex-col
+        bg-bg-secondary rounded-[20px] p-[20px] custom-creator-card" 
+        v-for="card in cards" 
+        :key="card.id" 
+        @click="cardClick(card.userName)"
+    >
         <!-- Preview Start -->
-        <div class="preview">
-            <div class="number">
-                <h3 class="number-text">{{ card.id }}</h3>
+        <div class="flex gap-[10px] relative lg:mb-[20px]">
+            <div 
+                class="w-[30px] h-[30px] lg:static flex justify-center items-center 
+                    rounded-[20px] text-grey bg-bg-color absolute left-[-8px] top-[-8px]"
+            >
+                <h3 class="text-base font-space font-normal ">
+                    {{ card.id }}
+                </h3>
             </div>
+            
             <img 
                 :src="getUserImageUrl(card.userName)" 
                 :alt="card.userName"
-                class="picture">
+                class="w-[120px] md:w-[60px] sm:w-[60px]"
+            >
         </div>
         <!-- Preview End -->
         
         <!-- Title Start -->
-        <div class="title">
+        <div class="flex flex-col gap-[5px]">
             
-            <h2 class="name-text">
+            <h2 class="text-xl text-center custom-text-lg md:text-start sm:text-start">
                 {{ card.userName }}
             </h2>
             
-            <div class="sale">
-                <h3 class="sale-text">{{ $t("Creators.totalSale") }}</h3>
-                <h3 class="sale-number">{{ card.sale }}</h3>
+            <div class="flex gap-[10px] m-auto">
+                <h3 class="font-serrat font-normal text-base text-grey">
+                    {{ $t("Creators.totalSale") }}
+                </h3>
+
+                <h3 class="text-base custom-text-nm-sec">
+                    {{ card.sale }}
+                </h3>
             </div>
+            
         </div>
         <!-- Title End -->
     </div>
@@ -52,186 +70,10 @@ import {getUserImageUrl} from '../../../helpers/helpers'
 
 <style scoped>
 
-/* Main Style Start */
-
-.card {
-    max-width: 240px;
-    width: 100%;
-    height: 240px;
-    display: flex;
-    flex-direction: column;
-    
-    background-color: var(--background-secondary) ;
-    border-radius: 20px;
-    padding: 20px;
-    transition: 0.2s;
-}
-
-.card:hover {
-    scale: 1.05;
-    cursor: pointer;
-}
-
-/* Main Style End */
-
-/* Preview Styles Start*/
-
-.preview {
-    display: flex;
-    gap: 10px;
-    position: relative;
-}
-
-.number {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    color: var(--text-color-secondary);
-    background-color: var(--background-color);
-}
-
-.number-text {
-    font-family: "SpaceMono", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-}
-
-.picture {
-    width: 120px;
-}
-
-/* Preview Styles End*/
-
-/* Title Styles Start */
-
-.title {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.name-text {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 30px;
-    color: var(--text-color-white);
-    text-align: center;
-}
-
-.sale {
-    display: flex;
-    gap: 10px;
-}
-
-.sale-text {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--text-color-secondary);
-}
-
-.sale-number {
-    font-family: "SpaceMono", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--text-color-white);
-}
-
-/* Title Styles End */
-
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 768px) and (max-width: 1279px) {  
-    
-    /* Main Style Start */
-
-    .card {
-        flex-direction: row;
-        max-width: 330px;
-        height: 100px;
-        justify-content: space-between;
-    }
-
-    /* Main Style End */
-
-    /* Preview Styles Start*/
-
-    .number {
-        position: absolute;
-        right: 40px;
-    }
-
-    /* Preview Styles End*/
-    
-    /* Title Styles Start */
-
-    .title {
-        width: 210px;
-    }
-
-    .name-text {
-        text-align: start;
-    }
-
-    .picture {
-        width: 60px;
-    }
-
-    /* Title Styles End */
-
-}
-
-/* Стилі для мобільних пристроїв */
-@media only screen and (max-width: 767px) {
-
-    /* Main Style Start */
-
-    .card {
-        max-width: 315px;
-        height: 100px;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    /* Main Style End */
-
-    /* Preview Styles Start*/
-
-    .preview {
-        width: 60px;  
-    }
-
-    .number {
-        position: absolute;
-        left: -10px;
-        top: -10px;
-    }
-
-    /* Preview Styles End*/
-
-    /* Title Styles Start */
-
-    .title {
-        width: 195px;
-    }
-
-    .name-text {
-        text-align: start;
-    }
-
-    .picture {
-        width: 60px;
-    }
-
-    /* Title Styles End */
-    
+.hover-styles {
+    @apply
+    hover:scale-102 hover:cursor-pointer
+    transition duration-300 
 }
 
 </style>

@@ -1,32 +1,44 @@
 <template>
-    <div class="section">
-        <div class="picture"></div>
-        <div class="form">
-            <h2 class="title">{{ $t("ConnectAWallet.title") }}</h2>
-            <h3 class="sub-title">{{ $t("ConnectAWallet.subTitle") }}</h3>
-            <div class="buttons">
+    <div class="w-[100%]  m-auto flex justify-between max-w-[1280px] 
+            md:max-w-[835px] sm:max-w-[315px] sm:flex-col sm:gap-[40px]"
+    >
+        <div class="picture w-[100%] max-w-[610px] 
+            md:max-w-[400px] sm:max-w-[315px] sm:h-[280px]"
+        ></div>
+        
+        <div 
+            class="w-[100%] py-[100px] flex flex-col max-w-[610px] 
+                md:max-w-[325px] md:py-[80px]
+                sm:max-w-[315px] sm:py-[30px]"
+        >
+            <h2 class="custom-text-lg text-5xl mb-[20px] sm:text-3xl">{{ $t("ConnectAWallet.title") }}</h2>
+            <h3 class="custom-sub-title mb-[40px]">{{ $t("ConnectAWallet.subTitle") }}</h3>
+            <div class="flex flex-col gap-[20px]">
                 <my-button class="button">
                     <img 
                         src="../../assets/images/Wallet/Metamask.svg" 
                         alt="Metamask"
-                        class="icon">
-                    {{ $t("ConnectAWallet.metamask") }}
+                        class="icon"
+                    >
+                        {{ $t("ConnectAWallet.metamask") }}
                 </my-button>
 
                 <my-button class="button">
                     <img 
                         src="../../assets/images/Wallet/WalletConnect.svg" 
                         alt="WalletConnect"
-                        class="icon">
-                    {{ $t("ConnectAWallet.walletConnect") }}
+                        class="icon"
+                    >
+                        {{ $t("ConnectAWallet.walletConnect") }}
                 </my-button>
 
                 <my-button class="button">
                     <img 
                         src="../../assets/images/Wallet/Coinbase.svg" 
                         alt="Coinbase"
-                        class="icon">
-                    {{ $t("ConnectAWallet.coinbase") }}
+                        class="icon"
+                    >
+                        {{ $t("ConnectAWallet.coinbase") }}
                 </my-button>
             </div>
             
@@ -34,161 +46,25 @@
     </div>
 </template>
 
-<script>
-    export default {
-        
-    }
-</script>
-
 <style scoped>
 
-.section {
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-
 .picture {
-    max-width: 610px;
-    width: 100%;
-    background: url('../../assets/images/Wallet/Picture.jpg') no-repeat;
-}
-
-.form {
-    max-width: 610px;
-    width: 100%;
-    padding: 100px 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.title {
-    color: var(--text-color-white);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 51px;
-    line-height: 56px;
-    text-align: start;
-    margin-bottom: 20px;
-}
-
-.sub-title {
-    color: var(--text-color-white);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 35px;
-    margin-bottom: 40px;
-}
-
-.buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.icon {
-    width: 40px;
+    @apply 
+    bg-[url('./../../assets/images/Wallet/Picture.jpg')]
+    bg-no-repeat
+    bg-cover
+    bg-center
 }
 
 .button {
-    max-width: 320px;
-    width: 100%;
-    height: 72px;
-    display: flex;
-    gap: 10px;
-    padding: 0 20px 0 40px;
-    background-color: var(--background-secondary);
-    border: 2px solid var(--button-background-color);
-    color: var(--text-color-white);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 30px;
-}
-
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 768px) and (max-width: 1279px) {   
-
-    .section {
-        max-width: 834px;
-        min-height: 530px;
-    }
-
-    .picture {
-        max-width: 397px;
-        background: url('../../assets/images/Wallet/PictureMedium.jpg') center/cover;
-    }
-    .form{
-        max-width: 325px;
-        padding: 80px 0;
-        min-height: 530px;
-    }
-
-    .title {
-        font-size: 33px;
-        line-height: 45px;
-    }
-
-    .sub-title {
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .title, .sub-title{
-        max-width: 325px;
-        width: 100%;
-    }
-    .icon {
-        width: 32px;
-    }
-
-    .button {
-        width: 325px;
-        height: 60px;
-    }
-}
-
-/* Медіа-запит для мобільних пристроїв з шириною екрану до 767px */
-@media only screen and (max-width: 767px) {
-
-    .section {
-        max-width: 375px;
-        min-height: 662px;
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .picture {
-        max-width: 375px;
-        min-height: 232px;
-        background-image: url('../../assets/images/Wallet/PictureSmall.jpg');
-    }
-
-    .form {
-        max-width: 315px;
-        padding: 30px 0;
-        min-height: 430px;
-        margin: 0 auto;
-    }
-
-    .title {
-        font-size: 26px;
-        line-height: 30px;
-    }
-
-    .sub-title {
-        font-size: 16px;
-        line-height: 22px;  
-    }
-
-    .button {
-        width: 315px;
-        height: 60px;
-    }
-
+    @apply w-[100%] h-[72px] max-w-[320px]
+    flex gap-[10px]
+    pr-[20px] pl-[40px]
+    bg-bg-secondary text-white
+    font-serrat font-semibold text-2xl
+    border-2 border-solid border-btn-bg-color
+    transition duration-300
+    hover:scale-102
 }
 
 </style>

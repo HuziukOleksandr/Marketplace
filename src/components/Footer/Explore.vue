@@ -1,7 +1,8 @@
 <template>
-    <div class="explore">
-        <h2 class="explore-header">{{ $t("Footer.explore") }}</h2>
-        <Navigation class="navigation" :link-item-styles="customLinkItemStyles"/>
+    <div class="max-w-[240px] w-[100%] ">
+        <h2 class="text-xl mb-[25px] custom-text-lg-sec">{{ $t("Footer.explore") }}</h2>
+        <Navigation 
+            :linkItemStyles="styles"/>
     </div>
 </template>
 
@@ -15,35 +16,8 @@ import Navigation from '../Navigation/Navigation.vue'
 
         data(){
             return{
-                customLinkItemStyles: {
-                    color: "var(--text-color-secondary)",
-                },
+                styles: "text-grey items-center flex mb-5"
             }
         }
     }
 </script>
-
-<style scoped>
-
-.explore {
-    max-width: 240px;
-    width: 100%;
-}
-
-.explore-header {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 35px;
-    color: var(--text-color-white);
-    margin-bottom: 30px;
-}
-
-.navigation {
-    display: flex;
-    flex-direction: column ;
-    gap: 20px;
-}
-
-</style>
-

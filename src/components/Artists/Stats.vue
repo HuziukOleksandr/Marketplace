@@ -45,7 +45,7 @@
 
 /* Main Styles Start */
 
-.stats {
+/* .stats {
     max-width: 510px;
     width: 100%;
     height: 75px;
@@ -71,13 +71,13 @@
     font-size: 22px;
     line-height: 35px;
     color: var(--text-color-white);
-}
+} */
 
 /* Main Styles End */
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (max-width: 1279px) {
-    .number {
+    /* .number {
         font-size: 22px;
         line-height: 35px;
     }
@@ -85,7 +85,7 @@
     .text {
         font-size: 16px;
         line-height: 22px;
-    }
+    } */
 }
 
 </style>

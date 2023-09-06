@@ -108,7 +108,7 @@ import axios from 'axios'
 
 <style scoped>
 
-.section {
+/* .section {
     min-height: 400px;
     display: flex;
     flex-direction: column;
@@ -223,14 +223,14 @@ import axios from 'axios'
 }
 .active {
     border-bottom: 3px solid var(--text-color-secondary);
-}
+} */
 
 
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
 
-    .header {
+    /* .header {
         max-width: 690px;  
     }
 
@@ -251,14 +251,14 @@ import axios from 'axios'
     .content {
         max-width: 690px;
         grid-template-columns: repeat(2, 1fr);
-    }
+    } */
 
 }
 
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
 
-    .header {
+    /* .header {
         max-width: 315px;  
     }
 
@@ -293,7 +293,7 @@ import axios from 'axios'
 
     .number {
         display: none;
-    }
+    } */
 
 }
 </style>

@@ -1,8 +1,13 @@
 <template>
-    <div class="input-wrapper">
-        <input v-bind="$attrs"  class="input" @input="updateInput" type="text" />
-        <div class="image-slot">
-            <slot name="image"></slot>
+    <div class="h-[60px] flex gap-[10px] rounded-[20px] px-[20px] py-[18px] border-2 border-bg-secondary border-solid">
+        <input 
+            v-bind="$attrs"  
+            class="font-base focus:outline-none custom-text-nm" 
+            @input="updateInput" 
+            type="text"/>
+
+        <div class="h-[24px] hover:cursor-pointer">
+            <slot></slot>
         </div>
     </div>
 </template>
@@ -18,38 +23,3 @@
         }
     }
 </script>
-
-<style scoped>
-.input-wrapper {
-    display: flex;
-    gap: 10px;
-    border-radius: 20px;
-    height: 60px;
-    border: 1px solid  var(--background-secondary);
-    padding: 18px 20px;
-}
-
-.input {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--text-color-white);
-}
-
-.image-slot {
-    height: 24px;
-}
-
-.image-slot:hover {
-    cursor: pointer;
-}
-.input:focus {
-    outline: none;
-}
-
-.input {
-    width: 100%;
-    height: 100%;
-}
-</style>

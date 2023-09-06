@@ -147,7 +147,7 @@ export default {
 
 <style scoped>
 
-.section {
+/* .section {
     width: 100%;
     min-height: 560px;
 }
@@ -168,10 +168,10 @@ export default {
     min-height: 300px;
     margin: 0 auto;
     padding: 40px 0;
-}
+} */
 /* Aside stylesa Start */
 
-.aside {
+/* .aside {
     max-width: 605px;
     width: 100%;
 }
@@ -239,11 +239,11 @@ export default {
     font-size: 22px;
     line-height: 35px;
     color: var(--text-color-white);
-}
+} */
 
 /* Aside stylesa End */
 
-.timer {
+/* .timer {
     align-self: flex-start;
 }
 
@@ -263,11 +263,11 @@ export default {
 
 .timer-second {
     display: none;
-}
+} */
 
 /* Container Styles Start */
 
-.container {
+/* .container {
     display: flex;
     flex-direction: column;
     padding: 80px 0;
@@ -317,23 +317,23 @@ export default {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-}
+} */
 /* Container Styles End */
 
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
-    .background {
+    /* .background {
         height: 420px;
     }
 
     .preview {
         max-width: 690px;
-    }
+    } */
 
     /* Aside stylesa Start */
 
-    .aside {
+    /* .aside {
         max-width: 365px;
     }
 
@@ -365,13 +365,13 @@ export default {
 
     .link-icon {
         width: 24px;
-    }
+    } */
 
     /* Aside stylesa End */
 
     /* Container Styles Start */
 
-    .container {
+    /* .container {
         padding: 40px 0;
     }
 
@@ -384,9 +384,9 @@ export default {
         align-items: center;
         justify-content: space-between;
 
-    }
+    } */
 
-    .title {
+    /* .title {
         font-size: 28px;
         line-height: 38px;
     }
@@ -394,7 +394,7 @@ export default {
     .content {
         max-width: 690px;
         grid-template-columns: repeat(2, 1fr);
-    }
+    } */
     /* Container Styles End */
 
 }
@@ -402,17 +402,17 @@ export default {
 
 /* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
-    .background {
+    /* .background {
         height: 320px;
     } 
 
     .preview {
         max-width: 315px;
-    }
+    } */
 
     /* Aside stylesa Start */
 
-    .aside {
+    /* .aside {
         width: 100%;
     }
 
@@ -449,11 +449,11 @@ export default {
 
     .link-icon {
         width: 24px;
-    }
+    } */
 
     /* Aside stylesa End */
 
-    .timer {
+    /* .timer {
         display: none;
     }
 
@@ -464,11 +464,11 @@ export default {
 
     .timer-button {
         width: 100%;
-    }
+    } */
 
     /* Container Styles Start */
 
-    .container {
+    /* .container {
         padding: 40px 0;
         gap: 30px;
     }
@@ -482,9 +482,9 @@ export default {
         align-items: center;
         justify-content: space-between;
 
-    }
+    } */
 
-    .title {
+    /* .title {
         font-size: 22px;
         line-height: 36px;
     }
@@ -511,7 +511,7 @@ export default {
     .content {
         max-width:  315px;
         grid-template-columns: repeat(1, 1fr);
-    }
+    } */
     /* Container Styles End */
 
 }

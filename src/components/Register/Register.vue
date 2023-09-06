@@ -42,7 +42,7 @@
 
 <style scoped>
 
-.section {
+/* .section {
     max-width: 1280px;
     width: 100%;
     height: 690px;
@@ -108,12 +108,12 @@
     width: 100%;
     height: 45px;
     padding: 0 30px;
-}
+} */
 
 /* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
 
-    .section {
+    /* .section {
         max-width: 834px;
         width: 100%;
         height: 615px;
@@ -165,13 +165,13 @@
 
     .button {
         width: 325px;
-    }
+    } */
 }
 
 /* Медіа-запит для мобільних пристроїв з шириною екрану до 767px */
 @media only screen and (max-width: 767px) {
 
-    .section{
+    /* .section{
         max-width: 375px;
         width: 100%;
         min-height: 775px;
@@ -225,7 +225,7 @@
 
     .button{
         width: 315px;
-    }
+    } */
 
 }
 </style>
