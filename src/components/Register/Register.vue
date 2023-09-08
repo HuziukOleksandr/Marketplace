@@ -1,10 +1,10 @@
 <template>
-    <div class="section">
+    <div class="section w-[100%] max-w-[1280px] h-[80vh] m-auto flex justify-between roundet-[20px]">
         <div class="picture"></div>
-        <div class="form">
-            <h2 class="title">{{ $t("Register.title") }}</h2>
-            <h3 class="sub-title">{{ $t("Register.subTitle") }}</h3>
-            <div class="inputs">
+        <div class="form w-[100%] max-w-[610px] flex flex-col justify-center">
+            <h2 class="custom-text-lg mb-[20px] lg:text-5xl  text-4xl">{{ $t("Register.title") }}</h2>
+            <h3 class="custom-sub-title mb-[40px]">{{ $t("Register.subTitle") }}</h3>
+            <div class="flex flex-col gap-[15px] mb-[30px]">
                 <my-input class="input" :placeholder="$t('Register.userName')">
                     <template #image>
                         <img src="../../assets/images/Register/User.svg" alt="User" />
@@ -42,190 +42,37 @@
 
 <style scoped>
 
-/* .section {
-    max-width: 1280px;
-    width: 100%;
-    height: 690px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+.section {
+    @apply 
+    md:max-w-[835px] md:h-[60wh] 
+    sm:max-w-[375px] sm:min-h-[100vh] sm:flex-col
 }
 
 .picture {
-    max-width: 610px;
-    width: 100%;
-    background-image: url('../../assets/images/Register/Picture.svg');
+    @apply w-[100%] max-w-[610px] h-[100%]
+    bg-[url('../../assets/images/Register/Picture.svg')]
+    bg-cover bg-center bg-no-repeat
+    md:max-w-[397px]
+    sm:max-w-[375px]
 }
 
 .form {
-    max-width: 610px;
-    width: 100%;
-    padding: 100px 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.title {
-    color: var(--text-color-white);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 51px;
-    line-height: 56px;
-    text-align: start;
-    margin-bottom: 20px;
-}
-
-.sub-title {
-    color: var(--text-color-white);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 35px;
-    margin-bottom: 40px;
-}
-
-.inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.button {
-    max-width: 330px;
-    width: 100%;
-    height: 45px;
-    justify-content: center;
-    background-color: var(--button-background-color);
-    border: none;
-    color: var(--text-color-white);
-    font-size: 16px;
-    line-height: 22px;
+    @apply 
+    md:max-w-[397px] 
+    sm:max-w-[315px] sm:m-auto sm:py-[30px]
 }
 
 .input {
-    max-width: 330px;
-    width: 100%;
-    height: 45px;
-    padding: 0 30px;
-} */
-
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
-
-    /* .section {
-        max-width: 834px;
-        width: 100%;
-        height: 615px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .picture {
-        max-width: 397px;
-        width: 100%;
-        background-image: url('../../assets/images/Register/PictureMedium.svg');
-    }
-
-    .form {
-        max-width: 397px;
-        width: 100%;
-        padding: 80px 0;
-        height: 615px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .title {
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 38px;
-        line-height: 45px;
-        text-align: start;
-        margin-bottom: 20px;
-    }
-
-    .sub-title {
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        margin-bottom: 40px;
-    }
-
-    .input {
-        max-width: 325px;
-        width: 100%;
-        height: 45px;
-        padding: 0 30px;
-    }
-
-    .button {
-        width: 325px;
-    } */
+    @apply w-[100%] h-[45px] 
+    max-w-[330px] md:max-w-[325px]
 }
 
-/* Медіа-запит для мобільних пристроїв з шириною екрану до 767px */
-@media only screen and (max-width: 767px) {
-
-    /* .section{
-        max-width: 375px;
-        width: 100%;
-        min-height: 775px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .picture{
-        max-width: 375px;
-        width: 100%;
-        min-height: 232px;
-        background-image: url('../../assets/images/Register/PictureSmall.svg');
-    }
-    .form{
-        max-width: 315px;
-        width: 100%;
-        padding: 30px 0;
-        height: 615px;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-    }
-
-    .title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 34px;
-        line-height: 45px;
-        text-align: start;
-        margin-bottom: 20px;
-    }
-
-    .sub-title{
-        color: var(--text-color-white);
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        margin-bottom: 40px;
-    }
-
-    .input{
-        max-width: 315px;
-        width: 100%;
-        height: 45px;
-        padding: 0 30px;
-    }
-
-    .button{
-        width: 315px;
-    } */
-
+.button { 
+    @apply h-[45px] w-[330px] 
+    px-[50px] 
+    bg-btn-bg-color text-white  flex justify-center
+    md:w-[325px]
+    sm:w-[315px]
 }
+
 </style>

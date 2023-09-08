@@ -1,9 +1,9 @@
 <template>
-    <div class="flex">
-        <div class="image-slot">
+    <div class="flex items-center relative ">
+        <div class="absolute left-3">
             <slot name="image"></slot>
         </div>
-        <input v-bind="$attrs"  class=" bg-white text-base custom-text-input focus:outline-none px-5" />
+        <input v-bind="$attrs"  class="input custom-text-input" />
     </div>
 </template>
 
@@ -12,3 +12,16 @@
         name: "my-input"
     }
 </script>
+
+<style scoped>
+
+
+
+.input {
+    @apply 
+    w-[100%] h-[100%] 
+    bg-white text-base focus:outline-none 
+    px-5 rounded-[20px]
+}
+
+</style>

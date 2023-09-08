@@ -1,7 +1,7 @@
 <template>
     <div 
-        class="max-w-[330px] w-[100%] flex flex-col hover:cursor-pointer rounded-[20px]" 
-        :style="{ backgroundColor: background}"
+        class="max-w-[330px] w-[100%] flex flex-col hover:cursor-pointer rounded-[20px] " 
+        :style="{ 'background-color': background}"
         @click="cardClick(card.id)"
     >
         <img 
@@ -9,7 +9,7 @@
             :alt="card.name"
         >
         
-        <div class="px-[30px] pt-[20px] pb-[25px] h-[100%] bg-bg-secondary rounded-b-[20px]">
+        <div class="px-[30px] pt-[20px] pb-[25px] h-[100%]  rounded-b-[20px]">
             <h2 class="text-xl mb-[5px] text-start custom-text-lg">
                 {{ card.name }}
             </h2>
