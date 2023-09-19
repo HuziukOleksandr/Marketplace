@@ -1,7 +1,7 @@
 <template>
-    <div class="m-auto flex flex-col items-center gap-[60px] py-[80px] md:gap-[40px] md:py-[40px] ">
+    <div class="custom-frame-styles">
         <!-- Header Start -->
-        <div class="max-w-[1050px] w-[100%] md:max-w-[690px] sm:max-w-[315px]">
+        <div class="w-[100%]">
             <h2 class="custom-title">
                 {{ $t("Category.title") }}
             </h2>
@@ -9,7 +9,7 @@
         <!-- Header End -->
 
         <!-- Content Start -->
-        <div class="max-w-[1050px] w-[100%] grid gap-[30px] grid-cols-4 grid-rows-2 md:max-w-[690px] sm:max-w-[315px] sm:grid-cols-2">
+        <div class="w-[100%] grid gap-[30px] grid-cols-4 grid-rows-2 sm:grid-cols-2">
             <Card :cards="cards"/>
         </div>
         <!-- Content End -->

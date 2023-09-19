@@ -1,28 +1,28 @@
 <template>
-    <div class="stats">
+    <div class="w-[100%] max-w-[510px] h-[75px] flex justify-between">
         <div class="item">
-            <div class="number">
+            <div class="number custom-text-lg-sec">
                 {{ stats.volume }}+
             </div>
-            <div class="text">
+            <div class="text custom-text-nm">
                 {{ $t("Artist.volume") }}
             </div>
         </div>
 
         <div class="item">
-            <div class="number">
+            <div class="number custom-text-lg-sec">
                 {{ stats.sold }}+
             </div>
-            <div class="text">
+            <div class="text custom-text-nm">
                 {{ $t("Artist.sold") }}
             </div>
         </div>
 
         <div class="item">
-            <div class="number">
+            <div class="number custom-text-lg-sec">
                 {{ stats.followers }}+
             </div>
-            <div class="text">
+            <div class="text custom-text-nm">
                 {{ $t("Artist.followers") }}
             </div>
         </div>
@@ -43,49 +43,16 @@
 
 <style scoped>
 
-/* Main Styles Start */
-
-/* .stats {
-    max-width: 510px;
-    width: 100%;
-    height: 75px;
-    display: flex;
-    justify-content: space-between;
-}
-
 .item {
-    width: 155px;
+    @apply w-[155px]
 }
 
 .number {
-    font-family: "SpaceMono", sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 39px;
-    color: var(--text-color-white);
+    @apply text-2xl sm:text-base
 }
 
 .text {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 35px;
-    color: var(--text-color-white);
-} */
-
-/* Main Styles End */
-
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (max-width: 1279px) {
-    /* .number {
-        font-size: 22px;
-        line-height: 35px;
-    }
-
-    .text {
-        font-size: 16px;
-        line-height: 22px;
-    } */
+    @apply text-xl sm:text-base
 }
 
 </style>

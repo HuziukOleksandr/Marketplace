@@ -1,9 +1,9 @@
     <template>
-    <div class="min-h-[840px] m-auto flex flex-col items-center gap-[15px] py-20 md:max-w-[690px] sm:max-w-[315px]">
+    <div class="custom-frame-styles">
         <!-- Header Start -->
-        <div class="max-w-[1050px] w-[100%] flex justify-between items-end md:max-w-[690px] sm:max-w-[315px]">
-            <div class="max-w-[700px] w-[100%] flex flex-col gap-[10px] md:w-[400px]">
-                <h2 class="custom-title">
+        <div class="w-[100%] flex justify-between items-end">
+            <div class="max-w-[700px] w-[100%] md:w-[400px]">
+                <h2 class="custom-title mb-[10px]">
                     {{ $t("Creators.title") }}
                 </h2>
 
@@ -26,7 +26,7 @@
         <!-- Header End -->
 
         <!-- Content Start -->
-        <div class="max-w-[1050px] w-[100%] m-auto grid gap-[30px] grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+        <div class="custom-grid-creators">
             <Card :cards="artists.slice(0, 12)" />
         </div>
         <!-- Content End -->
@@ -69,3 +69,16 @@ import axios from 'axios'
         }
     }
 </script>
+
+<style scoped>
+
+.custom-grid-creators {
+    @apply w-[100%]
+    grid 
+    grid-cols-4 
+    md:grid-cols-2 
+    sm:grid-cols-1
+    gap-[30px]
+}
+
+</style>

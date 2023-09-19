@@ -1,9 +1,10 @@
 <template>
-    <div class="custom-frame-styles ">
+    <div class="custom-frame-styles">
         <!-- Header Start -->
-        <div class="flex justify-between items-end w-[100%]">
-            <div class="max-w-[700px] w-[100%] flex flex-col gap-[10px] md:w-[400px]">
-                <h2 class="custom-title">
+        <div class="w-[100%] flex justify-between items-end">
+            <div class="w-[100%] max-w-[700px] md:w-[400px]">
+
+                <h2 class="custom-title mb-[10px]">
                     {{ $t("Discover.title") }}
                 </h2>
 
@@ -27,7 +28,7 @@
         <!-- Header End -->
 
         <!-- Content Start -->
-        <div class="content">
+        <div>
             <carousel :items-to-show="slides" >
                 <slide v-for="card in cards" :key="card.id">
                     <my-card 

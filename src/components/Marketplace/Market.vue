@@ -27,22 +27,28 @@
         <!-- Header End -->
 
         <!-- Content Start -->
-        <div class=" w-[100%]">
-            <div class=" h-[70px] container-header sm:h-[60px]">
+        <div class="w-[100%]">
+            <div class="container-header h-[70px] sm:h-[60px]">
                 <div class="w-[100%] m-auto flex max-w-[1050px] md:max-w-[690px] sm:max-w-[315px]">
                     <div 
                         class="item" 
                         :class="{ active: this.active === 'NFT' }" 
-                        @click="changeTabs('NFT')">
-                            <div class="link ">{{ $t("Marketplace.NFT") }}</div>
-                            <div class="number">{{ cards.length }}</div>
+                        @click="changeTabs('NFT')"
+                    >
+                        <div class="link ">
+                            {{ $t("Marketplace.NFT") }}
+                        </div>
+
+                        <div class="number">
+                            {{ cards.length }}
+                        </div>
                     </div>
                     <div
                         class="item"   
                         @click="changeTabs('Collection')" 
                         :class="{ active: this.active === 'Collection' }"
                     >
-                        <div href="" class="link" >
+                        <div href="" class="link">
                             {{ $t("Marketplace.collection") }}
                         </div>
 
@@ -58,19 +64,19 @@
                         v-for="card in searchCard(cards)"
                         v-if="this.active === 'NFT'"
                     >
-                            <my-card 
-                                :card="card"
-                                :background="background"
-                            />
+                        <my-card 
+                            :card="card"
+                            :background="background"
+                        />
                     </div>
                     
                     <div 
                         v-for="collection in searchCard(collections)"
                         v-if="this.active === 'Collection'"
                     >
-                            <my-collection 
-                                :collection="collection"
-                            />
+                        <my-collection 
+                            :collection="collection"
+                        />
                     </div>
                 </div>
             </div>
@@ -167,7 +173,7 @@ import axios from 'axios'
 .content {
     @apply 
     grid-cols-3 md:grid-cols-2 sm:grid-cols-1
-    max-w-[1050px] md:max-w-[690px] sm:max-w-[315]
+    max-w-[1050px] md:max-w-[690px] sm:max-w-[315px]
 }
 
 .active > .link {

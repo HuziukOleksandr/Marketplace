@@ -1,9 +1,8 @@
 <template>
-    <div class="w-[100%] custom-frame md:max-w-[835px] sm:max-w-[375px]">
+    <div class="custom-frame">
         <div class="background">
             <div 
-                class="w-[100%] flex  max-w-[1050px] 
-                    md:max-w-[690px] 
+                class="w-[100%] flex  max-w-[1050px] md:max-w-[690px] 
                     sm-max-w-[315px] sm:flex-col sm:items-center sm:gap-[30px]"
             >
                 <Card :card="card"/>
@@ -55,6 +54,7 @@ import Card from './HighlightCard.vue'
 
 .custom-frame {
     @apply 
+    w-[100%]
     max-w-[1440px]
     h-[640px]
     m-auto

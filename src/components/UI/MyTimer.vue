@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-[100%] rounded-[20px] flex flex-col gap-[10px] p-[30px] bg-timer-bg self-end">
+    <div class=" w-[100%] rounded-[20px] flex flex-col gap-[10px] p-[30px] bg-timer-bg">
         
         <p class="text-sm custom-text-nm-sec">{{ $t("Timer.title") }}</p>
         

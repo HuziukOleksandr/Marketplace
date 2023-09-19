@@ -52,12 +52,32 @@
 
 /* Title and Sub-Title End */
 
+/* Custom Size Styles Start */
 
 .custom-frame-styles {
     @apply 
     m-auto flex flex-col items-center gap-[60px] py-[80px] w-[100%] max-w-[1050px] 
     md:max-w-[690px] 
     sm:max-w-[315px] sm:gap-[40px] sm:py-[40px]
+}
+
+.custom-wrapper {
+    @apply w-[100%]
+    lg:max-w-[1050px]
+    md:max-w-[690px]
+    sm:max-w-[315px]
+    m-auto
+}
+
+/* Custom Size Styles End */
+
+/* Custom Buttons Styles Start */
+
+.custom-btn {
+    @apply 
+    h-[60px] px-[50px] 
+    bg-btn-bg-color
+    text-white
 }
 
 .custom-empty-btn {
@@ -68,3 +88,6 @@
     border-btn-bg-color 
     text-white
 }
+
+/* Custom Buttons Styles End */
+

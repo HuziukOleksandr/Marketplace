@@ -1,7 +1,7 @@
 <template>
-    <div class="links">
-        <h3 class="links-title">{{ $t("Artist.links") }}</h3>
-        <div class="links-icons">
+    <div class="flex flex-col gap-[10px]">
+        <h3 class="font-space font-semibold text-grey text-xl sm:text-base">{{ $t("Artist.links") }}</h3>
+        <div class="flex gap-[10px]">
             <img 
                 src="../../assets/images/svg/InternetLogo.svg" 
                 alt="InternetLogo" 
@@ -34,42 +34,9 @@
 
 <style scoped>
 
-/* .links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.links-title {
-    font-family: 'SpaceMono', sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 35px;
-    color: var(--text-color-secondary);
-}
-
-.links-icons {
-    display: flex;
-    gap: 10px;
-}
-
 .link {
-    transition: 0.2s;
+    @apply transition duration-300 hover:scale-102 hover:cursor-pointer
+    sm:w-[24px]
 }
 
-.link:hover {
-    cursor: pointer;
-    scale: 1.02;
-} */
-
-@media only screen and (max-width: 1279px) {
-    /* .links-title {
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .link {
-        width: 24px;
-    } */
-}
 </style>

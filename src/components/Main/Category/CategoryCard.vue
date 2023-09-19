@@ -8,17 +8,21 @@
             <img 
                 :src="getCategoryImageUrl(card.background)" 
                 :alt="card.background" 
-                class="blur-sm bg-img">
+                class="blur-sm bg-img"
+            >
             <img 
                 :src="getCategoryIconUrl(card.image)" 
                 :alt="card.image" 
-                class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] preview-icon">
+                class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] preview-icon"
+            >
         </div>
         <!-- Preview Start -->
 
         <!-- Title Start -->
         <div class="px-[30px] py-[20px] title md:px-[20px] sm:px-[20px]">
-            <h2 class="text-2xl custom-text-lg md:text-base sm:text-base">{{ card.name}}</h2>
+            <h2 class="text-2xl custom-text-lg md:text-base sm:text-base">
+                {{ card.name}}
+            </h2>
         </div>
         <!-- Title End -->
     </div>

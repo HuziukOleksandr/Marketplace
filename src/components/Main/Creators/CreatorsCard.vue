@@ -1,5 +1,5 @@
 <template>
-    <div  class="hover-styles max-w-[240px] w-[100%] h-[240px] flex flex-col
+    <div  class="hover-styles  max-w-[240px] h-[240px] flex flex-col
         bg-bg-secondary rounded-[20px] p-[20px] custom-creator-card" 
         v-for="card in cards" 
         :key="card.id" 
@@ -19,15 +19,14 @@
             <img 
                 :src="getUserImageUrl(card.userName)" 
                 :alt="card.userName"
-                class="w-[120px] md:w-[60px] sm:w-[60px]"
+                class="lg:w-[120px] w-[60px]"
             >
         </div>
         <!-- Preview End -->
         
         <!-- Title Start -->
-        <div class="flex flex-col gap-[5px]">
-            
-            <h2 class="text-xl text-center custom-text-lg md:text-start sm:text-start">
+        <div>
+            <h2 class="mb-[5px] text-xl custom-text-lg lg:text-center text-start">
                 {{ card.userName }}
             </h2>
             

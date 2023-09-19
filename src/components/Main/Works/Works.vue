@@ -1,8 +1,8 @@
 <template>
     <div class="custom-frame-styles">
         <!-- Header Start -->
-        <div class="w-[100%] flex flex-col gap-[10px] max-w-[1050px] md:max-w-[690px] sm:max-w-[315px] ">
-            <h2 class="custom-title">
+        <div class="w-[100%]">
+            <h2 class="custom-title mb-[10px]">
                 {{ $t("Works.title") }}
             </h2>
             
@@ -14,8 +14,7 @@
 
         <!-- Content Start -->
         <div 
-            class="w-[100%] flex justify-between gap-[30px] max-w-[1050px]
-                md:max-w-[690px] sm:max-w-[315px] sm:flex-col sm:gap-[20px]"
+            class="w-[100%] flex justify-between gap-[30px] sm:flex-col sm:gap-[20px]"
         >
             <Card :cards="cards"/>
         </div>

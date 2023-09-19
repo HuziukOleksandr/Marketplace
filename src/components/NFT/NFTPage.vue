@@ -1,86 +1,129 @@
 <template>
-    <div class="section">
-        <div class="background" :style="{ backgroundImage: backgroundImage }"></div>
-        <div class="preview">
-            <div class="aside">
-                <h2 class="name">
+    <div class="w-[100%]">
+        <div 
+            class="w-[100%] h-[560px] md:h-[420px] sm:h-[320px] 
+                bg-no-repeat bg-center bg-cover"
+            :style="{ 'background-image': backgroundImage }"
+        >
+        </div>
+
+        <div 
+            class="custom-wrapper flex justify-between py-[40px] " 
+        >
+
+            <div class="custom-wrapper">
+
+                <h2 class="custom-text-lg mb-[10px] text-5xl md:text-4xl sm:text-2xl">
                     {{ card.name }}
                 </h2>
-                <div class="date">
+
+                <div class="font-space font-normal lg:text-xl text-grey mb-[30px] text-base sm:mb-[20px]">
                     {{ $t("NFTPage.minted") }} {{ card.minted }}
                 </div>
-                <my-timer class="timer-second" :endtime="card.auction">
-                    <my-button class="timer-button">
+
+                <my-timer 
+                    class="hidden sm:flex mb-[20px]" 
+                    :endtime="card.auction"
+                >
+
+                    <my-button class="custom-btn justify-center">
                         {{ $t("NFTPage.timerButton") }}
                     </my-button>
                 </my-timer>
-                <div class="created">
+
+                <div class="text-lg">
                     {{ $t("NFTPage.created") }}
                 </div>
 
-                <my-user class="user" :userName="card.userName"/>
+                <my-user 
+                    class="mb-[30px] sm:mb-[20px]" 
+                    :userName="card.userName"
+                />
 
-                <div class="description">
+                <div class="text-lg">
                     {{ $t("NFTPage.description") }}
                 </div>
-                <p class="text">
+
+                <p class="custom-text-nm lg:text-xl mb-[30px] text-base sm:w-315px">
                     {{ card.description }}
                 </p>
 
-                <div class="details">
+                <div class="text-lg">
                     {{ $t("NFTPage.details") }}
                 </div>
-                <div class="links">
+
+                <div class="flex flex-col gap-[10px] mb-[30px]">
                     <div class="link">
                         <img 
                             src="../../assets/images/svg/InternetLogo.svg" 
                             alt="InternetLogo"
-                            class="link-icon">
-                        <div class="link-title">{{ $t("NFTPage.etherscan") }}</div>
+                            class="sm:w-[24px]"
+                        >
+
+                        <div class="custom-text-nm lg:text-xl text-base">
+                            {{ $t("NFTPage.etherscan") }}
+                        </div>
                     </div>
                     <div class="link">
                         <img 
                             src="../../assets/images/svg/InternetLogo.svg" 
                             alt="InternetLogo"
-                            class="link-icon">
-                        <div class="link-title">{{ $t("NFTPage.etherscan") }}</div>
+                            class="sm:w-[24px]"
+                        >
+
+                        <div class="custom-text-nm lg:text-xl text-base">
+                            {{ $t("NFTPage.etherscan") }}
+                        </div>
                     </div>
                 </div>
 
                 <Tags :tags="card.tags" /> 
                 
-
             </div>
             
-            <my-timer class="timer" :endtime="card.auction">
-                <my-button class="timer-button">
+            <my-timer 
+                class="w-[295px] flex sm:hidden self-start" 
+                :endtime="card.auction"
+            >
+                <my-button class="custom-btn justify-center">
                     {{ $t("NFTPage.timerButton") }}
                 </my-button>
             </my-timer>
-           
         </div>
-        <div class="container">
-            <div class="header-container">
-                <div class="title">{{ $t("NFTPage.more") }}</div>
-                <my-button class="button" @click="buttonClick(card.userName)"> 
+
+        <div class="flex flex-col  py-[80px] gap-[60px] md:py-[60px] sm:py-[40px] sm:gap-[30px]">
+            <div class="custom-wrapper h-[60px] flex items-center justify-between ">
+                <div class="custom-text-lg text-4xl md:text-3xl sm:text-xl">
+                    {{ $t("NFTPage.more") }}
+                </div>
+                <my-button 
+                    class="custom-empty-btn sm:hidden" 
+                    @click="buttonClick(card.userName)"
+                > 
                     <img 
                         src="../../assets/images/svg/ArrowRight.svg" 
-                        alt="">
+                        alt="ArrowRight"
+                    >
                     {{ $t("NFTPage.button") }}
                 </my-button>
             </div>
-            <div class="content">
+            <div class="custom-wrapper">
                 <div v-for="item in cards">
                     <my-card 
                         :card="item"
-                        :background="background"/>
+                        :background="background"
+                    />
                 </div>
             </div>
             
-            <my-button class="button-second" @click="buttonClick(card.userName)"> 
+            <my-button 
+                class="custom-empty-btn hidden sm:flex w-[315px] m-auto" 
+                @click="buttonClick(card.userName)"
+            > 
                 <img 
                     src="../../assets/images/svg/ArrowRight.svg" 
-                    alt="">
+                    alt="ArrowRight"
+                >
                 {{ $t("NFTPage.button") }}
             </my-button>
         </div>
@@ -147,167 +190,22 @@ export default {
 
 <style scoped>
 
-/* .section {
-    width: 100%;
-    min-height: 560px;
-}
-
-.background {
-    width: 100%;
-    height: 560px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.preview {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1050px;
-    width: 100%;
-    min-height: 300px;
-    margin: 0 auto;
-    padding: 40px 0;
-} */
-/* Aside stylesa Start */
-
-/* .aside {
-    max-width: 605px;
-    width: 100%;
-}
-
-.name {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 51px;
-    line-height: 56px;
-    color: var(--text-color-white);
-    margin-bottom: 10px;
-}
-
-.date {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 35px;
-    color: var(--text-color-secondary);
-    margin-bottom: 30px;
-}
-
-.created, .description, .details {
-    font-family: "SpaceMono",sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 35px;
-    color: var(--text-color-secondary);
-    margin-bottom: 10px;
-}
-
-.user {
-    margin-bottom: 30px;
-}
-
-.text {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 35px;
-    color: var(--text-color-white);
-    margin-bottom: 30px;
-}
-
-.links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 30px;
+.text-lg {
+    @apply 
+    font-space font-semibold text-grey
+    mb-[10px] text-xl 
+    sm:text-base
 }
 
 .link {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+    @apply flex gap-[10px] items-center
+    hover:cursor-pointer
 }
 
-.link:hover {
-    cursor: pointer;
-}
- 
-.link-title {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 35px;
-    color: var(--text-color-white);
-} */
+/* 
 
-/* Aside stylesa End */
 
-/* .timer {
-    align-self: flex-start;
-}
 
-.timer-button {
-    display: flex;
-    justify-content: center;
-    height: 60px;
-    padding: 0 50px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--text-color-white);
-    background-color: var(--button-background-color);
-    
-}
-
-.timer-second {
-    display: none;
-} */
-
-/* Container Styles Start */
-
-/* .container {
-    display: flex;
-    flex-direction: column;
-    padding: 80px 0;
-    gap: 60px;
-}
-
-.header-container {
-    max-width: 1050px;
-    width: 100%;
-    height: 60px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-.title {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 38px;
-    line-height: 45px;
-    color: var(--text-color-white);
-}
-
-.button {
-    height: 60px;
-    padding: 0 50px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--text-color-white);
-    background-color: var(--background-color);
-    border: 2px solid var(--button-background-color);
-}
-
-.button-second {
-    display: none;
-}
 
 .content {
     max-width: 1050px;
@@ -318,201 +216,23 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 } */
-/* Container Styles End */
-
-
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
-    /* .background {
-        height: 420px;
-    }
+    
 
-    .preview {
-        max-width: 690px;
-    } */
-
-    /* Aside stylesa Start */
-
-    /* .aside {
-        max-width: 365px;
-    }
-
-    .name {
-        font-size: 38px;
-        line-height: 45px;
-    }
-
-    .date {
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .created, .description, .details{
-        font-size: 22px;
-        line-height: 35px;
-    }
-
-    .text {
-        font-size: 16px;
-        line-height: 22px;
-        margin-bottom: 30px;
-    }
-
-    .link-title {
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .link-icon {
-        width: 24px;
-    } */
-
-    /* Aside stylesa End */
-
-    /* Container Styles Start */
-
-    /* .container {
-        padding: 40px 0;
-    }
-
-    .header-container {
-        max-width: 690px;
-        width: 100%;
-        height: 60px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-    } */
-
-    /* .title {
-        font-size: 28px;
-        line-height: 38px;
-    }
-
+    /*
     .content {
         max-width: 690px;
         grid-template-columns: repeat(2, 1fr);
     } */
-    /* Container Styles End */
 
 }
-
-
-/* Стилі для мобільних пристроїв */
 @media only screen and (max-width: 767px) {
-    /* .background {
-        height: 320px;
-    } 
+   
 
-    .preview {
-        max-width: 315px;
-    } */
+    
 
-    /* Aside stylesa Start */
+   
 
-    /* .aside {
-        width: 100%;
-    }
-
-    .name {
-        font-size: 28px;
-        line-height: 35px;
-    }
-
-    .date {
-        font-size: 16px;
-        line-height: 22px;
-        margin-bottom: 20px;
-    }
-
-    .created, .description, .details {
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .user {
-        margin-bottom: 20px;
-    }
-
-    .text {
-        font-size: 16px;
-        line-height: 22px;
-        margin-bottom: 30px;
-    }
-
-    .link-title {
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .link-icon {
-        width: 24px;
-    } */
-
-    /* Aside stylesa End */
-
-    /* .timer {
-        display: none;
-    }
-
-    .timer-second {
-        display: flex;
-        margin-bottom: 20px;
-    }
-
-    .timer-button {
-        width: 100%;
-    } */
-
-    /* Container Styles Start */
-
-    /* .container {
-        padding: 40px 0;
-        gap: 30px;
-    }
-
-    .header-container {
-        max-width: 315px;
-        width: 100%;
-        height: 60px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-    } */
-
-    /* .title {
-        font-size: 22px;
-        line-height: 36px;
-    }
-
-    .button {
-        display: none;
-    }
-
-    .button-second {
-        display: flex;
-        width: 315px;
-        margin: 0 auto;
-        height: 60px;
-        padding: 0 50px;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 22px;
-        color: var(--text-color-white);
-        background-color: var(--background-color);
-        border: 2px solid var(--button-background-color);
-    }
-
-    .content {
-        max-width:  315px;
-        grid-template-columns: repeat(1, 1fr);
-    } */
-    /* Container Styles End */
-
+ 
 }
 </style>

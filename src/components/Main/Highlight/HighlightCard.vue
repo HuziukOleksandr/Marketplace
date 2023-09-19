@@ -7,7 +7,9 @@
         <!-- User End -->
 
         <!-- Title Start -->
-        <h2 class="custom-title sm:self-center">{{ card.title }}</h2>
+        <h2 class="custom-title sm:self-center">
+            {{ card.title }}
+        </h2>
         <!-- Title End -->
 
         <!-- Button Start -->

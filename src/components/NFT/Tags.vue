@@ -1,10 +1,18 @@
 <template>
-    <h2 class="title">{{ $t("NFTPage.tags") }}</h2>
-    <div class="tags">
-        <div class="tag" v-for="tag in tags">
+
+    <h2 class="font-space font-semibold text-xl text-grey mb-[20px] sm:text-base">
+        {{ $t("NFTPage.tags") }}
+    </h2>
+
+    <div class="flex gap-[20px] md:flex-col sm:flex-col">
+        <div 
+            class="tag" 
+            v-for="tag in tags"
+        >
             {{ tag }}
         </div>
     </div>
+
 </template>
 
 <script>
@@ -20,76 +28,17 @@
 
 <style scoped>
 
-/* .title {
-    font-family: "SpaceMono",sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 35px;
-    color: var(--text-color-secondary);
-    margin-bottom: 20px;
-}
-
-.tags { 
-    display: flex;
-    gap: 20px;
+.title {
+    @apply font-space font-semibold text-xl text-grey mb-[20px]
 }
 
 .tag {
-    width: fit-content;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    border-radius: 20px;
-    background-color: var(--background-secondary);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--text-color-white);
-    text-transform: uppercase;
-    transition: 0.2s;
+    @apply w-fit h-[45px] px-[20px]
+    flex items-center rounded-[20px]
+    bg-bg-secondary text-white
+    font-serrat font-semibold text-base uppercase
+    transition duration-300
+    hover:cursor-pointer hover:scale-102
 }
-
-.tag:hover {
-    cursor: pointer;
-    scale: 1.02;
-} */
-
-
-/* Стилі для моніторів (більші планшетів та комп'ютерів) */
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
-   
-    /* .title {
-        font-size: 22px;
-        line-height: 35px;
-    }
-
-    .tags { 
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-       
-    } */
-
-   
-
-
-}
-
-/* Стилі для мобільних пристроїв */
-@media only screen and (max-width: 767px) {
-    /* .title {
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .tags { 
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    } */
-    
-} 
 
 </style>

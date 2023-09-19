@@ -1,5 +1,5 @@
 <template>
-    <div class="px-[50px] w-[100%] sm:p-0">
+    <div class="px-[50px] w-[100%] sm:px-[30px]">
         <div class="flex justify-between">
             <my-logo/>
 
