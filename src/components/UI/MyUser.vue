@@ -1,10 +1,16 @@
 <template>
-    <div class="flex gap-[10px] items-center" @click.stop="userClick(userName)">
+    <div 
+        class="flex gap-[10px] items-center" 
+        @click.stop="userClick(user.id)"
+    >
         <img 
             :src="getUserImageUrl(userName)" 
             :alt="userName"
-            class="w-6 hover:cursor-pointer">
-        <h2 class="font-serrat text-white font-normal leading-[22px] text-[16px] text-center hover:cursor-pointer">{{userName}}</h2>
+            class="w-6 hover:cursor-pointer"
+        >
+        <h2 class="font-serrat text-white font-normal leading-[22px] text-[16px] text-center hover:cursor-pointer">
+            {{userName}}
+        </h2>
     </div>
 </template>
 
@@ -32,14 +38,18 @@ import { getUserImageUrl } from '../../helpers/helpers'
             getUserImageUrl,
 
             userClick(name){
-                axios
-                .get('/data/Artists.json')
-                    .then(response =>  {
-                        this.user = response.data.Artists.find(element => element.userName == name) || null 
-                        
-                });
-                this.$router.push({name: 'Artists', params: { id: this.user.id}})
+                this.$router.push({name: 'Artists', params: { id: name}})
             },
+        },
+
+        async mounted() {
+            await axios
+            .get('/data/Artists.json')
+                .then(response =>  {
+                    this.user = response.data.Artists.find(element => element.userName == this.userName) || null    
+            });
+            
         }
+
     }
 </script>

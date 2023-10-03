@@ -75,9 +75,7 @@ const routes = [
             default: NFTPage,
             Footer
         },
-        props: route => ({
-            id: route.query.id
-        })
+        props: true
     }
 ]
 

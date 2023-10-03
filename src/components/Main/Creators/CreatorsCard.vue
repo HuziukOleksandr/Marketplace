@@ -3,7 +3,7 @@
         bg-bg-secondary rounded-[20px] p-[20px] custom-creator-card" 
         v-for="card in cards" 
         :key="card.id" 
-        @click="cardClick(card.userName)"
+        @click="cardClick(card.id)"
     >
         <!-- Preview Start -->
         <div class="flex gap-[10px] relative lg:mb-[20px]">
@@ -61,7 +61,9 @@ import {getUserImageUrl} from '../../../helpers/helpers'
             getUserImageUrl,
 
             cardClick(name){
-                this.$router.push({name: 'Artists', query: { artistName: name}})
+
+                console.log(name);
+                this.$router.push({name: 'Artists', params: { id: name}})
             }
         }
     }

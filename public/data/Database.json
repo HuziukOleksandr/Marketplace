@@ -1,0 +1,1178 @@
+{
+    "Artists": [
+        {   
+            "id": 1, 
+            "name": "Jaydon Ekstrom Bothman", 
+            "userName": "Keepitreal", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.35%",
+                "week": "0.45%",
+                "month": "0.91%",
+                "allTime": "1.2%"
+            }, 
+            "sold": { 
+                "day": "100",
+                "week": "200",
+                "month": "150",
+                "allTime": "300"
+            },
+            "volume": { 
+                "day": "15.7 ETH",
+                "week": "20.2 ETH",
+                "month": "25.9 ETH",
+                "allTime": "8.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 2, 
+            "name": "Ruben Carder", 
+            "userName": "DigiLab", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.47%",
+                "week": "0.34%",
+                "month": "0.56%",
+                "allTime": "7.2%"
+            }, 
+            "sold": { 
+                "day": "500",
+                "week": "300",
+                "month": "400",
+                "allTime": "600"
+            },
+            "volume": { 
+                "day": "10.5 ETH",
+                "week": "15.2 ETH",
+                "month": "30.9 ETH",
+                "allTime": "18.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 3, 
+            "name": "Alfredo Septimus", 
+            "userName": "GravityOne", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.67%",
+                "week": "0.37%",
+                "month": "0.59%",
+                "allTime": "5.4%"
+            },
+            "sold": { 
+                "day": "300",
+                "week": "100",
+                "month": "250",
+                "allTime": "200"
+            },
+            "volume": { 
+                "day": "5.7 ETH",
+                "week": "30.2 ETH",
+                "month": "15.9 ETH",
+                "allTime": "28.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 4, 
+            "name": "Davis Franci", 
+            "userName": "Juanie", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.68%",
+                "week": "0.67%",
+                "month": "0.44%",
+                "allTime": "2.6%"
+            },
+            "sold": { 
+                "day": "150",
+                "week": "250",
+                "month": "100",
+                "allTime": "400"
+            },
+            "volume": { 
+                "day": "18.7 ETH",
+                "week": "25.2 ETH",
+                "month": "20.9 ETH",
+                "allTime": "38.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 5, 
+            "name": "Livia Rosser", 
+            "userName": "BlueWhale", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.35%",
+                "week": "0.45%",
+                "month": "0.91%",
+                "allTime": "1.2%"
+            },
+            "sold": { 
+                "day": "400",
+                "week": "300",
+                "month": "250",
+                "allTime": "500"
+            },
+            "volume": { 
+                "day": "12.7 ETH",
+                "week": "15.2 ETH",
+                "month": "20.9 ETH",
+                "allTime": "25.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 6, 
+            "name": "Kianna Donin", 
+            "userName": "MrFox", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.35%",
+                "week": "0.45%",
+                "month": "0.91%",
+                "allTime": "1.2%"
+            },
+            "sold": { 
+                "day": "200",
+                "week": "250",
+                "month": "150",
+                "allTime": "350"
+            },
+            "volume": { 
+                "day": "30.7 ETH",
+                "week": "35.2 ETH",
+                "month": "40.9 ETH",
+                "allTime": "48.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 7, 
+            "name": "Phillip Lipshutz", 
+            "userName": "Shroomie", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.01%",
+                "week": "0.78%",
+                "month": "0.41%",
+                "allTime": "6.8%"
+            },
+            "sold": { 
+                "day": "50",
+                "week": "10",
+                "month": "20",
+                "allTime": "90"
+            },
+            "volume": { 
+                "day": "8.7 ETH",
+                "week": "9.2 ETH",
+                "month": "14.9 ETH",
+                "allTime": "6.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 8, 
+            "name": "Maria Rosser", 
+            "userName": "Robotica", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.87%",
+                "week": "0.45%",
+                "month": "0.31%",
+                "allTime": "4.2%"
+            },
+            "sold": { 
+                "day": "250",
+                "week": "200",
+                "month": "150",
+                "allTime": "300"
+            },
+            "volume": { 
+                "day": "20.7 ETH",
+                "week": "25.2 ETH",
+                "month": "35.9 ETH",
+                "allTime": "38.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 9, 
+            "name": "Kianna Stanton", 
+            "userName": "RustyRobot", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.45%",
+                "week": "0.78%",
+                "month": "0.34%",
+                "allTime": "6.2%"
+            },
+            "sold": { 
+                "day": "300",
+                "week": "150",
+                "month": "200",
+                "allTime": "250"
+            },
+            "volume": { 
+                "day": "15.7 ETH",
+                "week": "30.2 ETH",
+                "month": "15.9 ETH",
+                "allTime": "28.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 10, 
+            "name": "Randy Carder", 
+            "userName": "Animakid", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.67%",
+                "week": "0.49%",
+                "month": "0.34%",
+                "allTime": "1.9%"
+            },
+            "sold": { 
+                "day": "200",
+                "week": "300",
+                "month": "400",
+                "allTime": "600"
+            },
+            "volume": { 
+                "day": "10.5 ETH",
+                "week": "15.2 ETH",
+                "month": "30.9 ETH",
+                "allTime": "18.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 11, 
+            "name": "Lydia Culhane", 
+            "userName": "Dotgu", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.34%",
+                "week": "0.55%",
+                "month": "0.84%",
+                "allTime": "1.6%"
+            },
+            "sold": { 
+                "day": "400",
+                "week": "200",
+                "month": "250",
+                "allTime": "300"
+            },
+            "volume": { 
+                "day": "15.7 ETH",
+                "week": "20.2 ETH",
+                "month": "25.9 ETH",
+                "allTime": "28.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 12, 
+            "name": "Angel Lubin", 
+            "userName": "NebulaKid", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.86%",
+                "week": "0.97%",
+                "month": "0.31%",
+                "allTime": "4.2%"
+            },
+            "sold": { 
+                "day": "100",
+                "week": "200",
+                "month": "150",
+                "allTime": "300"
+            },
+            "volume": { 
+                "day": "18.7 ETH",
+                "week": "25.2 ETH",
+                "month": "20.9 ETH",
+                "allTime": "38.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 13, 
+            "name": "Allison Torff", 
+            "userName": "Allison", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.75%",
+                "week": "0.29%",
+                "month": "0.48%",
+                "allTime": "5.6%"
+            },
+            "sold": { 
+                "day": "200",
+                "week": "150",
+                "month": "100",
+                "allTime": "250"
+            },
+            "volume": { 
+                "day": "20.7 ETH",
+                "week": "15.2 ETH",
+                "month": "30.9 ETH",
+                "allTime": "28.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 14, 
+            "name": "Davis Workman", 
+            "userName": "BeKind2Robots", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.87%",
+                "week": "0.54%",
+                "month": "0.86%",
+                "allTime": "2.7%"
+            },
+            "sold": { 
+                "day": "300",
+                "week": "200",
+                "month": "150",
+                "allTime": "400"
+            },
+            "volume": { 
+                "day": "15.7 ETH",
+                "week": "25.2 ETH",
+                "month": "20.9 ETH",
+                "allTime": "38.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 15, 
+            "name": "Lindsey Lipshutz", 
+            "userName": "Lipshutz", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.23%",
+                "week": "0.99%",
+                "month": "0.64%",
+                "allTime": "7.9%"
+            },
+            "sold": { 
+                "day": "400",
+                "week": "300",
+                "month": "250",
+                "allTime": "500"
+            },
+            "volume": { 
+                "day": "12.7 ETH",
+                "week": "15.2 ETH",
+                "month": "20.9 ETH",
+                "allTime": "25.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 16, 
+            "name": "Rayna Bator", 
+            "userName": "MoonDancer", 
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.24%",
+                "week": "0.34%",
+                "month": "0.45%",
+                "allTime": "4.7%"
+            },
+            "sold": { 
+                "day": "200",
+                "week": "150",
+                "month": "100",
+                "allTime": "250"
+            },
+            "volume": { 
+                "day": "20.7 ETH",
+                "week": "15.2 ETH",
+                "month": "30.9 ETH",
+                "allTime": "28.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 17, 
+            "name": "Marilyn Torff", 
+            "userName": "Marilyn",    
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.45%",
+                "week": "0.85%",
+                "month": "0.34%",
+                "allTime": "2.9%"
+            },
+            "sold": { 
+                "day": "150",
+                "week": "200",
+                "month": "100",
+                "allTime": "300"
+            },
+            "volume": { 
+                "day": "18.7 ETH",
+                "week": "20.2 ETH",
+                "month": "25.9 ETH",
+                "allTime": "38.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 18, 
+            "name": "Skylar Levin", 
+            "userName": "Skylar",    
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.87%",
+                "week": "0.32%",
+                "month": "0.98%",
+                "allTime": "3.6%"
+            },
+            "sold": { 
+                "day": "100",
+                "week": "150",
+                "month": "200",
+                "allTime": "250"
+            },
+            "volume": { 
+                "day": "8.7 ETH",
+                "week": "15.2 ETH",
+                "month": "10.9 ETH",
+                "allTime": "28.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 19, 
+            "name": "Terry Dorwart", 
+            "userName": "Dorwart",    
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.34%",
+                "week": "0.89%",
+                "month": "0.65%",
+                "allTime": "4.4%"
+            },
+            "sold": { 
+                "day": "200",
+                "week": "250",
+                "month": "150",
+                "allTime": "300"
+            },
+            "volume": { 
+                "day": "18.7 ETH",
+                "week": "15.2 ETH",
+                "month": "20.9 ETH",
+                "allTime": "38.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        },
+        { 
+            "id": 20, 
+            "name": "Jocelyn Westervelt", 
+            "userName": "Ghiblier",    
+            "sale": "34.53 ETH", 
+            "change": { 
+                "day": "0.95%",
+                "week": "0.15%",
+                "month": "0.51%",
+                "allTime": "5.2%"
+            },
+            "sold": { 
+                "day": "500",
+                "week": "300",
+                "month": "400",
+                "allTime": "600"
+            },
+            "volume": { 
+                "day": "10.5 ETH",
+                "week": "15.2 ETH",
+                "month": "30.9 ETH",
+                "allTime": "18.5 ETH"
+            },
+            "background": "ArtistBackground",
+            "bio": "The internet's friendliest designer kid.",
+            "links": {
+                "site": "",
+                "discord": "",
+                "youtube": "",
+                "twitter": "",
+                "instagram": ""
+            },
+            "followers": "3000"
+        }
+    ],
+    "Cards": [
+        {
+            "id": "1", 
+            "picture": "DistantGalaxy", 
+            "name": "Distant Galaxy", 
+            "userName": "MoonDancer", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Animakid", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "2", 
+            "picture": "LifeOnEdena", 
+            "name": "Life On Edena", 
+            "userName": "Ghiblier", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Keepitreal", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "3", 
+            "picture": "AstroFiction", 
+            "name": "AstroFiction", 
+            "userName": "Dotgu",
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "DigiLab", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        { 
+            "id": "4", 
+            "picture": "PsychoDog", 
+            "name": "PsychoDog", 
+            "userName": "Dorwart", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Animakid", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "5", 
+            "picture": "ColorfulDog0524", 
+            "name": "ColorfulDog 0524", 
+            "userName": "Skylar", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "GravityOne", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "6", 
+            "picture": "FoxyLife", 
+            "name": "Foxy Life", 
+            "userName": "Marilyn", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Juanie", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "7", 
+            "picture": "DesignerBear", 
+            "name": "Designer Bear", 
+            "userName": "Lipshutz", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "BlueWhale", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "8", 
+            "picture": "CatFromFuture", 
+            "name": "Cat From Future", 
+            "userName": "BeKind2Robots", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Shroomie", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "9", 
+            "picture": "ColorfulDog0344", 
+            "name": "Colorful Dog 0344", 
+            "userName": "Allison", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "MrFox", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+            {"id": "10", 
+            "picture": "IceCreamApe0324", 
+            "name": "IceCream Ape 0324", 
+            "userName": "NebulaKid", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Robotica", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "11", 
+            "picture": "DancingRobot0375", 
+            "name": "Dancing Robot 0375", 
+            "userName": "Dotgu", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "RustyRobot", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "12", 
+            "picture": "DancingRobot0321", 
+            "name": "Dancing Robot 0321", 
+            "userName": "MoonDancer", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Dotgu", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are CardBackg roundCardBackgro undCardBackg roundCardB ackground sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "13", 
+            "picture": "DancingRobot0512", 
+            "name": "Dancing Robot 0512", 
+            "userName": "RustyRobot", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "NebulaKid", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "14", 
+            "picture": "DancingRobot0024", 
+            "name": "Dancing Robot 0024", 
+            "userName": "Robotica", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Allison", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "15", 
+            "picture": "DancingRobots0987", 
+            "name": "Dancing Robots 0987", 
+            "userName": "Robotica", "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "BeKind2Robots", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "16", 
+            "picture": "DesertWalk", 
+            "name": "Desert Walk", 
+            "userName": "Shroomie", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Lipshutz", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "17", 
+            "picture": "HappyRobot024", 
+            "name": "Happy Robot 024", 
+            "userName": "Shroomie", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "NebulaKid", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "18", 
+            "picture": "HappyRobot032", 
+            "name": "Happy Robot 032", 
+            "userName": "MrFox", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "MoonDancer", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "19", 
+            "picture": "IceCreamApe", 
+            "name": "Ice Cream Ape", 
+            "userName": "MrFox", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Marilyn", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "20", 
+            "picture": "SunsetDimension", 
+            "name": "Sunset Dimension", 
+            "userName": "BlueWhale", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Skylar", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "21", 
+            "picture": "SpaceTravel", 
+            "name": "Space Travel", 
+            "userName": "BlueWhale", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Dorwart", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "22", 
+            "picture": "SpaceTales", 
+            "name": "Space Tales", 
+            "userName": "Juanie", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Animakid", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "23", 
+            "picture": "CherryBlossomGirl01", 
+            "name": "Cherry Blossom Girl 01", 
+            "userName": "Juanie", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "RustyRobot", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "24", 
+            "picture": "CherryBlossomGirl03", 
+            "name": "Cherry Blossom Girl 03", 
+            "userName": "GravityOne", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "RustyRobot", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "25", 
+            "picture": "CryptoCity", 
+            "name": "CryptoCity   ", 
+            "userName": "GravityOne", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Ghiblier", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "26", 
+            "picture": "MagicMushroom0325", 
+            "name": "Magic Mushroom 0325", 
+            "userName": "DigiLab", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Animakid", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        },
+        {
+            "id": "27", 
+            "picture": "MagicMushroom03", 
+            "name": "Magic Mushroom 03", 
+            "userName": "Keepitreal", 
+            "price": "1.63 ETH", 
+            "bid": "0.33 wETH", 
+            "owner": "Shroomie", 
+            "background": "CardBackground",
+            "minted": "Sep 30, 2022",
+            "description": "There are all sorts of beings in the NFT Universe. The most advanced and friendly",
+            "tags": [
+                "Animation", "illustration", "moon", "moon"
+            ],
+            "auction": "2023-12-29"
+        }
+    ],
+    "Collections": [
+        {
+            "name": "Space",
+            "userName": "MoonDancer",
+            "Cards": [
+                {"id": "1", "name": "Sunset Dimension", "picture": "SunsetDimension" },
+                {"id": "2", "name": "Space Travel", "picture": "SpaceTravel" },
+                {"id": "3", "name": "Space Tales", "picture": "SpaceTales" },
+                {"id": "4", "name": "Distant Galaxy", "picture": "DistantGalaxy" },
+                {"id": "5", "name": "Life On Edena", "picture": "LifeOnEdena" },
+                {"id": "6", "name": "Life On Edena", "picture": "LifeOnEdena" }
+            ]
+        },
+        {
+            "name": "DSGN Animals",
+            "userName": "Animakid",
+            "Cards": [
+                {"id": "1", "name": "Psycho Dog", "picture": "PsychoDog" },
+                {"id": "2", "name": "ColorfulDog 0524", "picture": "ColorfulDog0524" },
+                {"id": "3", "name": "Foxy Life", "picture": "FoxyLife" },
+                {"id": "4", "name": "Colorful Dog 0524", "picture": "ColorfulDog0524" },
+                {"id": "5", "name": "Designer Bear", "picture": "DesignerBear" },
+                {"id": "6", "name": "Cat From Future", "picture": "CatFromFuture" },
+                {"id": "7", "name": "Colorful Dog 0344", "picture": "ColorfulDog0344" },
+                {"id": "8", "name": "IceCream Ape0324", "picture": "IceCreamApe0324" },
+                {"id": "9", "name": "IceCream Ape", "picture": "IceCreamApe" }
+                
+            ]
+        },
+        {
+            "name": "Disco Mashines",
+            "userName": "BeKind2Robots",
+            "Cards": [
+                {"id": "1", "name": "Dancing Robot 0321", "picture": "DancingRobot0321" },
+                {"id": "2", "name": "Desert Walk", "picture": "DesertWalk" },
+                {"id": "3", "name": "Happy Robot 032", "picture": "HappyRobot032" },
+                {"id": "4", "name": "Happy Robot 024", "picture": "HappyRobot024" },
+                {"id": "5", "name": "Dancing Robot 0375", "picture": "DancingRobot0375" },
+                {"id": "6", "name": "Dancing Robot 0987", "picture": "DancingRobot0987" },
+                {"id": "7", "name": "Dancing Robot 0512", "picture": "DancingRobot0512" },
+                {"id": "8", "name": "Dancing Robot 0024", "picture": "DancingRobot0024" }
+            ]
+        },
+        {
+            "name": "Cherry Blossom",
+            "userName": "Juanie",
+            "Cards": [
+                {"id": "1", "name": "Cherry BlossomGirl 01", "picture": "CherryBlossomGirl01" },
+                {"id": "2", "name": "Cherry Blossom Girl 03", "picture": "CherryBlossomGirl03" },
+                {"id": "2", "name": "Cherry Blossom Girl 03", "picture": "CherryBlossomGirl03" }
+            ]
+        },
+        {
+            "name": "Magic Mushroom",
+            "userName": "Juanie",
+            "Cards": [
+                {"id": "1", "name": "Magic Mushroom 0325", "picture": "MagicMushroom0325" },
+                {"id": "2", "name": "Magic Mushroom 03", "picture": "MagicMushroom03" },
+                {"id": "2", "name": "Magic Mushroom 0325", "picture": "MagicMushroom0325" }
+            ]
+        }
+    ]
+}

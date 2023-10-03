@@ -208,7 +208,7 @@ import Links from './Links.vue'
 
             changeTabs(type) {
                 this.active = type;
-            },
+            }
         },
 
         async mounted() {
