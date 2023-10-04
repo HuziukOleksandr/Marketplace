@@ -4,7 +4,8 @@
             v-bind="$attrs"  
             class=" font-base focus:outline-none custom-text-nm bg-bg-color" 
             @input="updateInput" 
-            type="text"/>
+            type="text"
+        />
 
         <div class="h-[24px] hover:cursor-pointer">
             <slot name="image"></slot>

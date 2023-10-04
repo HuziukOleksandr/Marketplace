@@ -25,7 +25,6 @@
                     class="hidden sm:flex mb-[20px]" 
                     :endtime="card.auction"
                 >
-
                     <my-button class="custom-btn justify-center">
                         {{ $t("NFTPage.timerButton") }}
                     </my-button>

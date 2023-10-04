@@ -76,7 +76,6 @@
                     :alt="artist.userName" 
                     class="lg:w-[60px] w-[24px]"
                 >
-
                 <div class="font-semibold lg:text-xl text-base name">
                     {{ artist.name }}
                 </div>

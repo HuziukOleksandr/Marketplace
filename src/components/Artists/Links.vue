@@ -1,27 +1,36 @@
 <template>
     <div class="flex flex-col gap-[10px]">
-        <h3 class="font-space font-semibold text-grey text-xl sm:text-base">{{ $t("Artist.links") }}</h3>
+
+        <h3 class="font-space font-semibold text-grey text-xl sm:text-base">
+            {{ $t("Artist.links") }}
+        </h3>
+        
         <div class="flex gap-[10px]">
             <img 
                 src="../../assets/images/svg/InternetLogo.svg" 
                 alt="InternetLogo" 
-                class="link">
+                class="link"
+            >
             <img 
                 src="../../assets/images/svg/DiscordLogo.svg" 
                 alt="DiscordLogo" 
-                class="link">
+                class="link"
+            >
             <img 
                 src="../../assets/images/svg/YoutubeLogo.svg" 
                 alt="YoutubeLogo" 
-                class="link">
+                class="link"
+            >
             <img 
                 src="../../assets/images/svg/TwitterLogo.svg" 
                 alt="TwitterLogo" 
-                class="link">
+                class="link"
+            >
             <img 
                 src="../../assets/images/svg/InstagramLogo.svg" 
                 alt="InstagramLogo" 
-                class="link">
+                class="link"
+            >
         </div>
     </div>
 </template>

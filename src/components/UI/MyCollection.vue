@@ -4,17 +4,21 @@
         <img 
             :src="getImageUrl(collection.Cards[0].picture)" 
             :alt="collection.Cards[0].picture"
-            class="rounded-[20px] hover:cursor-pointer">
+            class="rounded-[20px] hover:cursor-pointer"
+        >
         
         <div class="flex justify-between">
             <img 
                 :src="getImageUrl(collection.Cards[1].picture)" 
                 :alt="collection.Cards[1].picture"
-                class="w-[100px] rounded-[20px] mb:w-[95px] hover:cursor-pointer">
+                class="w-[100px] rounded-[20px] mb:w-[95px] hover:cursor-pointer"
+            >
+
             <img 
                 :src="getImageUrl(collection.Cards[2].picture)" 
                 :alt="collection.Cards[2].picture"
-                class="w-[100px] rounded-[20px] mb:w-[95px] hover:cursor-pointer">
+                class="w-[100px] rounded-[20px] mb:w-[95px] hover:cursor-pointer"
+            >
 
             <my-button class="w-[100px] h-[100px] flex justify-center items-center bg-btn-bg-color text-white mb:w-[95px]">
                 +{{ collection.Cards.length }}
@@ -22,7 +26,9 @@
         </div>
         
         <div class="flex flex-col gap-[10px]">
-            <h2 class="text-2xl  text-start custom-text-lg">{{ collection.name }}</h2>
+            <h2 class="text-2xl  text-start custom-text-lg">
+                {{ collection.name }}
+            </h2>
             <my-user :userName="collection.userName"/>
         </div>
     

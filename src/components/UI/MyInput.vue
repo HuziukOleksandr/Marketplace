@@ -3,7 +3,10 @@
         <div class="absolute left-3">
             <slot name="image"></slot>
         </div>
-        <input v-bind="$attrs"  class="input custom-text-input" />
+        <input 
+            v-bind="$attrs"  
+            class="input custom-text-input" 
+        />
     </div>
 </template>
 

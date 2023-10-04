@@ -21,7 +21,7 @@
                             src="../../../assets/images/Buttons/Eye.svg" 
                             alt="Eye"
                         >   
-                            {{ $t("Highlight.button") }}
+                        {{ $t("Highlight.button") }}
                     </my-button>
                 </div>
             </div>

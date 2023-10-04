@@ -3,7 +3,8 @@
             to="/marketplace" 
             class="font-serrat font-semibold hover:scale-102 transition duration-200" 
             :class="linkItemStyles"
-            @click="menuClose">
+            @click="menuClose"
+        >
             {{ $t("Navigation.marketplace") }}
         </router-link>
         
@@ -11,7 +12,8 @@
             to="/ranking"
             class="font-serrat font-semibold hover:scale-102 transition duration-200"
             :class="linkItemStyles"  
-            @click="menuClose">
+            @click="menuClose"
+        >
             {{ $t("Navigation.rankings") }}
         </router-link>
 
@@ -19,7 +21,8 @@
             to="/wallet"
             class="font-serrat font-semibold hover:scale-102 transition duration-200"
             :class="linkItemStyles" 
-            @click="menuClose">
+            @click="menuClose"
+        >
             {{ $t("Navigation.connectAWallet") }}
         </router-link> 
 </template>

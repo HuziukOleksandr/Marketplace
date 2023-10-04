@@ -1,8 +1,9 @@
 <template>
     <div class="max-w-[420px] w-[100%] flex flex-col ">
         <h2 
-            class="text-xl custom-text-lg-sec mb-[25px]">
-                {{ $t("Footer.title") }}
+            class="text-xl custom-text-lg-sec mb-[25px]"
+        >
+            {{ $t("Footer.title") }}
         </h2>
 
         <p class="text-base font-serrat font-semibold text-grey mb-[20px]">

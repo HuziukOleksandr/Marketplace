@@ -1,28 +1,63 @@
 <template>
     <div class="section w-[100%] max-w-[1280px] h-[80vh] m-auto flex justify-between roundet-[20px]">
+
         <div class="picture"></div>
+
         <div class="form w-[100%] max-w-[610px] flex flex-col justify-center">
-            <h2 class="custom-text-lg mb-[20px] lg:text-5xl  text-4xl">{{ $t("Register.title") }}</h2>
-            <h3 class="custom-sub-title mb-[40px]">{{ $t("Register.subTitle") }}</h3>
+            <h2 class="custom-text-lg mb-[20px] lg:text-5xl  text-4xl">
+                {{ $t("Register.title") }}
+            </h2>
+
+            <h3 class="custom-sub-title mb-[40px]">
+                {{ $t("Register.subTitle") }}
+            </h3>
+
             <div class="flex flex-col gap-[15px] mb-[30px]">
-                <my-input class="input" :placeholder="$t('Register.userName')">
+                <my-input 
+                    class="input" 
+                    :placeholder="$t('Register.userName')"
+                >
                     <template #image>
-                        <img src="../../assets/images/Register/User.svg" alt="User" />
+                        <img 
+                            src="../../assets/images/Register/User.svg" 
+                            alt="User" 
+                        />
                     </template>
                 </my-input>
-                <my-input class="input" :placeholder="$t('Register.email')">
+
+                <my-input 
+                    class="input" 
+                    :placeholder="$t('Register.email')"
+                >
                     <template #image>
-                        <img src="../../assets/images/Register/Email.svg" alt="Email" />
+                        <img 
+                            src="../../assets/images/Register/Email.svg" 
+                            alt="Email" 
+                        />
                     </template>
                 </my-input>
-                <my-input class="input" :placeholder="$t('Register.password')">
+
+                <my-input 
+                    class="input" 
+                    :placeholder="$t('Register.password')"
+                >
                     <template #image>
-                        <img src="../../assets/images/Register/LockKey.svg" alt="LockKey" />
+                        <img 
+                            src="../../assets/images/Register/LockKey.svg" 
+                            alt="LockKey" 
+                        />
                     </template>
                 </my-input>
-                <my-input class="input" :placeholder="$t('Register.confirm')">
+
+                <my-input 
+                    class="input" 
+                    :placeholder="$t('Register.confirm')"
+                >
                     <template #image>
-                        <img src="../../assets/images/Register/LockKey.svg" alt="LockKey" />
+                        <img 
+                            src="../../assets/images/Register/LockKey.svg" 
+                            alt="LockKey" 
+                        />
                     </template>
                 </my-input>
                 

@@ -21,7 +21,7 @@
                     src="../../../assets/images/Buttons/RocketLaunch.svg" 
                     alt="RocketLaunch"
                 >
-                    {{ $t("Discover.button") }}
+                {{ $t("Discover.button") }}
             </my-button>
             
         </div>
@@ -30,7 +30,10 @@
         <!-- Content Start -->
         <div>
             <carousel :items-to-show="slides" >
-                <slide v-for="card in cards" :key="card.id">
+                <slide 
+                    v-for="card in cards" 
+                    :key="card.id"
+                >
                     <my-card 
                         :card="card"
                         :background="background" 

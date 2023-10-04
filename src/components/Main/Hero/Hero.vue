@@ -16,7 +16,10 @@
                 {{ $t("Hero.text") }}
             </p>
 
-            <Info :infoList="infoList" class="sm:hidden"/>
+            <Info 
+                :infoList="infoList" 
+                class="sm:hidden"
+            />
         </div>
 
         <div class="max-w-[510px] w-[100%] flex flex-col md:max-w-[330px] sm:max-w-[315px]">

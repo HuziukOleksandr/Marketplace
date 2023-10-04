@@ -11,8 +11,14 @@
                 md:max-w-[325px] md:py-[80px]
                 sm:max-w-[315px] sm:py-[30px]"
         >
-            <h2 class="custom-text-lg text-5xl mb-[20px] sm:text-3xl">{{ $t("ConnectAWallet.title") }}</h2>
-            <h3 class="custom-sub-title mb-[40px]">{{ $t("ConnectAWallet.subTitle") }}</h3>
+            <h2 class="custom-text-lg text-5xl mb-[20px] sm:text-3xl">
+                {{ $t("ConnectAWallet.title") }}
+            </h2>
+
+            <h3 class="custom-sub-title mb-[40px]">
+                {{ $t("ConnectAWallet.subTitle") }}
+            </h3>
+
             <div class="flex flex-col gap-[20px]">
                 <my-button class="button">
                     <img 
@@ -20,7 +26,7 @@
                         alt="Metamask"
                         class="icon"
                     >
-                        {{ $t("ConnectAWallet.metamask") }}
+                    {{ $t("ConnectAWallet.metamask") }}
                 </my-button>
 
                 <my-button class="button">
@@ -29,7 +35,7 @@
                         alt="WalletConnect"
                         class="icon"
                     >
-                        {{ $t("ConnectAWallet.walletConnect") }}
+                    {{ $t("ConnectAWallet.walletConnect") }}
                 </my-button>
 
                 <my-button class="button">
@@ -38,10 +44,9 @@
                         alt="Coinbase"
                         class="icon"
                     >
-                        {{ $t("ConnectAWallet.coinbase") }}
+                    {{ $t("ConnectAWallet.coinbase") }}
                 </my-button>
             </div>
-            
         </div>
     </div>
 </template>

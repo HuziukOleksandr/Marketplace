@@ -1,22 +1,24 @@
 <template>
     <TransitionGroup>
-    
             <div 
                 class="flex flex-col p-[7px] gap-[10px] rounded-[5px] w-[49px] bg-bg-secondary absolute " 
                 v-if="dialogVisible" 
-                v-click-away="onClickAway">
+                v-click-away="onClickAway"
+            >
                 <img 
                     src="../../assets/images/svg/EN.svg" 
                     alt="Flag uk"
                     class="w-[35px] hover:cursor-pointer hover:scale-105 transition duration-200"
-                    @click="close('EN')">
+                    @click="close('EN')"
+                >
+
                 <img 
                     src="../../assets/images/svg/UA.svg" 
                     alt="Flag uk" 
                     class="w-[35px] hover:cursor-pointer hover:scale-105 transition duration-200"
-                    @click="close('UA')"> 
+                    @click="close('UA')"
+                > 
             </div>
-            
     </TransitionGroup>
 </template>
 

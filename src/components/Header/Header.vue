@@ -5,10 +5,12 @@
 
             <div class="flex items-center justify-between">
                 <img 
-                src="../../assets/images/svg/BurgerMenu.svg" 
-                alt="BurgerMenu" 
-                class="hidden md:block sm:block hover:cursor-pointer"
-                @click="dropDawnShow">
+                    src="../../assets/images/svg/BurgerMenu.svg" 
+                    alt="BurgerMenu" 
+                    class="hidden md:block sm:block hover:cursor-pointer"
+                    @click="dropDawnShow"
+                >
+
                 <Transition name="slide-fade">
                     <HeaderMenu class="md:hidden sm:hidden"/>
                 </Transition>
@@ -22,7 +24,8 @@
             <HeaderMenu 
                 v-if="dialogVisible" 
                 class="flex px-[20px] py-[10px] mb-[40px] rounded-[20px] bg-bg-secondary"
-                @menuClose="dropDawnShow"/>
+                @menuClose="dropDawnShow"
+            />
         </Transition>
     </div> 
 </template>

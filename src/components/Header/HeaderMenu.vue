@@ -3,13 +3,18 @@
             <Navigation 
                 :linkItemStyles="styles"
                 class="sm:m-3"
-                @menuClose="this.$emit('menuClose', false);"/>
+                @menuClose="this.$emit('menuClose', false);"
+            />
                 
             <my-button 
-                class="h-[60px] p-[30px] bg-btn-bg-color text-white border-none text-base sm:flex sm:justify-center" 
-                @click="buttonClick">
-                    <img src="../../assets/images/Buttons/User.svg" alt="user">
-                    {{ $t("Header.button") }}
+                class="custom-btn border-none text-base sm:flex sm:justify-center" 
+                @click="buttonClick"
+            >
+                <img 
+                    src="../../assets/images/Buttons/User.svg" 
+                    alt="user"
+                >
+                {{ $t("Header.button") }}
             </my-button>
         </div>
 </template>

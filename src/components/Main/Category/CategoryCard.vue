@@ -10,6 +10,7 @@
                 :alt="card.background" 
                 class="blur-sm bg-img"
             >
+            
             <img 
                 :src="getCategoryIconUrl(card.image)" 
                 :alt="card.image" 

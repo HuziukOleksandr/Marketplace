@@ -9,7 +9,7 @@
                     src="../../../assets/images/Buttons/RocketLaunchWhite.svg" 
                     alt="RocketLaunch"
                 >
-                    {{ $t("Hero.button") }}
+                {{ $t("Hero.button") }}
             </my-button>
         </div>
         

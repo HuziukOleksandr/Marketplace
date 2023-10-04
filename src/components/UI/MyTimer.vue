@@ -1,22 +1,48 @@
 <template>
     <div class=" w-[100%] rounded-[20px] flex flex-col gap-[10px] p-[30px] bg-timer-bg">
         
-        <p class="text-sm custom-text-nm-sec">{{ $t("Timer.title") }}</p>
+        <p class="text-sm custom-text-nm-sec">
+            {{ $t("Timer.title") }}
+        </p>
         
         <div class="max-w-[235px] w-[100%] h-[65px] flex justify-between">
+
             <div class="w-[53px]">
-                <h2 class="text-2xl custom-text-lg-sec">{{time.hours}}</h2>
-                <p class="text-xs custom-text-nm-sec">{{ $t("Timer.hours") }}</p>
+                <h2 class="text-2xl custom-text-lg-sec">
+                    {{time.hours}}
+                </h2>
+
+                <p class="text-xs custom-text-nm-sec">
+                    {{ $t("Timer.hours") }}
+                </p>
             </div>
-            <h2 class="w-[18px] text-2xl custom-text-lg-sec">:</h2>
+
+            <h2 class="w-[18px] text-2xl custom-text-lg-sec">
+                :
+            </h2>
+
             <div class="w-[53px]">
-                <h2 class="text-2xl custom-text-lg-sec">{{time.minutes}}</h2>
-                <p class="text-xs custom-text-nm-sec">{{ $t("Timer.minutes") }}</p>
+                <h2 class="text-2xl custom-text-lg-sec">
+                    {{time.minutes}}
+                </h2>
+
+                <p class="text-xs custom-text-nm-sec">
+                    {{ $t("Timer.minutes") }}
+                </p>
             </div>
-            <h2 class="w-[18px] text-2xl custom-text-lg-sec">:</h2>
+
+            <h2 class="w-[18px] text-2xl custom-text-lg-sec">
+                :
+            </h2>
+            
             <div class="w-[53px]">
-                <h2 class="text-2xl custom-text-lg-sec">{{time.seconds}}</h2>
-                <p class="text-xs custom-text-nm-sec">{{ $t("Timer.seconds") }}</p>
+                <h2 class="text-2xl custom-text-lg-sec">
+                    {{time.seconds}}
+                </h2>
+
+                <p class="text-xs custom-text-nm-sec">
+                    {{ $t("Timer.seconds") }}
+                </p>
             </div>
         </div>
 
