@@ -200,38 +200,4 @@ export default {
     @apply flex gap-[10px] items-center
     hover:cursor-pointer
 }
-
-/* 
-
-
-
-
-.content {
-    max-width: 1050px;
-    width: 100%;
-    margin: 0 auto;
-    min-height: 200px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-} */
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
-    
-
-    /*
-    .content {
-        max-width: 690px;
-        grid-template-columns: repeat(2, 1fr);
-    } */
-
-}
-@media only screen and (max-width: 767px) {
-   
-
-    
-
-   
-
- 
-}
 </style>
