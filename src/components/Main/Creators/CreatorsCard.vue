@@ -61,8 +61,6 @@ import {getUserImageUrl} from '../../../helpers/helpers'
             getUserImageUrl,
 
             cardClick(name){
-
-                console.log(name);
                 this.$router.push({name: 'Artists', params: { id: name}})
             }
         }
